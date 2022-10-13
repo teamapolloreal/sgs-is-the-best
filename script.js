@@ -1,4 +1,4 @@
-let bannerMessageNum = "6"
+let bannerMessageNum = "7"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -13,9 +13,9 @@ const body = document.querySelector('body'),
         if(mode === null){
             mode === "Dark"
             localStorage.setItem("mode", "Dark")
-            
+
             body.classList.toggle("dark");
-                
+
             // if(body.classList.contains("dark")){
             //     modeText.innerText = "Light mode";
             // }else{
@@ -24,7 +24,7 @@ const body = document.querySelector('body'),
         } else {
             if(mode === "Dark" || mode === "Dark Themed"){
                 body.classList.toggle("dark");
-                
+
                 // if(body.classList.contains("dark")){
                 //     modeText.innerText = "Light mode";
                 // }else{
@@ -45,7 +45,7 @@ const body = document.querySelector('body'),
 
         // modeSwitch.addEventListener("click" , () =>{
         //     body.classList.toggle("dark");
-            
+
         //     if(body.classList.contains("dark")){
         //         modeText.innerText = "Light mode";
         //         localStorage.setItem("mode", "dark")
@@ -84,7 +84,7 @@ function fullscreen(){
         }
     } else {
         window.location = "gamepage-full.html"
-    }    
+    }
 }
 
 var container = document.getElementsByClassName("container")
@@ -141,7 +141,7 @@ function gameIconSetting(changed){
             document.getElementById("gameIconSwitch").style.left = "30px";
             localStorage.setItem("gameIcon", true)
         }
-    } else 
+    } else
     {
         if(localStorage.getItem("gameIcon") === null || localStorage.getItem("gameIcon") === "true"){
             if(document.getElementById("gameIconSwitch") !== null) document.getElementById("gameIconSwitch").style.left = "30px";
@@ -210,7 +210,7 @@ function setCloak() {
     // link.herf = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
     // document.getElementsByTagName('head')[0].appendChild(link);
     // return;
-    
+
     if(icon === "Default"){
         link.herf = "sgs-logo.png";
         document.title = "Syce's Game Shack"
