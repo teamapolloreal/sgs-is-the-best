@@ -1,6 +1,6 @@
 let lastUpdate = "9/28/2022"
 let cdnUrl = "https://genuine-kitten-10d117.netlify.app"
-//CHANGE IMAGES ON HOME PAGE TOO
+//CHANGE IMAGES ON HOME PAGE TOOe
 const data = [
     {
         name: "1v1.lol",
