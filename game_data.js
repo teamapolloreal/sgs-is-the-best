@@ -1,5 +1,5 @@
 let lastUpdate = "9/28/2022"
-let cdnUrl = "https://genuine-kitten-10d117.netlify.app"
+let cdnUrl = "https://sgs-cdn.vercel.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
     {
