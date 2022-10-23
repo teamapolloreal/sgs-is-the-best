@@ -1,5 +1,5 @@
 let lastUpdate = "9/28/2022"
-let cdnUrl = "https://sgs-cdn.vercel.app"
+let cdnUrl = "https://sgs-kwh9ak5e1-sycegameshack.vercel.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
     {
