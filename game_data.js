@@ -1,4 +1,4 @@
-let lastUpdate = "10/27/2022"
+let lastUpdate = "10/28/2022"
 let cdnUrl = "https://sgs-cdn.vercel.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
