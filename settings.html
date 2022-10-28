@@ -10,43 +10,16 @@
 
       gtag('config', 'G-RZF5EEF09R');
     </script>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZPCB9G4RZ"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'G-LZPCB9G4RZ');
-     </script>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS51LMPFLE"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'G-SS51LMPFLE');
-     </script>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT7SGCCZFZ"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'G-ZT7SGCCZFZ');
-     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    
+
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
+
     <title>Syce's Game Shack</title>
     <link rel="icon" herf="sgs-logo.png" type="image/png">
 </head>
@@ -124,6 +97,14 @@
                     </li>
 
                     <li class="nav-link" id="altLinks">
+                        <a href="" onclick="window.open('https://bit.ly/sgs-chat-room', '_blank')">
+                            <i class='bx bx-chat icon' ></i>
+                            <span class="text nav-text">Chat Room</span>
+                            <span class="hovertext">Chat Room</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
                         <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
                             <i class='bx bx-link-alt icon' ></i>
                             <span class="text nav-text">Alt Links</span>
@@ -141,7 +122,7 @@
                         <span class="hovertext">Settings</span>
                     </a>
                 </li>
-                
+
                 <!-- <li class="">
                     <a href="#">
                         <i class='bx bx-log-out icon' ></i>
@@ -160,7 +141,7 @@
                         <span class="switch"></span>
                     </div>
                 </li> -->
-                
+
             </div>
         </div>
 
@@ -177,7 +158,9 @@
         </div>
         <br><br><br> -->
 
-        <div class="settingsBox" style="float: left; left: 4.5%;">
+        <div class="settingsHeading">Personalization</div>
+        <div class="settingsDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Personalize the site to your likings.</div>
+        <div class="setting">
             <div class="settingsTitle">Mode</div>
             <div class="settingsDescription">Change the website's appearance by a dark and a light contrast.</div>
             <select class="settingsSelect" id="modeSelect">
@@ -185,10 +168,9 @@
                 <option class="settingsSelectOption">Dark Themed</option>
                 <option class="settingsSelectOption">Light</option>
             </select>
-        </div>
-        <div class="settingsBox">
+            <br>
             <div class="settingsTitle">Theme Color</div>
-            <div class="settingsDescription">This changes the website's main theme color while using light or dark themed mode.</div>
+            <div class="settingsDescription">This changes the website's main color that you might see when using light or dark themed mode.</div>
             <select class="settingsSelect" id="themeSelect">
                 <option class="settingsSelectOption">Purple (Default)</option>
                 <option class="settingsSelectOption">Green</option>
@@ -197,19 +179,9 @@
                 <option class="settingsSelectOption">Red</option>
                 <option class="settingsSelectOption">Yellow</option>
             </select>
-        </div>
-        <br>
-        <div class="settingsBox" style="float: left; left: 4.5%;">
-            <div class="settingsTitle">Show Game Icon</div>
-            <div class="settingsDescription">Turning this off can improve faster loading times and help reduce network usage.</div>
-            <div class="settingsSwitch" onclick="gameIconSetting(true)">
-                <span class="switchBack"></span>
-                <span class="switchDot" id="gameIconSwitch"></span>
-            </div>
-        </div>
-        <div class="settingsBox">
+            <br>
             <div class="settingsTitle">Tab Cloak</div>
-            <div class="settingsDescription">This changes the website icon and title to help hide this among your tabs.</div>
+            <div class="settingsDescription">This changes the website icon and title to help hide this among your tabs. <b>Note: This may not be working correctly.</b></div>
             <select class="settingsSelect" id="cloakSelect">
                 <option class="settingsSelectOption">Default</option>
                 <option class="settingsSelectOption">Google Slides</option>
@@ -218,24 +190,44 @@
                 <option class="settingsSelectOption">Schoology</option>
                 <option class="settingsSelectOption">Desmos</option>
             </select>
-        </div>
-        <br>
-        <div class="settingsBox" style="float: left; left: 4.5%;">
-            <div class="settingsTitle">Open Sidebar by Default</div>
-            <div class="settingsDescription">This will keep the sidebar open and only close when you play a game or if you close it.</div>
-            <div class="settingsSwitch" onclick="openSidebarSetting(true)">
+            <br>
+            <div class="settingsTitle">Show Game Thumbnail</div>
+            <div class="settingsDescription">This toggles whether to show the game thumbnail or not. This can also improve faster loading times and help reduce network usage.</div>
+            <div class="settingsSwitch" onclick="gameIconSetting(true)">
                 <span class="switchBack"></span>
-                <span class="switchDot" id="openSidebarSwitch"></span>
+                <span class="switchDot" id="gameIconSwitch"></span>
             </div>
-        </div>
-        <div class="settingsBox">
+            <br>
             <div class="settingsTitle">Hide Alt Links Button</div>
             <div class="settingsDescription">If you prefer it, this will hide the alt links button on the sidebar.</div>
             <div class="settingsSwitch" onclick="altLinksSetting(true)">
                 <span class="switchBack"></span>
                 <span class="switchDot" id="altLinksSwitch"></span>
             </div>
+            <br>
         </div>
+        <div class="settingsLine"></div>
+        <br>
+        <div class="settingsHeading">Other</div>
+        <div class="settingsDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Other general site settings. Some of this might be useful others not.</div>
+        <div class="setting">
+            <div class="settingsTitle">Open Sidebar by Default</div>
+            <div class="settingsDescription">This will keep the sidebar open and only close when you play a game or if you close it.</div>
+            <div class="settingsSwitch" onclick="openSidebarSetting(true)">
+                <span class="switchBack"></span>
+                <span class="switchDot" id="openSidebarSwitch"></span>
+            </div>
+            <br>
+        </div>
+        <br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright Syce's Game Shack 2022© - Contact: sycegameshack@gmail.com</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+        </footer>
     </section>
 
     <script src="script.js"></script>

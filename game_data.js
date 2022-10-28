@@ -1,5 +1,5 @@
-let lastUpdate = "9/28/2022"
-let cdnUrl = "https://sgs-kwh9ak5e1-sycegameshack.vercel.app"
+let lastUpdate = "10/27/2022"
+let cdnUrl = "https://sgs-cdn.vercel.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
     {
@@ -218,6 +218,19 @@ const data = [
         ]
     },
     {
+        name: "Bloons TD 2",
+        id: "bloons_td_2",
+        genre: "Tower Defenese",
+        description: "Strategically place your defenses, upgrade your units, and stop all balloons from passing through.",
+        link: "Game Files/Bloons TD 2/index.html",
+        img: `${cdnUrl}/Images/bloons_td_2.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Bloxorz",
         id: "bloxorz",
         genre: "Puzzle",
@@ -314,6 +327,19 @@ const data = [
         controls: [
             "Drag Mouse - Aim & Power",
             "Right Click - Shoot"
+        ]
+    },
+    {
+        name: "Cell Machine",
+        id: "cell_machine",
+        genre: "Puzzle",
+        description: "Arrange cells. Build machines. Destroy enemies. Each cell on its own has a simple function, like moving or spawning other cells. But when combined, more interesting behavior emerges…",
+        link: "Game Files/Cell Machine/index.html",
+        img: `${cdnUrl}/Images/cell_machine.png`,
+        file_based: true,
+        publisher: "samhogan.itch.io",
+        controls: [
+            "",
         ]
     },
     {
@@ -471,6 +497,19 @@ const data = [
         ]
     },
     {
+        name: "Deal or no Deal",
+        id: "deal_or_no_deal",
+        genre: "Strategy",
+        description: "Throughout the game, the player is offered an amount of money or prizes to quit, being asked the titular question, \"Deal or no deal?\" If the contestant rejects every deal and eliminates all the other cases or boxes, the player keeps the money that was in the original case or box.",
+        link: "Game Files/Deal or no Deal/index.html",
+        img: `${cdnUrl}/Images/deal_or_no_deal.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Death Chase 3",
         id: "death_chase_3",
         genre: "Driving / Racing",
@@ -497,6 +536,19 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "Defend the Tank",
+        id: "defend_the_tank",
+        genre: "Arcade / Strategy",
+        description: "Drag and drop soldiers to place them at strategic positions on the tank. Keep the tank alive at all costs. Rotate your soldiers to inflict maximum damage on the enemy. Heal your tanks with mechanic soldiers. Collect coins to upgrade your tank after each battle.",
+        link: "Game Files/Defend the Tank/index.html",
+        img: `${cdnUrl}/Images/defend_the_tank.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
         ]
     },
     {
@@ -530,7 +582,7 @@ const data = [
         id: "dragon_ball_z",
         genre: "Adventure",
         description: "The epic episodic adventure of Goku and the Z Warriors as they defend the Earth and the Universe from super-powered fighters and monsters.",
-        link: `./GBA-Emulator/launcher.html#dbz_supersonic`,
+        link: "GBA-Emulator/launcher.html#dbz_supersonic",
         img: `${cdnUrl}/Images/dragon_ball_z.png`,
         file_based: true,
         publisher: "Nintendo",
@@ -635,6 +687,19 @@ const data = [
         ]
     },
     {
+        name: "Elastic Man",
+        id: "elastic_man",
+        genre: "Arcade",
+        description: "Elastic Man is an entertaining arcade game in which you can be free to play with an elastic face. Drag and pinch his face to relax and reduce stress.",
+        link: "https://d21u3ic0kp9e91.cloudfront.net/elasticman/0/index.html",
+        img: `${cdnUrl}/Images/elastic_man.png`,
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Evil Glitch",
         id: "evil_glitch",
         genre: "Shooter",
@@ -645,6 +710,19 @@ const data = [
         publisher: "JS13kGames",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "EXO",
+        id: "exo",
+        genre: "Tower Defense",
+        description: "A space based tower defence game! Build satellites and stations around planets orbiting a distant star. Survive waves of enemies.",
+        link: "Game Files/EXO/index.html",
+        img: `${cdnUrl}/Images/exo.png`,
+        file_based: true,
+        publisher: "ai-doge.itch.io",
+        controls: [
+            "",
         ]
     },
     {
@@ -752,6 +830,19 @@ const data = [
         ]
     },
     {
+        name: "Google Snake",
+        id: "google_snake",
+        genre: "Arcade / Classic",
+        description: "Snake is a game genre in which the player controls a developing line that eventually becomes its own principal barrier. The player controls a dot, square, or object on the playing board. It creates a trail behind it as it goes ahead, mimicking a snake. How to Play: Move around with the arrow keys and eat the dots.",
+        link: "Game Files/Google Snake/index.html",
+        img: `${cdnUrl}/Images/google_snake.png`,
+        file_based: true,
+        publisher: "Google",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Gun Mayhem 2",
         id: "gun_mayhem_2",
         genre: "Action / Shooter",
@@ -844,6 +935,19 @@ const data = [
         broken: true
     },
     {
+        name: "Indestructo Tank",
+        id: "indestructotank",
+        genre: "Arcade",
+        description: "You are the weapon. Bombs don't hurt, they just shoot you into the air so you can use your tank to ram and destroy. How many combos can you get?",
+        link: "Game Files/Indestructo Tank/index.html",
+        img: `${cdnUrl}/Images/indestructo_tank.png`,
+        file_based: true,
+        publisher: "Armor Games",
+        controls: [
+            "Left/Right Arrow - Movement",
+        ]
+    },
+    {
         name: "Jetboy",
         id: "jetboy",
         genre: "Platformer",
@@ -854,6 +958,19 @@ const data = [
         publisher: "Bob's Shack",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "Just One Boss",
+        id: "just_one_boss",
+        genre: "Arcade",
+        description: "Just one boss is a fun and challenging arcade game in which you have one aim – to defeat the boss! As the title suggests, you have only one boss to defeat, but this boss is difficult and cunning! You control a cute little blue slime ball and you must move around the playing field avoiding the boss's attacks.",
+        link: "Game Files/Just One Boss/index.htmml",
+        img: `${cdnUrl}/Images/just_one_boss.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
         ]
     },
     {
@@ -880,6 +997,32 @@ const data = [
         publisher: "littlealchemy2.com",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "Madalin Stunt Cars 2",
+        id: "madalin_stunt_cars_2",
+        genre: "Driving",
+        description: "Drive a powerful racing car and be ready for furious races with worthy opponents! The gameplay is full of simulation, allowing players to control the car, drift and feel the speed on open roads. You can drift around the city or death corners, explore the landscapes, and visit many other interesting places. Pick one of the intriguing supercars and begin performing impossible stunts through loops and obstacles! Challenge your friends in multiplayer mode! ",
+        link: "Game Files/Madalin Stunt Cars 2/index.html",
+        img: `${cdnUrl}/Images/madalin_stunt_cars_2.png`,
+        file_based: true,
+        publisher: "madalinstuntcars2.io",
+        controls: [
+            "",
+        ]
+    },
+    {
+        name: "Madalin Stunt Cars 3",
+        id: "madalin_stunt_cars_3",
+        genre: "Driving",
+        description: "Madalin Stunt Cars 3 is a wonderful multiplayer free racing game similar to previous editions 1 and 2. It's a multiplayer car racing game that you can play with premium vehicles in different race tracks. In the Madalin Stunt Cars 3 game, car races are waiting for you in gigantic action-packed parks.",
+        link: "Game Files/Madalin Stunt Cars 3/index.html",
+        img: `${cdnUrl}/Images/madalin_stunt_cars_3.png`,
+        file_based: true,
+        publisher: "topspeed.com",
+        controls: [
+            "",
         ]
     },
     {
@@ -913,12 +1056,25 @@ const data = [
         id: "mario_kart",
         genre: "Adventure / Driving",
         description: "Players compete in go-kart races while using various power up items.",
-        link: `./GBA-Emulator/launcher.html#mariokart`,
+        link: "./GBA-Emulator/launcher.html#mariokart",
         img: `${cdnUrl}/Images/mario_kart.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "Matrix Rampage",
+        id: "matrix_rampage",
+        genre: "Action",
+        description: "Matrix Rampage is an action fighting game where you must kill as many as possible enemies and get the highest score.",
+        link: "Game Files/Matrix Rampage/index.html",
+        img: `${cdnUrl}/Images/matrix_rampage.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
         ]
     },
     {
@@ -932,6 +1088,32 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "Mini Putt",
+        id: "mini_putt",
+        genre: "Classic / Sports",
+        description: "Mini Putt is everyone’s favorite crazy golf game from the Flash era. Tackle various mini-golf courses and check out your final score at the end. Compare the final results with your friends to decide who is the Mini Putt champion.",
+        link: "Game Files/Mini Putt/index.html",
+        img: `${cdnUrl}/Images/mini_putt.png`,
+        file_based: true,
+        publisher: "CrazyGames",
+        controls: [
+            "",
+        ]
+    },
+    {
+        name: "Missile Game 3D",
+        id: "missiles",
+        genre: "Arcade",
+        description: "Missile Game 3D is an arcade game to fly through a large tunnel and avoid crashing to complete the level.",
+        link: "Game Files/Missiles/index.html",
+        img: `${cdnUrl}/Images/missiles.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
         ]
     },
     {
@@ -1065,6 +1247,19 @@ const data = [
         ]
     },
     {
+        name: "Paper.io 2",
+        id: "paper-io_2",
+        genre: "Action / Multiplayer",
+        description: "Paper.io 2 is a snake style mobile game where users compete with other players worldwide. In the game you control blocks on a large map and the main objective is to conquer the most territory by enclosing it within the trail you leave behind.",
+        link: "Game Files/Paper.io 2/index.html",
+        img: `${cdnUrl}/Images/paper-io_2.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Pocket League 3D",
         id: "pocket_league_3d",
         genre: "Arcade / Sports",
@@ -1082,7 +1277,7 @@ const data = [
         id: "pokemon_emerald",
         genre: "Adventure",
         description: "Emerald does more with double battles, as gym leaders can be re-challenged after the story to participate in double battles. You can also encounter more double battles by having at least two conscious Pokemon on their team and being seen by two other trainers simultaneously.",
-        link: `./GBA-Emulator/launcher.html#pokemonemerald`,
+        link: "./GBA-Emulator/launcher.html#pokemonemerald",
         img: `${cdnUrl}/Images/pokemon_emerald.png`,
         file_based: false,
         publisher: "Nintendo",
@@ -1095,7 +1290,7 @@ const data = [
         id: "pokemon_fire_red",
         genre: "Adventure",
         description: "Pokémon FireRed and LeafGreen are the upgraded versions of the original Pokémon Red and Blue games, with more fun and more adventure. There are about 20 exclusive Pokémon in each version with different abilities.",
-        link: `./GBA-Emulator/launcher.html#pokemonred`,
+        link: "./GBA-Emulator/launcher.html#pokemonred",
         img: `${cdnUrl}/Images/pokemon_fire_red.png`,
         file_based: true,
         publisher: "Nintendo",
@@ -1108,7 +1303,7 @@ const data = [
         id: "pokemon_leaf_green",
         genre: "Adventure",
         description: "Pokémon FireRed and LeafGreen are the upgraded versions of the original Pokémon Red and Blue games, with more fun and more adventure. There are about 20 exclusive Pokémon in each version with different abilities.",
-        link: `./GBA-Emulator/launcher.html#pokemongreen`,
+        link: "./GBA-Emulator/launcher.html#pokemongreen",
         img: `${cdnUrl}/Images/pokemon_leaf_green.png`,
         file_based: true,
         publisher: "Nintendo",
@@ -1121,7 +1316,7 @@ const data = [
         id: "pokemon_mystery_dungeon_red",
         genre: "Adventure",
         description: "Gameplay is based on a classic roguelike game, with the player navigating the randomly generated dungeon with their Pokémon team.",
-        link: `./GBA-Emulator/launcher.html#mysteryred`,
+        link: "./GBA-Emulator/launcher.html#mysteryred",
         img: `${cdnUrl}/Images/pokemon_mystery_dungeon_red.png`,
         file_based: true,
         publisher: "Nintendo",
@@ -1134,7 +1329,7 @@ const data = [
         id: "pokemon_ruby",
         genre: "Adventure",
         description: "Pokémon Ruby Version and Pokémon Sapphire Version take great leaps in gameplay, particularly during combat. For the first time in a Pokémon game, Trainers can send two Pokémon into battle at the same time.",
-        link: `./GBA-Emulator/launcher.html#pokemonruby`,
+        link: "./GBA-Emulator/launcher.html#pokemonruby",
         img: `${cdnUrl}/Images/pokemon_ruby.png`,
         file_based: true,
         publisher: "Nintendo",
@@ -1147,12 +1342,38 @@ const data = [
         id: "pokemon_sapphire",
         genre: "Adventure",
         description: "Pokémon Ruby Version and Pokémon Sapphire Version take great leaps in gameplay, particularly during combat. For the first time in a Pokémon game, Trainers can send two Pokémon into battle at the same time.",
-        link: `./GBA-Emulator/index.html#pokemonsapphire`,
+        link: "./GBA-Emulator/index.html#pokemonsapphire",
         img: `${cdnUrl}/Images/pokemon_sapphire.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "PolyBranch",
+        id: "polybranch",
+        genre: "Minimalist",
+        description: "PolyBranch is a minimalist 3D game. Dodging branches may seem easy at first, but how long can you hold up as you approach terminal velocity?",
+        link: "Game Files/PolyBranch/index.html",
+        img: `${cdnUrl}/Images/polybranch.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
+        name: "Portal Flash",
+        id: "portal_flash",
+        genre: "Action / Puzzle",
+        description: "The Flash Version includes over 40 challenging, portals thinking levels, which features almost every feature the real game does, in 2d - energy balls, cubes, turrets and even the famous crusher from the trailer.",
+        link: "Game Files/Portal Flash/index.html",
+        img: `${cdnUrl}/Images/portal_flash.png`,
+        file_based: true,
+        publisher: "Armor Games",
+        controls: [
+            "",
         ]
     },
     // {
@@ -1169,6 +1390,32 @@ const data = [
     //     ],
     //     broken: true,
     // },
+    {
+        name: "Push Your Luck",
+        id: "push_your_luck",
+        genre: "Luck",
+        description: "In this game, you must spin the wheel and then guess whether the next number will be higher or lower. If you get it correct you get points that can be banked to be added to your score or risk it for more.",
+        link: "Game Files/Push Your Luck/index.html",
+        img: `${cdnUrl}/Images/push_your_luck.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
+        name: "Push the Square",
+        id: "push_the_square",
+        genre: "Incremental",
+        description: "Push the square is a short idle game.",
+        link: "Game Files/Push the Square/index.html",
+        img: `${cdnUrl}/Images/push_the_square.png`,
+        file_based: true,
+        publisher: "asdehielo.itch.io/push-the-square",
+        controls: [
+            "",
+        ]
+    },
     {
         name: "Radius Raid",
         id: "radius_raid",
@@ -1235,16 +1482,17 @@ const data = [
         ]
     },
     {
-        name: "top Snipers",
+        name: "Rooftop Snipers",
         id: "rooftop_snipers",
         genre: "2 Player / Shooter",
         description: "Rooftop Snipers is a chaotic two-button two-player sniper game. Find a friend to play with, or practice by playing against the computer in this rage-inducing action game that is similar in style and gameplay to smash hits such as Soccer Physics and Wrestle Jump.",
         link: `${cdnUrl}/Game Files/Rooftop Snipers/index.html`,
         img: `${cdnUrl}/Images/rooftop_snipers.png`,
         file_based: true,
-        publisher: "Unknown",
+        publisher: "Michael Eichler",
         controls: [
-            "Unknown",
+            "Player 1: W - Jump, E - Shoot",
+            "Player 2: I - Jump, O - Shoot"
         ]
     },
     {
@@ -1284,6 +1532,19 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
+        ]
+    },
+    {
+        name: "Snow Battle.io",
+        id: "snow_battle-io",
+        genre: "Action / Multiplayer",
+        description: "Snowball.io is a fun multiplayer arena IO game where you throw snowballs at other players. In this epic snow battle, you accumulate snow and take down other players while avoiding the disappearing ice platforms.",
+        link: "Game Files/Snowbattle",
+        img: `${cdnUrl}/Images/snow_battle-io.png`,
+        file_based: true,
+        publisher: "Y8",
+        controls: [
+            "",
         ]
     },
     {
@@ -1382,15 +1643,14 @@ const data = [
         id: "subwaysurfers",
         genre: "Endless / Runner",
         description: "It's you're goal to run a away from a cop chasing you while you complete missions, etc. How far can you go before getting caught?",
-        link: "Game Files/subway-surfers/index.html",
+        link: "Game Files/Subway Surfers/index.html",
         img: `${cdnUrl}/Images/subway_surfers.png`,
         file_based: true,
-        publisher: "Poki",
+        publisher: "projectcranberry.xyz (nanoGames)",
         controls: [
             "Arrow Keys/WASD - Movement",
             "Spacebar - Hoverboard"
-        ],
-        broken: true
+        ]
     },
     {
         name: "Super Buddy Kick",
@@ -1500,6 +1760,19 @@ const data = [
         ]
     },
     {
+        name: "There is no Game",
+        id: "there_is_no_game",
+        genre: "Adventure / Casual",
+        description: "This game is a comedy adventure that will take you on a journey you never asked to go on, through silly and unexpected video game universes. Will you be able to play along with the \"\"Game\"\" to find your way home? We sincerely think NOT.",
+        link: "Game Files/There is no Game/index.html",
+        img: `${cdnUrl}/Images/there_is_no_game.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Time Shooter 2",
         id: "time_shooter_2",
         genre: "FPS",
@@ -1546,9 +1819,12 @@ const data = [
         link: "Game Files/Tube Jumpers",
         img: `${cdnUrl}/Images/tube_jumpers.png`,
         file_based: true,
-        publisher: "Unknown",
+        publisher: "Michael Eichler",
         controls: [
-            "Unknown",
+            "Player 1: W - Movement",
+            "Player 2: I - Movement",
+            "Player 3: Z - Movement",
+            "Player 4: M - Movement",
         ]
     },
     {
@@ -1598,9 +1874,10 @@ const data = [
         link: "Game Files/Vex 3/index.html",
         img: `${cdnUrl}/Images/vex_3.png`,
         file_based: true,
-        publisher: "Unknown",
+        publisher: "KiZi",
         controls: [
-            "Unknown",
+            "Arrow Keys/WASD - Movement",
+            "Down Arrow/S - Enter Act",
         ]
     },
     {
@@ -1611,9 +1888,10 @@ const data = [
         link: "Game Files/Vex 4/index.html",
         img: `${cdnUrl}/Images/vex_4.png`,
         file_based: true,
-        publisher: "Unknown",
+        publisher: "KiZi",
         controls: [
-            "Unknown",
+            "Arrow Keys/WASD - Movement",
+            "Down Arrow/S - Enter Act",
         ]
     },
     {
@@ -1624,9 +1902,10 @@ const data = [
         link: "Game Files/Vex 5/index.html",
         img: `${cdnUrl}/Images/vex_5.png`,
         file_based: true,
-        publisher: "Unknown",
+        publisher: "KiZi",
         controls: [
-            "Unknown",
+            "Arrow Keys/WASD - Movement",
+            "Down Arrow/S - Enter Act",
         ]
     },
     {
@@ -1637,9 +1916,10 @@ const data = [
         link: "Game Files/Vex 6/index.html",
         img: `${cdnUrl}/Images/vex_6.png`,
         file_based: true,
-        publisher: "Unknown",
+        publisher: "KiZi",
         controls: [
-            "Unknown",
+            "Arrow Keys/WASD - Movement",
+            "Down Arrow/S - Enter Act",
         ]
     },
     {
@@ -1652,7 +1932,7 @@ const data = [
         file_based: false,
         publisher: "Unknown",
         controls: [
-            "",
+            "None",
         ]
     },
     {
@@ -1665,7 +1945,7 @@ const data = [
         file_based: true,
         publisher: "Unknown",
         controls: [
-            "Unknown",
+            "None",
         ]
     },
     {
@@ -1682,26 +1962,134 @@ const data = [
         ],
         broken: true
     },
+    {
+        name: "You Are Bezos",
+        id: "you_are_bezos",
+        genre: "Simulator",
+        description: "A simple text-based adventure exploring the age-old question: What would you do if you had more money than any single human being should ever have? Be sure to expand the side column using the arrow in the upper left to view your current funds.",
+        link: "Game Files/You Are Bezos/index.html",
+        img: `${cdnUrl}/Images/you_are_bezos.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    // {
+    //     name: "Zombs Royale",
+    //     id: "zombs_royale",
+    //     genre: "Shooter",
+    //     description: "",
+    //     link: "https://rudolph-the-red-nosed-reindeer.ga/tmm-zombsroyale",
+    //     img: `${cdnUrl}/Images/zombs_royale.png`,
+    //     file_based: false,
+    //     publisher: "Unknown",
+    //     controls: [
+    //         "",
+    //     ]
+    // },
+    // {
+    //     name: "",
+    //     id: "",
+    //     genre: "",
+    //     description: "",
+    //     link: "",
+    //     img: `${cdnUrl}/Images/.png`,
+    //     file_based: false,
+    //     publisher: "Unknown",
+    //     controls: [
+    //         "",
+    //     ]
+    // },
 ]
 
 document.getElementById("gamecount").innerText = `Game count: ${data.length}\nUpdated: ${lastUpdate}`
 
-var count = 0
-var container = document.getElementsByClassName(`container`)
-var img = document.getElementsByClassName(`game_img`)
-var title = document.getElementsByClassName(`game_title`)
-var genre = document.getElementsByClassName(`game_genre`)
-var click = document.getElementsByClassName(`game_click`)
-data.forEach(game => {
-    container[count].style.display = "inline-table"
-    if(localStorage.getItem("gameIcon") !== "false") img[count].src = game.img
-    title[count].innerText = game.name
-    genre[count].innerText = game.genre
-    click[count].onclick = function(){ viewGame(game.id) }
+// var container = document.getElementsByClassName(`container`)
+// var img = document.getElementsByClassName(`game_img`)
+// var title = document.getElementsByClassName(`game_title`)
+// var genre = document.getElementsByClassName(`game_genre`)
+// var click = document.getElementsByClassName(`game_click`)
+loadGames()
+function loadGames(){
+    var count = 0
+    var containers = []
 
-    if(localStorage.getItem("gameIcon") === "false") container[count].style.paddingTop = "7px";
-    count++;
-})
+    data.forEach(game => {
+        var div = document.createElement("div");
+        div.className = "container"
+        div.id = "container"
+        if(localStorage.getItem("gameIcon") === "false") div.style.paddingTop = "7px";
+
+        var game_click = document.createElement("a")
+        game_click.className = "game_click"
+        game_click.id = "click"
+        game_click.onclick = function(){ viewGame(game.id) }
+        game_click.herf = game.id
+
+        if(game.broken === true){
+          var broken_icon = document.createElement("i")
+          broken_icon.className = "bx bx-error icon"
+          broken_icon.id = "broken_icon"
+          if(localStorage.getItem("gameIcon") === "false") broken_icon.id = "broken_icon1"
+          game_click.appendChild(broken_icon)
+        } else {
+          var fav_icon = document.createElement("i")
+          fav_icon.className = "bx bx-star icon"
+          fav_icon.id = "fav_icon"
+          if(localStorage.getItem("gameIcon") === "false") fav_icon.style.fontSize = "20px";
+          if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
+              fav_icon.onclick = function(){ unfavorite(game.id) }
+              fav_icon.className = "bx bxs-star icon"
+              if(localStorage.getItem("mode") !== "Dark") div.style.backgroundColor = localStorage.getItem("themeHex") || "#695CFE"
+              if(localStorage.getItem("mode") === "Dark") div.style.backgroundColor = "#3a3b3c"
+              div.style.color = "#fff"
+          } else {
+              fav_icon.onclick = function(){ favorite(game.id) }
+          }
+          game_click.appendChild(fav_icon)
+        }
+
+        if(localStorage.getItem("gameIcon") !== "false"){
+            var game_img = document.createElement("img")
+            game_img.className = "game_img"
+            game_img.id = "img"
+            game_img.src = game.img
+            game_click.appendChild(game_img)
+        }
+
+        var game_title = document.createElement("div")
+        game_title.className = "game_title"
+        game_title.id = "title"
+        game_title.innerText = game.name
+        game_click.appendChild(game_title)
+
+        var game_genre = document.createElement("div")
+        game_genre.className = "game_genre"
+        game_genre.id = "genre"
+        game_genre.innerText = game.genre
+        game_click.appendChild(game_genre)
+
+        div.appendChild(game_click)
+
+        containers.push(div)
+    })
+
+    containers.reverse().forEach(container => {
+        referenceNode = document.getElementById("gameViewFullscreen")
+        referenceNode.parentNode.insertBefore(container, referenceNode.nextSibling)
+    })
+
+    resizeWidth();
+}
+
+function removeGames(){
+    var containers = document.getElementsByClassName("container")
+    const length = containers.length
+    for(let i = 0; i < length; i++){
+        containers[Math.abs(-data.length + i) - 1].remove()
+    }
+}
 
 let selectOptions = []
 for(let i = 0; i < data.length; i++){
@@ -1757,7 +2145,47 @@ select.onchange = async (event) => {
     }
 }
 
+var clickedStar = false
+function favorite(id){
+    if(document.getElementById("gameView") !== "block") clickedStar = true
+    for(let i = 0; i < data.length; i++){
+        if(data[i].id === id){
+            var favorites = localStorage.getItem("favorites")
+            if(favorites && favorites.includes(data[i].id)) return;
+
+            var favoritesList = favorites + `, ${data[i].id}`
+            if(favorites === null) favoritesList = `${data[i].id}`
+            localStorage.setItem("favorites", favoritesList)
+
+            removeGames();
+            loadGames();
+            return;
+        }
+    }
+}
+
+function unfavorite(id){
+  if(document.getElementById("gameView") !== "block") clickedStar = true
+  for(let i = 0; i < data.length; i++){
+      if(data[i].id === id){
+          var favorites = localStorage.getItem("favorites")
+          if(favorites && !favorites.includes(data[i].id)) return;
+
+          if(favorites.includes(`, ${data[i].id}`)){
+              localStorage.setItem("favorites", favorites.replace(`, ${data[i].id}`, ""))
+          } else {
+              localStorage.setItem("favorites", favorites.replace(`${data[i].id}`, ""))
+          }
+
+          removeGames();
+          loadGames();
+          return;
+      }
+  }
+}
+
 function viewGame(gameID){
+    if(clickedStar === true) return clickedStar = false
     for(let i = 0; i < data.length; i++){
         if(data[i].id === gameID){
             let fullscreen = document.getElementById("gameViewFullscreen")
@@ -1836,7 +2264,7 @@ function playGame(gameID){
             if(body.querySelector('nav').classList.value === "sidebar") body.querySelector('nav').classList.toggle("close")
             // document.getElementById("gameIframe").focus();
             window.scrollTo(0, 0)
-            // document.body.style.overflow = "hidden"
+            document.body.style.overflow = "visible"
         }
     }
 }
@@ -1868,10 +2296,10 @@ function playGame(gameID){
 function checkFocus(){
     if(document.getElementById("gamepage").style.display === "block"){
         if(document.activeElement === document.getElementById("gameIframe")){
-            document.body.style.overflow = "hidden"
+            // document.body.style.overflow = "hidden"
             document.getElementById("iframeFocus").style.display = "none"
         } else {
-            document.body.style.overflow = "visible"
+            // document.body.style.overflow = "visible"
             document.getElementById("iframeFocus").style.display = "block"
         }
     }

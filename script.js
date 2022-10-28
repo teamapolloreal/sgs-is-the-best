@@ -1,4 +1,4 @@
-let bannerMessageNum = "8"
+let bannerMessageNum = "9"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -64,6 +64,8 @@ function gamepage(){
     document.getElementById("importantMessage").style.display = "none"
 
     if(localStorage.getItem("openSidebar") === "true" && body.querySelector('nav').classList.value === "sidebar close") body.querySelector('nav').classList.toggle("close")
+
+    saveGameData();
 }
 
 function blog(){
@@ -87,10 +89,8 @@ function fullscreen(){
     }
 }
 
-var container = document.getElementsByClassName("container")
-
-resizeWidth()
 function resizeWidth(){
+    var container = document.getElementsByClassName("container")
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width
     if(document.getElementById("gameIframe") !== null){
         let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
@@ -200,7 +200,8 @@ function setCloak() {
     if(!link){
         link = window.document.createElement("link");
         link.rel = "icon"
-        link.type = "image/png"
+        link.herf = "test"
+        link.type = "image/x-icon"
         window.document.getElementsByTagName("head")[0].appendChild(link);
     }
 
@@ -348,6 +349,7 @@ window.onload = (event) => {
             }
             localStorage.setItem("tabCloak", event.target.value);
             setCloak();
+            saveSiteData();
         })
     }
 
@@ -359,6 +361,7 @@ window.onload = (event) => {
             }
             localStorage.setItem("mode", event.target.value);
             setMode();
+            saveSiteData();
         })
     }
 
@@ -370,8 +373,11 @@ window.onload = (event) => {
             }
             localStorage.setItem("theme", event.target.value);
             setTheme();
+            saveSiteData();
         })
     }
+
+    resizeWidth();
 
     document.getElementById("loader-wrapper").style.opacity = 0;
     document.body.style.overflow = "visible";
@@ -379,7 +385,7 @@ window.onload = (event) => {
         document.getElementById("loader-wrapper").style.display = "none";
     }, 500)
 
-    if(localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null) document.getElementById("bannerMessage").style.display = "block"
+    if(localStorage.getItem("bannerMessageNum") && localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null) document.getElementById("bannerMessage").style.display = "block"
 }
 
 window.onbeforeunload = function() {
@@ -391,6 +397,117 @@ function hideBanner(){
     document.getElementById("bannerMessage").style.display = "none"
     localStorage.setItem("bannerMessageNum", bannerMessageNum)
 }
+
+loadAccountData()
+function loadAccountData(){
+        var hash = window.location.hash.slice(1)
+        var decode = atob(hash)
+        var values = decode.split("_")
+        if(values[0] === "login"){
+        if(parseInt(values[1]) + 20000 < Date.now()) return;
+        localStorage.setItem("loggedIn", true)
+        localStorage.setItem("lastLoggedIn", Date.now())
+        localStorage.setItem("username", values[2])
+        localStorage.setItem("id", values[3])
+
+        document.getElementById("loggedIn").style.display = "block"
+        document.getElementById("notLoggedIn").style.display = "none"
+    }
+}
+
+function getGameData(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/gameData", true);
+    xhr.send(JSON.stringify({
+        value: "helo"
+    }))
+
+    xhr.onreadystatechange = function(){
+        if(this.readyState != 4) return;
+
+        if(this.status == 200){
+            var data = JSON.parse(this.responseText);
+
+            console.log(data)
+        }
+    }
+}
+
+getAccountData()
+function getAccountData(){
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function(){
+        if(this.readyState != 4) return;
+
+        if(this.status == 201){
+            var data = JSON.parse(this.responseText);
+
+            console.log(data)
+        }
+    }
+
+    xhr.open("GET", "/login", true)
+    xhr.send();
+}
+
+function saveSiteData(){
+    var values = [],
+    keys = Object.keys(localStorage),
+    i = 0, keys;
+
+    for(; key = keys[i]; i++){
+        values.push({key: key, data: localStorage.getItem(key)});
+    }
+
+    console.log(values)
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/saveSiteData", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+    xhr.send(JSON.stringify(values))
+    // xhr.send(JSON.stringify({ text: "hello" }))
+
+    xhr.onreadystatechange = function(){
+        if(this.readyState != 4) return;
+
+        if(this.status == 205){
+            // var data = JSON.parse(this.responseText);
+            console.log(this.responseText)
+            document.getElementById("overlays").style.display = "block"
+            setTimeout(() => { document.getElementById("savedOverlay").style.opacity = 100 }, 500)
+        
+            setTimeout(() => { document.getElementById("savedOverlay").style.opacity = 0 }, 5500)
+            setTimeout(() => { document.getElementById("overlays").style.display = "none" }, 6000)
+            return;
+        } else {
+            console.log(`error saving site settings`)
+        }
+    }
+}
+
+setInterval(() => {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/saveStats", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+    xhr.send(JSON.stringify({ "gamesPlayed": "90" }))
+    // xhr.send(JSON.stringify({ text: "hello" }))
+
+    xhr.onreadystatechange = function(){
+        if(this.readyState != 4) return;
+
+        if(this.status == 205){
+            // var data = JSON.parse(this.responseText);
+            count++
+            console.log(this.responseText)
+            saveData();
+        } else {
+            console.log(`error saving ${values[count].key}`)
+            count++
+            saveData();
+        }
+    }
+}, 60000)
 
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
@@ -426,13 +543,13 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add("form--hidden");
     });
 
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
+    // loginForm.addEventListener("submit", e => {
+    //     e.preventDefault();
 
-        // Perform your AJAX/Fetch login
+    //     // Perform your AJAX/Fetch login
 
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
-    });
+    //     // setFormMessage(loginForm, "error", "Invalid username/password combination");
+    // });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
@@ -460,5 +577,15 @@ function toggleLoginPage(){
         document.body.style.overflow = "hidden"
         var newlink = document.createElement("link").herf = "#login"
         document.getElementsByTagName("head")[0].appendChild(newlink)
+    }
+}
+
+function toggleLoginSidebar(){
+    if(document.getElementById("loggedIn").style.display === "block"){
+        document.getElementById("notLoggedIn").style.display = "block"
+        document.getElementById("loggedIn").style.display = "none"
+    } else {
+        document.getElementById("notLoggedIn").style.display = "none"
+        document.getElementById("loggedIn").style.display = "block"
     }
 }
