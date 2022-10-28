@@ -220,7 +220,7 @@ const data = [
     {
         name: "Bloons TD 2",
         id: "bloons_td_2",
-        genre: "Tower Defenese",
+        genre: "Tower Defense",
         description: "Strategically place your defenses, upgrade your units, and stop all balloons from passing through.",
         link: "Game Files/Bloons TD 2/index.html",
         img: `${cdnUrl}/Images/bloons_td_2.png`,
