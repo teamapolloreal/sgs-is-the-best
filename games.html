@@ -149,8 +149,8 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">New Major Release! (v5.0.0)</div>
-            <div class="messageBannerText">New games, features, and bug fixes! Read the new blog for the complete change-log. Sorry for the wait, I was unable to finish some features so they will be coming later.</div>
+            <div class="messageBannerTitle">New Options Menu! (v5.0.1)</div>
+            <div class="messageBannerText">New menu to perform actions such as favoriting, found on the game splash screen and while playing a game. View the update log on the blogs page for additional bug fixes and changes.</div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
@@ -211,9 +211,20 @@
                     <i class='bx bx-play icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
                     <span>PLAY</span>
                 </button>
-                <button class="reportButton" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
-                    <i class='bx bxs-flag-alt icon'></i>
-                </button>
+                <div id="" class="reportButton" onclick="optionsMenu('splashOptions')">
+                    <i class='bx bx-dots-horizontal-rounded icon' ></i>
+                    <!-- <span class="hovertext7">Options</span> -->
+                    <div id="splashOptions" class="dropdown-content" style="transform: translate(0, -140px); right: 3vmin">
+                        <button onclick="" class="dropbtn splashOp" id="favoriteOption2">
+                            <span class='bx bx-star icon' style="transform: translateY(1px)" id="favStarOption2"></span>
+                            <span style="padding: 5px" id="favoriteTextOption2">Favorite</span>
+                        </button>
+                        <button onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')" class="dropbtn splashOp">
+                            <span class='bx bxs-flag icon' style="transform: translateY(1px)"></span>
+                            <span style="padding: 5px">Report</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -245,6 +256,16 @@
                 <span>This game may be experiencing issues.<span>
             </div>
             <div class="messageBannerText" style="width: 100%; overflow: none;">If so, this game may not be working as expected. A fix is probably in the works.</div>
+        </div>
+        <div id="" class="gameOptions" onclick="optionsMenu('gameOptions')">
+            <i class='bx bx-dots-horizontal-rounded icon' ></i>
+            <span class="hovertext7">Options</span>
+            <div id="gameOptions" class="dropdown-content" style="transform: translateX(-155px)">
+                <button onclick="" class="dropbtn" id="favoriteOption">
+                    <span class='bx bx-star icon' style="transform: translateY(1px)" id="favStarOption"></span>
+                    <span style="padding: 5px" id="favoriteTextOption">Favorite</span>
+                </button>
+            </div>
         </div>
         <div class="title" id="gamePageTitle"></div>
         <div class="text" id="gamePageDesc"></div>

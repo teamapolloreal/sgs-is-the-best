@@ -16,6 +16,13 @@ let data = [
     //     text: "This update includes many new features and changes with bug fixes and performance improvements. Read below for more details:<br><br><b>New Account System!</b><br>• You can now create an account to use on this website! You can login or create an account by clicking on the new icon at the bottom of the sidebar.<br>• Accounts are used to save website settings, profile stats, and more. (I was trying to make it so data from the games save, however they use up way to much data so I can't do that, sorry)<br><br><b>New Features</b><br>• New profile page to manage your account (must be logged in to access)<br>• You can now favorite games to find them easier (just shows them as a different color, will be changed in the future)<br>• New indicators on the gamepage for when some games may not be working<br>• Redesigned settings page, a lot cleaner and nicer<br><br><b>New Games</b><br>• e<br><br><b>Other</b><br>• Added a core to the site. This manages connections with the database and other various tasks. (v1.0.0)<br>• Added a footer<br>• Added more detailed information to games (publisher, controls, etc)<br>• New efficient way to load the gamed on the games page<br><br><b>Resolved Issues</b><br>• Fixed an issue with the banner.<br>• Fixed Subway Surfers.<br>• Fixed a few spelling and grammar errors<br><br><i>From now on I will not be showing the Known Issues</i>",
     // },
     {
+        title: "Update Log of Version 5.0.1",
+        date: "11/1/22",
+        time: "< 1 min read",
+        id: "8",
+        text: "This update includes bug fixes and other minor changes. Read below for more details:<br><br><b>Changes</b><br>• Added a new options menu to the game splash screen and when your playing a game<br><br><b>New Games</b><br>• Crossy Road<br>ㅤ◦ This is re-added after the game stopped working, this has been fixed<br><br><b>Resolved Issues</b><br>• Fixed Incredibox (kinda)<br>• Fixed World's Hardest Game",
+    },
+    {
         title: "Changelog of version 5!",
         date: "10/28/22",
         time: "2 min read",

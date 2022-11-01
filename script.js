@@ -1,4 +1,4 @@
-let bannerMessageNum = "9"
+let bannerMessageNum = "10"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -398,194 +398,203 @@ function hideBanner(){
     localStorage.setItem("bannerMessageNum", bannerMessageNum)
 }
 
-loadAccountData()
-function loadAccountData(){
-        var hash = window.location.hash.slice(1)
-        var decode = atob(hash)
-        var values = decode.split("_")
-        if(values[0] === "login"){
-        if(parseInt(values[1]) + 20000 < Date.now()) return;
-        localStorage.setItem("loggedIn", true)
-        localStorage.setItem("lastLoggedIn", Date.now())
-        localStorage.setItem("username", values[2])
-        localStorage.setItem("id", values[3])
+// loadAccountData()
+// function loadAccountData(){
+//         var hash = window.location.hash.slice(1)
+//         var decode = atob(hash)
+//         var values = decode.split("_")
+//         if(values[0] === "login"){
+//         if(parseInt(values[1]) + 20000 < Date.now()) return;
+//         localStorage.setItem("loggedIn", true)
+//         localStorage.setItem("lastLoggedIn", Date.now())
+//         localStorage.setItem("username", values[2])
+//         localStorage.setItem("id", values[3])
+//
+//         document.getElementById("loggedIn").style.display = "block"
+//         document.getElementById("notLoggedIn").style.display = "none"
+//     }
+// }
+//
+// function getGameData(){
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("POST", "/gameData", true);
+//     xhr.send(JSON.stringify({
+//         value: "helo"
+//     }))
+//
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState != 4) return;
+//
+//         if(this.status == 200){
+//             var data = JSON.parse(this.responseText);
+//
+//             console.log(data)
+//         }
+//     }
+// }
+//
+// getAccountData()
+// function getAccountData(){
+//     var xhr = new XMLHttpRequest();
+//
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState != 4) return;
+//
+//         if(this.status == 201){
+//             var data = JSON.parse(this.responseText);
+//
+//             console.log(data)
+//         }
+//     }
+//
+//     xhr.open("GET", "/login", true)
+//     xhr.send();
+// }
+//
+// function saveSiteData(){
+//     var values = [],
+//     keys = Object.keys(localStorage),
+//     i = 0, keys;
+//
+//     for(; key = keys[i]; i++){
+//         values.push({key: key, data: localStorage.getItem(key)});
+//     }
+//
+//     console.log(values)
+//
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("POST", "/saveSiteData", true);
+//     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+//     xhr.send(JSON.stringify(values))
+//     // xhr.send(JSON.stringify({ text: "hello" }))
+//
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState != 4) return;
+//
+//         if(this.status == 205){
+//             // var data = JSON.parse(this.responseText);
+//             console.log(this.responseText)
+//             document.getElementById("overlays").style.display = "block"
+//             setTimeout(() => { document.getElementById("savedOverlay").style.opacity = 100 }, 500)
+//
+//             setTimeout(() => { document.getElementById("savedOverlay").style.opacity = 0 }, 5500)
+//             setTimeout(() => { document.getElementById("overlays").style.display = "none" }, 6000)
+//             return;
+//         } else {
+//             console.log(`error saving site settings`)
+//         }
+//     }
+// }
+//
+// setInterval(() => {
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("POST", "/saveStats", true);
+//     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+//     xhr.send(JSON.stringify({ "gamesPlayed": "90" }))
+//     // xhr.send(JSON.stringify({ text: "hello" }))
+//
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState != 4) return;
+//
+//         if(this.status == 205){
+//             // var data = JSON.parse(this.responseText);
+//             count++
+//             console.log(this.responseText)
+//             saveData();
+//         } else {
+//             console.log(`error saving ${values[count].key}`)
+//             count++
+//             saveData();
+//         }
+//     }
+// }, 60000)
+//
+// function setFormMessage(formElement, type, message) {
+//     const messageElement = formElement.querySelector(".form__message");
+//
+//     messageElement.textContent = message;
+//     messageElement.classList.remove("form__message--success", "form__message--error");
+//     messageElement.classList.add(`form__message--${type}`);
+// }
+//
+// function setInputError(inputElement, message) {
+//     inputElement.classList.add("form__input--error");
+//     inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
+// }
+//
+// function clearInputError(inputElement) {
+//     inputElement.classList.remove("form__input--error");
+//     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
+// }
+//
+// document.addEventListener("DOMContentLoaded", () => {
+//     const loginForm = document.querySelector("#login");
+//     const createAccountForm = document.querySelector("#createAccount");
+//
+//     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
+//         e.preventDefault();
+//         loginForm.classList.add("form--hidden");
+//         createAccountForm.classList.remove("form--hidden");
+//     });
+//
+//     document.querySelector("#linkLogin").addEventListener("click", e => {
+//         e.preventDefault();
+//         loginForm.classList.remove("form--hidden");
+//         createAccountForm.classList.add("form--hidden");
+//     });
+//
+//     // loginForm.addEventListener("submit", e => {
+//     //     e.preventDefault();
+//
+//     //     // Perform your AJAX/Fetch login
+//
+//     //     // setFormMessage(loginForm, "error", "Invalid username/password combination");
+//     // });
+//
+//     document.querySelectorAll(".form__input").forEach(inputElement => {
+//         inputElement.addEventListener("blur", e => {
+//             if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
+//                 setInputError(inputElement, "Username must be at least 10 characters in length");
+//             }
+//         });
+//
+//         inputElement.addEventListener("input", e => {
+//             clearInputError(inputElement);
+//         });
+//     });
+// });
+//
+// function toggleLoginPage(){
+//     let page = document.getElementById("loginPage")
+//     if(page.style.display === "block"){
+//         page.style.display = "none"
+//         document.body.style.overflow = "visible"
+//         var newlink = document.createElement("link").herf = "#hello"
+//         document.getElementsByTagName("head")[0].appendChild(newlink)
+//     } else {
+//         page.style.display = "block"
+//         page.style.position = "fixed"
+//         document.body.style.overflow = "hidden"
+//         var newlink = document.createElement("link").herf = "#login"
+//         document.getElementsByTagName("head")[0].appendChild(newlink)
+//     }
+// }
+//
+// function toggleLoginSidebar(){
+//     if(document.getElementById("loggedIn").style.display === "block"){
+//         document.getElementById("notLoggedIn").style.display = "block"
+//         document.getElementById("loggedIn").style.display = "none"
+//     } else {
+//         document.getElementById("notLoggedIn").style.display = "none"
+//         document.getElementById("loggedIn").style.display = "block"
+//     }
+// }
 
-        document.getElementById("loggedIn").style.display = "block"
-        document.getElementById("notLoggedIn").style.display = "none"
-    }
-}
-
-function getGameData(){
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/gameData", true);
-    xhr.send(JSON.stringify({
-        value: "helo"
-    }))
-
-    xhr.onreadystatechange = function(){
-        if(this.readyState != 4) return;
-
-        if(this.status == 200){
-            var data = JSON.parse(this.responseText);
-
-            console.log(data)
-        }
-    }
-}
-
-getAccountData()
-function getAccountData(){
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function(){
-        if(this.readyState != 4) return;
-
-        if(this.status == 201){
-            var data = JSON.parse(this.responseText);
-
-            console.log(data)
-        }
-    }
-
-    xhr.open("GET", "/login", true)
-    xhr.send();
-}
-
-function saveSiteData(){
-    var values = [],
-    keys = Object.keys(localStorage),
-    i = 0, keys;
-
-    for(; key = keys[i]; i++){
-        values.push({key: key, data: localStorage.getItem(key)});
-    }
-
-    console.log(values)
-    
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/saveSiteData", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
-    xhr.send(JSON.stringify(values))
-    // xhr.send(JSON.stringify({ text: "hello" }))
-
-    xhr.onreadystatechange = function(){
-        if(this.readyState != 4) return;
-
-        if(this.status == 205){
-            // var data = JSON.parse(this.responseText);
-            console.log(this.responseText)
-            document.getElementById("overlays").style.display = "block"
-            setTimeout(() => { document.getElementById("savedOverlay").style.opacity = 100 }, 500)
-        
-            setTimeout(() => { document.getElementById("savedOverlay").style.opacity = 0 }, 5500)
-            setTimeout(() => { document.getElementById("overlays").style.display = "none" }, 6000)
-            return;
-        } else {
-            console.log(`error saving site settings`)
-        }
-    }
-}
-
-setInterval(() => {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/saveStats", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
-    xhr.send(JSON.stringify({ "gamesPlayed": "90" }))
-    // xhr.send(JSON.stringify({ text: "hello" }))
-
-    xhr.onreadystatechange = function(){
-        if(this.readyState != 4) return;
-
-        if(this.status == 205){
-            // var data = JSON.parse(this.responseText);
-            count++
-            console.log(this.responseText)
-            saveData();
-        } else {
-            console.log(`error saving ${values[count].key}`)
-            count++
-            saveData();
-        }
-    }
-}, 60000)
-
-function setFormMessage(formElement, type, message) {
-    const messageElement = formElement.querySelector(".form__message");
-
-    messageElement.textContent = message;
-    messageElement.classList.remove("form__message--success", "form__message--error");
-    messageElement.classList.add(`form__message--${type}`);
-}
-
-function setInputError(inputElement, message) {
-    inputElement.classList.add("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
-}
-
-function clearInputError(inputElement) {
-    inputElement.classList.remove("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const createAccountForm = document.querySelector("#createAccount");
-
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm.classList.remove("form--hidden");
-    });
-
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm.classList.add("form--hidden");
-    });
-
-    // loginForm.addEventListener("submit", e => {
-    //     e.preventDefault();
-
-    //     // Perform your AJAX/Fetch login
-
-    //     // setFormMessage(loginForm, "error", "Invalid username/password combination");
-    // });
-
-    document.querySelectorAll(".form__input").forEach(inputElement => {
-        inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
-            }
-        });
-
-        inputElement.addEventListener("input", e => {
-            clearInputError(inputElement);
-        });
-    });
-});
-
-function toggleLoginPage(){
-    let page = document.getElementById("loginPage")
-    if(page.style.display === "block"){
-        page.style.display = "none"
-        document.body.style.overflow = "visible"
-        var newlink = document.createElement("link").herf = "#hello"
-        document.getElementsByTagName("head")[0].appendChild(newlink)
-    } else {
-        page.style.display = "block"
-        page.style.position = "fixed"
-        document.body.style.overflow = "hidden"
-        var newlink = document.createElement("link").herf = "#login"
-        document.getElementsByTagName("head")[0].appendChild(newlink)
-    }
-}
-
-function toggleLoginSidebar(){
-    if(document.getElementById("loggedIn").style.display === "block"){
-        document.getElementById("notLoggedIn").style.display = "block"
-        document.getElementById("loggedIn").style.display = "none"
-    } else {
-        document.getElementById("notLoggedIn").style.display = "none"
-        document.getElementById("loggedIn").style.display = "block"
-    }
-}
+function optionsMenu(dropdown) {
+		e = document.getElementById(dropdown)
+		if(e.style.display === "none" || (e.style.display !== "none" && e.style.display !== "block")){
+			e.style.display = "block"
+		} else {
+			e.style.display = "none"
+		}
+	}

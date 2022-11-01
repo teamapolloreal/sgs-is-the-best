@@ -1,4 +1,4 @@
-let lastUpdate = "10/28/2022"
+let lastUpdate = "11/1/2022"
 let cdnUrl = "https://sgs-cdn.vercel.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -414,19 +414,19 @@ const data = [
             "Right Click - Interact",
         ]
     },
-    // {
-    //     name: "Crossy Road",
-    //     id: "crossy_road",
-    //     genre: "Arcade",
-    //     description: "The objective of this game is to move a charater through an endless path of static and moving obstacles as far as possible without dying.",
-    //     link: "Game Files/Crossy Road/index.html",
-    //     img: `${cdnUrl}/Images/crossy_road.png`,
-    //     file_based: false,
-    //     publisher: "Poki",
-    //     controls: [
-    //         "WASD/Arrow Keys/Right Click - Movement",
-    //     ]
-    // },
+    {
+        name: "Crossy Road",
+        id: "crossy_road",
+        genre: "Arcade",
+        description: "The objective of this game is to move a charater through an endless path of static and moving obstacles as far as possible without dying.",
+        link: "Game Files/Crossy Road/index.html",
+        img: `${cdnUrl}/Images/crossy_road.png`,
+        file_based: false,
+        publisher: "Poki",
+        controls: [
+            "WASD/Arrow Keys/Right Click - Movement",
+        ]
+    },
     {
         name: "Cubefield",
         id: "cubefield",
@@ -925,7 +925,7 @@ const data = [
         id: "incredibox",
         genre: "Rhythm",
         description: "Incredibox is a music app that lets you create your own music with the help of a merry crew of beatboxers.Choose your musical style among 8 impressive atmospheres and start to lay down, record and share your mix.",
-        link: "https://secretshxcksource00.github.io/tst2/",
+        link: "Game Files/Incredibox/index.html",
         img: `${cdnUrl}/Images/incredibox.png`,
         file_based: false,
         publisher: "incredibox.com",
@@ -1953,14 +1953,13 @@ const data = [
         id: "worlds_hardest_game",
         genre: "Puzzle",
         description: "This game is a very difficult game as it requires you to go through very difficult level that seem very unpossible.",
-        link: "Game Files/World's Hardest Game/index.html",
+        link: "Game Files/Worlds Hardest Game/index.html",
         img: `${cdnUrl}/Images/worlds_hardest_game.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
             "Arrow Keys - Movement",
         ],
-        broken: true
     },
     {
         name: "You Are Bezos",
@@ -2157,6 +2156,14 @@ function favorite(id){
             if(favorites === null) favoritesList = `${data[i].id}`
             localStorage.setItem("favorites", favoritesList)
 
+            document.getElementById("favoriteOption").onclick = function(){ unfavorite(data[i].id) }
+            document.getElementById("favStarOption").className = "bx bxs-star icon"
+            document.getElementById("favoriteTextOption").innerText = "Unfavorite"
+
+            document.getElementById("favoriteOption2").onclick = function(){ unfavorite(data[i].id) }
+            document.getElementById("favStarOption2").className = "bx bxs-star icon"
+            document.getElementById("favoriteTextOption2").innerText = "Unfavorite"
+
             removeGames();
             loadGames();
             return;
@@ -2176,6 +2183,14 @@ function unfavorite(id){
           } else {
               localStorage.setItem("favorites", favorites.replace(`${data[i].id}`, ""))
           }
+
+          document.getElementById("favoriteOption").onclick = function(){ favorite(data[i].id) }
+          document.getElementById("favStarOption").className = "bx bx-star icon"
+          document.getElementById("favoriteTextOption").innerText = "Favorite"
+
+          document.getElementById("favoriteOption2").onclick = function(){ favorite(data[i].id) }
+          document.getElementById("favStarOption2").className = "bx bx-star icon"
+          document.getElementById("favoriteTextOption2").innerText = "Favorite"
 
           removeGames();
           loadGames();
@@ -2204,6 +2219,18 @@ function viewGame(gameID){
             publisher.innerText = data[i].publisher
             playBtn.onclick = function(){ playGame(data[i].id) }
             document.body.style.overflow = "hidden"
+
+            if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(data[i].id)){
+                document.getElementById("favoriteOption2").onclick = function(){ unfavorite(data[i].id) }
+                document.getElementById("favStarOption2").className = "bx bxs-star icon"
+                document.getElementById("favoriteTextOption2").innerText = "Unfavorite"
+            } else {
+                document.getElementById("favoriteOption2").onclick = function(){ favorite(data[i].id) }
+                document.getElementById("favStarOption2").className = "bx bx-star icon"
+                document.getElementById("favoriteTextOption2").innerText = "Favorite"
+            }
+
+            if(document.getElementById("splashOptions").style.display = "block") document.getElementById("splashOptions").style.display = "none"
         }
     }
 }
@@ -2254,6 +2281,17 @@ function playGame(gameID){
             document.getElementById("gameIframe").src = data[i].link
             document.getElementById("controls").style.transform = `translateY(${-70 + (data[i].controls.length * -25)}px)`
             document.getElementById("controlsText").innerText = data[i].controls.join("\n")
+            if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(data[i].id)){
+                document.getElementById("favoriteOption").onclick = function(){ unfavorite(data[i].id) }
+                document.getElementById("favStarOption").className = "bx bxs-star icon"
+                document.getElementById("favoriteTextOption").innerText = "Unfavorite"
+            } else {
+                document.getElementById("favoriteOption").onclick = function(){ favorite(data[i].id) }
+                document.getElementById("favStarOption").className = "bx bx-star icon"
+                document.getElementById("favoriteTextOption").innerText = "Favorite"
+            }
+
+            if(document.getElementById("gameOptions").style.display = "block") document.getElementById("gameOptions").style.display = "none"
 
             let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
             document.getElementById("gameIframe").style.height = newHeight
