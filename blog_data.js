@@ -16,56 +16,63 @@ let data = [
     //     text: "This update includes many new features and changes with bug fixes and performance improvements. Read below for more details:<br><br><b>New Account System!</b><br>• You can now create an account to use on this website! You can login or create an account by clicking on the new icon at the bottom of the sidebar.<br>• Accounts are used to save website settings, profile stats, and more. (I was trying to make it so data from the games save, however they use up way to much data so I can't do that, sorry)<br><br><b>New Features</b><br>• New profile page to manage your account (must be logged in to access)<br>• You can now favorite games to find them easier (just shows them as a different color, will be changed in the future)<br>• New indicators on the gamepage for when some games may not be working<br>• Redesigned settings page, a lot cleaner and nicer<br><br><b>New Games</b><br>• e<br><br><b>Other</b><br>• Added a core to the site. This manages connections with the database and other various tasks. (v1.0.0)<br>• Added a footer<br>• Added more detailed information to games (publisher, controls, etc)<br>• New efficient way to load the gamed on the games page<br><br><b>Resolved Issues</b><br>• Fixed an issue with the banner.<br>• Fixed Subway Surfers.<br>• Fixed a few spelling and grammar errors<br><br><i>From now on I will not be showing the Known Issues</i>",
     // },
     {
-        title: "Update Log of Version 5.0.1",
+        title: "Update Log of v5.1.0",
+        date: "11/3/22",
+        time: "1 min read",
+        id: "9",
+        text: "This update includes loads of new features and other improvements to the site. Read below for more details:<br><br><b>Changes</b><br>• Beginning of the soundboard! I've added a couple of sounds to it, please be patient as it's still in development and many more sounds are on the way<br>• All new redesigned blogs page<br>ㅤ◦ This includes new sections for recent and older blogs<br>ㅤ◦ New search bar to find blogs easier (still needs improvements)<br>• You can now add your own theme color! New color picker on the settings page which allows you to set any color as the theme<br>ㅤ◦ You can find this under the \"Custom\" option in the menu<br>• Favorited games now show at the top<br>• Other small changes<br><br><b>New Games</b><br>• Factory Balls Forever<br>• Papery Planes<br>• Scrap Metal 3<br>• Slow Roads<br>• Smash Karts<br>• Soldier Legend<br><br><b>Resolved Issues</b><br>• Fixed a bug where games that might be experiencing issues would not change background color when favorited",
+    },
+    {
+        title: "Update Log of v5.0.1",
         date: "11/1/22",
         time: "< 1 min read",
         id: "8",
-        text: "This update includes bug fixes and other minor changes. Read below for more details:<br><br><b>Changes</b><br>• Added a new options menu to the game splash screen and when your playing a game<br><br><b>New Games</b><br>• Crossy Road<br>ㅤ◦ This is re-added after the game stopped working, this has been fixed<br><br><b>Resolved Issues</b><br>• Fixed Incredibox (kinda)<br>• Fixed World's Hardest Game",
+        text: "This update includes bug fixes and other minor changes. Read below for more details:<br><br><b>Changes</b><br>• Added a new options menu to the game splash screen and when your playing a game<br><br><b>New Games</b><br>• Crossy Road<br>ㅤ◦ This is re-added after the game stopped working, this has been fixed<br><br><b>Resolved Issues</b><br>• Fixed Incredibox (kinda)<br>• Fixed Worlds Hardest Game",
     },
     {
-        title: "Changelog of version 5!",
+        title: "Update Log of Version 5!",
         date: "10/28/22",
         time: "2 min read",
         id: "7",
-        text: "This update includes many new features and changes with bug fixes and performance improvements. Read below for more details:<br><br><b>New Features</b><br>• You can now favorite games to find them easier (just shows them as a different color, will be changed in the future)<br>• New indicators on the gamepage for when some games may not be working<br>• Redesigned settings page, a lot cleaner and nicer<br><br><b>New Forums!</b><br>• Introducing my new peerboard! I created this as a better way to interact with the community and get feedback from people.<br>• This could be used to ask me questions or as an additional way to report bugs, etc. You could also just post about general stuff.<br>• Added it to the sidebar, just click on the message icon to access it. Have fun posting!<br><br><b>New Games</b><br>• Bloons TD 2<br>• Cell Machine<br>• Deal or no Deal<br>• Defend the Tank<br>• Elastic Man<br>• EXO<br>• Google Snake<br>• Indestructo Tank<br>• Just One Boss<br>• Madalin Stunt Cars 2 & 3<br>• Matrix Rampage<br>• Miniputt<br>• Missiles<br>• Paper.io 2<br>• PolyBranch<br>• Portal Flash<br>• Press Your Luck<br>• Push the Square<br>• Snowbattle<br>• There is no Game<br>• You Are Bezos<br><br><b>Other</b><br>• Added a footer<br>• Added more detailed information to games (publisher, controls, etc)<br>• New efficient way to load the gamed on the games page<br><br><b>Resolved Issues</b><br>• Fixed an issue with the banner.<br>• Fixed Subway Surfers.<br>• Fixed a few spelling and grammar errors<br><br><i>From now on I will not be showing the Known Issues</i>",
+        text: "This update includes many new features and changes with bug fixes and performance improvements. Read below for more details:<br><br><b>New Features</b><br>• You can now favorite games to find them easier (just shows them as a different color, will be changed in the future)<br>• New indicators on the gamepage for when some games may not be working<br>• Redesigned settings page, a lot cleaner and nicer<br><br><b>New Forums!</b><br>• Introducing my new peerboard! I created this as a better way to interact with the community and get feedback from people.<br>• This could be used to ask me questions or as an additional way to report bugs, etc. You could also just post about general stuff.<br>• Added it to the sidebar, just click on the message icon to access it. Have fun posting!<br><br><b>New Games</b><br>• Bloons TD 2<br>• Cell Machine<br>• Deal or no Deal<br>• Defend the Tank<br>• Elastic Man<br>• EXO<br>• Google Snake<br>• Indestructo Tank<br>• Just One Boss<br>• Madalin Stunt Cars 2 & 3<br>• Matrix Rampage<br>• Miniputt<br>• Missiles<br>• Paper.io 2<br>• PolyBranch<br>• Portal Flash<br>• Push Your Luck<br>• Push the Square<br>• Snowbattle<br>• There is no Game<br>• You Are Bezos<br><br><b>Other</b><br>• Added a footer<br>• Added more detailed information to games (publisher, controls, etc)<br>• New efficient way to load the games on the games page<br><br><b>Resolved Issues</b><br>• Fixed an issue with the banner.<br>• Fixed Subway Surfers.<br>• Fixed a few spelling and grammar errors<br><br><i>From now on I will not be showing the Known Issues</i>",
     },
     {
-        title: "Changelog of v4.1.2",
+        title: "Update Log of v4.1.2",
         date: "9/28/22",
         time: "< 1 min read",
         id: "6",
         text: "This update includes some new games and other fixes. Read below for more details:<br><br><b>Changes</b><br>• Fixed a typo in the settings.<br><br><b>New Games</b><br>• Age of War<br>• Death Run 3D<br>• Gun Mayhem 2 & Redux (finally, sorry for the wait)<br>• Jetboy<br>• Papa's Pizzaria & Scooperia<br>• Retro Bowl<br><br><b>Other</b><br>• Removed Fishington.io because it got blocked.<br>• Removed Powerline.io because it got blocked.<br><br><b>Known Issues</b><br>• Scaling may be a problem with certain elements on bigger/smaller resolution devices. (34482888)<br>ㅤ◦ <b>Workaround:</b> Scale up/down the page using zoom. Not available on mobile.<br>• Sometimes when clicking off the game splash screen thing, you would end up viewing a different game's splash screen. (44939979)<br>ㅤ◦ <b>Workaround:</b> Scale the page down. Not available on mobile.<br>• None of the site icons, including the cloak icons, show up. (52999265)<br>• 1v1.lol is not loading all the way. (91155718)<br>• Can't fullscreen on phones<br>• Some games' title text might be too long and cause it to look weird<br>• Connect 4 randomly broke its style (idk how lol)",
     },
     {
-        title: "Changelog of v4.1.1",
+        title: "Update Log of v4.1.1",
         date: "9/21/22",
         time: "1 - 2 min read",
         id: "5",
         text: "This update includes some needed changes and bug fixes. Read below for more details:<br><br><b>Changes</b><br>• Moved the settings tab down on the sidebar to the bottom<br>• New focus screen for when you go out of focus during a game (like when you're not clicked on it)<br>• New message when you play a game that may be experiencing issues<br><br><b>New Games</b><br>• Basketbros.io (Re-added)<br>• Death Chase 3<br>• Powerline.io<br>• Shell Shocker<br>ㅤ◦ This game was previously removed after some security issues but seems to have been resolved<br>• Solitaire<br><br><b>Other</b><br>• Removed Betrayal.io because it got blocked.<br>• Fixed Friday Night Funkin'<br>• Fixed Sort the Court.<br>• Fixed the World's Hardest Game<br><br><b>Known Issues</b><br>• Scaling may be a problem with certain elements on bigger/smaller resolution devices. (34482888)<br>ㅤ◦ <b>Workaround:</b> Scale up/down the page using zoom. Not available on mobile.<br>• Sometimes when clicking off the game splash screen thing, you would end up viewing a different game's splash screen. (44939979)<br>ㅤ◦ <b>Workaround:</b> Scale the page down. Not available on mobile.<br>• None of the site icons, including the cloak icons, show up. (52999265)<br>• 1v1.lol is not loading all the way. (91155718)<br><br><b>Resolved Issues</b><br>• On some devices, game descriptions might be too long that they get cut off, and/or the play button, at the bottom of the page. (79099003)<br>ㅤ◦ <b>Solution:</b> Turned on the y-overflow for the div element so it adds a scrollbar if it goes beyond a certain height.<br>• On some devices, a weird glitch would occur where if you scroll down on the gamepage and you play a game the page would be scrolled down too far somehow.<br>ㅤ◦ <b>Solution:</b> Every time the user plays a game it will scroll up to the top of the page.",
     },
     {
-        title: "Changelog of v4.1.0",
+        title: "Update Log of v4.1.0",
         date: "9/15/22",
         time: "2 min read",
         id: "4",
         text: "This update includes some cool new changes and features. Read below for more details:<br><br><b>Changes</b><br>• In the settings, you can now change the theme of the website to a few different colors. (More will be added and maybe even a custom option)<br>• New dark themed mode! Dark themed is basically dark mode but with the theme color. (Few things might need some improvements)<br>ㅤ◦ New option in the settings to change the mode of the site between light and dark mode, now with dark themed.<br>ㅤ◦ Removed the switch on the sidebar because of this.<br>• Added a new banner on the games page to inform users about updates and other important things.<br><br><b>New Games (Now over 100!)</b><br>• Asteroids<br>• Bounce Back<br>• BreakLock<br>• Cubefield<br>• Doodle Jump<br>• Evil Glitch<br>• Fishington.io<br>• Flappy Bird<br>• Hextris<br>• Pac-Man<br>• Radius Raid<br>• Retrohaunt<br>• Space Company<br>• Weaver Unlimited<br><br><b>Other</b><br>• Working on fixing crossy road. (Temporarily removed it)<br>• Blogs are now shown from newest to oldest instead of the other way around.<br>• Fixed a minor height error on the game splash screen.<br>• Adjusted the loading screen even more by making it fixed on the screen.<br>• You can no longer scroll while on a game's splash screen.<br>• Fixed Pokémon Emerald.<br><br><b>Known Issues</b><br>• Scaling may be a problem with certain elements on bigger/smaller resolution devices. (34482888)<br>ㅤ◦ <b>Workaround:</b> Scale up/down the page using zoom. Not available on mobile.<br>• Sometimes when clicking off the game splash screen thing, you would end up viewing a different game's splash screen. (44939979)<br>• On some devices, game descriptions might be too long that they get cut off, and/or the play button, at the bottom of the page. (79099003)<br>ㅤ◦ <b>Workaround:</b> Scale the page down. Not available on mobile.<br>• None of the site icons, including the cloak icons, show up. (52999265)<br>• 1v1.lol is not loading all the way. (91155718)",
     },
     {
-        title: "Changelog of v4.0.2",
+        title: "Update Log of v4.0.2",
         date: "8/24/22",
         time: "< 1 min read",
         id: "3",
         text: "This update includes some minor changes and small bug fixes. Read below for more details:<br><br><b>Changes</b><br>• Added a <b>X</b> on the game splash screen at the top left corner as another way to close it. (You can still click anywhere on the screen)<br><br><b>Known Issues</b><br>• Scaling may be a problem with certain elements on bigger/smaller resolution devices. (34482888)<br>ㅤ◦ <b>Workaround:</b> Scale up/down the page using zoom. Not available on mobile.<br>• Sometimes when clicking off the game splash screen thing, you would end up viewing a different game's splash screen. (44939979)<br>• On some devices, game descriptions might be too long that they get cut off, and/or the play button, at the bottom of the page. (79099003)<br>ㅤ◦ <b>Workaround:</b> Scale the page down. Not available on mobile.<br>• None of the site icons, including the cloak icons, show up. (52999265)<br><br><b>Resolved Issues</b><br>• If you scroll down and reload, the loading screen doesn't fade out and is seen fading out at the top of the page. (49867091)<br>ㅤ◦ <b>Solution:</b> Make it scroll to the top of the page upon reload.<br>• When loading the site, you may see the site glitch before completely loading with no loading screen. (26911389)<br>ㅤ◦ <b>Solution:</b> Hide the site by default and then re-show it once it loads the javascript.",
     },
     {
-        title: "Changelog of v4.0.1",
+        title: "Update Log of v4.0.1",
         date: "8/23/22",
         time: "< 1 min read",
         id: "2",
         text: "This update includes some small changes such as minor bug fixes and security updates. Read below for more details:<br><br><b>Security Updates</b><br>• Removed Adventure Capitalist as GitHub's Dependabot found <b>61 vulnerable dependencies</b> with some being critical.<br>ㅤ◦ I'm aware that this may of been actively exploited.<br><br><b>Changes</b><br>• Changed the scaling on the home page, should look better on smaller/bigger resolution devices.<br>• Fixed a few grammar and spelling errors, but there's still probably a lot more.<br>• Experimenting with a few other scaling things, the site should look a lot better on some devices.<br><br><b>Performance</b><br>• Increased the performance when playing games. This was mainly noticeable on mobile cause it was literal garbage before the update.<br><br><b>Known Issues</b><br>• When loading the site, you may see the site glitch before completely loading with no loading screen. (26911389)<br>• Scaling may be a problem with certain elements on bigger/smaller resolution devices. (34482888)<br>ㅤ◦ <b>Workaround:</b> Scale up/down the page using zoom. Not available on mobile.<br>• If you scroll down and reload, the loading screen doesn't fade out and is seen fading out at the top of the page. (49867091)<br>• Sometimes when clicking off the game splash screen thing, you would end up viewing a different game's splash screen. (44939979)<br>• On some devices, game descriptions might be too long that they get cut off, and/or the play button, at the bottom of the page. (79099003)<br>ㅤ◦ <b>Workaround:</b> Scale the page down. Not available on mobile.<br>• None of the site icons, including the cloak icons, show up. (52999265)<br><br><b>Resolved Issues</b><br>• Most noticeably on mobile, when you switch to the gamepage after being focused on the iframe, it would not re-show the scrollbar sometimes.(73980552)<br>ㅤ◦ <b>Solution:</b> Make it re-show in the script for going back to the gamepage.",
     },
     {
-        title: "Changelog of version 4!",
+        title: "Update Log of version 4!",
         date: "8/22/2022",
         time: "2 min read",
         id: "1",
@@ -85,10 +92,12 @@ data.forEach(blog => {
     let box = document.getElementsByClassName(`blogBox`)
     let title = document.getElementsByClassName(`blogTitle`)
     let date = document.getElementsByClassName(`blogDate`)
+    let description = document.getElementsByClassName(`blogDescription`)
 
     box[count].onclick = function(){ viewBlog(blog.id) }
     title[count].innerText = blog.title
     date[count].innerText = blog.date
+    if(blog.title.toLowerCase().includes("update log")) description[count].innerText = "Click to read this update log."
 
     count++;
 })
@@ -103,6 +112,37 @@ function viewBlog(blogID){
             document.getElementById("blog_date").innerText = `${data[i].date} • ${data[i].time}`
 
             document.getElementById("blog_text").innerHTML = data[i].text
+        }
+    }
+}
+
+function hideShow(e){
+    document.getElementById("blog_recent").style.display = e
+    document.getElementById("blog_description").style.display = e
+    document.getElementById("blog_description2").style.display = e
+    document.getElementById("blog_line").style.display = e
+    document.getElementById("blog_other").style.display = e
+    document.getElementById("blog_br1").style.display = e
+    document.getElementById("blog_br2").style.display = e
+}
+
+function searchBlog(){
+    let input = document.getElementById("searchbarBlog").value
+    input = input.toLowerCase()
+    let x = document.getElementsByClassName("blogBox")
+
+    if(input <= 0){
+        hideShow("block")
+        for(o = 0; o < x.length; o++){ x[i].style.display = "inline-table" }
+        return;
+    }
+
+    for(i = 0; i < x.length; i++){
+        if(!data[i].title.toLowerCase().includes(input)){
+            x[i].style.display = "none";
+        } else {
+            x[i].style.display = "inline-table"
+            hideShow("none")
         }
     }
 }

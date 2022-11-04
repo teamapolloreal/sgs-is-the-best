@@ -327,14 +327,24 @@ function setTheme(){
         localStorage.setItem("themeHex", "#febb01")
         loadTheme();
     }
+    if(theme === "Custom"){
+        localStorage.setItem("themeHex", document.getElementById("theme_color_picker").value)
+        document.getElementById("theme_color_picker").style.display = "block"
+        loadTheme();
+    }
 }
 
 var ddl = document.getElementById("themeSelect");
+var colorPicker = document.getElementById("theme_color_picker")
 if(ddl !== null){
     var opts = ddl.options.length
     for(var i = 0; i < opts; i++){
         if(ddl.options[i].value == localStorage.getItem("theme")){
             ddl.options[i].selected = true;
+            if(localStorage.getItem("theme") === "Custom"){
+                colorPicker.style.display = "block"
+                colorPicker.value = localStorage.getItem("themeHex")
+            }
             break;
         }
     }
@@ -349,7 +359,7 @@ window.onload = (event) => {
             }
             localStorage.setItem("tabCloak", event.target.value);
             setCloak();
-            saveSiteData();
+            // saveSiteData();
         })
     }
 
@@ -361,7 +371,7 @@ window.onload = (event) => {
             }
             localStorage.setItem("mode", event.target.value);
             setMode();
-            saveSiteData();
+            // saveSiteData();
         })
     }
 
@@ -372,8 +382,9 @@ window.onload = (event) => {
                 localStorage.setItem("theme", "Purple (Default)");
             }
             localStorage.setItem("theme", event.target.value);
+            document.getElementById("theme_color_picker").style.display = "none"
             setTheme();
-            saveSiteData();
+            // saveSiteData();
         })
     }
 
@@ -451,7 +462,7 @@ function hideBanner(){
 //     xhr.send();
 // }
 //
-// function saveSiteData(){
+// function // saveSiteData(){
 //     var values = [],
 //     keys = Object.keys(localStorage),
 //     i = 0, keys;
@@ -463,7 +474,7 @@ function hideBanner(){
 //     console.log(values)
 //
 //     var xhr = new XMLHttpRequest();
-//     xhr.open("POST", "/saveSiteData", true);
+//     xhr.open("POST", "/// saveSiteData", true);
 //     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
 //     xhr.send(JSON.stringify(values))
 //     // xhr.send(JSON.stringify({ text: "hello" }))
@@ -598,3 +609,17 @@ function optionsMenu(dropdown) {
 			e.style.display = "none"
 		}
 	}
+
+  function searchSoundboard(){
+      let input = document.getElementById("searchbarSoundboard").value
+      input = input.toLowerCase()
+      let x = document.getElementsByClassName("soundboard")
+
+      for(i = 0; i < x.length; i++){
+          if(!x[i].id.toLowerCase().includes(input)){
+              x[i].style.display = "none";
+          } else {
+              x[i].style.display = "inline-table"
+          }
+      }
+  }

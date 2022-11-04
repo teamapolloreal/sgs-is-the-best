@@ -123,6 +123,22 @@
                     </a>
                 </li>
 
+                <!-- <li class="mode" id="notLoggedIn">
+                    <a href="#" onclick="toggleLoginPage()">
+                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                        <span class="text nav-text">Login or create</span>
+                        <span class="hovertext">Login or create an account</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="loggedIn" style="display: none">
+                    <a href="account.html">
+                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                        <span class="text nav-text">Account (BETA)</span>
+                        <span class="hovertext">Manage Account (BETA)</span>
+                    </a>
+                </li> -->
+
                 <!-- <li class="">
                     <a href="#">
                         <i class='bx bx-log-out icon' ></i>
@@ -149,8 +165,8 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">New Options Menu! (v5.0.1)</div>
-            <div class="messageBannerText">New menu to perform actions such as favoriting, found on the game splash screen and while playing a game. View the update log on the blogs page for additional bug fixes and changes.</div>
+            <div class="messageBannerTitle">New Soundboard + Games! (v5.1.0)</div>
+            <div class="messageBannerText">Introducing the new soundboard to mess around with! New games, all new redesigned blogs page, theme color picker, and more! Read the update log on the blogs page for more.</div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
@@ -180,7 +196,7 @@
         <div class="filter">
             <span class='bx bx-filter icon'></span>
             <select class="filter-input" id="filterSelect">
-                <option class="dropdown-option">None</option>
+                <option class="dropdown-option">Filter - None</option>
                 <!-- <option class="dropdown-option">hello</option> -->
             </select>
         </div>
@@ -225,6 +241,9 @@
                         </button>
                     </div>
                 </div>
+                <!-- <button class="reportButton" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
+                    <i class='bx bxs-flag-alt icon'></i>
+                </button> -->
             </div>
         </div>
 
@@ -245,6 +264,7 @@
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
             <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
         </footer>
     </section>
 
@@ -257,6 +277,10 @@
             </div>
             <div class="messageBannerText" style="width: 100%; overflow: none;">If so, this game may not be working as expected. A fix is probably in the works.</div>
         </div>
+        <!-- <div class="gameOptions" onclick="">
+            <i class='bx bx-dots-horizontal-rounded icon' ></i>
+            <span class="hovertext7">Options</span>
+        </div> -->
         <div id="" class="gameOptions" onclick="optionsMenu('gameOptions')">
             <i class='bx bx-dots-horizontal-rounded icon' ></i>
             <span class="hovertext7">Options</span>
@@ -310,7 +334,8 @@
                 <span style="padding: 5px">Gamepage</span>
             </div>
         </div>
-        <br><br>
+        <br>
+        <br>
         <footer class="footer" id="footer">
             <br>
             <span class="text">Copyright Syce's Game Shack 2022© - Contact: sycegameshack@gmail.com</span>
@@ -318,8 +343,16 @@
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
             <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
         </footer>
     </section>
+
+    <!-- <section style="position: fixed; z-index: 101; display: none; width: 20%; height: 50px;" id="overlays">
+        <div class="savedOverlay" id="savedOverlay">
+            <span class='bx bx-check icon' style="transform: translate(-2px, 5px); font-size: 25px; padding: 1px; color: #00FF00"></span>
+            <span>Saved Game Data!</span>
+        </div>
+    </section> -->
 
     <script src="script.js"></script>
     <script src="game_data.js"></script>

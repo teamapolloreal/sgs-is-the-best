@@ -21,7 +21,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Syce's Game Shack</title>
-    <link rel="icon" herf="sgs-logo.png" type=image/png>
+    <link rel="icon" herf="sgs-logo.png" type="image/png">
 </head>
 <body>
     <div class="loader-wrapper" id="loader-wrapper">
@@ -122,6 +122,21 @@
                         <span class="hovertext">Settings</span>
                     </a>
                 </li>
+                <!-- <li class="mode" id="notLoggedIn">
+                    <a href="#" onclick="toggleLoginPage()">
+                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                        <span class="text nav-text">Login or create</span>
+                        <span class="hovertext">Login or create an account</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="loggedIn" style="display: none">
+                    <a href="account.html">
+                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                        <span class="text nav-text">Account (BETA)</span>
+                        <span class="hovertext">Manage Account (BETA)</span>
+                    </a>
+                </li> -->
 
                 <!-- <li class="">
                     <div class="profile-details">
@@ -179,10 +194,9 @@
             <div style="display: inline-table; width: 403px; width: 30vw; height: auto; transform: translate(-65%, 4.1vw)">
                 <div class="homeSectionTitle"><b>New Forums!</b></div>
                 <div class="homeSectionText">I've now created a peerboard for the community to chat with! I'll post important updates and other stuff here too.<br><br>I did this as a better way to interact with the community and get more feedback. Feel free to ask me questions, chat with other people, use it for report bugs or game sugestions, etc. It's included on the sidebar with the new message icon.</b></div>
-          </div>
+            </div>
         </div>
         <br>
-        <br><br>
         <footer class="footer" id="footer">
             <br>
             <span class="text">Copyright Syce's Game Shack 2022© - Contact: sycegameshack@gmail.com</span>
@@ -190,10 +204,11 @@
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
             <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
         </footer>
     </section>
 
-    <section class="section" style="display:none; background-color: transparent;" id="loginPage">
+    <!-- <section class="section" style="display:none; background-color: transparent;" id="loginPage">
         <div class="fadedBackground"></div>
         <br>
         <div class="login">
@@ -209,18 +224,10 @@
                     <div class="form__input-error-message"></div>
                 </div>
                 <button class="form__button" type="submit">Continue</button>
-                <!-- <br><br> -->
-                <!-- <p class="form__text">
-                    <a href="#" class="form__link">Forgot your password?</a>
-                </p> -->
                 <br><br>
                 <p class="form__text">
                     <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
                 </p>
-                <!-- <br>
-                <p class="form__text">
-                    <a>Don't lose your account login because there's no way to get it back.</a>
-                </p> -->
             </form>
             <form class="form form--hidden" id="createAccount" action="/createaccount" method="post">
                 <h1 class="form__title">Create Account</h1>
@@ -229,10 +236,6 @@
                     <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username" name="Username" required>
                     <div class="form__input-error-message"></div>
                 </div>
-                <!-- <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Email Address">
-                    <div class="form__input-error-message"></div>
-                </div> -->
                 <div class="form__input-group">
                     <input type="password" class="form__input" autofocus placeholder="Password" name="Password" required>
                     <div class="form__input-error-message"></div>
@@ -248,14 +251,14 @@
                 </p>
             </form>
         </div>
-    </section>
+    </section> -->
 
-    <section style="position: fixed; z-index: 101; display: none; width: 20%; height: 50px;" id="overlays">
+    <!-- <section style="position: fixed; z-index: 101; display: none; width: 20%; height: 50px;" id="overlays">
         <div class="savedOverlay" id="savedOverlay">
             <span class='bx bx-check icon' style="transform: translate(-2px, 5px); font-size: 25px; padding: 1px; color: #00FF00"></span>
             <span>Saved Game Data!</span>
         </div>
-    </section>
+    </section> -->
 
     <script src="script.js"></script>
 

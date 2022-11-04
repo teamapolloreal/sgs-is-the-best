@@ -123,6 +123,22 @@
                     </a>
                 </li>
 
+                <!-- <li class="mode" id="notLoggedIn">
+                    <a href="#" onclick="toggleLoginPage()">
+                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                        <span class="text nav-text">Login or create</span>
+                        <span class="hovertext">Login or create an account</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="loggedIn" style="display: none">
+                    <a href="account.html">
+                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                        <span class="text nav-text">Account (BETA)</span>
+                        <span class="hovertext">Manage Account (BETA)</span>
+                    </a>
+                </li> -->
+
                 <!-- <li class="">
                     <a href="#">
                         <i class='bx bx-log-out icon' ></i>
@@ -149,11 +165,146 @@
 
     <section class="section">
         <br>
+        <div class="messageBanner broken_banner" style="display: block; background-color: red;" id="importantMessage">
+            <div class="messageBannerTitle">
+                <span class='bx bx-error icon' style="transform: translateY(2px)"></span>
+                <span>Still in Development!<span>
+            </div>
+            <div class="messageBannerText" style="width: 100%; overflow: none;">This soundboard is still in the works and will have many improvements and new features soon!</div>
+        </div>
         <div class="title">Syce's Soundboard</div>
         <div class="text">I randomly made this soundboard once for fun and I thought it would be nice to include on the website :)</div>
         <div class="text">This is to be used to for fun purposes, please remember I'm not responsible for any trouble this may cause you.</div>
+        <br>
+        <div class="text" id="gamecount" style="display: inline-table; float: left;">Sounds: 16<br>Updated: 11/3/22</div>
+        <div class="" style="display: inline-table; float: right; padding-right: 5%;">
+            <button class="suggestionBox" onclick="window.open('https://forms.gle/oJV2kiSCFMZah3rP9', '_blank')">
+                <i class='bx bx-upload icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
+                <span>Upload a sound</span>
+            </button>
+        </div>
+        <br>
+        <div style="height: 35px; width: 1px;"></div>
+        <div class="search-box" style="width: 90%">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search..." id="searchbarSoundboard" onkeyup="searchSoundboard()">
+        </div>
         <br><br>
-        <div style="font-size: 25px; color: var(--text-color); font-weight: 600;">update (9/15): this is not really my top priority right now, i will probably add this in like a month (sorry)</div>
+
+        <div class="soundboard" id="android">
+            <audio class="sound" id="android" src="Soundboard/android-notif.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('android').play()" id="click">
+                <div class="soundboard_title" id="title">Android.mp3</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="bonk">
+            <audio class="sound" id="bonk" src="Soundboard/bonk.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('bonk').play()" id="click">
+                <div class="soundboard_title" id="title">Bonk</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="bruh">
+            <audio class="sound" id="bruh" src="Soundboard/bruh.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('bruh').play()" id="click">
+                <div class="soundboard_title" id="title">Bruh</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="dababy lets go">
+            <audio class="sound" id="lets_go" src="Soundboard/dababy-lets-go.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('lets_go').play()" id="click">
+                <div class="soundboard_title" id="title">Lets Go</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="dun dun law and order law & order">
+            <audio class="sound" id="DUN_DUN" src="Soundboard/DUN_DUN.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('DUN_DUN').play()" id="click">
+                <div class="soundboard_title" id="title">DUN DUN</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="fart">
+            <audio class="sound" id="fart" src="Soundboard/fart.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('fart').play()" id="click">
+                <div class="soundboard_title" id="title">Fart</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="fart with reverb">
+            <audio class="sound" id="fart-with-reverb" src="Soundboard/fart-with-reverb.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('fart-with-reverb').play()" id="click">
+                <div class="soundboard_title" id="title">Reverb Fart</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="nope">
+            <audio class="sound" id="nope" src="Soundboard/nope.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('nope').play()" id="click">
+                <div class="soundboard_title" id="title">Nope</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="rick roll never gonna give you up">
+            <audio class="sound" id="rick-roll" src="Soundboard/rick-roll.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('rick-roll').play()" id="click">
+                <div class="soundboard_title" id="title">Rick Roll</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="sicko mode">
+            <audio class="sound" id="sicko" src="Soundboard/sicko.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('sicko').play()" id="click">
+                <div class="soundboard_title" id="title">Sicko Mode</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="sloppy fart">
+            <audio class="sound" id="sloppy-fart" src="Soundboard/sloppy-fart.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('sloppy-fart').play()" id="click">
+                <div class="soundboard_title" id="title">Sloppy Fart</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="taco bell">
+            <audio class="sound" id="taco-bell" src="Soundboard/taco-bell.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('taco-bell').play()" id="click">
+                <div class="soundboard_title" id="title">Taco Bell</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="what the dog doin'">
+            <audio class="sound" id="what-the-dog-doin" src="Soundboard/what-the-dog-doin.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('what-the-dog-doin').play()" id="click">
+                <div class="soundboard_title" id="title">What the Dog Doin'</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="vine boom">
+            <audio class="sound" id="vine-boom" src="Soundboard/vine-boom.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('vine-boom').play()" id="click">
+                <div class="soundboard_title" id="title">Vine Boom</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="windows error">
+            <audio class="sound" id="WinError" src="Soundboard/WinError.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('WinError').play()" id="click">
+                <div class="soundboard_title" id="title">Windows Error</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <div class="soundboard" id="yeet">
+            <audio class="sound" id="yeet" src="Soundboard/yeet.mp3" preload="auto"></audio>
+            <a class="soundboard_click" onclick="document.getElementById('yeet').play()" id="click">
+                <div class="soundboard_title" id="title">Yeet</div>
+                <i class='bx bx-play icon' id="play_icon"></i>
+            </a>
+        </div>
+        <br><br>
+        <span class="text">loads of more sounds will be added just give me some time thanks :)</span>
         <br><br>
         <footer class="footer" id="footer">
             <br>
@@ -162,8 +313,16 @@
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
             <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
         </footer>
     </section>
+
+    <!-- <section style="position: fixed; z-index: 101; display: none; width: 20%; height: 50px;" id="overlays">
+        <div class="savedOverlay" id="savedOverlay">
+            <span class='bx bx-check icon' style="transform: translate(-2px, 5px); font-size: 25px; padding: 1px; color: #00FF00"></span>
+            <span>Saved Game Data!</span>
+        </div>
+    </section> -->
 
     <script src="script.js"></script>
 

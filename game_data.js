@@ -1,4 +1,4 @@
-let lastUpdate = "11/1/2022"
+let lastUpdate = "11/3/2022"
 let cdnUrl = "https://sgs-cdn.vercel.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -726,6 +726,19 @@ const data = [
         ]
     },
     {
+        name: "Factory Balls Forever",
+        id: "factory_balls_forever",
+        genre: "Puzzle",
+        description: "Factory Balls Forever is a puzzle game where you have to color the balls correctly! Use different tools to cover up the ball before start painting over it. Use the tools in the right order to create the right pattern for the puzzle. The game has a ton of levels, getting more and more difficult as you go along. Can you finish all puzzles in Factory Balls Forever?",
+        link: "Game Files/Factory Balls Forever/index.html",
+        img: `${cdnUrl}/Images/factory_balls_forever.png`,
+        file_based: true,
+        publisher: "engineering.com",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Fireboy & Watergirl",
         id: "fireboy_and_watergirl",
         genre: "2 Player / Puzzle",
@@ -1260,6 +1273,19 @@ const data = [
         ]
     },
     {
+        name: "Papery Planes",
+        id: "papery_planes",
+        genre: "Arcade",
+        description: "Papery Planes is a skill game where you have to fly your paper plane as far as possible. You are floating over a river with different rock formations that you have to dodge. The weather conditions will be changing from day to night and from summer to winter to make your flight as hard as possible. Collect enough coins to buy different types of Papery Planes and make sure to collect them all!",
+        link: "Game Files/Papery Planes/index.html",
+        img: `${cdnUrl}/Images/papery_planes.png`,
+        file_based: true,
+        publisher: "Poki",
+        controls: [
+            "Left/Right Arrow Keys - Fly Direction",
+        ]
+    },
+    {
         name: "Pocket League 3D",
         id: "pocket_league_3d",
         genre: "Arcade / Sports",
@@ -1509,6 +1535,19 @@ const data = [
         ]
     },
     {
+        name: "Scrap Metal 3",
+        id: "scrap_metal_3",
+        genre: "Adventure / Driving",
+        description: "This game is an amazing 3D car driving game in which you enjoy freedom to explore a huge map with many different terrains. This third Scrap Metal game brings you even more freedom, and 4 new cars. Explore the mountains, overcome different kinds of obstacles, and enjoy the high speeds!",
+        link: "Game Files/Scrap Metal 3/index.html",
+        img: `${cdnUrl}/Images/scrap_metal_3.png`,
+        file_based: true,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
         name: "Shell Shockers",
         id: "shell_shockers",
         genre: "FPS / Shooter",
@@ -1519,7 +1558,8 @@ const data = [
         publisher: "Blue Wizard Digital",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true
     },
     {
         name: "Slope 1",
@@ -1535,6 +1575,33 @@ const data = [
         ]
     },
     {
+        name: "Slow Roads",
+        id: "slow_roads",
+        genre: "Driving / Endless",
+        description: "Enjoy this slow relaxing endless driving game with minimalist visuals.",
+        link: "https://slowroads.io/",
+        img: `${cdnUrl}/Images/slow_roads.png`,
+        file_based: false,
+        publisher: "Unknown",
+        controls: [
+            "",
+        ]
+    },
+    {
+        name: "Smash Karts",
+        id: "smash_karts",
+        genre: "Arcade",
+        description: "Smash Karts is a free io Multiplayer Kart Battle Arena game. Drive fast. Fire rockets. Make big explosions.",
+        link: "Game Files/Smash Karts/index.html",
+        img: `${cdnUrl}/Images/smash_karts.png`,
+        file_based: true,
+        publisher: "SmashKarts.io",
+        controls: [
+            "WASD/Arrow Keys - Movement",
+            "Space - Fire Weapons"
+        ]
+    },
+    {
         name: "Snow Battle.io",
         id: "snow_battle-io",
         genre: "Action / Multiplayer",
@@ -1545,6 +1612,22 @@ const data = [
         publisher: "Y8",
         controls: [
             "",
+        ]
+    },
+    {
+        name: "Soldier Legend",
+        id: "soldier_legend",
+        genre: "Action / Shooting",
+        description: "The legendary soldier is incredible. In the game, the city has been attacked by aliens. They are trying to destroy the city. Now, pick up weapon and fight against them! Grab coins after you eliminated an alien to buy advanced weapons, towers and power-ups. You might want to invest in robo-factories and mana that supports you.",
+        link: "Game Files/Soldier Legend/index.html",
+        img: `${cdnUrl}/Images/soldier_legend.png`,
+        file_based: true,
+        publisher: "Poki",
+        controls: [
+            "WASD - Movement",
+            "R - Reload",
+            "1/3 - Special Attacks",
+            "Mouse Click - Shoot",
         ]
     },
     {
@@ -2013,6 +2096,7 @@ loadGames()
 function loadGames(){
     var count = 0
     var containers = []
+    var favorities = []
 
     data.forEach(game => {
         var div = document.createElement("div");
@@ -2025,6 +2109,12 @@ function loadGames(){
         game_click.id = "click"
         game_click.onclick = function(){ viewGame(game.id) }
         game_click.herf = game.id
+
+        if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
+            if(localStorage.getItem("mode") !== "Dark") div.style.backgroundColor = localStorage.getItem("themeHex") || "#695CFE"
+            if(localStorage.getItem("mode") === "Dark") div.style.backgroundColor = "#3a3b3c"
+            div.style.color = "#fff"
+        }
 
         if(game.broken === true){
           var broken_icon = document.createElement("i")
@@ -2040,9 +2130,6 @@ function loadGames(){
           if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
               fav_icon.onclick = function(){ unfavorite(game.id) }
               fav_icon.className = "bx bxs-star icon"
-              if(localStorage.getItem("mode") !== "Dark") div.style.backgroundColor = localStorage.getItem("themeHex") || "#695CFE"
-              if(localStorage.getItem("mode") === "Dark") div.style.backgroundColor = "#3a3b3c"
-              div.style.color = "#fff"
           } else {
               fav_icon.onclick = function(){ favorite(game.id) }
           }
@@ -2071,12 +2158,21 @@ function loadGames(){
 
         div.appendChild(game_click)
 
-        containers.push(div)
+        if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
+            favorities.push(div)
+        } else {
+            containers.push(div)
+        }
     })
 
     containers.reverse().forEach(container => {
         referenceNode = document.getElementById("gameViewFullscreen")
         referenceNode.parentNode.insertBefore(container, referenceNode.nextSibling)
+    })
+
+    favorities.reverse().forEach(favorite => {
+        referenceNode = document.getElementById("gameViewFullscreen")
+        referenceNode.parentNode.insertBefore(favorite, referenceNode.nextSibling)
     })
 
     resizeWidth();
@@ -2119,24 +2215,27 @@ for(let i = 0; i < selectOptionsList.length; i++){
 }
 var select = document.getElementById("filterSelect")
 select.onchange = async (event) => {
+    var currentContainers = document.getElementsByClassName("container")
     var inputText = event.target.value;
 
+    console.log(currentContainers)
+
     if(inputText === "None"){
-        for(let i = 0; i < container.length; i++){ container[i].style.display = "inline-table"}
+        for(let i = 0; i < currentContainers.length; i++){ currentContainers[i].style.display = "inline-table"}
         return;
     }
 
-    for(let i = 0; i < container.length; i++){ container[i].style.display = "none"}
+    for(let i = 0; i < currentContainers.length; i++){ currentContainers[i].style.display = "none"}
 
     for(let i = 0; i < selectOptionsList.length; i++){
         if(inputText === selectOptionsList[i]){
             for(let o = 0; o < data.length; o++){
                 if(data[o].genre.includes(" / ")){
                     for(let u = 0; u < data[o].genre.split(" / ").length; u++){
-                        if(data[o].genre.split(" / ")[u] === inputText) container[o].style.display = "inline-table"
+                        if(data[o].genre.split(" / ")[u] === inputText) currentContainers[o].style.display = "inline-table"
                     }
                 } else {
-                    if(data[o].genre === inputText) container[o].style.display = "inline-table"
+                    if(data[o].genre === inputText) currentContainers[o].style.display = "inline-table"
                 }
             }
             break;

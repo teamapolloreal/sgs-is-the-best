@@ -1026,7 +1026,7 @@ body.dark .container:hover{
     color: var(--text-color);
 }
 
-.settingsHeading {
+.pageHeading {
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color);
@@ -1034,7 +1034,7 @@ body.dark .container:hover{
     text-align: left;
 }
 
-.settingsLine {
+.pageLine {
     width: 90%;
     background-color: var(--text-color);
     height: 2px;
@@ -1050,7 +1050,7 @@ body.dark .container:hover{
     text-align: left;
 }
 
-.settingsDescription {
+.pageDescription {
     color: var(--text-color);
     font-weight: 400;
     font-size: 15px;
@@ -1226,39 +1226,67 @@ body.dark .profileStatsText{
     border: hidden;
 }
 
+.color_picker{
+    transform: translateY(-35px);
+    position: absolute;
+    right: 18%;
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
 .blogBox{
     text-align: center;
     position: relative;
     width: 30%;
     /* height: 170px; */
-    height: auto;
+    height: 200px;
     border-radius: 15px;
     line-height: 175%;
     text-decoration: hidden;
     background-color: var(--sidebar-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    padding-top: 10px;
+    padding: 16px;
+    padding-top: 5px;
     /* padding-bottom: 15px; */
     /* margin-top: 7px; */
     margin-left: 3px;
     display: inline-table;
     color: var(--text-color);
     padding-bottom: 30px;
+    line-height: 300%;
 }
 
 .blogBox:hover{
-    background-color: var(--primary-color);
+    opacity: 0.7;
     cursor: pointer;
     color: #fff;
+}
+
+.blogBox:hover .blogImg{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.blogImg {
+    background-image: url("https://media.istockphoto.com/photos/black-abstract-technological-background-with-hexagon-cells-3d-of-picture-id1171481416?b=1&k=20&m=1171481416&s=170667a&w=0&h=Nj1ctjAVu4itqhiBor7mYN4AL_YeKZr-zB9iv4vUIbw=");
+    background-size: 100%;
+    width: 108%;
+    height: 100px;
+    background-position: center;
+    /* box-shadow: 0 0 20px 15px var(--sidebar-color) inset; */
+    box-shadow: 0px 0px 20px 10px var(--sidebar-color) inset;
+    transform: translate(-16px, -5px);
+    border-radius: 15px;
 }
 
 .blogTitle {
     /* color: var(--text-color); */
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     text-align: left;
     height: auto;
+    line-height: 110%;
 }
 
 .blogDate {
@@ -1266,7 +1294,7 @@ body.dark .profileStatsText{
     font-weight: 600;
     font-size: 15px;
     text-align: left;
-    line-height: 110%;
+    line-height: 200%;
 }
 
 .blogDescription {
@@ -1276,6 +1304,7 @@ body.dark .profileStatsText{
     text-align: left;
     line-height: 1%;
     height: auto;
+    transform: translateY(12px);
 }
 
 .blogText{
@@ -1548,6 +1577,7 @@ body.dark .messageBanner {
 
 .footer {
     width: 100%;
+    /* height: 125px; */
     height: 100px;
     background-color: #3a3b3c;
     color: #fff;
@@ -1712,4 +1742,51 @@ body.dark .messageBanner {
     opacity: 0;
     font-weight: 600;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), -1px -1px 5px rgba(0, 0, 0, 0.3), -1px 1px 5px rgba(0, 0, 0, 0.3), 1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.soundboard{
+    text-align: center;
+    position: relative;
+    width: 17.7%;
+    max-height: 20px;
+    border-radius: 15px;
+    line-height: 175%;
+    text-decoration: hidden;
+    background-color: var(--sidebar-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    margin-top: 7px;
+    margin-left: 3px;
+    display: inline-table;
+    color: var(--text-color);
+    text-overflow: ellipsis;
+}
+
+.soundboard:hover{
+    background-color: var(--primary-color);
+    transition: var(--tran-05);
+    color: #FFF;
+    cursor: pointer;
+}
+
+body.dark .soundboard:hover{
+    background-color: var(--primary-color);
+    transition: var(--tran-05)
+}
+
+.soundboard_title{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+
+#play_icon {
+    color: #fff;
+    font-size: 30px;
+    transform: translate(-6px, -29px);
+    right: 10px;
+    z-index: 10;
+    position: absolute;
 }

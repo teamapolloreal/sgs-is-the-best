@@ -123,6 +123,22 @@
                     </a>
                 </li>
 
+                <!-- <li class="mode" id="notLoggedIn">
+                    <a href="#" onclick="toggleLoginPage()">
+                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                        <span class="text nav-text">Login or create</span>
+                        <span class="hovertext">Login or create an account</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="loggedIn" style="display: none">
+                    <a href="account.html">
+                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                        <span class="text nav-text">Account (BETA)</span>
+                        <span class="hovertext">Manage Account (BETA)</span>
+                    </a>
+                </li> -->
+
                 <!-- <li class="">
                     <a href="#">
                         <i class='bx bx-log-out icon' ></i>
@@ -151,54 +167,93 @@
         <br>
         <div class="title">Blog</div>
         <div class="text">This is my blog page! This page will probably just include update logs but I might write about other important things.</div>
-        <br><br><div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
+        <br>
+        <div class="search-box" style="width: 90%">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search..." id="searchbarBlog" onkeyup="searchBlog()">
+        </div>
+        <br><br>
+
+        <div class="pageHeading" id="blog_recent">Recent</div>
+        <div class="pageDescription" id="blog_description" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Read the newest blogs here!</div>
+        <br>
+        <div class="blogBox" onclick="">
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
             <div class="blogDescription">Click to read this blog.</div>
         </div>
         <div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
             <div class="blogDescription">Click to read this blog.</div>
         </div>
         <div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
+            <div class="blogDescription">Click to read this blog.</div>
+        </div>
+
+        <br id="blog_br1"><br id="blog_br2"><div class="pageLine" id="blog_line"></div>
+
+        <br><div class="pageHeading" id="blog_other">Other</div>
+        <div class="pageDescription" id="blog_description2" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">You can read the older blogs here.</div>
+        <br>
+        <div class="blogBox" onclick="">
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
+            <div class="blogDescription">Click to read this blog.</div>
+        </div>
+        <div class="blogBox" onclick="">
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
+            <div class="blogDescription">Click to read this blog.</div>
+        </div>
+        <div class="blogBox" onclick="">
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
             <div class="blogDescription">Click to read this blog.</div>
         </div>
         <div style="height: 10px;"></div>
         <div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
             <div class="blogDescription">Click to read this blog.</div>
         </div>
         <div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
             <div class="blogDescription">Click to read this blog.</div>
         </div>
         <div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
-            <div class="blogDescription">Click to read this blog.</div>
-        </div>
-        <div style="height: 10px;"></div>
-        <div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
-            <div class="blogDescription">Click to read this blog.</div>
-        </div>
-        <div class="blogBox" onclick="">
-            <div class="blogTitle"></div>
-            <div class="blogDate"></div>
-            <br>
+            <div class="blogImg"></div>
+            <div style="transform: translateY(-35px);">
+                <div class="blogTitle"></div>
+                <div class="blogDate"></div>
+            </div>
             <div class="blogDescription">Click to read this blog.</div>
         </div>
         <br><br>
@@ -209,6 +264,7 @@
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
             <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
         </footer>
     </section>
 
@@ -230,8 +286,16 @@
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
             <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
         </footer>
     </section>
+
+    <!-- <section style="position: fixed; z-index: 101; display: none; width: 20%; height: 50px;" id="overlays">
+        <div class="savedOverlay" id="savedOverlay">
+            <span class='bx bx-check icon' style="transform: translate(-2px, 5px); font-size: 25px; padding: 1px; color: #00FF00"></span>
+            <span>Saved Game Data!</span>
+        </div>
+    </section> -->
 
     <script src="script.js"></script>
     <script src="blog_data.js"></script>
