@@ -89,6 +89,10 @@ function fullscreen(){
     }
 }
 
+setTimeout(() => {
+    document.getElementById("loadingMessage").style.opacity = 1
+}, 2000)
+
 function resizeWidth(){
     var container = document.getElementsByClassName("container")
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width

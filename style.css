@@ -1363,6 +1363,16 @@ body.dark .profileStatsText{
     100% { height: 0%;}
 }
 
+.loadingMessage {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 12%;
+    opacity: 0;
+    transition: var(--tran-05)
+}
+
 .blogBack {
     background: var(--sidebar-color);
     float: right;

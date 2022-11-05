@@ -1,4 +1,4 @@
-let lastUpdate = "11/3/2022"
+let lastUpdate = "11/3/2022 (v5.1.0)"
 let cdnUrl = "https://sgs-cdn.vercel.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -2220,7 +2220,7 @@ select.onchange = async (event) => {
 
     console.log(currentContainers)
 
-    if(inputText === "None"){
+    if(inputText === "Filter - None"){
         for(let i = 0; i < currentContainers.length; i++){ currentContainers[i].style.display = "inline-table"}
         return;
     }
@@ -2229,13 +2229,13 @@ select.onchange = async (event) => {
 
     for(let i = 0; i < selectOptionsList.length; i++){
         if(inputText === selectOptionsList[i]){
-            for(let o = 0; o < data.length; o++){
+            for(let o = 0; o < currentContainers.length; o++){
                 if(data[o].genre.includes(" / ")){
-                    for(let u = 0; u < data[o].genre.split(" / ").length; u++){
-                        if(data[o].genre.split(" / ")[u] === inputText) currentContainers[o].style.display = "inline-table"
+                    for(let u = 0; u < currentContainers[o].getElementsByClassName("game_genre")[0].textContent.split(" / ").length; u++){
+                        if(currentContainers[o].getElementsByClassName("game_genre")[0].textContent.split(" / ")[u] === inputText) currentContainers[o].style.display = "inline-table"
                     }
                 } else {
-                    if(data[o].genre === inputText) currentContainers[o].style.display = "inline-table"
+                    if(currentContainers[o].getElementsByClassName("game_genre")[0].textContent === inputText) currentContainers[o].style.display = "inline-table"
                 }
             }
             break;
