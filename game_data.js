@@ -1,5 +1,5 @@
 let lastUpdate = "11/3/2022 (v5.1.0)"
-let cdnUrl = "https://sgs-cdn.vercel.app"
+let cdnUrl = "celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
     {
