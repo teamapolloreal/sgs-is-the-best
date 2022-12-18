@@ -1,4 +1,4 @@
-let bannerMessageNum = "11"
+let bannerMessageNum = "12"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
