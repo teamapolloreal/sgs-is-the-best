@@ -16,6 +16,13 @@ let data = [
     //     text: "This update includes many new features and changes with bug fixes and performance improvements. Read below for more details:<br><br><b>New Account System!</b><br>• You can now create an account to use on this website! You can login or create an account by clicking on the new icon at the bottom of the sidebar.<br>• Accounts are used to save website settings, profile stats, and more. (I was trying to make it so data from the games save, however they use up way to much data so I can't do that, sorry)<br><br><b>New Features</b><br>• New profile page to manage your account (must be logged in to access)<br>• You can now favorite games to find them easier (just shows them as a different color, will be changed in the future)<br>• New indicators on the gamepage for when some games may not be working<br>• Redesigned settings page, a lot cleaner and nicer<br><br><b>New Games</b><br>• e<br><br><b>Other</b><br>• Added a core to the site. This manages connections with the database and other various tasks. (v1.0.0)<br>• Added a footer<br>• Added more detailed information to games (publisher, controls, etc)<br>• New efficient way to load the gamed on the games page<br><br><b>Resolved Issues</b><br>• Fixed an issue with the banner.<br>• Fixed Subway Surfers.<br>• Fixed a few spelling and grammar errors<br><br><i>From now on I will not be showing the Known Issues</i>",
     // },
     {
+        title: "2022 Recap",
+        date: "12/31/22",
+        time: "2 min read",
+        id: "13",
+        text: "This year was crazy for Syce’s Game Shack! From starting as a joke back in late March to becoming an actual thing with hundreds, almost thousands of people everyday. Of course, I have to give credit to the one and only <b>Bob’s Game Shack</b> who gave me the idea to create my own.<br><br>This year saw a massive growth. I don’t have any numbers or exact data for last school year because I didn’t have analytics yet, but I already know this school year is much higher. I can’t thank you enough for all the support and growth that this site has received and I’m excited going into 2023 with new ideas and features planned.<br><br><b>Numbers (9/1 - 12/30)</b><br><b>• 379,000+ Views</b><br><b>• 11,000+ Users (~92% of which in Northern VA)</b><br><b>• 14m 22s Average Engagement Time</b><br><br><b>In over:</b><br><b>• 9 Countries</b><br><b>• 38 States + DC (USA)</b><br><b>• 7+ Different Languages</b>"
+    },
+    {
         title: "Version 6 Leaks 👀",
         date: "12/13/22",
         time: "2 min read",
