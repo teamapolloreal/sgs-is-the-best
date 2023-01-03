@@ -1,4 +1,4 @@
-let lastUpdate = "11/3/2022 (v5.1.0)"
+let lastUpdate = "1/3/2023 (v6.0.0)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -15,6 +15,7 @@ const data = [
             "Slide Left Click - Aim",
         ],
         broken: true,
+        note: "Game won't load, seems to the game's issue."
     },
     {
         name: "2 Player Games",
@@ -2102,18 +2103,19 @@ function loadGames(){
         var div = document.createElement("div");
         div.className = "container"
         div.id = "container"
-        if(localStorage.getItem("gameIcon") === "false") div.style.paddingTop = "7px";
+        div.onclick = function(){ viewGame(game.id) }
 
         var game_click = document.createElement("a")
         game_click.className = "game_click"
         game_click.id = "click"
-        game_click.onclick = function(){ viewGame(game.id) }
         game_click.herf = game.id
 
         if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
             if(localStorage.getItem("mode") !== "Dark") div.style.backgroundColor = localStorage.getItem("themeHex") || "#695CFE"
             if(localStorage.getItem("mode") === "Dark") div.style.backgroundColor = "#3a3b3c"
             div.style.color = "#fff"
+            if(localStorage.getItem("mode") !== "Dark") div.style.boxShadow = `0 2px 10px ${localStorage.getItem("themeHex") || "#695CFE"}`
+            if(localStorage.getItem("mode") === "Dark") div.style.boxShadow = `0 5px 10px #3a3b3c`
         }
 
         if(game.broken === true){
@@ -2126,6 +2128,9 @@ function loadGames(){
           var fav_icon = document.createElement("i")
           fav_icon.className = "bx bx-star icon"
           fav_icon.id = "fav_icon"
+          if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") === "true"){
+              fav_icon.style.color = "#ccc"
+          }
           if(localStorage.getItem("gameIcon") === "false") fav_icon.style.fontSize = "20px";
           if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
               fav_icon.onclick = function(){ unfavorite(game.id) }
@@ -2144,35 +2149,83 @@ function loadGames(){
             game_click.appendChild(game_img)
         }
 
+        if(localStorage.getItem("gameIcon") !== "false"){
+            var shadow = document.createElement("div")
+            shadow.className = "shadow"
+            shadow.id = "shadow"
+            game_click.appendChild(shadow)
+        }
+
         var game_title = document.createElement("div")
         game_title.className = "game_title"
         game_title.id = "title"
         game_title.innerText = game.name
+        if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") === "true"){
+            game_title.style.color = "#fff"
+            document.getElementById("rgs_title").style.color = "#fff"
+        }
         game_click.appendChild(game_title)
 
         var game_genre = document.createElement("div")
         game_genre.className = "game_genre"
         game_genre.id = "genre"
         game_genre.innerText = game.genre
+        if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") === "true"){
+            game_genre.style.color = "#ccc"
+            document.getElementById("rgs_genre").style.color = "#ccc"
+        }
         game_click.appendChild(game_genre)
 
         div.appendChild(game_click)
+
+        if(localStorage.getItem("gameIcon") === "false"){
+            div.style.padding = "8px";
+            div.style.height = "55px";
+            div.style.shadowBox = "none";
+            // div.style.marginTop = "7px";
+            div.classList.add("container2");
+            div.style.backgroundColor = "var(--sidebar-color)";
+            game_title.style.transform = "translate(0, -2px)"
+            game_genre.style.transform = "translate(0, 25px)"
+            game_genre.style.opacity = 1
+
+            var randomGameSelector = document.getElementById("randomSelector")
+            randomGameSelector.style.padding = "8px";
+            randomGameSelector.style.height = "55px";
+            randomGameSelector.style.shadowBox = "none";
+            randomGameSelector.style.backgroundColor = "var(--sidebar-color)";
+            document.getElementById("rgs_img").style.display = "none"
+            document.getElementById("rgs_shadow").style.display = "none"
+            document.getElementById("rgs_title").style.transform = "translate(0, -2px)"
+            document.getElementById("rgs_genre").style.transform = "translate(0, 25px)"
+            document.getElementById("rgs_genre").style.opacity = 1
+        }
 
         if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
             favorities.push(div)
         } else {
             containers.push(div)
         }
+
+        count++
     })
 
-    containers.reverse().forEach(container => {
-        referenceNode = document.getElementById("gameViewFullscreen")
-        referenceNode.parentNode.insertBefore(container, referenceNode.nextSibling)
+    if(favorities.length !== 0){
+        favorities[0].style.marginLeft = "0"
+    } else {
+        containers[0].style.marginLeft = "0"
+    }
+
+    favorities.forEach(favorite => {
+        // referenceNode = document.getElementById("gameViewFullscreen")
+        // referenceNode.parentNode.insertBefore(favorite, referenceNode.nextSibling)
+        document.getElementById("gamebar").appendChild(favorite)
     })
 
-    favorities.reverse().forEach(favorite => {
-        referenceNode = document.getElementById("gameViewFullscreen")
-        referenceNode.parentNode.insertBefore(favorite, referenceNode.nextSibling)
+    containers.forEach(container => {
+        // referenceNode = document.getElementById("gameViewFullscreen")
+        // referenceNode.parentNode.insertBefore(container, referenceNode.nextSibling)
+        document.getElementById("gamebar").appendChild(container)
     })
 
     resizeWidth();
@@ -2302,6 +2355,8 @@ function viewGame(gameID){
     if(clickedStar === true) return clickedStar = false
     for(let i = 0; i < data.length; i++){
         if(data[i].id === gameID){
+            if(localStorage.getItem("instantGame") === "true") return playGame(data[i].id)
+
             let fullscreen = document.getElementById("gameViewFullscreen")
             let title = document.getElementById("gameViewTitle")
             let img = document.getElementById("gameViewImg")
@@ -2357,13 +2412,13 @@ document.addEventListener("click", () => {
 function search(){
     let input = document.getElementById("searchbar").value
     input = input.toLowerCase()
-    let x = document.getElementsByClassName("container")
+    var currentContainers = document.getElementsByClassName("container")
 
-    for(i = 0; i < x.length; i++){
-        if(!x[i].getElementsByClassName("game_title")[0].textContent.toLowerCase().includes(input)){
-            x[i].style.display = "none";
+    for(i = 0; i < currentContainers.length; i++){
+        if(!currentContainers[i].getElementsByClassName("game_title")[0].textContent.toLowerCase().includes(input)){
+            currentContainers[i].style.display = "none";
         } else {
-            x[i].style.display = "inline-table"
+            currentContainers[i].style.display = "inline-table"
         }
     }
 }
@@ -2398,7 +2453,7 @@ function playGame(gameID){
 
             if(data[i].broken) document.getElementById("importantMessage").style.display = "block"
 
-            if(body.querySelector('nav').classList.value === "sidebar") body.querySelector('nav').classList.toggle("close")
+            if(localStorage.getItem("nav") === "Sidebar" && body.querySelector('nav').classList.value === "sidebar") body.querySelector('nav').classList.toggle("close")
             // document.getElementById("gameIframe").focus();
             window.scrollTo(0, 0)
             document.body.style.overflow = "visible"

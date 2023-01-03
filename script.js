@@ -1,4 +1,4 @@
-let bannerMessageNum = "12"
+let bannerMessageNum = "11"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -35,9 +35,19 @@ const body = document.querySelector('body'),
 
         toggle.addEventListener("click" , () =>{
             sidebar.classList.toggle("close");
+
+            if(sidebar.classList.value !== "sidebar close"){
+                document.getElementById("linkOptions").style.transform = "translate(240px, 0px)"
+            } else {
+                document.getElementById("linkOptions").style.transform = "translate(75px, 0px)"
+            }
         })
 
-        if(localStorage.getItem("openSidebar") === "true") sidebar.classList.toggle("close")
+        if(localStorage.getItem("openSidebar") === "true"){
+            sidebar.classList.toggle("close")
+            document.getElementById("linkOptions").style.transform = "translate(240px, -75px)"
+        }
+
 
         // searchBtn.addEventListener("click" , () =>{
         //     sidebar.classList.remove("close");
@@ -55,6 +65,7 @@ const body = document.querySelector('body'),
         //     }
         // });
 
+
 function gamepage(){
     document.getElementById("gameViewFullscreen").style.display = "none"
     document.getElementById("gamepage").style.display = "none"
@@ -66,11 +77,6 @@ function gamepage(){
     if(localStorage.getItem("openSidebar") === "true" && body.querySelector('nav').classList.value === "sidebar close") body.querySelector('nav').classList.toggle("close")
 
     saveGameData();
-}
-
-function blog(){
-    document.getElementById("blogPage").style.display = "none"
-    document.getElementById("blog").style.display = "block"
 }
 
 function fullscreen(){
@@ -94,311 +100,52 @@ setTimeout(() => {
 }, 2000)
 
 function resizeWidth(){
-    var container = document.getElementsByClassName("container")
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width
+
+    if(width < 1242){ document.getElementById("horLogoText").style.display = "none" } else { document.getElementById("horLogoText").style.display = "block" }
+    //Other
+    var container = document.getElementsByClassName("container")
+    var soundboard = document.getElementsByClassName("soundboard")
     if(document.getElementById("gameIframe") !== null){
         let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
         document.getElementById("gameIframe").style.height = newHeight
         document.getElementById("iframeFocus").style.height = newHeight
     }
-    if(width >= 0 && width < 699) for(i = 0; i < container.length; i++){
-        container[i].style.width = "30%";
+    for(let i = 0; i < container.length; i++){
+        var x = window.innerWidth * 90 / 100
+        var y = Math.trunc(x / 225)
+        var z = x / y - 26
+
+        container[i].style.width = `${z}px`
+        document.getElementById("randomSelector").style.width = `${z}px`
     }
-    if(width >= 700 && width < 959) for(i = 0; i < container.length; i++){
-        container[i].style.width = "30%";
+    for(let i = 0; i < soundboard.length; i++){
+        var x = window.innerWidth * 90 / 100
+        var y = Math.trunc(x / 350)
+        var z = x / y - 39
+        soundboard[i].style.width = `${z}px`
     }
-    if(width >= 960 && width < 1279) for(i = 0; i < container.length; i++){
-        container[i].style.width = "22.2%";
+
+    if(document.getElementsByClassName("homeSection0").length !== 0){
+        var section = document.querySelector(".homeSection0")
+        var textBox = document.querySelector(".homeTextBox")
+        var img = document.querySelector(".homeSectionImg")
+
+        textBox.style.top = `${(section.offsetHeight - textBox.offsetHeight) / 2}px`
+        img.style.top = `${(section.offsetHeight - img.offsetHeight) / 2}px`
     }
-    if(width >= 1280 && width < 1599) for(i = 0; i < container.length; i++){
-        container[i].style.width = "17.7%";
-    }
-    if(width >= 1600 && width < 1919) for(i = 0; i < container.length; i++){
-        container[i].style.width = "14.8%";
-    }
-    if(width >= 1920 && width < 2239) for(i = 0; i < container.length; i++){
-        container[i].style.width = "12.6%";
-    }
-    if(width >= 2240 && width < 2559) for(i = 0; i < container.length; i++){
-        container[i].style.width = "11%";
-    }
-    if(width >= 2560 && width < 2879) for(i = 0; i < container.length; i++){
-        container[i].style.width = "9.8%";
-    }
-    if(width >= 3500) for(i = 0; i < container.length; i++){
-        container[i].style.width = "8.89%";
-    }
-    console.log(width)
 }
 
 window.addEventListener("resize", function(){ resizeWidth(); })
 
-//Settings
-gameIconSetting();
-
-function gameIconSetting(changed){
-    if(changed === true){
-        if(localStorage.getItem("gameIcon") === null || localStorage.getItem("gameIcon") === "true"){
-            localStorage.setItem("gameIcon", false)
-            document.getElementById("gameIconSwitch").style.left = "15px";
-        } else {
-            document.getElementById("gameIconSwitch").style.left = "30px";
-            localStorage.setItem("gameIcon", true)
-        }
-    } else
-    {
-        if(localStorage.getItem("gameIcon") === null || localStorage.getItem("gameIcon") === "true"){
-            if(document.getElementById("gameIconSwitch") !== null) document.getElementById("gameIconSwitch").style.left = "30px";
-        } else {
-        }
-    }
-}
-
-openSidebarSetting();
-
-function openSidebarSetting(changed){
-    if(changed === true){
-        if(localStorage.getItem("openSidebar") === "false"){
-            localStorage.setItem("openSidebar", true)
-            document.getElementById("openSidebarSwitch").style.left = "30px";
-        } else {
-            document.getElementById("openSidebarSwitch").style.left = "15px";
-            localStorage.setItem("openSidebar", false)
-        }
-    } else {
-        if(localStorage.getItem("openSidebar") === "true"){
-            if(document.getElementById("openSidebarSwitch") !== null) document.getElementById("openSidebarSwitch").style.left = "30px";
-        } else {
-        }
-    }
-}
-
-altLinksSetting();
-
-function altLinksSetting(changed){
-    if(changed === true){
-        if(localStorage.getItem("altLinks") === "false"){
-            localStorage.setItem("altLinks", true)
-            document.getElementById("altLinksSwitch").style.left = "30px";
-            document.getElementById("altLinks").style.display = "none"
-        } else {
-            document.getElementById("altLinksSwitch").style.left = "15px";
-            localStorage.setItem("altLinks", false)
-            document.getElementById("altLinks").style.display = "block"
-        }
-    } else {
-        if(localStorage.getItem("altLinks") === "true"){
-            if(document.getElementById("altLinksSwitch") !== null) document.getElementById("altLinksSwitch").style.left = "30px";
-            document.getElementById("altLinks").style.display = "none"
-        } else {
-        }
-    }
-}
-
-setCloak()
-
-function setCloak() {
-    let icon = localStorage.getItem("tabCloak")
-    if(!icon) icon = "Default"
-    var link = document.querySelector("link[rel~='icon']");
-    if(!link){
-        link = window.document.createElement("link");
-        link.rel = "icon"
-        link.herf = "test"
-        link.type = "image/x-icon"
-        window.document.getElementsByTagName("head")[0].appendChild(link);
-    }
-
-    // var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
-    // link.type = "image/x-icon";
-    // link.rel = "shortcut icon";
-    // link.herf = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
-    // document.getElementsByTagName('head')[0].appendChild(link);
-    // return;
-
-    if(icon === "Default"){
-        link.herf = "sgs-logo.png";
-        document.title = "Syce's Game Shack"
-    }
-
-    if(icon === "Google Slides"){
-        link.herf = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
-        document.title = "Google Slides"
-    }
-
-    if(icon === "Google Docs"){
-        link.herf = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
-        document.title = "Google Docs"
-    }
-
-    if(icon === "Google Drive"){
-        link.herf = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
-        document.title = "Google Docs"
-    }
-
-    if(icon === "Schoology"){
-        link.herf = "https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico";
-        document.title = "Home | Schoology"
-    }
-
-    if(icon === "Desmos"){
-        link.herf = "https://www.desmos.com/assets/img/touch-icon-192x192.png";
-        document.title = "Desmos | Scientific Calculator"
-    }
-}
-
-if(localStorage.getItem("tabCloak") === null){ localStorage.setItem("tabCloak", "Default"); }
-var ddl = document.getElementById("cloakSelect");
-if(ddl !== null){
-    var opts = ddl.options.length
-    for(var i = 0; i < opts; i++){
-        if(ddl.options[i].value == localStorage.getItem("tabCloak")){
-            ddl.options[i].selected = true;
-            break;
-        }
-    }
-}
-
-function setMode(){
-    let mode = localStorage.getItem("mode")
-    if(!mode) mode = "Dark"
-
-    if(mode === "Dark"){
-        localStorage.setItem("mode", "Dark");
-        if(body.classList[0] !== "dark") body.classList.toggle("dark");
-        document.body.style.setProperty("--primary-color", "#3a3b3c");
-        document.body.style.setProperty("--primary-text-color", "#ccc")
-    }
-    if(mode === "Dark Themed"){
-        localStorage.setItem("mode", "Dark Themed");
-        if(body.classList[0] !== "dark") body.classList.toggle("dark");
-        loadTheme()
-    }
-    if(mode === "Light"){
-        localStorage.setItem("mode", "Light");
-        if(body.classList[0] === "dark") body.classList.toggle("dark");
-        loadTheme();
-    }
-}
-
-var ddl = document.getElementById("modeSelect");
-if(ddl !== null){
-    var opts = ddl.options.length
-    for(var i = 0; i < opts; i++){
-        if(ddl.options[i].value == localStorage.getItem("mode")){
-            ddl.options[i].selected = true;
-            break;
-        }
-    }
-}
-
-loadTheme();
-function loadTheme(){
-    let theme = localStorage.getItem("themeHex")
-    if(!theme) theme = "#695CFE"
-    if(localStorage.getItem("mode") === "Dark Themed"){
-        document.body.style.setProperty("--primary-color", theme)
-        document.body.style.setProperty("--primary-text-color", "#fff")
-    }
-    if(localStorage.getItem("mode") === "Light"){
-        document.body.style.setProperty("--primary-color", theme)
-    }
-}
-
-function setTheme(){
-    let theme = localStorage.getItem("theme")
-    if(theme === "Purple (Default)"){
-        localStorage.setItem("themeHex", "#695CFE")
-        loadTheme();
-    }
-    if(theme === "Green"){
-        localStorage.setItem("themeHex", "#0ed929")
-        loadTheme();
-    }
-    if(theme === "Light Blue"){
-        localStorage.setItem("themeHex", "#16aee6")
-        loadTheme();
-    }
-    if(theme === "Orange"){
-        localStorage.setItem("themeHex", "#f6920e")
-        loadTheme();
-    }
-    if(theme === "Red"){
-        localStorage.setItem("themeHex", "#f6290e")
-        loadTheme();
-    }
-    if(theme === "Yellow"){
-        localStorage.setItem("themeHex", "#febb01")
-        loadTheme();
-    }
-    if(theme === "Custom"){
-        localStorage.setItem("themeHex", document.getElementById("theme_color_picker").value)
-        document.getElementById("theme_color_picker").style.display = "block"
-        loadTheme();
-    }
-}
-
-var ddl = document.getElementById("themeSelect");
-var colorPicker = document.getElementById("theme_color_picker")
-if(ddl !== null){
-    var opts = ddl.options.length
-    for(var i = 0; i < opts; i++){
-        if(ddl.options[i].value == localStorage.getItem("theme")){
-            ddl.options[i].selected = true;
-            if(localStorage.getItem("theme") === "Custom"){
-                colorPicker.style.display = "block"
-                colorPicker.value = localStorage.getItem("themeHex")
-            }
-            break;
-        }
-    }
-}
-
 window.onload = (event) => {
-    var cloakSelect = document.getElementById("cloakSelect")
-    if(cloakSelect){
-        cloakSelect.addEventListener("change", function(event){
-            if(localStorage.getItem("tabCloak") === null){
-                localStorage.setItem("tabCloak", "Default");
-            }
-            localStorage.setItem("tabCloak", event.target.value);
-            setCloak();
-            // saveSiteData();
-        })
-    }
-
-    var modeSelect = document.getElementById("modeSelect")
-    if(modeSelect){
-        modeSelect.addEventListener("change", function(event){
-            if(localStorage.getItem("mode") === null){
-                localStorage.setItem("mode", "Dark");
-            }
-            localStorage.setItem("mode", event.target.value);
-            setMode();
-            // saveSiteData();
-        })
-    }
-
-    var themeSelect = document.getElementById("themeSelect")
-    if(themeSelect){
-        themeSelect.addEventListener("change", function(event){
-            if(localStorage.getItem("theme") === null){
-                localStorage.setItem("theme", "Purple (Default)");
-            }
-            localStorage.setItem("theme", event.target.value);
-            document.getElementById("theme_color_picker").style.display = "none"
-            setTheme();
-            // saveSiteData();
-        })
-    }
-
     resizeWidth();
 
     document.getElementById("loader-wrapper").style.opacity = 0;
     document.body.style.overflow = "visible";
     setTimeout(() => {
         document.getElementById("loader-wrapper").style.display = "none";
-    }, 500)
+    }, 250)
 
     if(localStorage.getItem("bannerMessageNum") && localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null) document.getElementById("bannerMessage").style.display = "block"
 }
@@ -613,17 +360,3 @@ function optionsMenu(dropdown) {
 			e.style.display = "none"
 		}
 	}
-
-  function searchSoundboard(){
-      let input = document.getElementById("searchbarSoundboard").value
-      input = input.toLowerCase()
-      let x = document.getElementsByClassName("soundboard")
-
-      for(i = 0; i < x.length; i++){
-          if(!x[i].id.toLowerCase().includes(input)){
-              x[i].style.display = "none";
-          } else {
-              x[i].style.display = "inline-table"
-          }
-      }
-  }

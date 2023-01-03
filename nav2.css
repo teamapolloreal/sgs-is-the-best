@@ -1,0 +1,80 @@
+.horNavbar {
+    width: 100%;
+    height: 70px;
+    background-color: var(--sidebar-color);
+    position: relative;
+    /* position: fixed; */
+    z-index: 10;
+    display: none;
+}
+
+.horBar {
+    width: 90%;
+    height: 55px;
+    position: relative;
+    margin: auto;
+    transform: translateY(10px);
+}
+
+.horLogo {
+    height: 40px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(5px);
+}
+
+.horLogoText {
+    font-size: 22px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 1;
+    color: var(--text-color);
+}
+
+.horPage {
+    height: 30px;
+    width: auto;
+    /* background-color: #fff; */
+    display: inline-table;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 5px;
+    position: relative;
+    border-radius: 12px;
+}
+
+.horPage:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--tran-05)
+}
+
+.horPage:hover .horText, .horPage:hover .pageIcon {
+    color: #fff;
+    transition: var(--tran-05)
+}
+
+.horSelected {
+    background-color: var(--primary-color);
+}
+
+.horSelected .horText, .horSelected .pageIcon {
+    color: #fff;
+}
+
+.horText {
+    color: var(--text-color);
+    font-size: 18px;
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.pageIcon {
+    color: var(--text-color);
+    font-size: 16px;
+}

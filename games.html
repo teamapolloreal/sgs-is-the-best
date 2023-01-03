@@ -16,6 +16,8 @@
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="nav2.css">
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -29,10 +31,65 @@
             <span class="loader-inner">
             </span>
         </span>
-        <span class="loadingMessage" id="loadingMessage">Did you know that you can reduce loading times by disabling game thumbnails in the settings?</span>
+        <span class="loadingMessage" id="loadingMessage">Did you know loading times can be reduced by disabling game thumbnails in the settings?</span>
     </div>
 
-    <nav class="sidebar close">
+    <div class="horNavbar" id="navbar2">
+        <div class="horBar">
+            <img class="horLogo" src="sgs-logo.png" alt="">
+            <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                <span class="horLogoText" id="horLogoText">Syce's Game Shack</span>
+            </div>
+
+            <div style="float: right; text-align: center; transform: translate(0px, -34px)">
+                <div class="horPage" onclick="location.replace('./index.html')">
+                    <i class='bx bx-home-alt pageIcon' ></i>
+                    <span class="horText">Home</span>
+                </div>
+                <div class="horPage horSelected">
+                    <i class='bx bx-joystick pageIcon' ></i>
+                    <span class="horText">Games</span>
+                </div>
+                <div class="horPage" onclick="location.replace('./soundboard.html')">
+                    <i class='bx bx-volume-full pageIcon' ></i>
+                    <span class="horText">Soundboard</span>
+                </div>
+                <div class="horPage" onclick="location.replace('blog.html')">
+                    <i class='bx bx-book-alt pageIcon' ></i>
+                    <span class="horText">Blogs</span>
+                </div>
+                <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
+                    <i class='bx bx-link-alt pageIcon' ></i>
+                    <span class="horText">Links</span>
+
+                    <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
+                        <button onclick="window.open('https://bit.ly/sgs-links', '_blank')" class="dropbtn" id="altLinks">
+                            <span class='bx bx-link-external icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Alt Links</span>
+                        </button>
+                        <button onclick="window.open('https://sgs.peerboard.com', '_blank')" class="dropbtn" id="peerboard">
+                            <span class='bx bx-chat icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Forums</span>
+                        </button>
+                        <button onclick="window.open('https://discord.gg/rTYbmvZC7X', '_blank')" class="dropbtn" id="discord">
+                            <span class='bx bxl-discord-alt icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Discord</span>
+                        </button>
+                        <button onclick="window.open('https://trello.com/b/PUXmNYGm/syces-game-shack', '_blank')" class="dropbtn" id="trello">
+                            <span class='bx bxl-trello icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Trello Board</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="horPage" onclick="location.replace('./settings.html')">
+                    <i class='bx bx-cog pageIcon' ></i>
+                    <span class="horText">Settings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar close" id="navbar1">
         <header>
             <br>
             <div class="image-text">
@@ -101,18 +158,29 @@
                     </li>
 
                     <li class="nav-link" id="altLinks">
-                        <a href="" onclick="window.open('https://sgs.peerboard.com', '_blank')">
-                            <i class='bx bx-chat icon' ></i>
-                            <span class="text nav-text">Forums</span>
-                            <span class="hovertext">Fourms</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link" id="altLinks">
-                        <a href="" onclick="window.open('https://bit.ly/sgs-links', '_blank')">
+                        <a href="#" onclick="optionsMenu('linkOptions')">
                             <i class='bx bx-link-alt icon' ></i>
-                            <span class="text nav-text">Alt Links</span>
-                            <span class="hovertext">Alt Links</span>
+                            <span class="text nav-text">Links</span>
+                            <span class="hovertext">Links</span>
+
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(75px, 0px)">
+                                <button onclick="window.open('https://bit.ly/sgs-links', '_blank')" class="dropbtn" id="altLinks">
+                                    <span class='bx bx-link-external' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Alt Links</span>
+                                </button>
+                                <button onclick="window.open('https://sgs.peerboard.com', '_blank')" class="dropbtn" id="peerboard">
+                                    <span class='bx bx-chat' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Forums</span>
+                                </button>
+                                <button onclick="window.open('https://discord.gg/rTYbmvZC7X', '_blank')" class="dropbtn" id="discord">
+                                    <span class='bx bxl-discord-alt' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Discord</span>
+                                </button>
+                                <button onclick="window.open('https://trello.com/b/PUXmNYGm/syces-game-shack', '_blank')" class="dropbtn" id="trello">
+                                    <span class='bx bxl-trello' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Trello Board</span>
+                                </button>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -169,8 +237,8 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">Version 6 Releasing This Week!</div>
-            <div class="messageBannerText">I'm planning to release version 6 sometime this week, most likely Friday. I have and will be releasing more leaks throughout the week on my peerboard so feel free to check them out, anyways have a nice winter break!</div>
+            <div class="messageBannerTitle">New Major Update! (v6.0.0)</div>
+            <div class="messageBannerText">I hope you like my site refresh, let me know how you think of it. Otherwise, continue playing and feel free to check out what else was added in the update <a class="underline_text" onclick="location.replace('blog.html')">here.</a></div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
@@ -251,6 +319,26 @@
             </div>
         </div>
 
+        <div style="text-align: center; width: 91.5%; margin: auto; transform: translateX(-0.75%);" id="gamebar">
+            <div class="randomGameSelector" id="randomSelector">
+                <a herf=" " class="game_click" onclick="viewGame(data[Math.floor(Math.random() * data.length)].id)" id="click">
+                    <img class="game_img" id="rgs_img" src="https://celebrated-stardust-91ad96.netlify.app/Images/random_game.png">
+                    <div class="shadow" id="rgs_shadow"></div>
+                    <div class="game_title" id="rgs_title">Random Game</div>
+                    <div class="game_genre" id="rgs_genre">Pick a random game.</div>
+                </a>
+            </div>
+            <!-- <div class="container" id="container">
+                <a herf=" " class="game_click" onclick="" id="click">
+                    <i class='bx bx-star icon' id="fav_icon"></i>
+                    <img class="game_img" id="img" src="Images/.png">
+                    <div class="shadow"></div>
+                    <div class="game_title" id="title"></div>
+                    <div class="game_genre" id="genre"></div>
+                </a>
+            </div> -->
+        </div>
+
         <!-- <div class="container" id="container">
             <a herf=" " class="game_click" onclick="" id="click">
                 <i class='bx bx-star icon' id="fav_icon"></i>
@@ -258,7 +346,7 @@
                 <div class="game_title" id="title"></div>
                 <div class="game_genre" id="genre"></div>
             </a>
-        </div>-->
+        </div> -->
 
         <br><br>
         <footer class="footer" id="footer">
@@ -293,6 +381,14 @@
                     <span class='bx bx-star icon' style="transform: translateY(1px)" id="favStarOption"></span>
                     <span style="padding: 5px" id="favoriteTextOption">Favorite</span>
                 </button>
+                <!-- <button onclick="" class="dropbtn" id="hideOption">
+                    <span class='bx bx-hide icon' style="transform: translateY(1px)" id="favStarOption"></span>
+                    <span style="padding: 5px" id="favoriteTextOption">Hide Note</span>
+                </button>
+                <button onclick="" class="dropbtn" id="hideOption">
+                    <span class='bx bx-window-alt icon' style="transform: translateY(1px)" id="favStarOption"></span>
+                    <span style="padding: 5px" id="favoriteTextOption">Play Windowed</span>
+                </button> -->
             </div>
         </div>
         <div class="title" id="gamePageTitle"></div>
@@ -359,7 +455,8 @@
     </section> -->
 
     <script src="script.js"></script>
-    <script src="game_data.js"></script>
+    <script src="./Scripts/game_data.js"></script>
+    <script src="./Scripts/settings.js"></script>
 
 </body>
 </html>
