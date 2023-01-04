@@ -2,6 +2,8 @@ setNav()
 function setNav(){
     let nav = localStorage.getItem("nav")
     if(!nav) nav = "Sidebar"
+    if(!nav) localStorage.setItem("nav", "Sidebar")
+    let sidebar = document.getElementById("navbar1")
 
     if(nav === "Sidebar"){
         document.getElementById("navbar1").style.display = "block"
@@ -75,7 +77,7 @@ gameIconSetting();
 function gameIconSetting(changed){
     if(changed === true){
         if(localStorage.getItem("gameIcon") === null || localStorage.getItem("gameIcon") === "true"){
-            localStorage.setItem("gameIcon", false)
+            localStorage.setItem("gameIcon", "false")
             document.getElementById("gameIconSwitch").style.left = "15px";
             document.getElementById("gameIconSwitch").style.backgroundColor = "var(--body-color)"
             document.getElementById("gameIconBack").style.backgroundColor = "var(--toggle-color)";
@@ -83,7 +85,7 @@ function gameIconSetting(changed){
             document.getElementById("gameIconSwitch").style.left = "30px";
             document.getElementById("gameIconSwitch").style.backgroundColor = "#fff"
             document.getElementById("gameIconBack").style.backgroundColor = "var(--primary-color)";
-            localStorage.setItem("gameIcon", true)
+            localStorage.setItem("gameIcon", "true")
         }
     } else
     {

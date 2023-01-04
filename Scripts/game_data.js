@@ -15,7 +15,7 @@ const data = [
             "Slide Left Click - Aim",
         ],
         broken: true,
-        note: "Game won't load, seems to the game's issue."
+        note: "Game won't load (WebSocket connection to wss failed)"
     },
     {
         name: "2 Player Games",
@@ -198,6 +198,7 @@ const data = [
             "Unknown",
         ],
         broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Binding of Isaac",
@@ -946,7 +947,8 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true
+        broken: true,
+        note: "Unable to load versions (Audio bug, cannot decode asset)"
     },
     {
         name: "Indestructo Tank",
@@ -1560,7 +1562,8 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Slope 1",
@@ -1777,6 +1780,7 @@ const data = [
             "Player 3: Move Mouse - Movement, Left Click - Shoot",
         ],
         broken: true,
+        note: "Game won't load (The request has been blocked; the content must be served over HTTPS)"
     },
     // {
     //     name: "TankTrouble 2",
@@ -2128,7 +2132,7 @@ function loadGames(){
           var fav_icon = document.createElement("i")
           fav_icon.className = "bx bx-star icon"
           fav_icon.id = "fav_icon"
-          if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") === "true"){
+          if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") !== "false"){
               fav_icon.style.color = "#ccc"
           }
           if(localStorage.getItem("gameIcon") === "false") fav_icon.style.fontSize = "20px";
@@ -2160,7 +2164,7 @@ function loadGames(){
         game_title.className = "game_title"
         game_title.id = "title"
         game_title.innerText = game.name
-        if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") === "true"){
+        if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") !== "false"){
             game_title.style.color = "#fff"
             document.getElementById("rgs_title").style.color = "#fff"
         }
@@ -2170,7 +2174,7 @@ function loadGames(){
         game_genre.className = "game_genre"
         game_genre.id = "genre"
         game_genre.innerText = game.genre
-        if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") === "true"){
+        if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") !== "false"){
             game_genre.style.color = "#ccc"
             document.getElementById("rgs_genre").style.color = "#ccc"
         }
@@ -2451,7 +2455,10 @@ function playGame(gameID){
             document.getElementById("gameIframe").style.height = newHeight
             document.getElementById("iframeFocus").style.height = newHeight
 
-            if(data[i].broken) document.getElementById("importantMessage").style.display = "block"
+            if(data[i].broken){
+                document.getElementById("importantMessage").style.display = "block"
+                document.getElementById("messageBannerText").innerHTML = `This game may not be working as expected. <a class="errormessage">Error: ${data[i].note}</a>`
+            }
 
             if(localStorage.getItem("nav") === "Sidebar" && body.querySelector('nav').classList.value === "sidebar") body.querySelector('nav').classList.toggle("close")
             // document.getElementById("gameIframe").focus();

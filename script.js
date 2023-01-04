@@ -1,4 +1,4 @@
-let bannerMessageNum = "11"
+let bannerMessageNum = "13"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -88,11 +88,28 @@ function fullscreen(){
         } else if(elem.webkitRequestFullscreen){
             elem.webkitRequestFullscreen();
         } else if(elem.msRequestFullscreen){
-            elem.requestFullscreen();
+            elem.msRequestFullscreen();
         }
     } else {
-        window.location = "gamepage-full.html"
+        // window.location = "gamepage-full.html"
     }
+}
+
+function windowedfullscreen (){
+  var iframe = document.getElementById("gameIframe")
+    iframe.classList = "gameIframeFull"
+    document.body.style.overflow = "hidden"
+    window.scrollTo(0, 0)
+    iframe.focus()
+
+    iframe.addEventListener("keydown", key => {
+        console.log(key)
+        if(key.key === "Escape"){
+
+            iframe.classList = "gameIframe"
+            // iframe.removeEventListener("keydown", key, false)
+        }
+    })
 }
 
 setTimeout(() => {
@@ -147,11 +164,13 @@ window.onload = (event) => {
         document.getElementById("loader-wrapper").style.display = "none";
     }, 250)
 
-    if(localStorage.getItem("bannerMessageNum") && localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null) document.getElementById("bannerMessage").style.display = "block"
+    if(localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null){
+        if(document.getElementsByClassName("bannerMessage").length !== 0) document.getElementById("bannerMessage").style.display = "block"
+    }
 }
 
 window.onbeforeunload = function() {
-    document.querySelector("html").style.backgroundColor = "#18191a"
+    document.querySelector("html").style.backgroundColor = "var(--body-color)"
     document.querySelector("body").style.display = "none";
 }
 

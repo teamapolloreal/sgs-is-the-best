@@ -46,7 +46,7 @@
                     <i class='bx bx-home-alt pageIcon' ></i>
                     <span class="horText">Home</span>
                 </div>
-                <div class="horPage horSelected">
+                <div class="horPage horSelected" onclick="gamepage()">
                     <i class='bx bx-joystick pageIcon' ></i>
                     <span class="horText">Games</span>
                 </div>
@@ -367,7 +367,7 @@
                 <span class='bx bx-error icon' style="transform: translateY(2px)"></span>
                 <span>This game may be experiencing issues.<span>
             </div>
-            <div class="messageBannerText" style="width: 100%; overflow: none;">If so, this game may not be working as expected. A fix is probably in the works.</div>
+            <div class="messageBannerText" style="width: 100%; overflow: none;" id="messageBannerText">This game may not be working as expected. Error: </div>
         </div>
         <!-- <div class="gameOptions" onclick="">
             <i class='bx bx-dots-horizontal-rounded icon' ></i>
@@ -382,12 +382,15 @@
                     <span style="padding: 5px" id="favoriteTextOption">Favorite</span>
                 </button>
                 <!-- <button onclick="" class="dropbtn" id="hideOption">
-                    <span class='bx bx-hide icon' style="transform: translateY(1px)" id="favStarOption"></span>
-                    <span style="padding: 5px" id="favoriteTextOption">Hide Note</span>
+                    <span class='bx bx-hide icon' style="transform: translateY(1px)" id="hideNoteOption"></span>
+                    <span style="padding: 5px" id="hideTextOption">Hide Note</span>
                 </button>
-                <button onclick="" class="dropbtn" id="hideOption">
-                    <span class='bx bx-window-alt icon' style="transform: translateY(1px)" id="favStarOption"></span>
-                    <span style="padding: 5px" id="favoriteTextOption">Play Windowed</span>
+                <button onclick="windowedfullscreen()" class="dropbtn" id="hideOption">
+                    <span class='bx bx-window-alt icon' style="transform: translate(-40px, 1px)"></span>
+                    <div style="line-height: 90%; transform: translate(10px, -25px)">
+                        <span style="padding: 5px; font-size: 13px;">Windowed</span>
+                        <br><span style="padding: 5px; font-size: 13px;">Fullscreen</span>
+                    </div>
                 </button> -->
             </div>
         </div>
@@ -402,10 +405,10 @@
             <span style="font-size: 2.25vw; line-height: 150%; font-weight: 600;">Game not focused</span>
             <br>
             <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">Click to re-focus.</span>
-            <div style="height: 55%; width: 1px; opacity: 0;"></div>
-            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 600;">Why is this important?</span>
+            <div style="height: 55vh; width: 1px; opacity: 0;"></div>
+            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 600;">Huh?</span>
             <br>
-            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">It's because you can't control the game if it's not focused.</span>
+            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">You can't play the game if it's not focused, goofy.</span>
         </div>
         <br>
         <div class="controlsBox" id="controls">
