@@ -84,7 +84,7 @@ body.dark{
     border-radius: 6px;
     background-color: var(--primary-color-light);
     cursor: pointer;
-    width: 58%;
+    width: calc(60% - 5px);
     height: 50px;
     display: inline-table;
     padding: 1px;
@@ -117,6 +117,7 @@ body.dark .search-box .icon{
     height: 50px;
     display: inline-table;
     transition: var(--tran-05);
+    margin-left: 5px;
 }
 
 .filter-input{
@@ -397,6 +398,18 @@ body.dark #fav_icon {
     z-index: 10000;
 }
 
+.gameIframeFullscreen{
+    background-color: var(--body-color);
+    /* overflow: hidden; */
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .iframeFocus{
     background-color: var(--sidebar-color);
     overflow: none;
@@ -415,6 +428,59 @@ body.dark #fav_icon {
     /* bottom: 50%; */
     color: var(--text-color);
     display: block;
+}
+
+.FPSCount {
+    width: 120px;
+    height: 40px;
+    right: 12%;
+    position: absolute;
+    background-color: var(--sidebar-color);
+    padding: 7px;
+    border-radius: 15px;
+    color: #fff;
+    font-style: 12px;
+    transform: translateY(50%);
+    opacity: 0.8;
+    overflow: hidden;
+    pointer-events: none;
+    display: none
+}
+
+.FPSCountFull {
+    right: 2%;
+    z-index: 10001;
+    transform: translateY(-510%);
+}
+
+.FPSCountFullscreen {
+    right: 2%;
+}
+
+.FPSCount:hover {
+    opacity: 0.1;
+    transition: 0.1s
+}
+
+.exitBtn {
+    width: 40px;
+    height: 40px;
+    left: 2%;
+    z-index: 10001;
+    position: absolute;
+    background-color: var(--sidebar-color);
+    padding: 7px;
+    border-radius: 15px;
+    color: #fff;
+    font-style: 12px;
+    transform: translateY(-510%);
+    opacity: 0.8;
+    overflow: hidden;
+    display: none
+}
+
+.exitBtn:hover {
+    opacity: 0.5
 }
 
 .gameOptions {
@@ -685,7 +751,8 @@ body.dark .dropdown-content button {
     display: inline-table;
     padding: 1px;
     transition: var(--tran-05);
-    display: inline-table
+    display: inline-table;
+    transform: translateY(-55%);
 }
 
 .gamePageBtn{
@@ -720,7 +787,7 @@ body.dark .dropdown-content button {
     /* transform: translateY(-70px); */
     padding: 10px;
     text-align: left;
-    transition: var(--tran-05)
+    transition: var(--tran-05);
 }
 
 .suggestionBox{
@@ -1720,19 +1787,42 @@ body.dark .footer {
     text-decoration: underline;
 }
 
-.savedOverlay {
+.alertSection {
+    position: fixed;
+    z-index: 101;
+    display: block;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+}
+
+.alerts {
+    width: 250px;
+    height: auto;
+    right: 2%;
+    bottom: 17%;
+    position: absolute;
+    /* transform: translateY(100%); */
+}
+
+.alertBox {
+    width: 250px;
+    height: 45px;
     background-color: var(--sidebar-color);
     border-radius: 20px;
     color: var(--text-color);
-    padding: 7px;
+    padding: 10px;
     font-size: 15px;
-    transform: translate(395%, 1130%);
+    position: relative;
+    display: inline-table;
+    margin-bottom: -600%;
+    margin-top: 12%;
+    /* transform: translate(395%, 1130%); */
+    /* transform: translateY(900%); */
     transition: var(--tran-05);
     opacity: 0;
     font-weight: 600;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3), -1px -1px 5px rgba(0, 0, 0, 0.3), -1px 1px 5px rgba(0, 0, 0, 0.3), 1px -1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px var(--primary-color);
 }
 
 .soundboard, .soundboard_button {

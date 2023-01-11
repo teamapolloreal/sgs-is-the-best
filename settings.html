@@ -266,6 +266,13 @@
                 <span class="switchDot" id="gameIconSwitch"></span>
             </div>
             <br>
+            <div class="settingsTitle">FPS Count</div>
+            <div class="pageDescription">Toggle the frames per second while playing a game. Count will appear as average/minimum FPS.</div>
+            <div class="settingsSwitch" onclick="FPSSetting(true)">
+                <span class="switchBack" id="FPSBack"></span>
+                <span class="switchDot" id="FPSSwitch"></span>
+            </div>
+            <br>
         </div>
         <div class="pageLine"></div>
         <br>
@@ -330,12 +337,10 @@
         </footer>
     </section>
 
-    <!-- <section style="position: fixed; z-index: 101; display: none; width: 20%; height: 50px;" id="overlays">
-        <div class="savedOverlay" id="savedOverlay">
-            <span class='bx bx-check icon' style="transform: translate(-2px, 5px); font-size: 25px; padding: 1px; color: #00FF00"></span>
-            <span>Saved Applied Changes!</span>
+    <section class="alertSection">
+        <div class="alerts" id="alerts">
         </div>
-    </section> -->
+    </section>
 
     <script src="script.js"></script>
     <script src="./Scripts/settings.js"></script>

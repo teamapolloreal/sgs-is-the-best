@@ -237,25 +237,27 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">New Major Update! (v6.0.0)</div>
-            <div class="messageBannerText">I hope you like my site refresh, let me know how you think of it. Otherwise, continue playing and feel free to check out what else was added in the update <a class="underline_text" onclick="location.replace('blog.html')">here.</a></div>
+            <div class="messageBannerTitle">Minecraft! (v6.1.0)</div>
+            <div class="messageBannerText">Added Minecraft 1.5.2 + FPS counter in settings. Also added windowed fullscreen in the game options with other minor changes. You can read the full update log <a class="underline_text" onclick="location.replace('blog.html')">here.</a></div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
         <div class="text">Remember to only play games during free time or when you have permission to do so. I am not responsible for any trouble this might cause.</div>
         <br>
         <div class="text" id="gamecount" style="display: inline-table; float: left;"></div>
-        <div class="" style="display: inline-table; float: right; padding-right: 4.7%;">
-            <button class="reportBox" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
-                <i class='bx bxs-flag-alt icon'></i>
-                <span class="hovertext6">Report</span>
-            </button>
-        </div>
-        <div class="" style="display: inline-table; float: right; padding-right: 1%;">
-            <button class="suggestionBox" onclick="window.open('https://forms.gle/gs3eyQ4rwb8tucxo8', '_blank')">
-                <i class='bx bxs-plus-circle icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
-                <span>Make a suggestion</span>
-            </button>
+        <div id="" class="gameOptions" onclick="optionsMenu('gamepageOptions')" style="transform: translateY(-0.75px); background-color: var(--primary-color-light)">
+            <i class='bx bx-dots-horizontal-rounded icon' ></i>
+            <span class="hovertext7">Options</span>
+            <div id="gamepageOptions" class="dropdown-content" style="transform: translateX(-155px)">
+                <button class="dropbtn" onclick="window.open('https://forms.gle/gs3eyQ4rwb8tucxo8', '_blank')">
+                    <span class='bx bx-plus-circle icon' style="transform: translateY(3px); font-size: 20px"></span>
+                    <span style="padding: 5px">Suggestion</span>
+                </button>
+                <button class="dropbtn" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
+                    <span class='bx bx-error-circle icon' style="transform: translateY(3px); font-size: 20px"></span>
+                    <span style="padding: 5px">Report</span>
+                </button>
+            </div>
         </div>
         <br>
         <div style="height: 35px; width: 1px;"></div>
@@ -264,7 +266,6 @@
             <span class='bx bx-search icon'></span>
             <input class="search-box-input" type="text" placeholder="Search..." id="searchbar" onkeyup="search()">
         </div>
-        <div style="display: inline-table; width: 2%;"></div>
         <div class="filter">
             <span class='bx bx-filter icon'></span>
             <select class="filter-input" id="filterSelect">
@@ -304,11 +305,11 @@
                     <!-- <span class="hovertext7">Options</span> -->
                     <div id="splashOptions" class="dropdown-content" style="transform: translate(0, -140px); right: 3vmin">
                         <button onclick="" class="dropbtn splashOp" id="favoriteOption2">
-                            <span class='bx bx-star icon' style="transform: translateY(1px)" id="favStarOption2"></span>
+                            <span class='bx bx-star icon' style="transform: translateY(3px); font-size: 20px" id="favStarOption2"></span>
                             <span style="padding: 5px" id="favoriteTextOption2">Favorite</span>
                         </button>
                         <button onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')" class="dropbtn splashOp">
-                            <span class='bx bxs-flag icon' style="transform: translateY(1px)"></span>
+                            <span class='bx bx-error-circle icon' style="transform: translateY(3px); font-size: 20px"></span>
                             <span style="padding: 5px">Report</span>
                         </button>
                     </div>
@@ -319,7 +320,7 @@
             </div>
         </div>
 
-        <div style="text-align: center; width: 91.5%; margin: auto; transform: translateX(-0.75%);" id="gamebar">
+        <div style="text-align: center; width: calc(90% + 35px); margin: auto; transform: translateX(0);" id="gamebar">
             <div class="randomGameSelector" id="randomSelector">
                 <a herf=" " class="game_click" onclick="viewGame(data[Math.floor(Math.random() * data.length)].id)" id="click">
                     <img class="game_img" id="rgs_img" src="https://celebrated-stardust-91ad96.netlify.app/Images/random_game.png">
@@ -378,20 +379,17 @@
             <span class="hovertext7">Options</span>
             <div id="gameOptions" class="dropdown-content" style="transform: translateX(-155px)">
                 <button onclick="" class="dropbtn" id="favoriteOption">
-                    <span class='bx bx-star icon' style="transform: translateY(1px)" id="favStarOption"></span>
+                    <span class='bx bx-star icon' style="transform: translateY(3px); font-size: 20px" id="favStarOption"></span>
                     <span style="padding: 5px" id="favoriteTextOption">Favorite</span>
                 </button>
                 <!-- <button onclick="" class="dropbtn" id="hideOption">
                     <span class='bx bx-hide icon' style="transform: translateY(1px)" id="hideNoteOption"></span>
                     <span style="padding: 5px" id="hideTextOption">Hide Note</span>
-                </button>
-                <button onclick="windowedfullscreen()" class="dropbtn" id="hideOption">
-                    <span class='bx bx-window-alt icon' style="transform: translate(-40px, 1px)"></span>
-                    <div style="line-height: 90%; transform: translate(10px, -25px)">
-                        <span style="padding: 5px; font-size: 13px;">Windowed</span>
-                        <br><span style="padding: 5px; font-size: 13px;">Fullscreen</span>
-                    </div>
                 </button> -->
+                <button onclick="windowedfullscreen()" class="dropbtn" id="hideOption">
+                    <span class='bx bx-window-alt icon' style="transform: translateY(3px); font-size: 20px"></span>
+                    <span style="padding: 5px">Windowed</span>
+                </button>
             </div>
         </div>
         <div class="title" id="gamePageTitle"></div>
@@ -399,16 +397,20 @@
         <br>
 
         <!-- <iframe class="gameIframe" src="" id="gameIframe" width="1074" height="600"></iframe> -->
-        <iframe class="gameIframe" src="" id="gameIframe"></iframe>
+        <div id="fullscreenGame">
+            <div class="exitBtn" id="exitBtn" onclick="exitWindowed()"><i class='bx bx-x icon' style="transform: translateY(0px); font-size: 25px"></i></div>
+            <div class="FPSCount" id="FPSCount" onclick="focusGame()">0/0 FPS</div>
+            <iframe class="gameIframe" src="" id="gameIframe"></iframe>
+        </div>
         <div class="iframeFocus" onclick="focusGame()" id="iframeFocus">
             <br><br>
             <span style="font-size: 2.25vw; line-height: 150%; font-weight: 600;">Game not focused</span>
             <br>
             <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">Click to re-focus.</span>
-            <div style="height: 55vh; width: 1px; opacity: 0;"></div>
+            <div style="height: 25vw; width: 1px; opacity: 0;"></div>
             <span style="font-size: 1.2vw; line-height: 150%; font-weight: 600;">Huh?</span>
             <br>
-            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">You can't play the game if it's not focused, goofy.</span>
+            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">You can't play the game if it's not focused, goofy. 💀</span>
         </div>
         <br>
         <div class="controlsBox" id="controls">
@@ -418,23 +420,23 @@
         </div>
         <div class="gamePageBtnBackground">
             <div class="gamePageBtn" onclick="fullscreen()">
-                <span class='bx bx-fullscreen icon' style="transform: translateY(1px)"></span>
-                <span style="padding: 5px">Fullscreen</span>
+                <span class='bx bx-fullscreen icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
+                <span style="padding: 5px; font-size: 1.2vw">Fullscreen</span>
             </div>
             <div style="width: 5%; height: 1px; display: inline-table;"></div>
             <div class="gamePageBtn" onclick="controls()">
-                <span class='bx bxs-joystick-button icon' style="transform: translateY(1px)"></span>
-                <span style="padding: 5px">Controls</span>
+                <span class='bx bxs-joystick-button icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
+                <span style="padding: 5px; font-size: 1.2vw">Controls</span>
             </div>
             <div style="width: 5%; height: 1px; display: inline-table;"></div>
             <div class="gamePageBtn" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
-                <span class='bx bxs-megaphone icon' style="transform: translateY(1px)"></span>
-                <span style="padding: 5px">Report</span>
+                <span class='bx bxs-error-circle icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
+                <span style="padding: 5px; font-size: 1.2vw">Report</span>
             </div>
             <div style="width: 5%; height: 1px; display: inline-table;"></div>
             <div class="gamePageBtn" onclick="gamepage()">
-                <span class='bx bxs-joystick icon' style="transform: translateY(1px)"></span>
-                <span style="padding: 5px">Gamepage</span>
+                <span class='bx bxs-joystick icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
+                <span style="padding: 5px; font-size: 1.2vw">Gamepage</span>
             </div>
         </div>
         <br>
@@ -450,12 +452,10 @@
         </footer>
     </section>
 
-    <!-- <section style="position: fixed; z-index: 101; display: none; width: 20%; height: 50px;" id="overlays">
-        <div class="savedOverlay" id="savedOverlay">
-            <span class='bx bx-check icon' style="transform: translate(-2px, 5px); font-size: 25px; padding: 1px; color: #00FF00"></span>
-            <span>Saved Game Data!</span>
+    <section class="alertSection">
+        <div class="alerts" id="alerts">
         </div>
-    </section> -->
+    </section>
 
     <script src="script.js"></script>
     <script src="./Scripts/game_data.js"></script>

@@ -1,4 +1,4 @@
-let bannerMessageNum = "13"
+let bannerMessageNum = "14"
 const body = document.querySelector('body'),
         sidebar = body.querySelector('nav'),
         toggle = body.querySelector(".toggle"),
@@ -82,7 +82,7 @@ function gamepage(){
 function fullscreen(){
     document.getElementById("gameIframe").focus();
     if(window.location == window.parent.location){
-        var elem = document.getElementById("gameIframe")
+        var elem = document.getElementById("fullscreenGame")
         if(elem.requestFullscreen){
             elem.requestFullscreen();
         } else if(elem.webkitRequestFullscreen){
@@ -90,26 +90,47 @@ function fullscreen(){
         } else if(elem.msRequestFullscreen){
             elem.msRequestFullscreen();
         }
+
+        var iframe = document.getElementById("gameIframe")
+        iframe.classList = "gameIframeFullscreen"
+        var fpscount = document.getElementById("FPSCount")
+        fpscount.classList = "FPSCount FPSCountFullscreen"
+
+        elem.addEventListener("fullscreenchange", exitHandler, false)
+        elem.addEventListener("mozfullscreenchange", exitHandler, false)
+        elem.addEventListener("MSFullscreenChange", exitHandler, false)
+        elem.addEventListener("webkitfullscreenchange", exitHandler, false)
+        function exitHandler(){
+            if(!document.webkitIsFullScreen && !document.MozFullScreen && !document.msFullscreenElement){
+                iframe.classList = "gameIframe"
+                fpscount.classList = "FPSCount"
+                resizeWidth();
+            }
+        }
     } else {
         // window.location = "gamepage-full.html"
     }
 }
 
 function windowedfullscreen (){
-  var iframe = document.getElementById("gameIframe")
+    var iframe = document.getElementById("gameIframe")
     iframe.classList = "gameIframeFull"
     document.body.style.overflow = "hidden"
     window.scrollTo(0, 0)
     iframe.focus()
+    var fpscount = document.getElementById("FPSCount")
+    fpscount.classList = "FPSCount FPSCountFull"
+    document.getElementById("exitBtn").style.display = "block"
+}
 
-    iframe.addEventListener("keydown", key => {
-        console.log(key)
-        if(key.key === "Escape"){
-
-            iframe.classList = "gameIframe"
-            // iframe.removeEventListener("keydown", key, false)
-        }
-    })
+function exitWindowed(){
+    var iframe = document.getElementById("gameIframe")
+    var fpscount = document.getElementById("FPSCount")
+    iframe.classList = "gameIframe"
+    fpscount.classList = "FPSCount"
+    document.body.style.overflow = "visible"
+    document.getElementById("exitBtn").style.display = "none"
+    resizeWidth();
 }
 
 setTimeout(() => {
@@ -123,17 +144,20 @@ function resizeWidth(){
     //Other
     var container = document.getElementsByClassName("container")
     var soundboard = document.getElementsByClassName("soundboard")
+    var gamebar = document.getElementById("gamebar")
     if(document.getElementById("gameIframe") !== null){
         let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
         document.getElementById("gameIframe").style.height = newHeight
         document.getElementById("iframeFocus").style.height = newHeight
     }
     for(let i = 0; i < container.length; i++){
-        var x = window.innerWidth * 90 / 100
-        var y = Math.trunc(x / 225)
-        var z = x / y - 26
+      var x = window.innerWidth * 90 / 100
+      var y = Math.trunc(x / 225)
+      var z = x / y - 26
 
         container[i].style.width = `${z}px`
+        // container[i].style.marginLeft = `${z}px`
+        gamebar.style.width = `calc(90% + ${7 * y})`
         document.getElementById("randomSelector").style.width = `${z}px`
     }
     for(let i = 0; i < soundboard.length; i++){
@@ -165,7 +189,7 @@ window.onload = (event) => {
     }, 250)
 
     if(localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null){
-        if(document.getElementsByClassName("bannerMessage").length !== 0) document.getElementById("bannerMessage").style.display = "block"
+        document.getElementById("bannerMessage").style.display = "block"
     }
 }
 
@@ -379,3 +403,70 @@ function optionsMenu(dropdown) {
 			e.style.display = "none"
 		}
 	}
+
+  const times = [];
+  var updateTime = null
+  var minimum = []
+  var lastMin = { last: 0, num: 0 }
+  let fps;
+
+  function refreshLoop(){
+      if(localStorage.getItem("FPSCount") !== "true") return;
+      document.getElementById("FPSCount").style.display = "block"
+      window.requestAnimationFrame(() => {
+          const now = performance.now();
+          while (times.length > 0 && times[0] <= now - 1000){
+              times.shift();
+          }
+          times.push(now);
+          fps = times.length
+          minimum.push(fps)
+          if(updateTime === null || updateTime < Date.now()){
+              if(lastMin.num === 4){
+                  lastMin.last = minimum.sort((a, b) => a - b)[0]
+                  lastMin.num = 0
+                  minimum = []
+              }
+              document.getElementById("FPSCount").innerText = `${fps - 1}/${lastMin.last - 1} FPS`
+              updateTime = Date.now() + 250
+              lastMin.num++
+          }
+          refreshLoop()
+      })
+  }
+
+  refreshLoop()
+
+  function createAlertBox(info){
+      if(document.getElementsByClassName("alertBox").length > 3) return;
+      var color = "var(--primary-color)"
+      if(info.color === "green") color = "#0ed929"
+      if(info.color === "red") color = "#f6290e"
+      var time = info.time || 2000
+
+      let length = 10
+      const characters = "abcdefghikjlmnopqrstuvwxyz"
+      let result = ""
+      for(let i = 0; i < length; i++){
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+
+      var alertBox = document.createElement("div")
+      alertBox.className = "alertBox"
+      alertBox.id = result
+      alertBox.style.opacity = "1"
+      alertBox.style.boxShadow = `0px 0px 10px ${color}`
+
+      var text = document.createElement("span")
+      text.innerText = info.text
+      alertBox.appendChild(text)
+
+      document.getElementById("alerts").appendChild(alertBox)
+
+      setTimeout(() => {
+          document.getElementById(result).style.opacity = "0"
+          setTimeout(() => {
+              document.getElementById(result).remove()
+          }, 550)
+      }, time)
+  }

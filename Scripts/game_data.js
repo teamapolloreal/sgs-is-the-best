@@ -1,4 +1,4 @@
-let lastUpdate = "1/3/2023 (v6.0.0)"
+let lastUpdate = "1/11/2023 (v6.1.0)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -1091,6 +1091,24 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
+        ]
+    },
+    {
+        name: "Minecraft",
+        id: "minecraft",
+        genre: "Adventure / Survival",
+        description: "Minecraft 1.5.2 by Eaglercraft. Minecraft is a 3D sandbox game allowing the player to focus on exploring, features, plants, mobs and items. Mining, building, crafting, you probably get it.",
+        link: `${cdnUrl}/Game Files//EasyEagler-main/lastUpdate.html`,
+        img: `${cdnUrl}/Images/minecraft.png`,
+        file_based: true,
+        publisher: "Eaglercraft",
+        controls: [
+            "WASD - Movement",
+            "Space - Jump",
+            "Left Click - Break Block",
+            "Right Click - Place Block",
+            "*Many more not listed here",
+            "*Controls are customizable in-game"
         ]
     },
     {
@@ -2322,6 +2340,7 @@ function favorite(id){
 
             removeGames();
             loadGames();
+            createAlertBox({ color: "green", text: "Favorited Game"})
             return;
         }
     }
@@ -2350,6 +2369,7 @@ function unfavorite(id){
 
           removeGames();
           loadGames();
+          createAlertBox({ color: "red", text: "Unfavorited Game"})
           return;
       }
   }

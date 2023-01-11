@@ -16,6 +16,7 @@ function setNav(){
             document.getElementById("homeSection0").style.height = "100vh"
             document.getElementById("homeTextBox").style.top = "38vh"
         }
+        document.getElementById("alerts").style.bottom = "5%"
 
         var sections = document.getElementsByClassName("sectionNav2")
         for(let i = 0; i < sections.length; i++){
@@ -26,6 +27,7 @@ function setNav(){
         document.getElementById("navbar1").style.display = "none"
         document.getElementById("navbar2").style.display = "block"
         sidebar.classList = "sidebar"
+        document.getElementById("alerts").style.bottom = "17%"
 
         var sections = document.getElementsByClassName("section")
         for(let i = 0; i < sections.length; i++){
@@ -60,6 +62,7 @@ function instanlyLaunchGame(changed){
             document.getElementById("instantGameBack").style.backgroundColor = "var(--toggle-color)";
             localStorage.setItem("instantGame", false)
         }
+        createAlertBox({ color: "green", text: "Applied New Changes"})
     } else {
         if(localStorage.getItem("instantGame") === "true"){
             if(document.getElementById("instantGameSwitch") !== null){
@@ -87,6 +90,7 @@ function gameIconSetting(changed){
             document.getElementById("gameIconBack").style.backgroundColor = "var(--primary-color)";
             localStorage.setItem("gameIcon", "true")
         }
+        createAlertBox({ color: "green", text: "Applied New Changes"})
     } else
     {
         if(localStorage.getItem("gameIcon") === null || localStorage.getItem("gameIcon") === "true"){
@@ -94,6 +98,35 @@ function gameIconSetting(changed){
                 document.getElementById("gameIconSwitch").style.left = "30px";
                 document.getElementById("gameIconSwitch").style.backgroundColor = "#fff"
                 document.getElementById("gameIconBack").style.backgroundColor = "var(--primary-color)";
+            }
+        } else {
+        }
+    }
+}
+
+FPSSetting();
+
+function FPSSetting(changed){
+    if(changed === true){
+        if(localStorage.getItem("FPSCount") === "false"){
+            localStorage.setItem("FPSCount", "true")
+            document.getElementById("FPSSwitch").style.left = "30px";
+            document.getElementById("FPSSwitch").style.backgroundColor = "#fff"
+            document.getElementById("FPSBack").style.backgroundColor = "var(--primary-color)";
+        } else {
+            document.getElementById("FPSSwitch").style.left = "15px";
+            document.getElementById("FPSSwitch").style.backgroundColor = "var(--body-color)"
+            document.getElementById("FPSBack").style.backgroundColor = "var(--toggle-color)";
+            localStorage.setItem("FPSCount", "false")
+            refreshLoop();
+        }
+        createAlertBox({ color: "green", text: "Applied New Changes"})
+    } else {
+        if(localStorage.getItem("FPSCount") === "true"){
+            if(document.getElementById("FPSSwitch") !== null){
+                document.getElementById("FPSSwitch").style.left = "30px";
+                document.getElementById("FPSSwitch").style.backgroundColor = "#fff"
+                document.getElementById("FPSBack").style.backgroundColor = "var(--primary-color)";
             }
         } else {
         }
@@ -115,6 +148,7 @@ function openSidebarSetting(changed){
             document.getElementById("openSidebarBack").style.backgroundColor = "var(--toggle-color)";
             localStorage.setItem("openSidebar", false)
         }
+        createAlertBox({ color: "green", text: "Applied New Changes"})
     } else {
         if(localStorage.getItem("openSidebar") === "true"){
             if(document.getElementById("openSidebarSwitch") !== null){
@@ -296,6 +330,7 @@ if(ddl !== null){
             }
             localStorage.setItem("tabCloak", event.target.value);
             setCloak();
+            createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
     }
@@ -308,6 +343,7 @@ if(ddl !== null){
             }
             localStorage.setItem("mode", event.target.value);
             setMode();
+            createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
     }
@@ -321,6 +357,7 @@ if(ddl !== null){
             localStorage.setItem("theme", event.target.value);
             document.getElementById("theme_color_picker").style.display = "none"
             setTheme();
+            createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
     }
@@ -333,6 +370,7 @@ if(ddl !== null){
             }
             localStorage.setItem("nav", event.target.value);
             setNav();
+            createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
     }

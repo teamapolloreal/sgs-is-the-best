@@ -554,6 +554,7 @@ function stopSound(id){
 }
 
 function playAll(){
+    createAlertBox({ text: "Loading Sounds, Please Wait", time: 5000 })
     for(let i = 0; i < sound_data.length; i++){
         var audio = document.getElementById(sound_data[i].id + "_audio")
         audio.play()
