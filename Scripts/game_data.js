@@ -2129,7 +2129,7 @@ function loadGames(){
 
         var game_click = document.createElement("a")
         game_click.className = "game_click"
-        game_click.id = "click"
+        game_click.id = game.id
         game_click.herf = game.id
 
         if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
