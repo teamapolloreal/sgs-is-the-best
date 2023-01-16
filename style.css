@@ -394,6 +394,7 @@ body.dark #fav_icon {
     right: 0%;
     width: 100%;
     height: 100%;
+    min-height: 100%;
     /* transform: translateX(); */
     z-index: 10000;
 }
@@ -407,6 +408,7 @@ body.dark #fav_icon {
     right: 0%;
     width: 100%;
     height: 100%;
+    min-height: 100%;
     border: none;
 }
 
@@ -450,11 +452,13 @@ body.dark #fav_icon {
 .FPSCountFull {
     right: 2%;
     z-index: 10001;
-    transform: translateY(-510%);
+    /* transform: translateY(-510%); */
+    top: -0.5%;
 }
 
 .FPSCountFullscreen {
     right: 2%;
+    top: -0.5%;
 }
 
 .FPSCount:hover {
@@ -465,7 +469,8 @@ body.dark #fav_icon {
 .exitBtn {
     width: 40px;
     height: 40px;
-    left: 2%;
+    left: -55px;
+    top: -0.5%;
     z-index: 10001;
     position: absolute;
     background-color: var(--sidebar-color);
@@ -473,7 +478,7 @@ body.dark #fav_icon {
     border-radius: 15px;
     color: #fff;
     font-style: 12px;
-    transform: translateY(-510%);
+    transform: translateY(50%);
     opacity: 0.8;
     overflow: hidden;
     display: none
@@ -948,7 +953,7 @@ body.dark .dropdown-content button {
 
 .profileBox{
     width: 90%;
-    height: 200px;
+    height: 235px;
     background-color: var(--sidebar-color);
     position: relative;
     margin: auto;
@@ -959,16 +964,104 @@ body.dark .dropdown-content button {
     padding-right: 20px;
 }
 
+.achieveBtn, .achievement {
+    height: 90px;
+}
+
+.achievement {
+    margin-top: 30px;
+}
+
+.achieveBtn .profileUsername, .achievement .profileUsername {
+    font-size: 25px;
+}
+
+.achieveBtn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.achieveIcon {
+    font-size: 60px;
+    right: 8px;
+    position: absolute;
+    transform: translateY(-32px);
+    color: var(--text-color);
+}
+
+body.dark .achieveIcon {
+    color: #fff;
+}
+
 .profileUsername{
     font-size: 30px;
     font-weight: 600;
-    color: var(--text-color)
+    color: var(--primary-color)
+}
+
+body.dark .profileUsername {
+    color: #fff;
+}
+
+.profileSelect{
+    position: absolute;
+    left: 30%;
+    height: 25px;
+    width: 200px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: translateY(-25px);
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    font-weight: 600;
+    border: hidden;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    z-index: 100;
+}
+
+.psuser {
+    left: 20px;
+    height: 40px;
+    width: 40%;
+    transform: translateY(-40px);
 }
 
 .profileText{
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--text-color)
+}
+
+.ptr {
+    position: absolute;
+    right: 20px;
+    text-align: right;
+}
+
+.profileEdit {
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color-light);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    color: var(--text-color);
+    padding: 10px;
+}
+
+body.dark .profileEdit {
+    color: #fff;
+}
+
+.profileEdit:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .profileStatsBox{
@@ -1018,7 +1111,20 @@ body.dark .profileStatsText{
   display: block;
   margin: 10px auto;
   height: 60px;
-  transform: translate(70px, -61px);
+  transform: translate(0, -61px);
+}
+
+.profileCircle {
+    right: 16px;
+    position: absolute;
+    margin: none;
+}
+
+.achieveCircle {
+    right: 16px;
+    position: absolute;
+    margin: none;
+    transform: translateY(-68px);
 }
 
 .soundboard-circle {

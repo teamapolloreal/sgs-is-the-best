@@ -96,6 +96,9 @@
                     <i class='bx bx-cog pageIcon' ></i>
                     <span class="horText">Settings</span>
                 </div>
+                <div class="horPage" onclick="location.replace('./profile.html')" style="background-color: var(--primary-color-light)">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                </div>
             </div>
         </div>
     </div>
@@ -197,7 +200,7 @@
                 </ul>
             </div>
 
-            <div class="bottom-content" style="transform: translateY(-40%);">
+            <div class="bottom-content" style="transform: translateY(-20%);">
                 <li class="nav-link">
                     <a href="#" class="selected">
                         <i class='bx bx-cog icon' ></i>
@@ -212,15 +215,15 @@
                         <span class="text nav-text">Login or create</span>
                         <span class="hovertext">Login or create an account</span>
                     </a>
-                </li>
-
-                <li class="mode" id="loggedIn" style="display: none">
-                    <a href="account.html">
-                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
-                        <span class="text nav-text">Account (BETA)</span>
-                        <span class="hovertext">Manage Account (BETA)</span>
-                    </a>
                 </li> -->
+
+                <li class="mode">
+                    <a href="profile.html">
+                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                        <span class="text nav-text">Profile</span>
+                        <span class="hovertext">View Profile</span>
+                    </a>
+                </li>
 
                 <!-- <li class="">
                     <a href="#">
@@ -294,7 +297,6 @@
             <div class="pageDescription">Change the website's appearance by a dark and a light contrast.</div>
             <select class="settingsSelect" id="modeSelect">
                 <option class="settingsSelectOption">Dark</option>
-                <option class="settingsSelectOption">Dark Themed</option>
                 <option class="settingsSelectOption">Light</option>
             </select>
             <br>
@@ -339,7 +341,7 @@
         <br>
         <footer class="footer" id="footer">
             <br>
-            <span class="text">Copyright Syce's Game Shack 2022© - Contact: sycegameshack@gmail.com</span>
+            <span class="text">Copyright Syce's Game Shack 2023© - Contact: sycegameshack@gmail.com</span>
             <br>
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->

@@ -1,4 +1,4 @@
-let lastUpdate = "1/11/2023 (v6.1.0)"
+let lastUpdate = "1/16/2023 (v6.2.0)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -2484,6 +2484,7 @@ function playGame(gameID){
             // document.getElementById("gameIframe").focus();
             window.scrollTo(0, 0)
             document.body.style.overflow = "visible"
+            trackGameData(data[i].id, null)
         }
     }
 }

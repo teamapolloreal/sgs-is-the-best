@@ -51,7 +51,7 @@ instanlyLaunchGame();
 
 function instanlyLaunchGame(changed){
     if(changed === true){
-        if(localStorage.getItem("instantGame") === "false"){
+        if(localStorage.getItem("instantGame") !== "true"){
             localStorage.setItem("instantGame", true)
             document.getElementById("instantGameSwitch").style.left = "30px";
             document.getElementById("instantGameSwitch").style.backgroundColor = "#fff"
@@ -108,7 +108,7 @@ FPSSetting();
 
 function FPSSetting(changed){
     if(changed === true){
-        if(localStorage.getItem("FPSCount") === "false"){
+        if(localStorage.getItem("FPSCount") !== "true"){
             localStorage.setItem("FPSCount", "true")
             document.getElementById("FPSSwitch").style.left = "30px";
             document.getElementById("FPSSwitch").style.backgroundColor = "#fff"
@@ -137,7 +137,7 @@ openSidebarSetting();
 
 function openSidebarSetting(changed){
     if(changed === true){
-        if(localStorage.getItem("openSidebar") === "false"){
+        if(localStorage.getItem("openSidebar") !== "true"){
             localStorage.setItem("openSidebar", true)
             document.getElementById("openSidebarSwitch").style.left = "30px";
             document.getElementById("openSidebarSwitch").style.backgroundColor = "#fff"
@@ -229,16 +229,10 @@ function setMode(){
     let mode = localStorage.getItem("mode")
     if(!mode) mode = "Dark"
 
-    if(mode === "Dark"){
+    if(mode === "Dark" || mode === "Dark Themed"){
         localStorage.setItem("mode", "Dark");
         if(body.classList[0] !== "dark") body.classList.toggle("dark");
-        document.body.style.setProperty("--primary-color", "#3a3b3c");
-        document.body.style.setProperty("--primary-text-color", "#ccc")
-    }
-    if(mode === "Dark Themed"){
-        localStorage.setItem("mode", "Dark Themed");
-        if(body.classList[0] !== "dark") body.classList.toggle("dark");
-        loadTheme()
+        loadTheme();
     }
     if(mode === "Light"){
         localStorage.setItem("mode", "Light");
@@ -262,7 +256,7 @@ loadTheme();
 function loadTheme(){
     let theme = localStorage.getItem("themeHex")
     if(!theme) theme = "#695CFE"
-    if(localStorage.getItem("mode") === "Dark Themed"){
+    if(localStorage.getItem("mode") === "Dark" || localStorage.getItem("mode") === "Dark Themed"){
         document.body.style.setProperty("--primary-color", theme)
         document.body.style.setProperty("--primary-text-color", "#fff")
     }
@@ -320,6 +314,17 @@ if(ddl !== null){
     }
 }
 
+var ddl = document.getElementById("alertSelect");
+if(ddl !== null){
+    var opts = ddl.options.length
+    for(var i = 0; i < opts; i++){
+        if(ddl.options[i].value == localStorage.getItem("alerts")){
+            ddl.options[i].selected = true;
+            break;
+        }
+    }
+}
+
 //Onload
 {
     var cloakSelect = document.getElementById("cloakSelect")
@@ -370,6 +375,18 @@ if(ddl !== null){
             }
             localStorage.setItem("nav", event.target.value);
             setNav();
+            createAlertBox({ color: "green", text: "Applied New Changes"})
+            // saveSiteData();
+        })
+    }
+
+    var alertSelect = document.getElementById("alertSelect")
+    if(alertSelect){
+        alertSelect.addEventListener("change", function(event){
+            if(localStorage.getItem("alerts") === null){
+                localStorage.setItem("alerts", "Show All");
+            }
+            localStorage.setItem("alerts", event.target.value);
             createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })

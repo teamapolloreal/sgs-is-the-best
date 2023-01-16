@@ -96,6 +96,9 @@
                     <i class='bx bx-cog pageIcon' ></i>
                     <span class="horText">Settings</span>
                 </div>
+                <div class="horPage" onclick="location.replace('./profile.html')" style="background-color: var(--primary-color-light)">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                </div>
             </div>
         </div>
     </div>
@@ -197,7 +200,7 @@
                 </ul>
             </div>
 
-            <div class="bottom-content" style="transform: translateY(-40%);">
+            <div class="bottom-content" style="transform: translateY(-20%);">
                 <li class="nav-link">
                     <a href="settings.html">
                         <i class='bx bx-cog icon' ></i>
@@ -212,15 +215,15 @@
                         <span class="text nav-text">Login or create</span>
                         <span class="hovertext">Login or create an account</span>
                     </a>
-                </li>
-
-                <li class="mode" id="loggedIn" style="display: none">
-                    <a href="account.html">
-                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
-                        <span class="text nav-text">Account (BETA)</span>
-                        <span class="hovertext">Manage Account (BETA)</span>
-                    </a>
                 </li> -->
+
+                <li class="mode">
+                    <a href="profile.html">
+                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                        <span class="text nav-text">Profile</span>
+                        <span class="hovertext">View Profile</span>
+                    </a>
+                </li>
 
                 <!-- <li class="">
                     <a href="#">
@@ -248,8 +251,8 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">Minecraft! (v6.1.0)</div>
-            <div class="messageBannerText">Added Minecraft 1.5.2 + FPS counter in settings. Also added windowed fullscreen in the game options with other minor changes. You can read the full update log <a class="underline_text" onclick="location.replace('blog.html')">here.</a></div>
+            <div class="messageBannerTitle">Profiles (v6.2.0)</div>
+            <div class="messageBannerText">You now have your own profile! View on your navbar, should be a profile icon. Play games to gain xp, gain enough xp you level up. Complete achievements to win rewards, etc. You can read the full update log <a class="underline_text" onclick="location.replace('blog.html')">here.</a></div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
@@ -363,7 +366,7 @@
         <br><br>
         <footer class="footer" id="footer">
             <br>
-            <span class="text">Copyright Syce's Game Shack 2022© - Contact: sycegameshack@gmail.com</span>
+            <span class="text">Copyright Syce's Game Shack 2023© - Contact: sycegameshack@gmail.com</span>
             <br>
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
@@ -411,6 +414,8 @@
         <div id="fullscreenGame">
             <div class="exitBtn" id="exitBtn" onclick="exitWindowed()"><i class='bx bx-x icon' style="transform: translateY(0px); font-size: 25px"></i></div>
             <div class="FPSCount" id="FPSCount" onclick="focusGame()">0/0 FPS</div>
+            <div style="min-width: 100vw; min-height: 100vh; position: fixed; background-color: transparent; top: 0;
+            z-index: 100000" id="afkdetector"></div>
             <iframe class="gameIframe" src="" id="gameIframe"></iframe>
         </div>
         <div class="iframeFocus" onclick="focusGame()" id="iframeFocus">
@@ -454,7 +459,7 @@
         <br>
         <footer class="footer" id="footer">
             <br>
-            <span class="text">Copyright Syce's Game Shack 2022© - Contact: sycegameshack@gmail.com</span>
+            <span class="text">Copyright Syce's Game Shack 2023© - Contact: sycegameshack@gmail.com</span>
             <br>
             <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
             <br> -->
@@ -471,6 +476,7 @@
     <script src="script.js"></script>
     <script src="./Scripts/game_data.js"></script>
     <script src="./Scripts/settings.js"></script>
+    <script src="./Scripts/profile.js"></script>
 
 </body>
 </html>

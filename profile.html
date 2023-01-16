@@ -30,13 +30,13 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Syce's Game Shack</title>
-    <link rel="icon" herf="sgs-logo.png" type=image/png>
+    <link rel="icon" herf="sgs-logo.png" type="image/png">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB243QR"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="loader-wrapper" id="loader-wrapper">
         <span class="loader">
             <span class="loader-inner">
@@ -61,11 +61,11 @@
                     <i class='bx bx-joystick pageIcon' ></i>
                     <span class="horText">Games</span>
                 </div>
-                <div class="horPage horSelected">
+                <div class="horPage" onclick="location.replace('./soundboard.html')">
                     <i class='bx bx-volume-full pageIcon' ></i>
                     <span class="horText">Soundboard</span>
                 </div>
-                <div class="horPage" onclick="location.replace('blog.html')">
+                <div class="horPage" onclick="location.replace('./blog.html')">
                     <i class='bx bx-book-alt pageIcon' ></i>
                     <span class="horText">Blogs</span>
                 </div>
@@ -96,7 +96,7 @@
                     <i class='bx bx-cog pageIcon' ></i>
                     <span class="horText">Settings</span>
                 </div>
-                <div class="horPage" onclick="location.replace('./profile.html')" style="background-color: var(--primary-color-light)">
+                <div class="horPage horSelected" onclick="location.replace('./profile.html')">
                     <i class='bx bx-user-circle pageIcon profileIcon' ></i>
                 </div>
             </div>
@@ -156,7 +156,7 @@
                     </li> -->
 
                     <li class="nav-link">
-                        <a href="#" class="selected">
+                        <a href="soundboard.html">
                             <i class='bx bx-volume-full icon' ></i>
                             <span class="text nav-text">Soundboard</span>
                             <span class="hovertext">Soundboard</span>
@@ -165,7 +165,7 @@
 
                     <li class="nav-link">
                         <a href="blog.html">
-                            <i class='bx bx-book-alt icon' ></i>
+                            <i class='bx bx-book-alt icon'></i>
                             <span class="text nav-text">Blog</span>
                             <span class="hovertext">Blog</span>
                         </a>
@@ -218,7 +218,7 @@
                 </li> -->
 
                 <li class="mode">
-                    <a href="profile.html">
+                    <a href="profile.html" class="selected">
                         <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
                         <span class="text nav-text">Profile</span>
                         <span class="hovertext">View Profile</span>
@@ -249,60 +249,133 @@
 
     </nav>
 
-    <section class="section">
+    <section class="section" id="mainProfile">
+        <!-- <br>
+        <div class="title">Account Settings</div>
+        <div class="text">This is the settings page for your account.</div> -->
         <br>
-        <div class="title">Syce's Soundboard</div>
-        <div class="text">I randomly made this soundboard once for fun and I thought it would be nice to include on the website :)</div>
-        <div class="text">This is to be used to for fun purposes, please remember I'm not responsible for any trouble this may cause you.</div>
-        <br>
-        <div class="text" id="soundcount" style="display: inline-table; float: left;">Sounds: 16<br>Updated: 11/4/22 (v5.1.1)</div>
-        <div class="" style="display: inline-table; float: right; padding-right: 5%;">
-            <button class="suggestionBox" onclick="window.open('https://forms.gle/oJV2kiSCFMZah3rP9', '_blank')">
-                <i class='bx bx-upload icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
-                <span>Upload a sound</span>
-            </button>
-        </div>
-        <br>
-        <div style="height: 35px; width: 1px;"></div>
-        <div class="search-box" style="width: 56.50%">
+        <!-- <div class="search-box" style="float: left; transform: translateX(8.5%); display: relative;">
             <span class='bx bx-search icon'></span>
-            <input class="search-box-input" type="text" placeholder="Search..." id="searchbarSoundboard" onkeyup="searchSoundboard()">
+            <input class="search-box-input" type="text" placeholder="Search..." id="searchbar" onkeyup="search()">
         </div>
-        <div class="soundboard_button" id="play_all_btn" onclick="playAll()">
-            <a class="soundboard_click" id="play_all_click">
-                <div class="soundboard_title sb_btn_title" id="bruh">Play All</div>
-            </a>
+        <br><br><br> -->
+        <div class="profileBox">
+            <span class="profileUsername" id="profileUsername">No Username Set</span>
+            <input class="profileSelect psuser" type="text" placeholder="Enter your new username" id="usernameInputProfile" onkeyup="inputUsername()">
+            <br>
+            <span class="profileText" id="profileTitle">No Title Set</span>
+            <select class="profileSelect" id="titleInputProfile">
+                <option class="settingsSelectOption" id="noobie_gamer">Noobie Gamer</option>
+                <!-- <option class="settingsSelectOption" id="pro_gamer">Pro Gamer</option>
+                <option class="settingsSelectOption" id="certified_pro_gamer">Certified Pro Gamer</option>
+                <option class="settingsSelectOption" id="absolutely_cracked">Absolutely Cracked</option>
+                <option class="settingsSelectOption" id="legit_hacker">Legit Hacker</option>
+                <option class="settingsSelectOption" id="bro_im_dead">bro im dead 💀</option>
+                <option class="settingsSelectOption" id="what_the_dog_doin">what the dog doin'</option> -->
+            </select>
+            <br><span class="profileText" id="profileLvlXP">Level: 1 - Experience: 25/100</span>
+            <span class="profileText ptr" id="minutes_played_text">Minutes Played: 0 min (0 hrs)</span>
+            <div class="profileEdit" id="profileEdit" onclick="editProfile(true)">
+                <i class='bx bx-edit-alt icon' style="font-size: 25px;"></i>
+            </div>
+            <br><br>
+            <div class="profileStatsBox" style="float: left;">
+                <span class="profileStatsTitle">Games Played</span>
+                <br>
+                <span class="profileStatsText" id="games_played_text"><b>90/111</b></span>
+                <svg viewBox="0 0 36 36" class="circle-svg profileCircle">
+                   <path class="around"
+                      stroke-dasharray="100, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                   <path class="percent" id="games_played" stroke-dasharray="81, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                </svg>
+            </div>
+            <div class="profileStatsBox" style="margin: auto">
+                <span class="profileStatsTitle">Achievements</span>
+                <br>
+                <span class="profileStatsText" id="achievements_completed_text"><b>0/12</b></span>
+                <svg viewBox="0 0 36 36" class="circle-svg profileCircle">
+                   <path class="around"
+                      stroke-dasharray="100, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                   <path class="percent" id="achievements_completed" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                </svg>
+            </div>
+            <div class="profileStatsBox" style="float: right; transform: translateY(-80px);">
+                <span class="profileStatsTitle">Badges</span>
+                <br>
+                <span class="profileStatsText" style="font-size: 15px"><b>coming soon!</b></span>
+                <svg viewBox="0 0 36 36" class="circle-svg profileCircle">
+                   <path class="around"
+                      stroke-dasharray="100, 100"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                   <path class="percent" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                </svg>
+            </div>
         </div>
-        <div class="soundboard_button" id="play_all_btn" onclick="stopAll()">
-            <a class="soundboard_click" id="click">
-                <div class="soundboard_title sb_btn_title" id="title">Stop All</div>
-            </a>
+
+        <br><div class="profileBox achieveBtn" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('achievements').style.display = 'block'">
+            <span class="profileUsername">Achievements</span>
+            <br>
+            <span class="profileText">Click to view your progress towards achievements.</span>
+            <i class='bx bx-chevron-right achieveIcon'></i>
         </div>
-        <br><br>
-        <svg style="display: none">
+        <br>
+        <div class="setting">
+            <div class="settingsTitle">Alerts</div>
+            <div class="pageDescription">Choose which alerts you would like to show.</div>
+            <select class="settingsSelect" id="alertSelect" style="width: 15%">
+                <option class="settingsSelectOption">Show All</option>
+                <option class="settingsSelectOption">Level Up + Achievements</option>
+                <option class="settingsSelectOption">Level Up Only</option>
+                <option class="settingsSelectOption">None</option>
+            </select>
+          </div>
+
+        <br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright Syce's Game Shack 2023© - Contact: sycegameshack@gmail.com</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
+    <section class="section" id="achievements" style="display: none">
+        <br>
+        <div class="title">Achievements</div>
+        <div class="text">Complete achievements to earn rewards! <b>Scroll to the bottom to view completed ones.</b></div>
+        <div class="blogBack" onclick="loadProfile(), document.getElementById('mainProfile').style.display = 'block', document.getElementById('achievements').style.display = 'none'">
+            <i class='bx bx-chevron-left icon' ></i>
+            <span class="hovertext7">Back</span>
+        </div>
+        <svg style="display: none" id="insertBeforeThisLOL">
             <path id="lol" class="around" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
         </svg>
-
-        <div style="text-align: center; width: 92%; margin: auto; transform: translateX(-0.3%);" id="gamebar">
-            <!-- <div class="soundboard" id="Android Notif">
-                <audio class="sound" id="android_notif_audio" src="Soundboard/android-notif.mp3" preload="auto"></audio>
-                <a class="soundboard_click" onclick="playSound('android_notif')" id="click">
-                    <div class="soundboard_title" id="title">Android.mp3</div>
-                    <i class='bx bx-play icon' id="play_icon">
-                        <svg viewBox="0 0 36 36" class="circle-svg soundboard-circle">
-                            <path class="around"
-                               stroke-dasharray="100, 100"
-                               d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                            <path class="percent" id="audio_percent" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                         </svg>
-                     </i>
-                </a>
-            </div> -->
-        </div>
-
         <br><br>
-        <span class="text">loads of more sounds will be added just give me some time thanks :)</span>
-        <br><br>
+
+        <!-- <br><div class="profileBox achievement">
+          <span class="profileUsername">Play Games for 5 Minutes</span>
+          <br>
+          <span class="profileText">Reward: 500xp</span>
+          <svg viewBox="0 0 36 36" class="circle-svg achieveCircle">
+             <path class="around"
+                stroke-dasharray="100, 100"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+             <path class="percent" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+          </svg>
+        </div>-->
+
+        <div class="pageLine"></div>
+        <br>
+        <div class="pageHeading">Completed</div>
+        <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Look back at the ones you've completed. How impressive!</div>
+        <a style="display: none" id="completedINsetLOLOL"></a>
+
+        <br>
         <footer class="footer" id="footer">
             <br>
             <span class="text">Copyright Syce's Game Shack 2023© - Contact: sycegameshack@gmail.com</span>
@@ -320,8 +393,8 @@
     </section>
 
     <script src="script.js"></script>
-    <script src="./Scripts/soundboard.js"></script>
     <script src="./Scripts/settings.js"></script>
+    <script src="./Scripts/profile.js"></script>
 
 </body>
 </html>

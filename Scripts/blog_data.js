@@ -1,4 +1,4 @@
-let lastUpdate = "1/2/2023"
+let lastUpdate = "1/16/2023 (v6.2.0)"
 let blog_data = [
     {
         title: "2022 Recap",
@@ -26,6 +26,14 @@ let blog_data = [
     },
 ]
 let log_data = [
+    {
+        title: "Update Log of v6.2.0",
+        date: "January 16, 2023",
+        writtenBy: "Syce",
+        id: "v6-2-0",
+        description: "This updates includes new user profiles with many other features.",
+        text: "This updates includes new user profiles with many other features. Read below for more details:<br><br><h3>Profiles</h3><ul><li>Each user now has their own profile</li><li class='whitecircle' type='circle'><b>Note:</b> These are cache based, so don’t clear your cookies!</li><li>Tracks progress and information to show</li><li>Gain XP to level up, get new rewards</li><li>Customizable, change your name and title (unlock new titles)</li></ul><br><h3>Achievements</h3><ul><li>See your progress towards your achievements</li><li>Sorted to show most completed at top</li><li>Rewards for completing include:</li><li class='whitecircle' type='circle'>Titles on your profile</li> <li class='whitecircle' type='circle'>Badges on your profile (coming soon)</li><li class='whitecircle' type='circle'>XP and levels</li></ul><br><h3>Other</h3><ul><li>Deleted dark mode… just kidding dark themed is now just dark mode</li><li>Fixes and stability improvements</li></ul><br><h3>Resolved Issues</h3><ul><li>Fixed fullscreen not covering the whole screen. Resolved on both windowed fullscreen and fullscreen</li><li>Fixed the windowed fullscreen exit button not being in the right spot</li><li class='whitecircle' type='circle'>Might be still flimsy on mobile</li></ul> <br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
     {
         title: "Update Log of v6.1.0",
         date: "January 11, 2023",

@@ -1,70 +1,69 @@
-let bannerMessageNum = "14"
+let bannerMessageNum = "15"
 const body = document.querySelector('body'),
-        sidebar = body.querySelector('nav'),
-        toggle = body.querySelector(".toggle"),
-        //searchBtn = body.querySelector(".search-box"),
-        modeSwitch = body.querySelector(".toggle-switch"),
-        modeText = body.querySelector(".mode-text");
+sidebar = body.querySelector('nav'),
+toggle = body.querySelector(".toggle"),
+//searchBtn = body.querySelector(".search-box"),
+modeSwitch = body.querySelector(".toggle-switch"),
+modeText = body.querySelector(".mode-text");
 
-        body.style.display = "block"
+body.style.display = "block"
 
-        // startup
-        let mode = localStorage.getItem("mode")
-        if(mode === null){
-            mode === "Dark"
-            localStorage.setItem("mode", "Dark")
+// startup
+let mode = localStorage.getItem("mode")
+if(mode === null){
+    mode === "Dark"
+    localStorage.setItem("mode", "Dark")
 
-            body.classList.toggle("dark");
+    body.classList.toggle("dark");
 
-            // if(body.classList.contains("dark")){
-            //     modeText.innerText = "Light mode";
-            // }else{
-            //     modeText.innerText = "Dark mode";
-            // }
-        } else {
-            if(mode === "Dark" || mode === "Dark Themed"){
-                body.classList.toggle("dark");
+    // if(body.classList.contains("dark")){
+    //     modeText.innerText = "Light mode";
+    // }else{
+    //     modeText.innerText = "Dark mode";
+    // }
+} else {
+    if(mode === "Dark" || mode === "Dark Themed"){
+        body.classList.toggle("dark");
 
-                // if(body.classList.contains("dark")){
-                //     modeText.innerText = "Light mode";
-                // }else{
-                //     modeText.innerText = "Dark mode";
-                // }
-            }
-        }
+        // if(body.classList.contains("dark")){
+        //     modeText.innerText = "Light mode";
+        // }else{
+        //     modeText.innerText = "Dark mode";
+        // }
+    }
+}
 
-        toggle.addEventListener("click" , () =>{
-            sidebar.classList.toggle("close");
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
 
-            if(sidebar.classList.value !== "sidebar close"){
-                document.getElementById("linkOptions").style.transform = "translate(240px, 0px)"
-            } else {
-                document.getElementById("linkOptions").style.transform = "translate(75px, 0px)"
-            }
-        })
+    if(sidebar.classList.value !== "sidebar close"){
+        document.getElementById("linkOptions").style.transform = "translate(240px, 0px)"
+    } else {
+        document.getElementById("linkOptions").style.transform = "translate(75px, 0px)"
+    }
+})
 
-        if(localStorage.getItem("openSidebar") === "true"){
-            sidebar.classList.toggle("close")
-            document.getElementById("linkOptions").style.transform = "translate(240px, -75px)"
-        }
+if(localStorage.getItem("openSidebar") === "true"){
+    sidebar.classList.toggle("close")
+    document.getElementById("linkOptions").style.transform = "translate(240px, -75px)"
+}
 
 
-        // searchBtn.addEventListener("click" , () =>{
-        //     sidebar.classList.remove("close");
-        // })
+// searchBtn.addEventListener("click" , () =>{
+//     sidebar.classList.remove("close");
+// })
 
-        // modeSwitch.addEventListener("click" , () =>{
-        //     body.classList.toggle("dark");
+// modeSwitch.addEventListener("click" , () =>{
+//     body.classList.toggle("dark");
 
-        //     if(body.classList.contains("dark")){
-        //         modeText.innerText = "Light mode";
-        //         localStorage.setItem("mode", "dark")
-        //     }else{
-        //         modeText.innerText = "Dark mode";
-        //         localStorage.setItem("mode", "light")
-        //     }
-        // });
-
+//     if(body.classList.contains("dark")){
+//         modeText.innerText = "Light mode";
+//         localStorage.setItem("mode", "dark")
+//     }else{
+//         modeText.innerText = "Dark mode";
+//         localStorage.setItem("mode", "light")
+//     }
+// });
 
 function gamepage(){
     document.getElementById("gameViewFullscreen").style.display = "none"
@@ -76,7 +75,8 @@ function gamepage(){
 
     if(localStorage.getItem("openSidebar") === "true" && body.querySelector('nav').classList.value === "sidebar close") body.querySelector('nav').classList.toggle("close")
 
-    saveGameData();
+    // saveGameData();
+    trackGameData(null, "stop")
 }
 
 function fullscreen(){
@@ -92,9 +92,8 @@ function fullscreen(){
         }
 
         var iframe = document.getElementById("gameIframe")
-        iframe.classList = "gameIframeFullscreen"
         var fpscount = document.getElementById("FPSCount")
-        fpscount.classList = "FPSCount FPSCountFullscreen"
+
 
         elem.addEventListener("fullscreenchange", exitHandler, false)
         elem.addEventListener("mozfullscreenchange", exitHandler, false)
@@ -105,10 +104,23 @@ function fullscreen(){
                 iframe.classList = "gameIframe"
                 fpscount.classList = "FPSCount"
                 resizeWidth();
+            } else {
+                iframe.classList = "gameIframeFullscreen"
+                fpscount.classList = "FPSCount FPSCountFullscreen"
             }
         }
     } else {
         // window.location = "gamepage-full.html"
+    }
+}
+
+function exitFullscreen(){
+    if(document.exitFullscreen){
+        document.exitFullscreen();
+    } else if(document.webkitExitFullscreen){
+        document.webkitExitFullscreen();
+    } else if(document.msExitFullscreen){
+        document.msExitFullscreen();
     }
 }
 
@@ -189,7 +201,7 @@ window.onload = (event) => {
     }, 250)
 
     if(localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null){
-        document.getElementById("bannerMessage").style.display = "block"
+        if(document.getElementById("bannerMessage")) document.getElementById("bannerMessage").style.display = "block"
     }
 }
 
@@ -412,6 +424,7 @@ function optionsMenu(dropdown) {
 
   function refreshLoop(){
       if(localStorage.getItem("FPSCount") !== "true") return;
+      if(!document.getElementById("FPSCount")) return;
       document.getElementById("FPSCount").style.display = "block"
       window.requestAnimationFrame(() => {
           const now = performance.now();
@@ -450,6 +463,7 @@ function optionsMenu(dropdown) {
       for(let i = 0; i < length; i++){
           result += characters.charAt(Math.floor(Math.random() * characters.length));
       }
+      if(info.id) result = info.id
 
       var alertBox = document.createElement("div")
       alertBox.className = "alertBox"
@@ -463,6 +477,7 @@ function optionsMenu(dropdown) {
 
       document.getElementById("alerts").appendChild(alertBox)
 
+      if(time === "never") return;
       setTimeout(() => {
           document.getElementById(result).style.opacity = "0"
           setTimeout(() => {
