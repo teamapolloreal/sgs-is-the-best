@@ -65,28 +65,29 @@ const achievement_data = [
     {
         name: "Play 10 Different Games",
         id: "play_10_games",
-        reward: "2500xp",
+        reward: "250xp",
         progress: null,
-        progress_info: { a: "play_games", b: 10, xp: 2500 }
+        progress_info: { a: "play_games", b: 10, xp: 250 }
     },
     {
         name: "Play 25 Different Games",
         id: "play_25_games",
-        reward: "5000xp",
+        reward: "500xp",
         progress: null,
-        progress_info: { a: "play_games", b: 25, xp: 5000 }
+        progress_info: { a: "play_games", b: 25, xp: 500 }
     },
     {
         name: "Play 50 Different Games",
         id: "play_50_games",
-        reward: "10000xp + \"what the dog doin'\" Title",
+        reward: "1000xp + \"what the dog doin'\" Title",
         progress: null,
-        progress_info: { a: "play_games", b: 50, xp: 10000, title: "what the dog doin' 🐶", t_id: "what_the_dog_doin" }
+        progress_info: { a: "play_games", b: 50, xp: 1000, title: "what the dog doin' 🐶", t_id: "what_the_dog_doin" }
     },
 ]
 
 loadProfile();
 function loadProfile(){
+    checkXP();
     if(!document.getElementById("usernameInputProfile")) return;
     var username = localStorage.getItem("sgs_profile_username")
     var title = localStorage.getItem("sgs_profile_title")
@@ -200,6 +201,7 @@ function trackGameData(id, status){
             playedGames = playedGames + `${id} || `
             localStorage.setItem("playedGames", playedGames)
         }
+        checkCompletion();
     }
 }
 
@@ -279,9 +281,23 @@ setInterval(() => {
     checkCompletion();
 }, 60000)
 
-function checkCompletion(){
-    var minutes_played = localStorage.getItem("minutes_played") || 0
+function checkXP(){
+    var xp = parseInt(localStorage.getItem("xp")) || 0
     var lvl = parseInt(localStorage.getItem("lvl")) || 1
+    if(xp >= lvl * 75){
+        var xp = xp - lvl * 75
+        var lvl = lvl + 1
+        if(localStorage.getItem("alerts") !== "None") createAlertBox({ color: "green", text: `You leveled up to level ${lvl}`, time: 8000 })
+        localStorage.setItem("xp", xp)
+        localStorage.setItem("lvl", lvl)
+        checkXP();
+    }
+}
+
+checkCompletion();
+function checkCompletion(){
+    checkXP();
+    var minutes_played = localStorage.getItem("minutes_played") || 0
     var lvl = parseInt(localStorage.getItem("lvl")) || 1
     var games_played = localStorage.getItem("playedGames") || null
     if(games_played) games_played = games_played.split("||").length - 1
