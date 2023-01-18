@@ -1,4 +1,4 @@
-let lastUpdate = "1/16/2023 (v6.2.0)"
+let lastUpdate = "1/18/2023 (v6.2.1)"
 let blog_data = [
     {
         title: "2022 Recap",
@@ -26,6 +26,14 @@ let blog_data = [
     },
 ]
 let log_data = [
+    {
+        title: "Update Log of v6.2.1",
+        date: "January 18, 2023",
+        writtenBy: "Syce",
+        id: "v6-2-1",
+        description: "This update includes bug fixes and minor changes.",
+        text: "This update includes bug fixes and minor changes. Read below for more details:<br><br><h3>Changes</h3><ul><li>Added numbers on the achievements to show your progress</li><li>Updated the list of blocked/bugged games</li><li class='whitecircle' type='circle'>And yes there’s a lot I need to work on</li></ul><br><h4>Balances</h4><ul><li>Nerfed the amount of xp you get from some achievements</li></ul><br><h3>Resolved Issues</h3><ul><li>Having enough XP to level up from achievements wouldn’t work (<a class='underline_text' onclick='location.replace('https://sgs.peerboard.com/post/1798518837')'>1798518837</a>)</li><li>Unable to save your Ball Blast game</li><li>Typo on the file source for Just One Boss</li><li>Typo on the file source for Moto X3M Winter</li></ul> <br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
     {
         title: "Update Log of v6.2.0",
         date: "January 16, 2023",
