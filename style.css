@@ -993,6 +993,21 @@ body.dark .achieveIcon {
     color: #fff;
 }
 
+.achievementStatsText{
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 100%;
+    position: absolute;
+    right: 100px;
+    top: 35.5px;
+    text-align: left;
+}
+
+body.dark .achievementStatsText {
+    color: #fff;
+}
+
 .profileUsername{
     font-size: 30px;
     font-weight: 600;
@@ -1147,7 +1162,15 @@ body.dark .profileStatsText{
   stroke-linecap: round;
   animation: progress 1s ease-out forwards;
 }
+
 .circle-svg path.around {
+    /* stroke: #c4c4c4; */
+    stroke: var(--primary-color-light);
+    fill: none;
+    stroke-width: 2.8;
+}
+
+.soundboard-circle path.around, .profileCircle path.around {
     /* stroke: #c4c4c4; */
     stroke: var(--sidebar-color);
     fill: none;
@@ -1746,39 +1769,6 @@ body.dark .messageBanner {
 body.dark .footer {
     background-color: #3a3b3c;
 }
-
-.sidebar .bottom-content li.profile {
-    background: var(--primary-color-light);
-}
-
-/* .sidebar .bottom-content li.profile {
-    position: fixed;
-    height: 60px;
-    width: 78px;
-    left: 0;
-    bottom: -8px;
-    padding: 10px 14px;
-    background: #1d1b31;
-    transition: var(--tran-05);
-    overflow: hidden;
-}
-
-.sidebar.open .bottom-content li.profile {
-    width: 250px;
-}
-
-/* .sidebar .bottom-content li.profile-details {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-} */
-
-/* .sidebar .bottom-content li.profile .name, .sidebar .bottom-content li.profile .job {
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
-    white-space: nowrap;
-} */
 
 .login {
     width: 40%;

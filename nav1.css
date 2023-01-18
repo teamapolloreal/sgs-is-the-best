@@ -270,3 +270,36 @@ body.dark .mode .sun-moon i.moon{
 body.dark .switch::before{
     left: 20px;
 }
+
+.sidebar .bottom-content li.profile {
+    background: var(--primary-color-light);
+}
+
+/* .sidebar .bottom-content li.profile {
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    ba*/ckground: #1d1b31;
+    transition: var(--tran-05);
+    overflow: hidden;
+}
+
+.sidebar.open .bottom-content li.profile {
+    width: 250px;
+}
+
+/* .sidebar .bottom-content li.profile-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+} 
+
+/* .sidebar .bottom-content li.profile .name, .sidebar .bottom-content li.profile .job {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+} */

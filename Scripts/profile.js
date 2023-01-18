@@ -250,6 +250,7 @@ setInterval(() => {
                 document.getElementById("afk_message0").remove();
                 document.getElementById("afk_message1").remove();
                 createAlertBox({ color: "red", text: `You've gone afk 💻`, time: "never", id:"afk_message2" })
+                createAlertBox({ color: "red", text: `Interact with the site`, time: "never", id:"afk_message1" })
             }
             document.getElementById("afkdetector").style.display = "block"
             document.getElementById("fullscreenGame").style.opacity = 0.5
@@ -398,6 +399,11 @@ function loadAchievements(){
         text.className = "profileText"
         text.innerHTML = `<b>Reward:</b> ${achievement.reward}`
         div.appendChild(text)
+
+        var statText = document.createElement("span")
+        statText.className = "achievementStatsText"
+        statText.innerHTML = `${achievement.progress * achievement.progress_info.b / 100}/${achievement.progress_info.b}`
+        div.appendChild(statText)
 
         var achieveCircle = document.createElementNS("http://www.w3.org/2000/svg", "svg")
         achieveCircle.setAttributeNS(null, "viewBox", "0 0 36 36")

@@ -1,4 +1,4 @@
-let lastUpdate = "1/16/2023 (v6.2.0)"
+let lastUpdate = "1/18/2023 (v6.2.1)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -96,7 +96,9 @@ const data = [
         publisher: "U.S. Air Force",
         controls: [
             "idk the controls to this game",
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Among Us",
@@ -154,7 +156,9 @@ const data = [
             "Arrow Keys - Movement",
             "Left/Right Arrow Keys - Attack",
             "Hold Left/Right Arrow Key - Long Range Attack",
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Ball Blast",
@@ -288,7 +292,9 @@ const data = [
             "WASD/Arrow Keys - Movement",
             "U - Undo",
             "R - Restart",
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "BreakLock",
@@ -315,7 +321,9 @@ const data = [
         controls: [
             "Hold Right Click - Aim & Power",
             "Release Right Click - Release"
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Cannon Basketball 4",
@@ -385,7 +393,8 @@ const data = [
             "Right Click - Place Piece in Row",
             "Right Click - Play Again"
         ],
-        broken: true
+        broken: true,
+        note: "Game style broke (Blocked cross-origin response [link] with MIME type text/html."
     },
     {
         name: "Cookie Clicker",
@@ -525,7 +534,9 @@ const data = [
             "X - Missile",
             "N - Nitro",
             "Space - Jump",
-        ]
+        ],
+        broken: true,
+        note: "Game removed (Site Not Found)"
     },
     {
         name: "Death Run 3D",
@@ -564,7 +575,9 @@ const data = [
         publisher: "diep.io-2",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Doodle Jump",
@@ -669,7 +682,9 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true,
+        note: "Error while loading game (An error occurred running the Unity content on this page)"
     },
     {
         name: "Edge Not Found",
@@ -751,7 +766,9 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     // {
     //     name: "Fishington.io",
@@ -981,7 +998,7 @@ const data = [
         id: "just_one_boss",
         genre: "Arcade",
         description: "Just one boss is a fun and challenging arcade game in which you have one aim – to defeat the boss! As the title suggests, you have only one boss to defeat, but this boss is difficult and cunning! You control a cute little blue slime ball and you must move around the playing field avoiding the boss's attacks.",
-        link: "Game Files/Just One Boss/index.htmml",
+        link: `${cdnUrl}/Game Files/Just One Boss/index.html`,
         img: `${cdnUrl}/Images/just_one_boss.png`,
         file_based: true,
         publisher: "Unknown",
@@ -1026,7 +1043,9 @@ const data = [
         publisher: "madalinstuntcars2.io",
         controls: [
             "",
-        ]
+        ],
+        broken: true,
+        note: "Game takes forever to load ()"
     },
     {
         name: "Madalin Stunt Cars 3",
@@ -1044,7 +1063,7 @@ const data = [
     {
         name: "Mad Burger 3",
         id: "mad_burger_3",
-        genre: "Managing / Launcher",
+        genre: "Launcher / Managing",
         description: "Mad Burger 3 is a launcher game where you have to cook your and launch it as far as you can. Get good recipes, buy ingredients, and upgrade your skill.",
         link: "https://dddavit.github.io/madburger/",
         img: `${cdnUrl}/Images/mad_burger_3.png`,
@@ -1194,7 +1213,7 @@ const data = [
         id: "moto_x3m_winter",
         genre: "Driving",
         description: "The goal of this game is to race your motorbike through levels with massive, moving obstacles that you have to jump over or avoid. You can flip in the air to decrease your final time and earn a perfect score.",
-        link: "Game Files/Moto X3M Winter",
+        link: "Game Files/Moto X3M Winter/index.html",
         img: `${cdnUrl}/Images/moto_x3m_winter.png`,
         file_based: true,
         publisher: "Unknown",
@@ -1560,7 +1579,7 @@ const data = [
         id: "scrap_metal_3",
         genre: "Adventure / Driving",
         description: "This game is an amazing 3D car driving game in which you enjoy freedom to explore a huge map with many different terrains. This third Scrap Metal game brings you even more freedom, and 4 new cars. Explore the mountains, overcome different kinds of obstacles, and enjoy the high speeds!",
-        link: "Game Files/Scrap Metal 3/index.html",
+        link: `${cdnUrl}/Game Files/Scrap Metal 3/index.html`,
         img: `${cdnUrl}/Images/scrap_metal_3.png`,
         file_based: true,
         publisher: "Unknown",
@@ -1607,7 +1626,9 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Smash Karts",
@@ -1702,7 +1723,9 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true,
+        note: "Game is blocked"
     },
     {
         name: "Stack",
@@ -1957,7 +1980,9 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true,
+        note: "The game cannot load (Can not send data)"
     },
     {
         name: "UNO",
@@ -1970,7 +1995,9 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        broken: true,
+        note: "No longer works (Application error)"
     },
     {
         name: "Vex 3",
