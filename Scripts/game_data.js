@@ -8,7 +8,7 @@ const data = [
         genre: "Building Simulator",
         description: "1v1.lol is an online building simulator & third person shooting game. Battle royale, build fight, zone wars and more game modes to enjoy!",
         link: "https://advanced-channeler.02.gz-associates.com/?t=tam-1v1-lol",
-        img: `${cdnUrl}/Images/1v1-lol.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_1v1-lol.png`,
         file_based: false,
         publisher: "JustPlay.LOL",
         controls: [
@@ -23,7 +23,7 @@ const data = [
         genre: "2 Player",
         description: "2 Player Games is a 2 player shooter game that you and your friend can play. You earn coins from playing which can then be used to buy other charaters with different guns and rarities.",
         link: `${cdnUrl}/Game Files/2 Player Games/index.html`,
-        img: `${cdnUrl}/Images/2_player_games.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_2_player_games.png`,
         file_based: true,
         publisher: "Scratch - Llxma909",
         controls: [
@@ -38,7 +38,7 @@ const data = [
         genre: "Arcade",
         description: "In this game, you're trying to destroy all the balls before they reach the bottom. It may sound simple but it gets harder and harder as you reach higher levels.",
         link: "https://files.acticdn.com/278374/22226/index.html",
-        img: `${cdnUrl}/Images/99_balls.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_99_balls.png`,
         file_based: false,
         publisher: "GameSnacks",
         controls: [
@@ -51,7 +51,7 @@ const data = [
         genre: "Puzzle",
         description: "In this game, you're trying to slide the number tiles on the grid to combine them to create a tile with the number 2048. Can you go beyond 2048?",
         link: "Game Files/2048/index.html",
-        img: `${cdnUrl}/Images/2048.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_2048.png`,
         file_based: true,
         publisher: "Solebon LLC",
         controls: [
@@ -65,7 +65,7 @@ const data = [
     //     description: "Adventure Capitalist is a game where you can form your own multi-national conglomerate to create a world-wide, monopolistic economy.",
     //     link: "https://than1089.github.io/adventure-capitalist/",
     //     // link: "Game Files/Adventure Capitalist/public/index.html",
-    //     img: `${cdnUrl}/Images/adventure_capitalist.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_adventure_capitalist.png`,
     //     file_based: false,
     //     publisher: "Hyper Hippo Productions",
     //     controls: [
@@ -78,7 +78,7 @@ const data = [
         genre: "Defense / Strategy",
         description: "Take control of 16 different units and 15 different turrets to defend your base and destroy your enemy. In this game, you start at the caveman age, then evolve! There are a total of 5 ages, each with its own unique units and turrets.",
         link: "Game Files/Age of War/index.html",
-        img: `${cdnUrl}/Images/age_of_war.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_age_of_war.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -91,7 +91,7 @@ const data = [
         genre: "Adventure",
         description: "See if you can complete the type of missions Airmen carry out everyday with this interactive game that puts you in the muddle of action around the world.",
         link: "https://www.airforce.com/airmanchallenge/",
-        img: `${cdnUrl}/Images/airman_challenge.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_airman_challenge.png`,
         file_based: false,
         publisher: "U.S. Air Force",
         controls: [
@@ -106,7 +106,7 @@ const data = [
         genre: "Mystery",
         description: "sus",
         link: "Game Files/Among Us/index.html",
-        img: `${cdnUrl}/Images/among_us.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_among_us.png`,
         file_based: true,
         publisher: "kevin.games",
         controls: [
@@ -122,7 +122,7 @@ const data = [
         genre: "Platformer",
         description: "It's your job to help Appel navigate through each level, avoiding danger, and collecting as many golden apples as you can before finally facing Micro Manager and restoring peace to the world.",
         link: `${cdnUrl}/Game Files/Appel/index.html`,
-        img: `${cdnUrl}/Images/appel.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_appel.png`,
         file_based: true,
         publisher: "Scratch - griffpatch",
         controls: [
@@ -135,7 +135,7 @@ const data = [
         genre: "Arcade / Shooter",
         description: "In this game you control a single spaceship in an asteroid field which is periodically traversed by flying saucers. The object of the game is to shoot and destroy the asteroids and saucers without getting hit by them.",
         link: "Game Files/Asteroids/index.html",
-        img: `${cdnUrl}/Images/asteroids.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_asteroids.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -149,7 +149,7 @@ const data = [
         genre: "Action",
         description: "In this game you are a pig fighting your way through hordes of bacon-hungry enemies.",
         link: "https://tybsi.com/games/bacon-may-die/index.html",
-        img: `${cdnUrl}/Images/bacon_may_die.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_bacon_may_die.png`,
         file_based: false,
         publisher: "tybsi.com",
         controls: [
@@ -166,7 +166,7 @@ const data = [
         genre: "Arcade",
         description: "In this game you must destroy all the balls without one hitting you. You can then upgrade and unlock new guns with coins that you get.",
         link: `${cdnUrl}/Game Files/Ball Blast/index.html`,
-        img: `${cdnUrl}/Images/ball_blast.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_ball_blast.png`,
         file_based: true,
         publisher: "Scratch - AnimationsScratch",
         controls: [
@@ -179,7 +179,7 @@ const data = [
         genre: "2 Player / Sports",
         description: "In this game you can play solo or with a friend as a varity of legendary basketball players.",
         link: `${cdnUrl}/Game Files/Basketball Stars/index.html`,
-        img: `${cdnUrl}/Images/basketball_stars.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_basketball_stars.png`,
         file_based: true,
         publisher: "Madpuffers",
         controls: [
@@ -195,7 +195,7 @@ const data = [
         genre: "2 Player / Sports",
         description: "BasketBros.io is a charming basketball game with a cool retro look that can be played with friends or against CPUs.",
         link: "https://basketball.services/",
-        img: `${cdnUrl}/Images/basketbros-io.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_basketbros-io.png`,
         file_based: false,
         publisher: "Blue Wizard Digital",
         controls: [
@@ -210,7 +210,7 @@ const data = [
         genre: "Rouge-like",
         description: "The Binding of Isaac is a randomly generated action RPG shooter with heavy Rouge-like elements.",
         link: "https://advanced-channeler.02.gz-associates.com/?s=%3furl%3D%252Fflash%252Fbinding-of-isaac.swf&t=tam-flash-ruffle",
-        img: `${cdnUrl}/Images/binding_of_isaac.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_binding_of_isaac.png`,
         file_based: false,
         publisher: "Headup Games",
         controls: [
@@ -229,7 +229,7 @@ const data = [
         genre: "Tower Defense",
         description: "Strategically place your defenses, upgrade your units, and stop all balloons from passing through.",
         link: "Game Files/Bloons TD 2/index.html",
-        img: `${cdnUrl}/Images/bloons_td_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_bloons_td_2.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -242,7 +242,7 @@ const data = [
         genre: "Puzzle",
         description: "Bloxorz is a puzzle game that tests your logic and patience. The goal of the game is to put the bloxorz to the destination by rolling it.",
         link: `${cdnUrl}/Game Files/Bloxorz/index.html`,
-        img: `${cdnUrl}/Images/bloxorz.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_bloxorz.png`,
         file_based: true,
         publisher: "addictinggames.com",
         controls: [
@@ -255,7 +255,7 @@ const data = [
         genre: "Adventure / Rouge-like",
         description: "Bounce Back is a charming and addictive little Zelda inspired rogue-like adventure game where you use boomerangs to battle your way through 10 challenging procedurally generated levels.",
         link: "Game Files/Bounce Back/index.html",
-        img: `${cdnUrl}/Images/bounce_back.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_bounce_back.png`,
         file_based: true,
         publisher: "JS13kGames",
         controls: [
@@ -271,7 +271,7 @@ const data = [
         genre: "Archery",
         description: "Bowmasters is one of the top archery arcade games in the world. Play multiplayer or solo with bowmen.",
         link: "https://html5.iclouds.io/archery-master/?ref",
-        img: `${cdnUrl}/Images/bowmasters.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_bowmasters.png`,
         file_based: false,
         publisher: "iclouds.io",
         controls: [
@@ -285,7 +285,7 @@ const data = [
         genre: "Puzzle",
         description: "This is a challenging puzzle game with 16 levels where you play as Bob moving boxes to the correct spot.",
         link: "https://games.engineering.com/boxbob/index.html",
-        img: `${cdnUrl}/Images/boxbob.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_boxbob.png`,
         file_based: false,
         publisher: "engineering.com",
         controls: [
@@ -302,7 +302,7 @@ const data = [
         genre: "Puzzle",
         description: "A hybrid of Mastermind and the Android pattern lock. A game you gonna love to hate. Link the dots to try to find the pattern, you will get clues to help you solve it.",
         link: "Game Files/BreakLock/index.html",
-        img: `${cdnUrl}/Images/breaklock.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_breaklock.png`,
         file_based: true,
         publisher: "engineering.com",
         controls: [
@@ -315,7 +315,7 @@ const data = [
         genre: "Adventure",
         description: "In this game you must launch Burrito Bison as far as you can, bouncing, flying, and soaring through the skies to fend off the invasion of gummies.",
         link: "https://tybsi.com/games/burrito-bison-launcha-libre/index.html",
-        img: `${cdnUrl}/Images/burrito_bison.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_burrito_bison.png`,
         file_based: false,
         publisher: "tynsi.com",
         controls: [
@@ -331,7 +331,7 @@ const data = [
         genre: "Sports",
         description: "Cannon Basketball 4 is a sports game where you launch basketballs as you try to solve puzzles, collect stars, and make baskets.",
         link: "Game Files/Cannon Basketball 4/index.html",
-        img: `${cdnUrl}/Images/cannon_basketball_4.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_cannon_basketball_4.png`,
         file_based: true,
         publisher: "Armor Games",
         controls: [
@@ -345,7 +345,7 @@ const data = [
         genre: "Puzzle",
         description: "Arrange cells. Build machines. Destroy enemies. Each cell on its own has a simple function, like moving or spawning other cells. But when combined, more interesting behavior emerges…",
         link: "Game Files/Cell Machine/index.html",
-        img: `${cdnUrl}/Images/cell_machine.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_cell_machine.png`,
         file_based: true,
         publisher: "samhogan.itch.io",
         controls: [
@@ -358,7 +358,7 @@ const data = [
         genre: "Classic",
         description: "Chess is one of the oldest and most popular board games. It is played by two opponents, this game also includes an AI, where the objective of the game is to capture the opponent's king.",
         link: "Game Files/Chess/index.html",
-        img: `${cdnUrl}/Images/chess.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_chess.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -372,7 +372,7 @@ const data = [
         genre: "Classic",
         description: "In this game you need to guide a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score.",
         link: "Game Files/Chrome Dinosaur/index.html",
-        img: `${cdnUrl}/Images/chrome_dinosaur.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_chrome_dinosaur.png`,
         file_based: true,
         publisher: "Google",
         controls: [
@@ -386,7 +386,7 @@ const data = [
         genre: "Classic",
         description: "Connect 4 is a tic-tac-toe-like two-player game in which players alternately place pieces on a board to acheive 4 in-a-row.",
         link: "Game Files/Connect 4/index.html",
-        img: `${cdnUrl}/Images/connect_4.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_connect_4.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -402,7 +402,7 @@ const data = [
         genre: "Incremental",
         description: "Cookie Clicker is an incremental web-broswer game where the goal is to produce as many cookies as you can by clicking on the big cookie and buying items.",
         link: "Game Files/Cookie Clicker/index.html",
-        img: `${cdnUrl}/Images/cookie_clicker.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_cookie_clicker.png`,
         file_based: true,
         publisher: "Orteil",
         controls: [
@@ -417,7 +417,7 @@ const data = [
         genre: "Adventure / Survival",
         description: "CraftMine is a cool 2D Minecraft game, this game is all about surviving for as long as you can with surronding materials.",
         link: "Game Files/CraftMine/index.html",
-        img: `${cdnUrl}/Images/craftmine.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_craftmine.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -431,7 +431,7 @@ const data = [
         genre: "Arcade",
         description: "The objective of this game is to move a charater through an endless path of static and moving obstacles as far as possible without dying.",
         link: "Game Files/Crossy Road/index.html",
-        img: `${cdnUrl}/Images/crossy_road.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_crossy_road.png`,
         file_based: false,
         publisher: "Poki",
         controls: [
@@ -444,7 +444,7 @@ const data = [
         genre: "Endless",
         description: "Cubefield is a simple but addictive game where there are only two controls. You must guide your ship through an endless field of ominous looking colored cubes without hitting them.",
         link: "Game Files/Cubefield/index.html",
-        img: `${cdnUrl}/Images/cubefield.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_cubefield.png`,
         file_based: true,
         publisher: "flecko.net",
         controls: [
@@ -458,7 +458,7 @@ const data = [
         genre: "Arcade",
         description: "You need to try to stack as many cubes to make a tower run and surf on the road to reach the finish line.",
         link: "https://html5.iclouds.io/box-surfing-v1/",
-        img: `${cdnUrl}/Images/cube_surfer.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_cube_surfer.png`,
         file_based: false,
         publisher: "iclouds.io",
         controls: [
@@ -471,7 +471,7 @@ const data = [
         genre: "Puzzle",
         description: "In this game you must feed a creature named Om Nom with candy by cutting ropes in a certain manner, while using other tools such as bubbles and air cushions to avoid hazards and collect stars.",
         link: "Game Files/Cut the Rope/index.html",
-        img: `${cdnUrl}/Images/cut_the_rope.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_cut_the_rope.png`,
         file_based: true,
         publisher: "ZeptoLab",
         controls: [
@@ -485,7 +485,7 @@ const data = [
         genre: "Arcade",
         description: "In this game you must feed a creature named Om Nom with candy by cutting ropes in a certain manner, while using other tools such as bubbles and air cushions to avoid hazards and collect stars.",
         link: "Game Files/CTR Holiday/index.html",
-        img: `${cdnUrl}/Images/ctr_holiday.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_ctr_holiday.png`,
         file_based: true,
         publisher: "Zeptolab",
         controls: [
@@ -499,7 +499,7 @@ const data = [
         genre: "Arcade",
         description: "In this game you must feed a creature named Om Nom with candy by cutting ropes in a certain manner, while using other tools such as bubbles and air cushions to avoid hazards and collect stars.",
         link: "Game Files/CTR Time Travel/index.html",
-        img: `${cdnUrl}/Images/ctr_time_travel.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_ctr_time_travel.png`,
         file_based: true,
         publisher: "ZeptoLab",
         controls: [
@@ -513,7 +513,7 @@ const data = [
         genre: "Strategy",
         description: "Throughout the game, the player is offered an amount of money or prizes to quit, being asked the titular question, \"Deal or no deal?\" If the contestant rejects every deal and eliminates all the other cases or boxes, the player keeps the money that was in the original case or box.",
         link: "Game Files/Deal or no Deal/index.html",
-        img: `${cdnUrl}/Images/deal_or_no_deal.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_deal_or_no_deal.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -526,7 +526,7 @@ const data = [
         genre: "Driving / Racing",
         description: "Death Chase 3 is a platform type car racing game. Race on mountain roads; A road full of tricky passages, cliffs, underground tunnels, bridges and traps.",
         link: "https://b0bz-d34thch4z3.netlify.app/",
-        img: `${cdnUrl}/Images/death_chase_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_death_chase_3.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -544,7 +544,7 @@ const data = [
         genre: "Endless",
         description: "Death Run 3D is an extremely fast game for true skillers only. If you love hardcore games, this game is the right for you. You fly inside a tube with various blocks and almost each of them is movable. Your task is avoid them. Gaps between blocks are very short so swift responses are the only way to success.",
         link: "Game Files/Death Run 3D/index.html",
-        img: `${cdnUrl}/Images/death_run_3d.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_death_run_3d.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -557,7 +557,7 @@ const data = [
         genre: "Arcade / Strategy",
         description: "Drag and drop soldiers to place them at strategic positions on the tank. Keep the tank alive at all costs. Rotate your soldiers to inflict maximum damage on the enemy. Heal your tanks with mechanic soldiers. Collect coins to upgrade your tank after each battle.",
         link: "Game Files/Defend the Tank/index.html",
-        img: `${cdnUrl}/Images/defend_the_tank.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_defend_the_tank.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -570,7 +570,7 @@ const data = [
         genre: "Arcade",
         description: "The more points you have the better. It's the main thing to pay attention in Diep 2.io 2. You can exchange XP points for upgrading your charater's skills. However that won't help you in case you meet week, but experienced player. And YES this game contains ads, thats because this is the original game, all revenue is going to the developers.",
         link: "https://diepio-2.com/",
-        img: `${cdnUrl}/Images/diep_2-io.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_diep_2-io.png`,
         file_based: false,
         publisher: "diep.io-2",
         controls: [
@@ -585,7 +585,7 @@ const data = [
         genre: "Platformer",
         description: "The aim of the game is to guide a four-legged creature called the Doodler up an unending series of platformers without falling.",
         link: "Game Files/Doodle Jump/index.html",
-        img: `${cdnUrl}/Images/doodle_jump.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_doodle_jump.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -598,7 +598,7 @@ const data = [
         genre: "Adventure",
         description: "The epic episodic adventure of Goku and the Z Warriors as they defend the Earth and the Universe from super-powered fighters and monsters.",
         link: "GBA-Emulator/launcher.html#dbz_supersonic",
-        img: `${cdnUrl}/Images/dragon_ball_z.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_dragon_ball_z.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
@@ -611,7 +611,7 @@ const data = [
         genre: "Arcade / Endless",
         description: "In this cool driving game, use your skills to draw a path for the car to drive through the level. Make sure you draw a steady path or else you'll end the level.",
         link: "Game Files/Draw The Hill/index.html",
-        img: `${cdnUrl}/Images/draw_the_hill.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_draw_the_hill.png`,
         file_based: true,
         publisher: "Math Playground",
         controls: [
@@ -624,7 +624,7 @@ const data = [
         genre: "Horror",
         description: "Dreader is a short mouse maze game with horror elements. Warning: This game contains flashing lights and stripes and may be unsuitable for people with photosensitive epilepsy.",
         link: "https://b0bzgx3mzz-dr3ad3r.netlify.app/",
-        img: `${cdnUrl}/Images/dreader.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_dreader.png`,
         file_based: false,
         publisher: "donitz.itch.io",
         controls: [
@@ -637,7 +637,7 @@ const data = [
         genre: "Drifting",
         description: "Drift Hunters is an awesome 3D car driving game in which you score points by drifting various cars. These points earn you money, that you can spend to upgrade your current car or buy a new one.",
         link: `${cdnUrl}/Game Files/Drift Hunters/index.html`,
-        img: `${cdnUrl}/Images/drift_hunters.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_drift_hunters.png`,
         file_based: true,
         publisher: "drift-hunters.co",
         controls: [
@@ -651,7 +651,7 @@ const data = [
         genre: "Adventure",
         description: "Duck Life is a game series where you train your duck for races and/or battles.",
         link: "Game Files/Duck Life 2/index.html",
-        img: `${cdnUrl}/Images/duck_life_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_duck_life_2.png`,
         file_based: true,
         publisher: "Poki",
         controls: [
@@ -664,7 +664,7 @@ const data = [
         genre: "Adventure",
         description: "Duck Life is a game series where you train your duck for races and/or battles.",
         link: "Game Files/Duck Life 3/index.html",
-        img: `${cdnUrl}/Images/duck_life_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_duck_life_3.png`,
         file_based: true,
         publisher: "Kongregate",
         controls: [
@@ -677,7 +677,7 @@ const data = [
         genre: "Adventure",
         description: "Duck Life is a game series where you train your duck for races and/or battles.",
         link: "Game Files/Duck Life 4/index.html",
-        img: `${cdnUrl}/Images/duck_life_4.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_duck_life_4.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -692,7 +692,7 @@ const data = [
         genre: "Puzzle",
         description: "Edge Not Found is a Sokoban-style puzzle game set on an infinitely repeating grid. There are 20+ puzzles and they get can pretty tricky.",
         link: "Game Files/Edge Not Found",
-        img: `${cdnUrl}/Images/edge_not_found.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_edge_not_found.png`,
         file_based: true,
         publisher: "js13kgames.com",
         controls: [
@@ -709,7 +709,7 @@ const data = [
         genre: "Arcade",
         description: "Elastic Man is an entertaining arcade game in which you can be free to play with an elastic face. Drag and pinch his face to relax and reduce stress.",
         link: "https://d21u3ic0kp9e91.cloudfront.net/elasticman/0/index.html",
-        img: `${cdnUrl}/Images/elastic_man.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_elastic_man.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -722,7 +722,7 @@ const data = [
         genre: "Shooter",
         description: "You must fight to survive as long you can while evading enemies and destroying their bases to stop the corruption.",
         link: "Game Files/Evil Glitch/index.html",
-        img: `${cdnUrl}/Images/evil_glitch.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_evil_glitch.png`,
         file_based: true,
         publisher: "JS13kGames",
         controls: [
@@ -735,7 +735,7 @@ const data = [
         genre: "Tower Defense",
         description: "A space based tower defence game! Build satellites and stations around planets orbiting a distant star. Survive waves of enemies.",
         link: "Game Files/EXO/index.html",
-        img: `${cdnUrl}/Images/exo.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_exo.png`,
         file_based: true,
         publisher: "ai-doge.itch.io",
         controls: [
@@ -748,7 +748,7 @@ const data = [
         genre: "Puzzle",
         description: "Factory Balls Forever is a puzzle game where you have to color the balls correctly! Use different tools to cover up the ball before start painting over it. Use the tools in the right order to create the right pattern for the puzzle. The game has a ton of levels, getting more and more difficult as you go along. Can you finish all puzzles in Factory Balls Forever?",
         link: "Game Files/Factory Balls Forever/index.html",
-        img: `${cdnUrl}/Images/factory_balls_forever.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_factory_balls_forever.png`,
         file_based: true,
         publisher: "engineering.com",
         controls: [
@@ -761,7 +761,7 @@ const data = [
         genre: "2 Player / Puzzle",
         description: "Help Fireboy and Watergirl find the exit through the Forest Temple. Fireboy must avoid the water and Watergirl must avoid the fire, and be careful, the green mud kills them both!",
         link: "https://advanced-channeler.02.gz-associates.com/?t=tam-fireboy-and-watergirl-4-crystal-temple",
-        img: `${cdnUrl}/Images/fireboy_and_watergirl.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_fireboy_and_watergirl.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -776,7 +776,7 @@ const data = [
     //     genre: "Arcade",
     //     description: "Fishington.io is a multiplayer fishing game featuring characters from the game Betrayal.io. Cast your line and catch fish to sell on the market!",
     //     link: "https://fishington.io",
-    //     img: `${cdnUrl}/Images/fishington-io.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_fishington-io.png`,
     //     file_based: false,
     //     publisher: "End Game Interactive, Inc.",
     //     controls: [
@@ -789,7 +789,7 @@ const data = [
         genre: "Arcade",
         description: "You must navigate Faby, the bird, through pairs of pipes that have equally sized gaps placed at random heights.",
         link: "Game Files/Flappy Bird/index.html",
-        img: `${cdnUrl}/Images/flappy_bird.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_flappy_bird.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -802,7 +802,7 @@ const data = [
         genre: "Horror",
         description: "In this game, you get a job as a night guard at Freddy Fazbir's pizzeria. A few hours of work will replenish your budget decently. It can't help but please, but a little worm of doubt still began to gnaw at you and your suspicions began to creep in. And then midnight came. At exactly twelve o'clock the worst nightmare of your life will begin!",
         link: "https://redlionsq.com/uploads/5/5/6/7/5567194/custom_themes/602302113323144959/fnaf-final-purgatory.html",
-        img: `${cdnUrl}/Images/five_nights_at_freddys.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_five_nights_at_freddys.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -815,7 +815,7 @@ const data = [
         genre: "Rhythm",
         description: "Friday Night Funkin' is a rhythm game where you must control a character called Boyfriend, who must defeat a series of opponents in order to continue dating his significant other, Girlfriend.",
         link: "Game Files/Friday Night Funkin/index.html",
-        img: `${cdnUrl}/Images/friday_night_funkin.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_friday_night_funkin.png`,
         file_based: true,
         publisher: "The Funkin' Crew Inc.",
         controls: [
@@ -828,7 +828,7 @@ const data = [
         genre: "Arcade",
         description: "In this game you must control the movement of an icon and navigate along music-based levels, while avoiding obstacles such as spikes that instantly destroy the icon on impact.",
         link: `${cdnUrl}/Game Files/GeometryDash/index.html`,
-        img: `${cdnUrl}/Images/geometry_dash.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_geometry_dash.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -841,7 +841,7 @@ const data = [
         genre: "2 Player / Shooter",
         description: "Getaway Shootout is a chaotic race to reach the getaway objective in each map. Race against the computer or grab a friend to prove who is best. Collect power-ups and weapons along the way, and navigate through tough maps.",
         link: `${cdnUrl}/Game Files/Getaway Shootout/index.html`,
-        img: `${cdnUrl}/Images/getaway_shootout.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_getaway_shootout.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -854,7 +854,7 @@ const data = [
         genre: "Adventure",
         description: "Getting Over It is a climbing game. You move the hammer with the mouse, and that's all there is. With practice, you'll be able to jump, swing, climb and fly.",
         link: "https://html5.iclouds.io/climb-over-it/",
-        img: `${cdnUrl}/Images/getting_over_it.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_getting_over_it.png`,
         file_based: false,
         publisher: "iclouds.io",
         controls: [
@@ -867,7 +867,7 @@ const data = [
         genre: "Arcade / Classic",
         description: "Snake is a game genre in which the player controls a developing line that eventually becomes its own principal barrier. The player controls a dot, square, or object on the playing board. It creates a trail behind it as it goes ahead, mimicking a snake. How to Play: Move around with the arrow keys and eat the dots.",
         link: "Game Files/Google Snake/index.html",
-        img: `${cdnUrl}/Images/google_snake.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_google_snake.png`,
         file_based: true,
         publisher: "Google",
         controls: [
@@ -880,7 +880,7 @@ const data = [
         genre: "Action / Shooter",
         description: "The aim of each round is simple - you must knock your enemies off of the stage and prevent them from jumping back on. You can push your enemies by shooting them. You can avoid being thrown off the stage yourself by using a series of jumps and double jumps. The gameplay is fast-paced and fun and you must have quick reactions to win!",
         link: "Game Files/Gun Mayhem 2/index.html",
-        img: `${cdnUrl}/Images/gun_mayhem_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_gun_mayhem_2.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -893,7 +893,7 @@ const data = [
         genre: "Action / Shooter",
         description: "Gun Mayhem Redux is a third-person shooter game. The goal of the game is either to capture a flag for a certain duration or kill your opponents. To play the game you move a character up and down, back and forth while shooting at the enemy. The game provides you with eight campaign levels and a tutorial.",
         link: "Game Files/Gun Mayhem Redux/index.html",
-        img: `${cdnUrl}/Images/gun_mayhem_redux.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_gun_mayhem_redux.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -906,7 +906,7 @@ const data = [
     //     genre: "?",
     //     description: "?",
     //     link: "https://freezydev.itch.io/hakai",
-    //     img: `${cdnUrl}/Images/.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_.png`,
     //     file_based: false,
     //     publisher: "Unknown",
     //     controls: [
@@ -919,7 +919,7 @@ const data = [
         genre: "Strategy",
         description: "The goal of the game is to stop blocks from leaving the inside of the outer gray hexagon.",
         link: "Game Files/Hextris/index.html",
-        img: `${cdnUrl}/Images/hextris.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_hextris.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -932,7 +932,7 @@ const data = [
         genre: "Shooter",
         description: "You vs 100 is a chaotic survival game where you face a vast horde of zombies determined to kill. Shoot them, blow them to pieces - do whatever it takes to avoid being mauled. Buy a range of new weapons and outfits for an explosively stylish apocalypse scenario.",
         link: "https://heartfelt-salmiakki-9e8ee9.netlify.app/",
-        img: `${cdnUrl}/Images/horde_killer.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_horde_killer.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -945,7 +945,7 @@ const data = [
         genre: "Idle",
         description: "Click on a brick to break it and score points. Use points to purchase new balls with different abilities and upgrade them. Balls will automatically bounce and break bricks to score more points.",
         link: "Game Files/Idle Breakout/index.html",
-        img: `${cdnUrl}/Images/idle_breakout.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_idle_breakout.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -958,7 +958,7 @@ const data = [
         genre: "Rhythm",
         description: "Incredibox is a music app that lets you create your own music with the help of a merry crew of beatboxers.Choose your musical style among 8 impressive atmospheres and start to lay down, record and share your mix.",
         link: "Game Files/Incredibox/index.html",
-        img: `${cdnUrl}/Images/incredibox.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_incredibox.png`,
         file_based: false,
         publisher: "incredibox.com",
         controls: [
@@ -973,7 +973,7 @@ const data = [
         genre: "Arcade",
         description: "You are the weapon. Bombs don't hurt, they just shoot you into the air so you can use your tank to ram and destroy. How many combos can you get?",
         link: "Game Files/Indestructo Tank/index.html",
-        img: `${cdnUrl}/Images/indestructo_tank.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_indestructo_tank.png`,
         file_based: true,
         publisher: "Armor Games",
         controls: [
@@ -986,7 +986,7 @@ const data = [
         genre: "Platformer",
         description: "Jet Boy is a fun to play endless platform game. You need to avoid the mines and the holes in the ground and collect the fruit and the coins so you can buy Shields, the shields protect you for 10 seconds so you wont't get hurt… Buy Shields with In-App Purchase, Remove Admob Ads with In-App Purchase Controls",
         link: "https://b0bz-j3tb0y.netlify.app/",
-        img: `${cdnUrl}/Images/jetboy.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_jetboy.png`,
         file_based: false,
         publisher: "Bob's Shack",
         controls: [
@@ -999,7 +999,7 @@ const data = [
         genre: "Arcade",
         description: "Just one boss is a fun and challenging arcade game in which you have one aim – to defeat the boss! As the title suggests, you have only one boss to defeat, but this boss is difficult and cunning! You control a cute little blue slime ball and you must move around the playing field avoiding the boss's attacks.",
         link: `${cdnUrl}/Game Files/Just One Boss/index.html`,
-        img: `${cdnUrl}/Images/just_one_boss.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_just_one_boss.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1012,7 +1012,7 @@ const data = [
         genre: "Puzzle",
         description: "The goal is to untangle the ropes with a limited number of moves. Sounds easy, but one mistake can mess up the whole knot.",
         link: "https://html5.iclouds.io/knots-master/index.html",
-        img: `${cdnUrl}/Images/knots.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_knots.png`,
         file_based: false,
         publisher: "iclouds.io",
         controls: [
@@ -1025,7 +1025,7 @@ const data = [
         genre: "Misc",
         description: "In this game, you start with 4 basic elements and mix them to start creating more things. It's all about mixing elements to create intresting, fun and surprising items.",
         link: "https://littlealchemy2.com/",
-        img: `${cdnUrl}/Images/little_alchemy.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_little_alchemy.png`,
         file_based: false,
         publisher: "littlealchemy2.com",
         controls: [
@@ -1038,7 +1038,7 @@ const data = [
         genre: "Driving",
         description: "Drive a powerful racing car and be ready for furious races with worthy opponents! The gameplay is full of simulation, allowing players to control the car, drift and feel the speed on open roads. You can drift around the city or death corners, explore the landscapes, and visit many other interesting places. Pick one of the intriguing supercars and begin performing impossible stunts through loops and obstacles! Challenge your friends in multiplayer mode! ",
         link: "Game Files/Madalin Stunt Cars 2/index.html",
-        img: `${cdnUrl}/Images/madalin_stunt_cars_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_madalin_stunt_cars_2.png`,
         file_based: true,
         publisher: "madalinstuntcars2.io",
         controls: [
@@ -1053,7 +1053,7 @@ const data = [
         genre: "Driving",
         description: "Madalin Stunt Cars 3 is a wonderful multiplayer free racing game similar to previous editions 1 and 2. It's a multiplayer car racing game that you can play with premium vehicles in different race tracks. In the Madalin Stunt Cars 3 game, car races are waiting for you in gigantic action-packed parks.",
         link: "Game Files/Madalin Stunt Cars 3/index.html",
-        img: `${cdnUrl}/Images/madalin_stunt_cars_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_madalin_stunt_cars_3.png`,
         file_based: true,
         publisher: "topspeed.com",
         controls: [
@@ -1066,7 +1066,7 @@ const data = [
         genre: "Launcher / Managing",
         description: "Mad Burger 3 is a launcher game where you have to cook your and launch it as far as you can. Get good recipes, buy ingredients, and upgrade your skill.",
         link: "https://dddavit.github.io/madburger/",
-        img: `${cdnUrl}/Images/mad_burger_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_mad_burger_3.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1079,7 +1079,7 @@ const data = [
         genre: "Arcade",
         description: "Mageclash.io is a multiplayer fantasy game where you battle monsters and other players in order to become the most powerful player on the server. And YES this game contains ads, thats because this is the original game, all revenue is going to the developers.",
         link: "https://www.mageclash.io/",
-        img: `${cdnUrl}/Images/mage_clash-io.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_mage_clash-io.png`,
         file_based: false,
         publisher: "mageclash.io",
         controls: [
@@ -1092,7 +1092,7 @@ const data = [
         genre: "Adventure / Driving",
         description: "Players compete in go-kart races while using various power up items.",
         link: "./GBA-Emulator/launcher.html#mariokart",
-        img: `${cdnUrl}/Images/mario_kart.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_mario_kart.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
@@ -1105,7 +1105,7 @@ const data = [
         genre: "Action",
         description: "Matrix Rampage is an action fighting game where you must kill as many as possible enemies and get the highest score.",
         link: "Game Files/Matrix Rampage/index.html",
-        img: `${cdnUrl}/Images/matrix_rampage.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_matrix_rampage.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1118,7 +1118,7 @@ const data = [
         genre: "Adventure / Survival",
         description: "Minecraft 1.5.2 by Eaglercraft. Minecraft is a 3D sandbox game allowing the player to focus on exploring, features, plants, mobs and items. Mining, building, crafting, you probably get it.",
         link: `${cdnUrl}/Game Files//EasyEagler-main/lastUpdate.html`,
-        img: `${cdnUrl}/Images/minecraft.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_minecraft.png`,
         file_based: true,
         publisher: "Eaglercraft",
         controls: [
@@ -1136,7 +1136,7 @@ const data = [
         genre: "Classic / Puzzle",
         description: "Minesweeper is a single-player logic-based computer game played on rectangular board whose object is to locate a predetermined number of randomly-placed mines in the shortest possible time by clicking on safe squares while avoiding the squares with mines.",
         link: "https://www-ig-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/playminesweepergame/minesweeper.xml",
-        img: `${cdnUrl}/Images/minesweeper.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_minesweeper.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1149,7 +1149,7 @@ const data = [
         genre: "Classic / Sports",
         description: "Mini Putt is everyone’s favorite crazy golf game from the Flash era. Tackle various mini-golf courses and check out your final score at the end. Compare the final results with your friends to decide who is the Mini Putt champion.",
         link: "Game Files/Mini Putt/index.html",
-        img: `${cdnUrl}/Images/mini_putt.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_mini_putt.png`,
         file_based: true,
         publisher: "CrazyGames",
         controls: [
@@ -1162,7 +1162,7 @@ const data = [
         genre: "Arcade",
         description: "Missile Game 3D is an arcade game to fly through a large tunnel and avoid crashing to complete the level.",
         link: "Game Files/Missiles/index.html",
-        img: `${cdnUrl}/Images/missiles.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_missiles.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1175,7 +1175,7 @@ const data = [
         genre: "Driving",
         description: "The goal of this game is to race your motorbike through levels with massive, moving obstacles that you have to jump over or avoid. You can flip in the air to decrease your final time and earn a perfect score.",
         link: "Game Files/Moto X3M/index.html",
-        img: `${cdnUrl}/Images/moto_x3m.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_moto_x3m.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1188,7 +1188,7 @@ const data = [
         genre: "Driving",
         description: "The goal of this game is to race your motorbike through levels with massive, moving obstacles that you have to jump over or avoid. You can flip in the air to decrease your final time and earn a perfect score.",
         link: "Game Files/Moto X3M Pool Party/index.html",
-        img: `${cdnUrl}/Images/moto_x3m_pool_party.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_moto_x3m_pool_party.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1201,7 +1201,7 @@ const data = [
         genre: "Driving",
         description: "The goal of this game is to race your motorbike through levels with massive, moving obstacles that you have to jump over or avoid. You can flip in the air to decrease your final time and earn a perfect score.",
         link: "Game Files/Moto X3M Spooky/index.html",
-        img: `${cdnUrl}/Images/moto_x3m_spooky.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_moto_x3m_spooky.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1214,7 +1214,7 @@ const data = [
         genre: "Driving",
         description: "The goal of this game is to race your motorbike through levels with massive, moving obstacles that you have to jump over or avoid. You can flip in the air to decrease your final time and earn a perfect score.",
         link: "Game Files/Moto X3M Winter/index.html",
-        img: `${cdnUrl}/Images/moto_x3m_winter.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_moto_x3m_winter.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1227,7 +1227,7 @@ const data = [
         genre: "Shooter",
         description: "My Friend Pedro is a violent ballet about friendship, imagination, and one man's struggle to obliterate anyone in his path at the behest of a sentient banana.",
         link: "https://advanced-channeler.02.gz-associates.com/?t=tam-flash-ruffle&s=%3Furl%3D%252Fflash-armorgames%252Fmy-friend-pedro-1598012ef.swf",
-        img: `${cdnUrl}/Images/my_friend_pedro.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_my_friend_pedro.png`,
         file_based: false,
         publisher: "Armor Games",
         controls: [
@@ -1240,7 +1240,7 @@ const data = [
     //     genre: "Shooter",
     //     description: "",
     //     link: "https://rudolph-the-red-nosed-reindeer.ga/tam-flash-ruffle/?url=%2Fflash-armorgames%2Fmy-friend-pedro-aren-16138b620.swf",
-    //     img: `${cdnUrl}/Images/my_friend_pedro_arena.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_my_friend_pedro_arena.png`,
     //     file_based: false,
     //     publisher: "Unknown",
     //     controls: [
@@ -1253,7 +1253,7 @@ const data = [
         genre: "Action / Maze",
         description: "You must control Pac-Man through an enclosed maze. The objective of the game is to eat all of the dots placed in the maze while avoiding four colored ghosts.",
         link: "Game Files/Pac-Man/index.html",
-        img: `${cdnUrl}/Images/pac-man.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pac-man.png`,
         file_based: true,
         publisher: "TomMalbran",
         controls: [
@@ -1266,7 +1266,7 @@ const data = [
         genre: "Management",
         description: "Papa's Pizzeria gently introduces you to the art of customer service and making steamy delicious pizzas fresh from the oven. Take your first orders and start by adding the requested toppings. Then, move your pizza to the oven and cook it for the specified time.",
         link: "Game Files/Papa's Pizzaria/index.html",
-        img: `${cdnUrl}/Images/papas_pizzaria.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_papas_pizzaria.png`,
         file_based: false,
         publisher: "Bob's Shack",
         controls: [
@@ -1279,7 +1279,7 @@ const data = [
         genre: "Management",
         description: "Stay in this town and open up an ice-cream shop! Bake cookies, sell ice-cream and make money! The game offers an option of saving your game if need be, so that you can continue after you return to the game. Start playing and start cashing in!",
         link: "https://vnqpi4csdtso3eagjo7nnc69ejilnlvh-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%252Fpapa-s-scooperia.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=21a6c241a3303c26&libs=core&mid=218&parent=https://sites.google.com/site/unblockedgameswtf/papa-s-scooperia#st=e%3DAIHE3cCxvtz7hq9Gryodd6Nt45yhjSnaXIpJpaolmsUgcqwoTiOTG01gbSe1qJqw6YvklEsB1soh3WC4SZnzMpgOJ53SQroIepWugRHjoU8Hj4fQys50OHyPHmb%252FsjOricwxZUGwlwn4%26c%3Denterprise&rpctoken=-5455470944845841767",
-        img: `${cdnUrl}/Images/papas_scooperia.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_papas_scooperia.png`,
         file_based: false,
         publisher: "",
         controls: [
@@ -1292,7 +1292,7 @@ const data = [
         genre: "Adventure / Survival",
         description: "Paper Minecraft is a 2D version of the legendary building game Minecraft. Before starting a game you can choose a variety of different character skins and game modes. You must surivive for as long as possible before dying.",
         link: "Game Files/Paper Minecraft/index.html",
-        img: `${cdnUrl}/Images/paper_minecraft.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_paper_minecraft.png`,
         file_based: true,
         publisher: "Scratch - griffpatch",
         controls: [
@@ -1305,7 +1305,7 @@ const data = [
         genre: "Action / Multiplayer",
         description: "Paper.io 2 is a snake style mobile game where users compete with other players worldwide. In the game you control blocks on a large map and the main objective is to conquer the most territory by enclosing it within the trail you leave behind.",
         link: "Game Files/Paper.io 2/index.html",
-        img: `${cdnUrl}/Images/paper-io_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_paper-io_2.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1318,7 +1318,7 @@ const data = [
         genre: "Arcade",
         description: "Papery Planes is a skill game where you have to fly your paper plane as far as possible. You are floating over a river with different rock formations that you have to dodge. The weather conditions will be changing from day to night and from summer to winter to make your flight as hard as possible. Collect enough coins to buy different types of Papery Planes and make sure to collect them all!",
         link: "Game Files/Papery Planes/index.html",
-        img: `${cdnUrl}/Images/papery_planes.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_papery_planes.png`,
         file_based: true,
         publisher: "Poki",
         controls: [
@@ -1331,7 +1331,7 @@ const data = [
         genre: "Arcade / Sports",
         description: "Pocket League 3D is a fan football game played with cars that you can play with either 1 or 2 players.",
         link: "https://grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/805200638580542612/pocket-league.html",
-        img: `${cdnUrl}/Images/pocket_league_3d.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pocket_league_3d.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1344,7 +1344,7 @@ const data = [
         genre: "Adventure",
         description: "Emerald does more with double battles, as gym leaders can be re-challenged after the story to participate in double battles. You can also encounter more double battles by having at least two conscious Pokemon on their team and being seen by two other trainers simultaneously.",
         link: "./GBA-Emulator/launcher.html#pokemonemerald",
-        img: `${cdnUrl}/Images/pokemon_emerald.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pokemon_emerald.png`,
         file_based: false,
         publisher: "Nintendo",
         controls: [
@@ -1357,7 +1357,7 @@ const data = [
         genre: "Adventure",
         description: "Pokémon FireRed and LeafGreen are the upgraded versions of the original Pokémon Red and Blue games, with more fun and more adventure. There are about 20 exclusive Pokémon in each version with different abilities.",
         link: "./GBA-Emulator/launcher.html#pokemonred",
-        img: `${cdnUrl}/Images/pokemon_fire_red.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pokemon_fire_red.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
@@ -1370,7 +1370,7 @@ const data = [
         genre: "Adventure",
         description: "Pokémon FireRed and LeafGreen are the upgraded versions of the original Pokémon Red and Blue games, with more fun and more adventure. There are about 20 exclusive Pokémon in each version with different abilities.",
         link: "./GBA-Emulator/launcher.html#pokemongreen",
-        img: `${cdnUrl}/Images/pokemon_leaf_green.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pokemon_leaf_green.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
@@ -1383,7 +1383,7 @@ const data = [
         genre: "Adventure",
         description: "Gameplay is based on a classic roguelike game, with the player navigating the randomly generated dungeon with their Pokémon team.",
         link: "./GBA-Emulator/launcher.html#mysteryred",
-        img: `${cdnUrl}/Images/pokemon_mystery_dungeon_red.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pokemon_mystery_dungeon_red.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
@@ -1396,7 +1396,7 @@ const data = [
         genre: "Adventure",
         description: "Pokémon Ruby Version and Pokémon Sapphire Version take great leaps in gameplay, particularly during combat. For the first time in a Pokémon game, Trainers can send two Pokémon into battle at the same time.",
         link: "./GBA-Emulator/launcher.html#pokemonruby",
-        img: `${cdnUrl}/Images/pokemon_ruby.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pokemon_ruby.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
@@ -1409,7 +1409,7 @@ const data = [
         genre: "Adventure",
         description: "Pokémon Ruby Version and Pokémon Sapphire Version take great leaps in gameplay, particularly during combat. For the first time in a Pokémon game, Trainers can send two Pokémon into battle at the same time.",
         link: "./GBA-Emulator/index.html#pokemonsapphire",
-        img: `${cdnUrl}/Images/pokemon_sapphire.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_pokemon_sapphire.png`,
         file_based: true,
         publisher: "Nintendo",
         controls: [
@@ -1422,7 +1422,7 @@ const data = [
         genre: "Minimalist",
         description: "PolyBranch is a minimalist 3D game. Dodging branches may seem easy at first, but how long can you hold up as you approach terminal velocity?",
         link: "Game Files/PolyBranch/index.html",
-        img: `${cdnUrl}/Images/polybranch.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_polybranch.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1435,7 +1435,7 @@ const data = [
         genre: "Action / Puzzle",
         description: "The Flash Version includes over 40 challenging, portals thinking levels, which features almost every feature the real game does, in 2d - energy balls, cubes, turrets and even the famous crusher from the trailer.",
         link: "Game Files/Portal Flash/index.html",
-        img: `${cdnUrl}/Images/portal_flash.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_portal_flash.png`,
         file_based: true,
         publisher: "Armor Games",
         controls: [
@@ -1448,7 +1448,7 @@ const data = [
     //     genre: "Arcade / Multiplayer",
     //     description: "The game involves players taking on the role of a powerline, similar to a snake from Slither.io, another popular io game. The player must kill other players by causing them to collide with their powerline, and eat their food to grow.",
     //     link: "https://powerline.io/",
-    //     img: `${cdnUrl}/Images/powerline-io.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_powerline-io.png`,
     //     file_based: false,
     //     publisher: "Unknown",
     //     controls: [
@@ -1462,7 +1462,7 @@ const data = [
         genre: "Luck",
         description: "In this game, you must spin the wheel and then guess whether the next number will be higher or lower. If you get it correct you get points that can be banked to be added to your score or risk it for more.",
         link: "Game Files/Push Your Luck/index.html",
-        img: `${cdnUrl}/Images/push_your_luck.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_push_your_luck.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1475,7 +1475,7 @@ const data = [
         genre: "Incremental",
         description: "Push the square is a short idle game.",
         link: "Game Files/Push the Square/index.html",
-        img: `${cdnUrl}/Images/push_the_square.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_push_the_square.png`,
         file_based: true,
         publisher: "asdehielo.itch.io/push-the-square",
         controls: [
@@ -1488,7 +1488,7 @@ const data = [
         genre: "Shooter",
         description: "Radius Raid is a space themed shoot 'em up where you must blast away unrelenting enemies before they destroy you.",
         link: "Game Files/Radius Raid/index.html",
-        img: `${cdnUrl}/Images/radius_raid.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_radius_raid.png`,
         file_based: true,
         publisher: "JS13kGames",
         controls: [
@@ -1501,7 +1501,7 @@ const data = [
     //     genre: "Shooter",
     //     description: "",
     //     link: "https://cdn.icestonesoft.com/online_games/raze/",
-    //     img: `${cdnUrl}/Images/raze_1.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_raze_1.png`,
     //     file_based: false,
     //     publisher: "Unknown",
     //     controls: [
@@ -1514,7 +1514,7 @@ const data = [
         genre: "Sports",
         description: "Retro Bowl is the perfect game for the armchair quarterback to finally prove a point. Presented in a glorious retro style, the game has simple roster management, including press duties and the handling of fragile egos, while on the field you get to call the shots. Can you pass the grade and take your team all the way to the ultimate prize?",
         link: "Game Files/Retro Bowl/index.html",
-        img: `${cdnUrl}/Images/retro_bowl.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_retro_bowl.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1527,7 +1527,7 @@ const data = [
         genre: "Mystery",
         description: "Someone or something is stealing our time. Today was yesterday and tomorrow is nowhere to be seen. Detective Clay is on the case!",
         link: "Game Files/Retrohaunt/index.html",
-        img: `${cdnUrl}/Images/retrohaunt.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_retrohaunt.png`,
         file_based: true,
         publisher: "JS13kGames",
         controls: [
@@ -1540,7 +1540,7 @@ const data = [
         genre: "Puzzle",
         description: "RoadBlocks is a puzzle game where you must complete the road with the pieces the game gives you.",
         link: "Game Files/RoadBlocks/index.html",
-        img: `${cdnUrl}/Images/roadblocks.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_roadblocks.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1553,7 +1553,7 @@ const data = [
         genre: "2 Player / Shooter",
         description: "Rooftop Snipers is a chaotic two-button two-player sniper game. Find a friend to play with, or practice by playing against the computer in this rage-inducing action game that is similar in style and gameplay to smash hits such as Soccer Physics and Wrestle Jump.",
         link: `${cdnUrl}/Game Files/Rooftop Snipers/index.html`,
-        img: `${cdnUrl}/Images/rooftop_snipers.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_rooftop_snipers.png`,
         file_based: true,
         publisher: "Michael Eichler",
         controls: [
@@ -1567,7 +1567,7 @@ const data = [
         genre: "Runner",
         description: "Run 3 is an endless runner game where you need to navigate your little alien through space.",
         link: "https://b0bzshxck27.netlify.app/",
-        img: `${cdnUrl}/Images/run_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_run_3.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1580,7 +1580,7 @@ const data = [
         genre: "Adventure / Driving",
         description: "This game is an amazing 3D car driving game in which you enjoy freedom to explore a huge map with many different terrains. This third Scrap Metal game brings you even more freedom, and 4 new cars. Explore the mountains, overcome different kinds of obstacles, and enjoy the high speeds!",
         link: `${cdnUrl}/Game Files/Scrap Metal 3/index.html`,
-        img: `${cdnUrl}/Images/scrap_metal_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_scrap_metal_3.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1593,7 +1593,7 @@ const data = [
         genre: "FPS / Shooter",
         description: "Shell Shockers is an online, first-person shooter game where you control Eggs that move around one of nine Maps, with the objective being to go up the leaderboard killing each other.",
         link: "https://tam-shellshockers.arfotoarte.com/",
-        img: `${cdnUrl}/Images/shell_shockers.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_shell_shockers.png`,
         file_based: false,
         publisher: "Blue Wizard Digital",
         controls: [
@@ -1608,7 +1608,7 @@ const data = [
         genre: "Arcade / Speed Run",
         description: "Roll down the slope for as long as possible without falling off the edge or hitting any obstacles along the way. Get ready for serious speed boost as you fall downhill the never-ending surface.",
         link: `${cdnUrl}/Game Files/Slope 1/index.html`,
-        img: `${cdnUrl}/Images/slope_1.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_slope_1.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1621,7 +1621,7 @@ const data = [
         genre: "Driving / Endless",
         description: "Enjoy this slow relaxing endless driving game with minimalist visuals.",
         link: "https://slowroads.io/",
-        img: `${cdnUrl}/Images/slow_roads.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_slow_roads.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1636,7 +1636,7 @@ const data = [
         genre: "Arcade",
         description: "Smash Karts is a free io Multiplayer Kart Battle Arena game. Drive fast. Fire rockets. Make big explosions.",
         link: "Game Files/Smash Karts/index.html",
-        img: `${cdnUrl}/Images/smash_karts.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_smash_karts.png`,
         file_based: true,
         publisher: "SmashKarts.io",
         controls: [
@@ -1650,7 +1650,7 @@ const data = [
         genre: "Action / Multiplayer",
         description: "Snowball.io is a fun multiplayer arena IO game where you throw snowballs at other players. In this epic snow battle, you accumulate snow and take down other players while avoiding the disappearing ice platforms.",
         link: "Game Files/Snowbattle",
-        img: `${cdnUrl}/Images/snow_battle-io.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_snow_battle-io.png`,
         file_based: true,
         publisher: "Y8",
         controls: [
@@ -1663,7 +1663,7 @@ const data = [
         genre: "Action / Shooting",
         description: "The legendary soldier is incredible. In the game, the city has been attacked by aliens. They are trying to destroy the city. Now, pick up weapon and fight against them! Grab coins after you eliminated an alien to buy advanced weapons, towers and power-ups. You might want to invest in robo-factories and mana that supports you.",
         link: "Game Files/Soldier Legend/index.html",
-        img: `${cdnUrl}/Images/soldier_legend.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_soldier_legend.png`,
         file_based: true,
         publisher: "Poki",
         controls: [
@@ -1679,7 +1679,7 @@ const data = [
         genre: "Classic",
         description: "The first objective is to release and play into position certain cards to build up each foundation, in sequence and in suit, from the ace through the king. The ultimate objective is to build the whole pack onto the foundations, and if that can be done, the Solitaire game is won.",
         link: "Game Files/Solitaire/index.html",
-        img: `${cdnUrl}/Images/solitaire.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_solitaire.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1692,7 +1692,7 @@ const data = [
         genre: "Simulation",
         description: "Sort the Court is a game where you are a king and the goal is to raise your population, happiness, and gold. You do this by answering Yes or No to people that come up to you with offers.",
         link: "Game Files/Sort the Court/index.html",
-        img: `${cdnUrl}/Images/sort_the_court.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_sort_the_court.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1705,7 +1705,7 @@ const data = [
         genre: "Incremental",
         description: "Space Company is a science-fiction incremental game where you start from humble beginnings on Earth, working your way up to travelling between star systems and building Dyson Spheres and pretty much colonising the entire galaxy(ies?) And more!",
         link: "Game Files/Space Company/index.html",
-        img: `${cdnUrl}/Images/space_company.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_space_company.png`,
         file_based: true,
         publisher: "Sparticle999",
         controls: [
@@ -1718,7 +1718,7 @@ const data = [
         genre: "Arcade",
         description: "Space Paper.io is a game where you fly around the map and claim you territory. And YES this game contains ads, thats because this is the original game, all revenue is going to the developers.",
         link: "https://spacepaper.io/",
-        img: `${cdnUrl}/Images/space_paper-io.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_space_paper-io.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1733,7 +1733,7 @@ const data = [
         genre: "Stacking",
         description: "You have to stack tiles on top of each other and create a tower from the tiles as high as possible before. The game trims the size of the blocks when they are not perfectly stacked on top of each other.",
         link: "Game Files/Stack/index.html",
-        img: `${cdnUrl}/Images/stack.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_stack.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1746,7 +1746,7 @@ const data = [
         genre: "Multiplayer / Survival",
         description: "Starve.io is a browser-based online multiplayer survival game. In this game, you must control a human-like avatar, aiming to survive and get stronger equipment. And YES this game contains ads, thats because this is the original game, all revenue is going to the developers.",
         link: "https://starve.io.theadvancedmethod.abl.cl/",
-        img: `${cdnUrl}/Images/starve-io.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_starve-io.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1759,7 +1759,7 @@ const data = [
         genre: "Arcade",
         description: "Avoid every obstacle that stands in your way. Can you execute all these acrobatic tricks in a row like a boss? In this game, embody the spider stickman. Finish all the levels with the same agility as a spider.",
         link: "Game Files/Stickman Hook/index.html",
-        img: `${cdnUrl}/Images/stickman_hook.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_stickman_hook.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1772,7 +1772,7 @@ const data = [
         genre: "Endless / Runner",
         description: "It's you're goal to run a away from a cop chasing you while you complete missions, etc. How far can you go before getting caught?",
         link: "Game Files/Subway Surfers/index.html",
-        img: `${cdnUrl}/Images/subway_surfers.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_subway_surfers.png`,
         file_based: true,
         publisher: "projectcranberry.xyz (nanoGames)",
         controls: [
@@ -1786,7 +1786,7 @@ const data = [
         genre: "Action",
         description: "Super Buddy Kick is a brutal game in which you mutilate the ragdoll in many ways. Hit the buddy with hammers and blades, shoot him with pistols and rifles, let him explode with grenades and even drop flames on him!",
         link: "https://advanced-channeler.02.gz-associates.com/?t=tam-super-buddy-kick-online",
-        img: `${cdnUrl}/Images/super_buddy_kick.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_super_buddy_kick.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1799,7 +1799,7 @@ const data = [
         genre: "Arcade / Platformer",
         description: "Mario must race through the Mushroom Kingdom and save Princess Toadstool from Bowser. Mario jumps, runs, and walks across each level. The worlds are full of enemies and platforms, and open holes.",
         link: "Game Files/Super Mario Bros/index.html",
-        img: `${cdnUrl}/Images/super_mario_bros.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_super_mario_bros.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1812,7 +1812,7 @@ const data = [
         genre: "Maze / Shooter",
         description: "Drive through a maze to find your enemies, and shoot from a save point before they aim their cannon at you.",
         link: "https://bmarinacampground.net/uploads/5/5/6/7/5567194/custom_themes/851609344627074058/files/index.html",
-        img: `${cdnUrl}/Images/tank_trouble.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_tank_trouble.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1829,7 +1829,7 @@ const data = [
     //     genre: "?",
     //     description: "",
     //     link: "Game Files/Tank Trouble 2/index.html",
-    //     img: `${cdnUrl}/Images/tank_trouble.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_tank_trouble.png`,
     //     file_based: false,
     //     publisher: "Unknown",
     //     controls: [
@@ -1842,7 +1842,7 @@ const data = [
         genre: "Drifting",
         description: "Master the longboard as you drift through stunning mountain ranges, swerve through bustling city streets, and along the sandy beaches of Sunset Island.",
         link: `${cdnUrl}/Game Files/Tanuki Sunset/index.html`,
-        img: `${cdnUrl}/Images/tanuki_sunset.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_tanuki_sunset.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1855,7 +1855,7 @@ const data = [
         genre: "Arcade",
         description: "Temple Run 2 is an endless running video game. The goal of the game is simple, run the longest you can dodging obstacles and jumping without messing up.",
         link: "Game Files/Temple Run 2/index.html",
-        img: `${cdnUrl}/Images/temple_run_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_temple_run_2.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1868,7 +1868,7 @@ const data = [
         genre: "Puzzle",
         description: "Tetris is a tile-matching puzzle game with a simple goal of destroying line of blocks before it reaches the top.",
         link: "Game Files/Tetris/index.html",
-        img: `${cdnUrl}/Images/tetris.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_tetris.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1881,7 +1881,7 @@ const data = [
         genre: "Puzzle",
         description: "The Impossible Quiz is an online trivia quiz that features only very hard questions. Many of the questions have double meanings, tricks and puns and requires you to think outside the box. Out of the four answers, only one answer is right. There are in total 110 questions.",
         link: "https://advanced-channeler.02.gz-associates.com/?s=%3Furl%3D%252Fflash%252Fimpossiblequiz2.swf&t=tam-flash-ruffle",
-        img: `${cdnUrl}/Images/the_impossible_quiz_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_the_impossible_quiz_2.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1894,7 +1894,7 @@ const data = [
         genre: "Adventure / Casual",
         description: "This game is a comedy adventure that will take you on a journey you never asked to go on, through silly and unexpected video game universes. Will you be able to play along with the \"\"Game\"\" to find your way home? We sincerely think NOT.",
         link: "Game Files/There is no Game/index.html",
-        img: `${cdnUrl}/Images/there_is_no_game.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_there_is_no_game.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1907,7 +1907,7 @@ const data = [
         genre: "FPS",
         description: "This is a first person shooter game where time sands still until you move. Plan your shots and moves carefully as you must dodge enemy fire in epic slo-mo combat.",
         link: "https://ldaiodgdl1b4supcg3mhrvjqsf9a60v3-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/x001n5b6/ts2.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=e3b97d41d9b668d3&libs=core&mid=113&parent=https://sites.google.com/site/unblockedgameswtf/time-shooter-2#st=e%3DAIHE3cAneeedHBGirlp53gyNdeuN1scZziBGoatQMYmGLaH57IlgJFEspsSZ4zgwTbYkmrtTtO1AKsipyi1n%252FPcHBSnSj0eGa3vvp3oz0kDqfwWk%252FVtD3BA%253D%26c%3Denterprise&rpctoken=-6926225573722568764",
-        img: `${cdnUrl}/Images/time_shooter_2.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_time_shooter_2.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1920,7 +1920,7 @@ const data = [
         genre: "FPS",
         description: "This is a first person shooter game where time sands still until you move. Plan your shots and moves carefully as you must dodge enemy fire in epic slo-mo combat.",
         link: "https://c948ebn9d7mt7708ltutkt0ncbqleedo-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/x002d4f5/ts3.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=d46b9372ddb3ad67&libs=core&mid=88&parent=https://sites.google.com/site/unblockedgame76/time-shooter-3#st=e%3DAIHE3cCt9LNDXREyRib3u9ooN1xoByJtCuB5SPKhZxbPeS%252F%252BkIqQqbSDyOx3R4axlHBipKjAHPexKtGN6dqN%252Ft6sbR8efDVHs00C7%252F44XPgtROhEPMpHerc%253D%26c%3Denterprise&rpctoken=-3457677117462969399",
-        img: `${cdnUrl}/Images/time_shooter_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_time_shooter_3.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1933,7 +1933,7 @@ const data = [
         genre: "Building",
         description: "This game is all about designing, pick colors from the pat let te, plop down colored blocks of house on the irregular grid and watch the game turn it into cute little houses.",
         link: `${cdnUrl}/Game Files/Townscaper/index.html`,
-        img: `${cdnUrl}/Images/townscaper.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_townscaper.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1946,7 +1946,7 @@ const data = [
         genre: "2 Player / Action",
         description: "The objective of this game is to be the last one to stay on the tube, but watch out for miscellaneous objects while watching your back from other players.",
         link: "Game Files/Tube Jumpers",
-        img: `${cdnUrl}/Images/tube_jumpers.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_tube_jumpers.png`,
         file_based: true,
         publisher: "Michael Eichler",
         controls: [
@@ -1962,7 +1962,7 @@ const data = [
         genre: "Runner",
         description: "Tunnel Rush is an adrenaline-inducing running game in which you traverse through tunnels and caves at speed shilst dodging obstacles along thw way.",
         link: `${cdnUrl}/Game Files/Tunnel Rush/index.html`,
-        img: `${cdnUrl}/Images/tunnel_rush.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_tunnel_rush.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -1975,7 +1975,7 @@ const data = [
         genre: "Driving",
         description: "Turbo Moto Racer 3D is a racing game set in a city. Demonstrate your motorcycle riding talents in congested areas. Pass difficult levels to unlock new motorcycles. Feel the rush of excitement coursing through your veins.",
         link: "https://advanced-channeler.02.gz-associates.com/?t=tam-turbo-moto-racer",
-        img: `${cdnUrl}/Images/turbo_moto_racer.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_turbo_moto_racer.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -1990,7 +1990,7 @@ const data = [
         genre: "Classic / Multiplayer",
         description: "UNO is a multi-player card game in which the objective is to be the first player to get rid of all the cards in their hand.",
         link: "https://uno-online-multiplayer.herokuapp.com",
-        img: `${cdnUrl}/Images/uno.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_uno.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -2005,7 +2005,7 @@ const data = [
         genre: "Platformer",
         description: "This is a game where you must parkour a stickman through acts, jumping and sliding through deadly devices and traps, to get to the final state where you will complete the Vexation.",
         link: "Game Files/Vex 3/index.html",
-        img: `${cdnUrl}/Images/vex_3.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_vex_3.png`,
         file_based: true,
         publisher: "KiZi",
         controls: [
@@ -2019,7 +2019,7 @@ const data = [
         genre: "Platformer",
         description: "This is a game where you must parkour a stickman through acts, jumping and sliding through deadly devices and traps, to get to the final state where you will complete the Vexation.",
         link: "Game Files/Vex 4/index.html",
-        img: `${cdnUrl}/Images/vex_4.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_vex_4.png`,
         file_based: true,
         publisher: "KiZi",
         controls: [
@@ -2033,7 +2033,7 @@ const data = [
         genre: "Platformer",
         description: "This is a game where you must parkour a stickman through acts, jumping and sliding through deadly devices and traps, to get to the final state where you will complete the Vexation.",
         link: "Game Files/Vex 5/index.html",
-        img: `${cdnUrl}/Images/vex_5.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_vex_5.png`,
         file_based: true,
         publisher: "KiZi",
         controls: [
@@ -2047,7 +2047,7 @@ const data = [
         genre: "Platformer",
         description: "This is a game where you must parkour a stickman through acts, jumping and sliding through deadly devices and traps, to get to the final state where you will complete the Vexation.",
         link: "Game Files/Vex 6/index.html",
-        img: `${cdnUrl}/Images/vex_6.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_vex_6.png`,
         file_based: true,
         publisher: "KiZi",
         controls: [
@@ -2061,7 +2061,7 @@ const data = [
         genre: "Puzzle",
         description: "It's a bit like Wordle, but this game has you figuring out how to ladder from one word to another. You have six chances to guess the path between two words in Weaver.",
         link: "https://weaverwordle.com/weaver-unlimited/",
-        img: `${cdnUrl}/Images/weaver_unlimited.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_weaver_unlimited.png`,
         file_based: false,
         publisher: "Unknown",
         controls: [
@@ -2074,7 +2074,7 @@ const data = [
         genre: "Puzzle",
         description: "This is a popular word guessing game where you must correctly select a random five-letter word. You only get six tries to guess the word, but the game will give you hints along the way.",
         link: "Game Files/Wordle Unlimited/index.html",
-        img: `${cdnUrl}/Images/wordle_unlimited.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_wordle_unlimited.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -2087,7 +2087,7 @@ const data = [
         genre: "Puzzle",
         description: "This game is a very difficult game as it requires you to go through very difficult level that seem very unpossible.",
         link: "Game Files/Worlds Hardest Game/index.html",
-        img: `${cdnUrl}/Images/worlds_hardest_game.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_worlds_hardest_game.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -2100,7 +2100,7 @@ const data = [
         genre: "Simulator",
         description: "A simple text-based adventure exploring the age-old question: What would you do if you had more money than any single human being should ever have? Be sure to expand the side column using the arrow in the upper left to view your current funds.",
         link: "Game Files/You Are Bezos/index.html",
-        img: `${cdnUrl}/Images/you_are_bezos.png`,
+        img: `${cdnUrl}/High Compressed/highcompress_you_are_bezos.png`,
         file_based: true,
         publisher: "Unknown",
         controls: [
@@ -2113,7 +2113,7 @@ const data = [
     //     genre: "Shooter",
     //     description: "",
     //     link: "https://rudolph-the-red-nosed-reindeer.ga/tmm-zombsroyale",
-    //     img: `${cdnUrl}/Images/zombs_royale.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_zombs_royale.png`,
     //     file_based: false,
     //     publisher: "Unknown",
     //     controls: [
@@ -2126,7 +2126,7 @@ const data = [
     //     genre: "",
     //     description: "",
     //     link: "",
-    //     img: `${cdnUrl}/Images/.png`,
+    //     img: `${cdnUrl}/High Compressed/highcompress_.png`,
     //     file_based: false,
     //     publisher: "Unknown",
     //     controls: [
