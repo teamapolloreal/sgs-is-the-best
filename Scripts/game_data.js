@@ -1,4 +1,4 @@
-let lastUpdate = "1/18/2023 (v6.2.1)"
+let lastUpdate = "1/24/2023 (v6.2.2)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -1247,6 +1247,20 @@ const data = [
     //         "",
     //     ]
     // },
+    {
+        name: "Osu! Mania",
+        id: "osu",
+        genre: "Rhythm",
+        description: "osu! is a rhythm game with modes that offer a varity of \"beatmaps\" which are played to songs of different lengths. This mode includes falling and rising musical notes vertically as it is one of the four game modes.",
+        link: `${cdnUrl}/Game Files/Osu/index.html`,
+        img: `${cdnUrl}/High Compressed/highcompress_osu.png`,
+        file_based: true,
+        publisher: "OliBomby",
+        controls: [
+            "Unknown",
+        ],
+        new: true
+    },
     {
         name: "Pac-Man",
         id: "pac-man",
@@ -2512,6 +2526,7 @@ function playGame(gameID){
             window.scrollTo(0, 0)
             document.body.style.overflow = "visible"
             trackGameData(data[i].id, null)
+            window.location.hash = `#${data[i].id}`
         }
     }
 }
@@ -2579,5 +2594,23 @@ function controls(){
         document.getElementById("controls").style.display = "block"
     } else {
         document.getElementById("controls").style.display = "none"
+    }
+}
+
+var oldUrl = window.location.herf;
+window.addEventListener("hashchange", function(){
+    checkHash();
+})
+
+function checkHash(){
+    var newHash = window.location.hash
+    if(newHash === "#" || newHash === ""){
+        gamepage();
+    } else {
+        var realgame = false;
+        data.forEach(game => { 
+            if(game.id === newHash.slice(1)) realgame = true
+        })
+        if(realgame === true) playGame(newHash.slice(1))
     }
 }

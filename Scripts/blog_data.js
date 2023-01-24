@@ -27,6 +27,14 @@ let blog_data = [
 ]
 let log_data = [
     {
+        title: "Update Log of v6.2.2",
+        date: "January 24, 2023",
+        writtenBy: "Syce",
+        id: "v6-2-2",
+        description: "This update includes minor bug fixes and performance changes.",
+        text: "This update includes minor bug fixes and performance changes. Read below for more details:<br><br><h3>Changes</h3><h4>New Games</h4><ul><li>Osu! Mania (from scratch)</li></ul><br><h4>Hashes</h4><ul><li>Added a hash to the url when playing games</li><li class='whitecircle' type='circle'>This allows you to copy the url and paste it to load the same game</li><li class='whitecircle' type='circle'>Also allows you to hit the back arrow to go back to the game page (weird for some games)</li></ul><br><h3>Performance</h3><ul><li>Improved the loading time drastically on the games page</li><li class='whitecircle' type='circle'>Compressed images: less size, little quality difference, lower network usage</li><li class='whitecircle' type='circle'>This only applies for game thumbnails being on</li></ul><br><h3>Resolved Issues</h3><ul><li>The site appearing just a white screen after clicking on the back arrow in chrome</li></ul><br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
+    {
         title: "Update Log of v6.2.1",
         date: "January 18, 2023",
         writtenBy: "Syce",

@@ -77,6 +77,7 @@ function gamepage(){
 
     // saveGameData();
     trackGameData(null, "stop")
+    window.location.hash = `#`
 }
 
 function fullscreen(){
@@ -203,12 +204,14 @@ window.onload = (event) => {
     if(localStorage.getItem("bannerMessageNum") !== bannerMessageNum || localStorage.getItem("bannerMessageNum") === null){
         if(document.getElementById("bannerMessage")) document.getElementById("bannerMessage").style.display = "block"
     }
+
+    if(window.location.pathname === "/games.html") checkHash();
 }
 
-window.onbeforeunload = function() {
-    document.querySelector("html").style.backgroundColor = "var(--body-color)"
-    document.querySelector("body").style.display = "none";
-}
+// window.onbeforeunload = function() {
+//     document.querySelector("html").style.backgroundColor = "var(--body-color)"
+//     document.querySelector("body").style.display = "none";
+// }
 
 function hideBanner(){
     document.getElementById("bannerMessage").style.display = "none"
