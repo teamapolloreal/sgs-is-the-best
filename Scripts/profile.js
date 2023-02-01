@@ -114,16 +114,16 @@ const achievement_data = [
     {
         name: "Read 2 Blogs or Logs",
         id: "read_2_blogs",
-        reward: "250xp + \"not reading allat🤦‍🤣\" Title",
+        reward: "100xp + \"not reading allat🤦‍🤣\" Title",
         progress: null,
-        progress_info: { a: "read_blogs", b: 2, xp: 250, title: "not reading allat🤦‍♂️🤣", t_id: "not_reading_allat" }
+        progress_info: { a: "read_blogs", b: 2, xp: 100, title: "not reading allat🤦‍♂️🤣", t_id: "not_reading_allat" }
     },
     {
         name: "Read 10 Blogs or Logs",
         id: "read_10_blogs",
-        reward: "1000xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/5.png' class='img-emoji2'> Badge!",
+        reward: "250xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/5.png' class='img-emoji2'> Badge!",
         progress: null,
-        progress_info: { a: "read_blogs", b: 10, xp: 1000, b_id: "5" }
+        progress_info: { a: "read_blogs", b: 10, xp: 250, b_id: "5" }
     },
 ]
 
