@@ -386,7 +386,7 @@ function checkCompletion(){
                 createAlertBox({ color: "green", text: `Achievement completed`, time: 8000 })
 
                 if(achievement_data[o].progress_info.xp){
-                    if(achievement_data[o].id === "play_every_game" && localStorage.getItem("everyGame") !== "true"){
+                    if((achievement_data[o].id === "play_every_game" && localStorage.getItem("everyGame") !== "true") || achievement_data[o].id !== "play_every_game"){
                         localStorage.setItem("everyGame", "true")
                         var xp = parseInt(localStorage.getItem("xp")) || 0
                         var lvl = parseInt(localStorage.getItem("lvl")) || 1
