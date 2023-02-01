@@ -297,6 +297,7 @@
             <div class="pageDescription">Change the website's appearance by a dark and a light contrast.</div>
             <select class="settingsSelect" id="modeSelect">
                 <option class="settingsSelectOption">Dark</option>
+                <option class="settingsSelectOption">Darker Dark</option>
                 <option class="settingsSelectOption">Light</option>
             </select>
             <br>
@@ -310,6 +311,7 @@
                 <option class="settingsSelectOption">Green</option>
                 <option class="settingsSelectOption">Light Blue</option>
                 <option class="settingsSelectOption">Red</option>
+                <!-- <option class="settingsSelectOption">Rainbow</option> -->
             </select>
             <input name="Color Picker" type="color" class="color_picker" id="theme_color_picker" oninput="setTheme()">
             <br>
@@ -330,6 +332,14 @@
         <div class="pageHeading">Other</div>
         <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">Other general site settings. Some of this might be useful others not.</div>
         <div class="setting">
+            <div class="settingsTitle">Hot Keys</div>
+            <div class="pageDescription">Hot keys allow you to navigate the site much easier. You can view them using <b>Shift + /</b></div>
+            <div class="settingsSwitch" onclick="hotKeysSetting(true)">
+                <span class="switchBack" id="hotkeysBack"></span>
+                <span class="switchDot" id="hotkeysSwitch"></span>
+                
+            </div>
+            <br>
             <div class="settingsTitle">Open Sidebar by Default</div>
             <div class="pageDescription">This will keep the sidebar open and only close when you play a game or if you close it.</div>
             <div class="settingsSwitch" onclick="openSidebarSetting(true)">
@@ -351,12 +361,20 @@
     </section>
 
     <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
         <div class="alerts" id="alerts">
         </div>
     </section>
 
     <script src="script.js"></script>
     <script src="./Scripts/settings.js"></script>
+    <script src="./Scripts/hotkeys.js"></script>
 
 </body>
 </html>

@@ -27,12 +27,20 @@ let blog_data = [
 ]
 let log_data = [
     {
+        title: "Update Log of v6.3.0",
+        date: "February 1, 2023",
+        writtenBy: "Syce",
+        id: "v6-3-0",
+        description: "This update includes badges, hot keys, redesigned game view, and other changes.",
+        text: "This update includes badges, hot keys, redesigned game view, and other changes. Read below for more details:<br><br><h3>Badges</h3><ul><li>5 new badges for your profile!</li><li class='whitecircle' type='circle'>Sorry if they look bad, I’m bad at pixel art lol</li><li>These are attainable by completing different achievements</li><li class='whitecircle' type='circle'>Purposely made some hard to get</li></ul><br><h3>Hot Keys</h3><ul><li>Hot keys allow you to navigate the site much easier</li><li class='whitecircle' type='circle'>Can be disabled in settings if you don’t want them</li><li>View using <b>Shift + /</b></li></ul><br><h3>Other</h3><ul><li>Redesigned the game view</li><li class='whitecircle' type='circle'>Now includes supported devices</li><li class='whitecircle' type='circle'>Can now press esc to exit the menu and enter to play</li><li>Darker dark mode for users who prefer very dark colors</li><li>Announcements now include the date they were announced</li><li>URL hashes added to blogs just like games</li><li>6 new achievements and 1 new title (including the ones for badges)</li></ul><br><h3>Resolved Issues</h3><ul><li>Coming back from afk would not hide one of the alerts</li><li>Favorited games shadow does not use the theme color in dark mode</li><li>Links un-clickable on the blogs page</li><li>Numbers in the profile include decimals sometimes</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
+    {
         title: "Update Log of v6.2.2",
         date: "January 24, 2023",
         writtenBy: "Syce",
         id: "v6-2-2",
         description: "This update includes minor bug fixes and performance changes.",
-        text: "This update includes minor bug fixes and performance changes. Read below for more details:<br><br><h3>Changes</h3><h4>New Games</h4><ul><li>Osu! Mania (from scratch)</li></ul><br><h4>Hashes</h4><ul><li>Added a hash to the url when playing games</li><li class='whitecircle' type='circle'>This allows you to copy the url and paste it to load the same game</li><li class='whitecircle' type='circle'>Also allows you to hit the back arrow to go back to the game page (weird for some games)</li></ul><br><h3>Performance</h3><ul><li>Improved the loading time drastically on the games page</li><li class='whitecircle' type='circle'>Compressed images: less size, little quality difference, lower network usage</li><li class='whitecircle' type='circle'>This only applies for game thumbnails being on</li></ul><br><h3>Resolved Issues</h3><ul><li>The site appearing just a white screen after clicking on the back arrow in chrome</li></ul><br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+        text: "This update includes minor bug fixes and performance changes. Read below for more details:<br><br><h3>Changes</h3><h4>New Games</h4><ul><li>Osu! Mania (from scratch)</li></ul><br><h4>Hashes</h4><ul><li>Added a hash to the url when playing games</li><li class='whitecircle' type='circle'>This allows you to copy the url and paste it to load the same game</li><li class='whitecircle' type='circle'>Also allows you to hit the back arrow to go back to the game page (weird for some games)</li></ul><br><h3>Performance</h3><ul><li>Improved the loading time drastically on the games page</li><li class='whitecircle' type='circle'>Compressed images: less size, little quality difference, lower network usage</li><li class='whitecircle' type='circle'>This only applies for game thumbnails being on</li></ul><br><h3>Resolved Issues</h3><ul><li>The site appearing just a white screen after clicking on the back arrow in chrome</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
     },
     {
         title: "Update Log of v6.2.1",
@@ -40,7 +48,7 @@ let log_data = [
         writtenBy: "Syce",
         id: "v6-2-1",
         description: "This update includes bug fixes and minor changes.",
-        text: "This update includes bug fixes and minor changes. Read below for more details:<br><br><h3>Changes</h3><ul><li>Added numbers on the achievements to show your progress</li><li>Updated the list of blocked/bugged games</li><li class='whitecircle' type='circle'>And yes there’s a lot I need to work on</li></ul><br><h4>Balances</h4><ul><li>Nerfed the amount of xp you get from some achievements</li></ul><br><h3>Resolved Issues</h3><ul><li>Having enough XP to level up from achievements wouldn’t work (<a class='underline_text' onclick='location.replace('https://sgs.peerboard.com/post/1798518837')'>1798518837</a>)</li><li>Unable to save your Ball Blast game</li><li>Typo on the file source for Just One Boss</li><li>Typo on the file source for Moto X3M Winter</li></ul> <br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+        text: "This update includes bug fixes and minor changes. Read below for more details:<br><br><h3>Changes</h3><ul><li>Added numbers on the achievements to show your progress</li><li>Updated the list of blocked/bugged games</li><li class='whitecircle' type='circle'>And yes there’s a lot I need to work on</li></ul><br><h4>Balances</h4><ul><li>Nerfed the amount of xp you get from some achievements</li></ul><br><h3>Resolved Issues</h3><ul><li>Having enough XP to level up from achievements wouldn’t work (<a class='underline_text' onclick='window.open(`https://sgs.peerboard.com/post/1798518837`, `_blank`)'>1798518837</a>)</li><li>Unable to save your Ball Blast game</li><li>Typo on the file source for Just One Boss</li><li>Typo on the file source for Moto X3M Winter</li></ul> <br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
     },
     {
         title: "Update Log of v6.2.0",
@@ -48,7 +56,7 @@ let log_data = [
         writtenBy: "Syce",
         id: "v6-2-0",
         description: "This updates includes new user profiles with many other features.",
-        text: "This updates includes new user profiles with many other features. Read below for more details:<br><br><h3>Profiles</h3><ul><li>Each user now has their own profile</li><li class='whitecircle' type='circle'><b>Note:</b> These are cache based, so don’t clear your cookies!</li><li>Tracks progress and information to show</li><li>Gain XP to level up, get new rewards</li><li>Customizable, change your name and title (unlock new titles)</li></ul><br><h3>Achievements</h3><ul><li>See your progress towards your achievements</li><li>Sorted to show most completed at top</li><li>Rewards for completing include:</li><li class='whitecircle' type='circle'>Titles on your profile</li> <li class='whitecircle' type='circle'>Badges on your profile (coming soon)</li><li class='whitecircle' type='circle'>XP and levels</li></ul><br><h3>Other</h3><ul><li>Deleted dark mode… just kidding dark themed is now just dark mode</li><li>Fixes and stability improvements</li></ul><br><h3>Resolved Issues</h3><ul><li>Fixed fullscreen not covering the whole screen. Resolved on both windowed fullscreen and fullscreen</li><li>Fixed the windowed fullscreen exit button not being in the right spot</li><li class='whitecircle' type='circle'>Might be still flimsy on mobile</li></ul> <br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+        text: "This updates includes new user profiles with many other features. Read below for more details:<br><br><h3>Profiles</h3><ul><li>Each user now has their own profile</li><li class='whitecircle' type='circle'><b>Note:</b> These are cache based, so don’t clear your cookies!</li><li>Tracks progress and information to show</li><li>Gain XP to level up, get new rewards</li><li>Customizable, change your name and title (unlock new titles)</li></ul><br><h3>Achievements</h3><ul><li>See your progress towards your achievements</li><li>Sorted to show most completed at top</li><li>Rewards for completing include:</li><li class='whitecircle' type='circle'>Titles on your profile</li> <li class='whitecircle' type='circle'>Badges on your profile (coming soon)</li><li class='whitecircle' type='circle'>XP and levels</li></ul><br><h3>Other</h3><ul><li>Deleted dark mode… just kidding dark themed is now just dark mode</li><li>Fixes and stability improvements</li></ul><br><h3>Resolved Issues</h3><ul><li>Fixed fullscreen not covering the whole screen. Resolved on both windowed fullscreen and fullscreen</li><li>Fixed the windowed fullscreen exit button not being in the right spot</li><li class='whitecircle' type='circle'>Might be still flimsy on mobile</li></ul> <br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
     },
     {
         title: "Update Log of v6.1.0",
@@ -56,7 +64,7 @@ let log_data = [
         writtenBy: "Syce",
         id: "v6-1-0",
         description: "This update includes new features and changes. And Minecraft.",
-        text: "This update includes new features and changes. Read below for more details:<br><br><h3>Minecraft!</h3>Highly requested game, finally here. I was able to get Minecraft 1.5.2 working with Eaglercraft. Let me know if there’s any issues getting it to load or something. I was unable to get multiplayer and LAN to work when testing but it might work for you idk.<br><br><h3>Changes</h3><ul><li>New FPS count, enable in settings</li><li>Play games in windowed fullscreen, found in the game options menu</li><li>Replaced buttons with a menu at the top of the gamepage</li><li class='whitecircle' type='circle'> Changed the report icon</li><li>New bootstrap alerts, starting to be used around the site</li><li>Other small changes</li></ul><br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+        text: "This update includes new features and changes. Read below for more details:<br><br><h3>Minecraft!</h3>Highly requested game, finally here. I was able to get Minecraft 1.5.2 working with Eaglercraft. Let me know if there’s any issues getting it to load or something. I was unable to get multiplayer and LAN to work when testing but it might work for you idk.<br><br><h3>Changes</h3><ul><li>New FPS count, enable in settings</li><li>Play games in windowed fullscreen, found in the game options menu</li><li>Replaced buttons with a menu at the top of the gamepage</li><li class='whitecircle' type='circle'> Changed the report icon</li><li>New bootstrap alerts, starting to be used around the site</li><li>Other small changes</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
     },
     {
         title: "Update Log of v6.0.1",
@@ -64,7 +72,7 @@ let log_data = [
         writtenBy: "Syce",
         id: "v6-0-1",
         description: "This update includes minor bug fixes and changes aimed at improving the site.",
-        text: "This update includes minor bug fixes and changes aimed at improving the site. Read below for more details:<br><br><h3>Changes</h3><ul><li>New font, not widely used yet</li><li>Reasons are included on the game may be experiencing issues banner</li><li>Blogs now have actual bullet points using HTML</li><li>Other minor tweaks</li></ul><br><h3>Resolved Issues</h3><ul><li>Text on game containers too light for some users using light mode</li></ul><br><br>Check out my <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+        text: "This update includes minor bug fixes and changes aimed at improving the site. Read below for more details:<br><br><h3>Changes</h3><ul><li>New font, not widely used yet</li><li>Reasons are included on the game may be experiencing issues banner</li><li>Blogs now have actual bullet points using HTML</li><li>Other minor tweaks</li></ul><br><h3>Resolved Issues</h3><ul><li>Text on game containers too light for some users using light mode</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
     },
     {
         title: "Update Log of Version 6!",
@@ -72,7 +80,7 @@ let log_data = [
         writtenBy: "Syce",
         id: "version6",
         description: "This update includes a brand new refresh to the site with loads of changes.",
-        text: "This update includes a brand new refresh to the site with loads of changes. Read below for more details:<br><br><h3>New Changes</h3><ul><li>Redesigned some major components of the site, including a few pages to give them a fresh look</li><li>Horizontal navigation bar! This can be toggled in settings if you prefer the look of the bar on top</li><li>New home page! Simplified look, no overload with information</li><li>Changed the game thumbnails to a much more cleaner and slick design</li><li>Loads of new sounds added to the soundboard and an additional new design as well</li><li>Cleaned up the blogs page to make it easier to search through</li><li>New links drop-down menu on the sidebar and horizontal bar, this just has external links like the forums, now including Discord and Trello</li></ul><br><h3>Soundboard</h3><ul><li>Total of 88 sounds!</li><li>Buttons to play or stop all sounds on the soundboard</li><li>Much easier to see which sounds are playing and for how much longer</li></ul><br><h3>Other</h3><ul><li>Added a random game selector</li><li>New setting to instantly play a game after clicking on it</li><li>Changed the scaling a little bit of some things. More simple and less complex + doesn’t scale weird (might need improvement)</li><li>Blogs get proper sub-headers and additional information</li><li>Switches that are on in settings now have a themed background</li><li>Performance improvements to make the site seem more responsive and faster</li><li>Additional backend QoL changes</li></ul><br><h3>Resolved Issues</h3><ul><li>Fixed an issue with the search showing games</li><li>With light mode, the text in options menus would match the background making it unreadable</li></ul><br><br>Check out my new <a class='underline_text colored' onclick='location.replace('https://trello.com/b/PUXmNYGm/syces-game-shack')'><b>Trello Board</b></a> with a list of bugs and planned upcoming features.",
+        text: "This update includes a brand new refresh to the site with loads of changes. Read below for more details:<br><br><h3>New Changes</h3><ul><li>Redesigned some major components of the site, including a few pages to give them a fresh look</li><li>Horizontal navigation bar! This can be toggled in settings if you prefer the look of the bar on top</li><li>New home page! Simplified look, no overload with information</li><li>Changed the game thumbnails to a much more cleaner and slick design</li><li>Loads of new sounds added to the soundboard and an additional new design as well</li><li>Cleaned up the blogs page to make it easier to search through</li><li>New links drop-down menu on the sidebar and horizontal bar, this just has external links like the forums, now including Discord and Trello</li></ul><br><h3>Soundboard</h3><ul><li>Total of 88 sounds!</li><li>Buttons to play or stop all sounds on the soundboard</li><li>Much easier to see which sounds are playing and for how much longer</li></ul><br><h3>Other</h3><ul><li>Added a random game selector</li><li>New setting to instantly play a game after clicking on it</li><li>Changed the scaling a little bit of some things. More simple and less complex + doesn’t scale weird (might need improvement)</li><li>Blogs get proper sub-headers and additional information</li><li>Switches that are on in settings now have a themed background</li><li>Performance improvements to make the site seem more responsive and faster</li><li>Additional backend QoL changes</li></ul><br><h3>Resolved Issues</h3><ul><li>Fixed an issue with the search showing games</li><li>With light mode, the text in options menus would match the background making it unreadable</li></ul><br><br>Check out my new <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features.",
     },
     {
         title: "Update Log of v5.1.1",
@@ -193,6 +201,7 @@ log_data.forEach(blog => {
     count2++;
 })
 
+var current = "Blog"
 function viewBlog(blogID, log){
     let data = blog_data
     if(log === true) data = log_data
@@ -201,17 +210,34 @@ function viewBlog(blogID, log){
             document.getElementById("blogPage").style.display = "block"
             document.getElementById("blog").style.display = "none"
             document.getElementById("updateLogs").style.display = "none"
-            if(log === true){
-                document.getElementById("blogReturn").onclick = function(){ document.getElementById('blogPage').style.display = 'none', document.getElementById('updateLogs').style.display = 'block' }
-            } else {
-                document.getElementById("blogReturn").onclick = function(){ document.getElementById('blogPage').style.display = 'none', document.getElementById('blog').style.display = 'block' }
-            }
             window.scrollTo(0, 0)
             document.getElementById("blog_title").innerText = data[i].title
             document.getElementById("blog_date").innerHTML = `Written by ${data[i].writtenBy}<br>On ${data[i].date}`
 
             document.getElementById("blog_text").innerHTML = data[i].text
+            window.location.hash = `#${data[i].id}`
+            if(log === true){ current = "Log" } else { current = "Blog" };
+
+            var viewedBlogs = localStorage.getItem("viewedBlogs") || null
+            if(!viewedBlogs){
+                viewedBlogs = `${data[i].id} || `
+                localStorage.setItem("viewedBlogs", viewedBlogs)
+                return;
+            }
+            if(!viewedBlogs.includes(`|| ${data[i].id}`) && !viewedBlogs.includes(`${data[i].id} ||`)){
+                viewedBlogs = viewedBlogs + `${data[i].id} || `
+                localStorage.setItem("viewedBlogs", viewedBlogs)
+            }
+            checkCompletion();
         }
+    }
+}
+
+function blog(info){
+    if(current === "Log" && !info){
+        document.getElementById('blogPage').style.display = 'none'; document.getElementById('updateLogs').style.display = 'block'; window.location.hash = `#updatelogs`
+    } else {
+        document.getElementById('blogPage').style.display = 'none'; document.getElementById('updateLogs').style.display = 'none'; document.getElementById('blog').style.display = 'block'; window.location.hash = `#`
     }
 }
 
@@ -237,5 +263,28 @@ function searchBlog(){
         } else {
             x[i].style.display = "inline-table"
         }
+    }
+}
+
+var oldUrl = window.location.herf;
+window.addEventListener("hashchange", function(){
+    checkHash();
+})
+
+function checkHash(){
+    var newHash = window.location.hash
+    if(newHash === "#updatelogs"){
+        document.getElementById('blogPage').style.display = 'none'; 
+        document.getElementById('updateLogs').style.display = 'block';
+    }
+    if(newHash === "#" || newHash === ""){
+        blog(true);
+    } else {
+        blog_data.forEach(blog => { 
+            if(blog.id === newHash.slice(1)) return viewBlog(newHash.slice(1));
+        })
+        log_data.forEach(log => { 
+            if(log.id === newHash.slice(1)) return viewBlog(newHash.slice(1), true);
+        })
     }
 }

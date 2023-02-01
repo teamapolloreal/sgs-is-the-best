@@ -251,8 +251,9 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">v6.3.0 Delay</div>
-            <div class="messageBannerText">v6.3.0 was suppose to release today, however I ran into a load of problems so I will have to move the update back. As to when, I don’t quite know yet but just expect it soon. Sorry for the inconvenience and I hope you understand.</a></div>
+            <div class="messageBannerTitle">Badges & Hot Keys! + Redesigned Game View (v6.3.0)</div>
+            <div class="messageBannerText">Yep, new badges for your profile, new hot keys to navigate the site much faster, and a new darker dark mode. You can read the full update log <a class="underline_text" onclick="location.replace('blog.html#v6-3-0')">here.</a></div>
+            <div class="messageBannerDate">2/1/2023</div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
@@ -298,39 +299,43 @@
                     <i class='bx bx-x icon' style="transform: translateY(-5px)"></i>
                 </button>
                 <img class="gameViewImg" id="gameViewImg">
-                <div class="gameViewSubTitle">Description</div>
-                <div class="gameViewText" id="gameViewDescription"></div>
-                <br>
-                <div style="display: inline-table; width: 50%; float: left;">
-                    <div class="gameViewSubTitle">Genre</div>
-                    <div class="gameViewText" id="gameViewGenre"></div>
-                </div>
-                <div style="display: inline-table; width: 50%; float: left;">
-                    <div class="gameViewSubTitle">Publisher</div>
-                    <div class="gameViewText" id="gameViewPublisher"></div>
-                </div>
-                <br><br><br>
-                <button class="playButton" id="playButton">
-                    <i class='bx bx-play icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
-                    <span>PLAY</span>
-                </button>
-                <div id="" class="reportButton" onclick="optionsMenu('splashOptions')">
-                    <i class='bx bx-dots-horizontal-rounded icon' ></i>
-                    <!-- <span class="hovertext7">Options</span> -->
-                    <div id="splashOptions" class="dropdown-content" style="transform: translate(0, -140px); right: 3vmin">
-                        <button onclick="" class="dropbtn splashOp" id="favoriteOption2">
-                            <span class='bx bx-star icon' style="transform: translateY(3px); font-size: 20px" id="favStarOption2"></span>
-                            <span style="padding: 5px" id="favoriteTextOption2">Favorite</span>
+                <div style="position: absolute; right: 35px; top: 60px; width: 33%; height: 24.5vw; overflow-y: auto;">
+                    <div class="gameViewSubTitle">Description</div>
+                    <div class="gameViewText" id="gameViewDescription"></div>
+                    <br>
+                    <div style="display: inline-table; width: 50%; float: left;">
+                        <div class="gameViewSubTitle">Genre</div>
+                        <div class="gameViewText" id="gameViewGenre"></div>
+                    </div>
+                    <div style="display: inline-table; width: 50%; float: left;">
+                        <div class="gameViewSubTitle">Publisher</div>
+                        <div class="gameViewText" id="gameViewPublisher"></div>
+                    </div>
+                    <br><br><br>
+                    <div class="gameViewSubTitle">Supported Devices</div>
+                    <div class="gameViewText" id="gameViewDevices"></div>
+                    <br>
+                    <div style="position: fixed; bottom: 40px; width: 33%; height: auto;">
+                        <button class="playButton" id="playButton">
+                            <i class='bx bx-play icon' style="font-size: 20px; padding-right: 3px; transform: translateY(3px);"></i>
+                            <span>PLAY</span>
                         </button>
-                        <button onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')" class="dropbtn splashOp">
-                            <span class='bx bx-error-circle icon' style="transform: translateY(3px); font-size: 20px"></span>
-                            <span style="padding: 5px">Report</span>
-                        </button>
+                        <div id="" class="reportButton" onclick="optionsMenu('splashOptions')">
+                            <i class='bx bx-dots-horizontal-rounded icon' ></i>
+                            <!-- <span class="hovertext7">Options</span> -->
+                            <div id="splashOptions" class="dropdown-content" style="transform: translate(0, -140px); right: 0px;">
+                                <button onclick="" class="dropbtn splashOp" id="favoriteOption2">
+                                    <span class='bx bx-star icon' style="transform: translateY(3px); font-size: 20px" id="favStarOption2"></span>
+                                    <span style="padding: 5px" id="favoriteTextOption2">Favorite</span>
+                                </button>
+                                <button onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')" class="dropbtn splashOp">
+                                    <span class='bx bx-error-circle icon' style="transform: translateY(3px); font-size: 20px"></span>
+                                    <span style="padding: 5px">Report</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- <button class="reportButton" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
-                    <i class='bx bxs-flag-alt icon'></i>
-                </button> -->
             </div>
         </div>
 
@@ -469,6 +474,13 @@
     </section>
 
     <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
         <div class="alerts" id="alerts">
         </div>
     </section>
@@ -477,6 +489,7 @@
     <script src="./Scripts/game_data.js"></script>
     <script src="./Scripts/settings.js"></script>
     <script src="./Scripts/profile.js"></script>
+    <script src="./Scripts/hotKeys.js"></script>
 
 </body>
 </html>

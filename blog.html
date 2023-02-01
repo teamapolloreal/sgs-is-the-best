@@ -65,7 +65,7 @@
                     <i class='bx bx-volume-full pageIcon' ></i>
                     <span class="horText">Soundboard</span>
                 </div>
-                <div class="horPage horSelected" onclick="blog()">
+                <div class="horPage horSelected" onclick="blog(true)">
                     <i class='bx bx-book-alt pageIcon' ></i>
                     <span class="horText">Blogs</span>
                 </div>
@@ -164,7 +164,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#" class="selected" onclick="blog()">
+                        <a href="#" class="selected" onclick="blog(true)">
                             <i class='bx bx-book-alt icon'></i>
                             <span class="text nav-text">Blog</span>
                             <span class="hovertext">Blog</span>
@@ -266,7 +266,7 @@
               <div class="blogDate2"></div>
             </div>
             <div class="blogDescription2">Click to view the update logs of the site.</div>
-            <button class="blogReadBtn2" onclick="document.getElementById('blog').style.display = 'none', document.getElementById('updateLogs').style.display = 'block'">View Update Logs</button>
+            <button class="blogReadBtn2" onclick="document.getElementById('blog').style.display = 'none'; document.getElementById('updateLogs').style.display = 'block'; window.location.hash = `#updatelogs`">View Update Logs</button>
         </div>
 
         <div class="pageHeading" id="blog_recent">Our Blog</div>
@@ -305,13 +305,18 @@
         <br>
         <div class="title">Update Logs</div>
         <div class="text">Read the update logs to find out what was included in the recent updates.</div>
-        <div class="blogBack" onclick="document.getElementById('blog').style.display = 'block', document.getElementById('updateLogs').style.display = 'none'">
+        <div class="blogBack" onclick="document.getElementById('blog').style.display = 'block'; document.getElementById('updateLogs').style.display = 'none'; window.location.hash = `#`">
             <i class='bx bx-chevron-left icon' ></i>
             <span class="hovertext7">Back</span>
         </div>
         <br>
 
         <div style="text-align: left; width: 92.9%; margin: auto; transform: translateX(1.7%)">
+            <div class="logBox">
+                <div style=""><div class="logTitle"></div><div class="logDate"></div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div><div class="logDescription"></div>
+                <button class="logReadBtn" onclick="">Continue Reading</button>
+            </div>
             <div class="logBox">
                 <div style=""><div class="logTitle"></div><div class="logDate"></div></div>
                 <div style="width: 1px; height: 15px; opacity: 0"></div><div class="logDescription"></div>
@@ -429,6 +434,13 @@
     </section>
 
     <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
         <div class="alerts" id="alerts">
         </div>
     </section>
@@ -436,6 +448,8 @@
     <script src="script.js"></script>
     <script src="./Scripts/blog_data.js"></script>
     <script src="./Scripts/settings.js"></script>
+    <script src="./Scripts/profile.js"></script>
+    <script src="./Scripts/hotkeys.js"></script>
 
 </body>
 </html>

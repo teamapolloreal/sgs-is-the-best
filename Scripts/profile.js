@@ -42,6 +42,13 @@ const achievement_data = [
         progress_info: { a: "minutes_played", b: 60, xp: 2000, title: "bro im dead 💀", t_id: "bro_im_dead" }
     },
     {
+        name: "Play Games for 24 Hours",
+        id: "play_24_hours",
+        reward: "20000xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/3.png' class='img-emoji2'> Badge",
+        progress: null,
+        progress_info: { a: "minutes_played", b: 1440, xp: 20000, b_id: "3" }
+    },
+    {
         name: "Reach Level 10",
         id: "reach_level_10",
         reward: "1000xp + \"Pro Gamer\" Title",
@@ -61,6 +68,20 @@ const achievement_data = [
         reward: "5000xp + \"Legit Hacker\" Title",
         progress: null,
         progress_info: { a: "reach_level", b: 50, xp: 5000, title: "Legit Hacker", t_id: "legit_hacker" }
+    },
+    {
+        name: "Reach Level 69",
+        id: "reach_level_69",
+        reward: "6969xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/4.png' class='img-emoji2'> Badge!",
+        progress: null,
+        progress_info: { a: "reach_level", b: 69, xp: 6969, b_id: "4" }
+    },
+    {
+        name: "Reach Level 100",
+        id: "reach_level_100",
+        reward: "10000xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/2.png' class='img-emoji2'> Badge!",
+        progress: null,
+        progress_info: { a: "reach_level", b: 100, xp: 10000, b_id: "2" }
     },
     {
         name: "Play 10 Different Games",
@@ -83,6 +104,27 @@ const achievement_data = [
         progress: null,
         progress_info: { a: "play_games", b: 50, xp: 1000, title: "what the dog doin' 🐶", t_id: "what_the_dog_doin" }
     },
+    {
+        name: "Play Every Single Game",
+        id: "play_every_game",
+        reward: "1250xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/1.png' class='img-emoji2'> Badge!",
+        progress: null,
+        progress_info: { a: "play_games", b: 148, xp: 1250, b_id: "1" }
+    },
+    {
+        name: "Read 2 Blogs or Logs",
+        id: "read_2_blogs",
+        reward: "250xp + \"not reading allat🤦‍🤣\" Title",
+        progress: null,
+        progress_info: { a: "read_blogs", b: 2, xp: 250, title: "not reading allat🤦‍♂️🤣", t_id: "not_reading_allat" }
+    },
+    {
+        name: "Read 10 Blogs or Logs",
+        id: "read_10_blogs",
+        reward: "1000xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/5.png' class='img-emoji2'> Badge!",
+        progress: null,
+        progress_info: { a: "read_blogs", b: 10, xp: 1000, b_id: "5" }
+    },
 ]
 
 loadProfile();
@@ -92,8 +134,17 @@ function loadProfile(){
     var username = localStorage.getItem("sgs_profile_username")
     var title = localStorage.getItem("sgs_profile_title")
     document.getElementById("usernameInputProfile").value = username
-    document.getElementById("profileUsername").innerText = username || "No Username Set"
     document.getElementById("profileTitle").innerText = title || "Noobie Gamer"
+
+    var badges = localStorage.getItem("badges") || null
+    var badgesInclude = ""
+    if(badges && badges.includes("2")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/2.png' class='img-emoji'>";
+    if(badges && badges.includes("3")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/3.png' class='img-emoji'>";
+    if(badges && badges.includes("4")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/4.png' class='img-emoji'>";
+    if(badges && badges.includes("1")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/1.png' class='img-emoji'>";
+    if(badges && badges.includes("5")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/5.png' class='img-emoji'>";
+    if(username) document.getElementById("profileUsername").innerHTML = `${username} ${badgesInclude}`;
+    if(!username) document.getElementById("profileUsername").innerHTML = `No Username Set ${badgesInclude}`;
 
     var options = document.getElementById("titleInputProfile").getElementsByClassName("settingsSelectOption")
     Array.from(options).forEach(option => {
@@ -107,6 +158,7 @@ function loadProfile(){
     if(titles && titles.includes("legit_hacker")) addTitle("Legit Hacker")
     if(titles && titles.includes("bro_im_dead")) addTitle("bro im dead 💀")
     if(titles && titles.includes("what_the_dog_doin")) addTitle("what the dog doin'")
+    if(titles && titles.includes("not_reading_allat")) addTitle("not reading allat🤦‍♂️🤣")
 
     function addTitle(id){
         var select = document.getElementById("titleInputProfile")
@@ -215,6 +267,7 @@ function notafklol(){
     }
     if(document.getElementById("afk_message2")){
         document.getElementById("afk_message2").remove();
+        document.getElementById("afk_message2").remove();
     }
     if(document.getElementById("afkdetector").style.display === "block") focusGame();
     document.getElementById("afkdetector").style.display = "none"
@@ -302,6 +355,8 @@ function checkCompletion(){
     var lvl = parseInt(localStorage.getItem("lvl")) || 1
     var games_played = localStorage.getItem("playedGames") || null
     if(games_played) games_played = games_played.split("||").length - 1
+    var blogs_viewed = localStorage.getItem("viewedBlogs") || null
+    if(blogs_viewed) blogs_viewed = blogs_viewed.split("||").length - 1
     completed = []
     for(let u = 0; u < achievement_data.length; u++){
         if(achievement_data[u].progress_info.a === "minutes_played"){
@@ -312,6 +367,14 @@ function checkCompletion(){
         }
         if(achievement_data[u].progress_info.a === "play_games"){
             if(games_played >= achievement_data[u].progress_info.b && localStorage.getItem(achievement_data[u].id) !== "true") completed.push(achievement_data[u].id)
+            if(games_played < achievement_data[u].progress_info.b && localStorage.getItem(achievement_data[u].id) === "true"){
+                localStorage.setItem(achievement_data[u].id, "false")
+                var replace = localStorage.getItem("badges").replace(`${achievement_data[u].progress_info.b_id} || `, "")
+                localStorage.setItem("badges", replace)
+            }
+        }
+        if(achievement_data[u].progress_info.a === "read_blogs"){
+            if(blogs_viewed >= achievement_data[u].progress_info.b && localStorage.getItem(achievement_data[u].id) !== "true") completed.push(achievement_data[u].id)
         }
     }
 
@@ -323,19 +386,22 @@ function checkCompletion(){
                 createAlertBox({ color: "green", text: `Achievement completed`, time: 8000 })
 
                 if(achievement_data[o].progress_info.xp){
-                    var xp = parseInt(localStorage.getItem("xp")) || 0
-                    var lvl = parseInt(localStorage.getItem("lvl")) || 1
-                    var newxp = achievement_data[o].progress_info.xp
-                    createAlertBox({ text: `Reward: ${newxp}xp`, time: 8000 })
-                    if(xp + newxp >= lvl * 75){
-                        var xp = xp + newxp - lvl * 75
-                        var lvl = lvl + 1
-                        if(localStorage.getItem("alerts") !== "None") createAlertBox({ color: "green", text: `You leveled up to level ${lvl}`, time: 8000 })
-                        localStorage.setItem("xp", xp)
-                        localStorage.setItem("lvl", lvl)
-                    } else {
-                        var xp = xp + newxp
-                        localStorage.setItem("xp", xp)
+                    if(achievement_data[o].id === "play_every_game" && localStorage.getItem("everyGame") !== "true"){
+                        localStorage.setItem("everyGame", "true")
+                        var xp = parseInt(localStorage.getItem("xp")) || 0
+                        var lvl = parseInt(localStorage.getItem("lvl")) || 1
+                        var newxp = achievement_data[o].progress_info.xp
+                        createAlertBox({ text: `Reward: ${newxp}xp`, time: 8000 })
+                        if(xp + newxp >= lvl * 75){
+                            var xp = xp + newxp - lvl * 75
+                            var lvl = lvl + 1
+                            if(localStorage.getItem("alerts") !== "None") createAlertBox({ color: "green", text: `You leveled up to level ${lvl}`, time: 8000 })
+                            localStorage.setItem("xp", xp)
+                            localStorage.setItem("lvl", lvl)
+                        } else {
+                            var xp = xp + newxp
+                            localStorage.setItem("xp", xp)
+                        }
                     }
                 }
 
@@ -344,6 +410,13 @@ function checkCompletion(){
                     titles = titles + `${achievement_data[o].progress_info.t_id} || `
                     localStorage.setItem("titles", titles)
                     createAlertBox({ text: `Reward: \"${achievement_data[o].progress_info.title}\" Title`, time: 8000 })
+                }
+
+                if(achievement_data[o].progress_info.b_id){
+                    var badges = localStorage.getItem("badges") || ""
+                    badges = badges + `${achievement_data[o].progress_info.b_id} || `
+                    localStorage.setItem("badges", badges)
+                    createAlertBox({ text: `Reward: New Badge!`, time: 8000 })
                 }
                 loadProfile();
             }
@@ -360,7 +433,7 @@ function loadAchievements(){
     achievement_data.forEach(achievement => {
         if(achievement.progress_info.a === "minutes_played"){
             var minutes_played = parseInt(localStorage.getItem("minutes_played")) || 0
-            achievement.progress = Math.trunc(minutes_played / achievement.progress_info.b * 1000) / 10
+            achievement.progress = (minutes_played / achievement.progress_info.b * 1000) / 10
             if(achievement.progress > 100) achievement.progress = 100
         }
 
@@ -375,11 +448,20 @@ function loadAchievements(){
             if(!games_played){
                 achievement.progress = 0
             } else {
-                achievement.progress = Math.trunc((games_played.split("||").length - 1) / achievement.progress_info.b * 100)
+                achievement.progress = (games_played.split("||").length - 1) / achievement.progress_info.b * 100
                 if(achievement.progress > 100) achievement.progress = 100
             }
         }
 
+        if(achievement.progress_info.a === "read_blogs"){
+            var blogs_viewed = localStorage.getItem("viewedBlogs") || null
+            if(!blogs_viewed){
+                achievement.progress = 0
+            } else {
+                achievement.progress = (blogs_viewed.split("||").length - 1) / achievement.progress_info.b * 100
+                if(achievement.progress > 100) achievement.progress = 100
+            }
+        }
 
         var div = document.createElement("div");
         div.className = "profileBox achievement"
@@ -389,7 +471,7 @@ function loadAchievements(){
         var name = document.createElement("span")
         name.className = "profileUsername"
         name.innerText = achievement.name
-        name.id = achievement.progress
+        name.id = Math.trunc(achievement.progress)
         div.appendChild(name)
 
         var br = document.createElement("br")
@@ -397,17 +479,19 @@ function loadAchievements(){
 
         var text = document.createElement("span")
         text.className = "profileText"
+        if(achievement.reward.includes("<img")) text.className = "profileText2"
         text.innerHTML = `<b>Reward:</b> ${achievement.reward}`
         div.appendChild(text)
 
         var statText = document.createElement("span")
         statText.className = "achievementStatsText"
-        statText.innerHTML = `${achievement.progress * achievement.progress_info.b / 100}/${achievement.progress_info.b}`
+        statText.innerHTML = `${Math.trunc(achievement.progress * achievement.progress_info.b / 100)}/${achievement.progress_info.b}`
         div.appendChild(statText)
 
         var achieveCircle = document.createElementNS("http://www.w3.org/2000/svg", "svg")
         achieveCircle.setAttributeNS(null, "viewBox", "0 0 36 36")
         achieveCircle.setAttributeNS(null, "class", "circle-svg achieveCircle")
+        if(achievement.reward.includes("<img")) achieveCircle.setAttributeNS(null, "class", "circle-svg achieveCircle2")
 
         if(window.location.pathname.includes("profile.html")){var around = document.querySelector("#lol").cloneNode(true)} else {var around = document.createElement("path")}
         // around.classList = "around"
@@ -419,7 +503,7 @@ function loadAchievements(){
         if(window.location.pathname.includes("profile.html")){var percent = document.querySelector("#lol").cloneNode(true)} else {var percent = document.createElement("path")}
         percent.classList = "percent"
         percent.setAttribute("id", achievement.id + "_percent")
-        percent.setAttribute("stroke-dasharray", `${achievement.progress}, 100`)
+        percent.setAttribute("stroke-dasharray", `${Math.trunc(achievement.progress)}, 100`)
         percent.setAttribute("b", "M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831")
         achieveCircle.appendChild(percent)
 

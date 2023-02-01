@@ -1,4 +1,4 @@
-let lastUpdate = "1/24/2023 (v6.2.2)"
+let lastUpdate = "2/1/2023 (v6.3.0)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -43,7 +43,8 @@ const data = [
         publisher: "GameSnacks",
         controls: [
             "Slide Left Click - Aim",
-        ]
+        ],
+        devices: "Computer, Mobile (Best in Windowed Fullscreen)"
     },
     {
         name: "2048",
@@ -56,7 +57,8 @@ const data = [
         publisher: "Solebon LLC",
         controls: [
             "Arrow Keys/WASD - Move tiles",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     // {
     //     name: "Adventure Capitalist",
@@ -105,7 +107,7 @@ const data = [
         id: "among_us",
         genre: "Mystery",
         description: "sus",
-        link: `${cdnUrl}/Game Files/Among Us/index.html`,
+        link: "Game Files/Among Us/index.html",
         img: `${cdnUrl}/High Compressed/highcompress_among_us.png`,
         file_based: true,
         publisher: "kevin.games",
@@ -171,7 +173,8 @@ const data = [
         publisher: "Scratch - AnimationsScratch",
         controls: [
             "Hold Right Click - Swipe & Shoot",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Basketball Stars",
@@ -364,7 +367,8 @@ const data = [
         controls: [
             "1st Right Click - Select Piece",
             "2nd Right Click - Move Piece"
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Chrome Dinosaur",
@@ -463,7 +467,8 @@ const data = [
         publisher: "iclouds.io",
         controls: [
             "Hover Mouse - Slide Left/Right (might need to click first)",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Cut the Rope",
@@ -477,7 +482,8 @@ const data = [
         controls: [
             "Click & Drag - Cut Rope",
             "Click Bubble - Pop It"
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "CTR Holiday",
@@ -491,7 +497,8 @@ const data = [
         controls: [
             "Click & Drag - Cut Rope",
             "Click Bubble - Pop It"
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "CTR Time Travel",
@@ -505,7 +512,8 @@ const data = [
         controls: [
             "Click & Drag - Cut Rope",
             "Click Bubble - Pop It"
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Deal or no Deal",
@@ -518,7 +526,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Death Chase 3",
@@ -543,7 +552,7 @@ const data = [
         id: "death_run_3d",
         genre: "Endless",
         description: "Death Run 3D is an extremely fast game for true skillers only. If you love hardcore games, this game is the right for you. You fly inside a tube with various blocks and almost each of them is movable. Your task is avoid them. Gaps between blocks are very short so swift responses are the only way to success.",
-        link: `${cdnUrl}/Game Files/Death Run 3D/index.html`,
+        link: "Game Files/Death Run 3D/index.html",
         img: `${cdnUrl}/High Compressed/highcompress_death_run_3d.png`,
         file_based: false,
         publisher: "Unknown",
@@ -616,7 +625,8 @@ const data = [
         publisher: "Math Playground",
         controls: [
             "Drag Right Click - Draw",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Dreader",
@@ -714,7 +724,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Evil Glitch",
@@ -753,7 +764,8 @@ const data = [
         publisher: "engineering.com",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Fireboy & Watergirl",
@@ -794,7 +806,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "FNAF Final Purgatory",
@@ -814,7 +827,7 @@ const data = [
         id: "friday_night_funkin",
         genre: "Rhythm",
         description: "Friday Night Funkin' is a rhythm game where you must control a character called Boyfriend, who must defeat a series of opponents in order to continue dating his significant other, Girlfriend.",
-        link: `${cdnUrl}/Game Files/Friday Night Funkin/index.html`,
+        link: "Game Files/Friday Night Funkin/index.html",
         img: `${cdnUrl}/High Compressed/highcompress_friday_night_funkin.png`,
         file_based: true,
         publisher: "The Funkin' Crew Inc.",
@@ -833,7 +846,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Getaway Shootout",
@@ -924,7 +938,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Left/Right Arrow Key - Rotate",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Horde Killer",
@@ -950,7 +965,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Incredibox",
@@ -964,6 +980,7 @@ const data = [
         controls: [
             "Unknown",
         ],
+        devices: "Computer, Mobile",
         broken: true,
         note: "Unable to load versions (Audio bug, cannot decode asset)"
     },
@@ -1017,7 +1034,8 @@ const data = [
         publisher: "iclouds.io",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Little Alchemy",
@@ -1030,7 +1048,8 @@ const data = [
         publisher: "littlealchemy2.com",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Madalin Stunt Cars 2",
@@ -1045,7 +1064,7 @@ const data = [
             "",
         ],
         broken: true,
-        note: "Game takes forever to load ()"
+        note: "Game takes forever to load"
     },
     {
         name: "Madalin Stunt Cars 3",
@@ -1058,7 +1077,8 @@ const data = [
         publisher: "topspeed.com",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer (Preferably Fast)"
     },
     {
         name: "Mad Burger 3",
@@ -1128,7 +1148,8 @@ const data = [
             "Right Click - Place Block",
             "*Many more not listed here",
             "*Controls are customizable in-game"
-        ]
+        ],
+        devices: "Computer (Preferably Fast)"
     },
     {
         name: "Minesweeper",
@@ -1154,7 +1175,8 @@ const data = [
         publisher: "CrazyGames",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Missile Game 3D",
@@ -1167,7 +1189,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile (Best in Windowed Fullscreen)"
     },
     {
         name: "Moto X3M",
@@ -1180,7 +1203,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Moto X3M Pool Party",
@@ -1193,7 +1217,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Moto X3M Spooky",
@@ -1206,7 +1231,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Moto X3M Winter",
@@ -1219,7 +1245,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "My Friend Pedro",
@@ -1259,6 +1286,7 @@ const data = [
         controls: [
             "Unknown",
         ],
+        devices: "Computer, Mobile (Preferably Fast)",
         new: true
     },
     {
@@ -1285,7 +1313,8 @@ const data = [
         publisher: "Bob's Shack",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Papa's Scooperia",
@@ -1298,7 +1327,8 @@ const data = [
         publisher: "",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Paper Minecraft",
@@ -1324,7 +1354,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Papery Planes",
@@ -1347,7 +1378,7 @@ const data = [
         link: "https://grandcanyonshuttles.com/uploads/5/5/6/7/5567194/custom_themes/805200638580542612/pocket-league.html",
         img: `${cdnUrl}/High Compressed/highcompress_pocket_league_3d.png`,
         file_based: false,
-        publisher: "Unknown",
+        publisher: "twoplayergames.org",
         controls: [
             "Unknown",
         ]
@@ -1454,7 +1485,8 @@ const data = [
         publisher: "Armor Games",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     // {
     //     name: "Powerline.io",
@@ -1481,7 +1513,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Push the Square",
@@ -1494,7 +1527,8 @@ const data = [
         publisher: "asdehielo.itch.io/push-the-square",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Radius Raid",
@@ -1559,7 +1593,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Rooftop Snipers",
@@ -1599,7 +1634,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer (Preferably Fast)"
     },
     {
         name: "Shell Shockers",
@@ -1698,7 +1734,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Sort the Court",
@@ -1711,7 +1748,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Space Company",
@@ -1724,7 +1762,8 @@ const data = [
         publisher: "Sparticle999",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Space Paper.io",
@@ -1738,6 +1777,7 @@ const data = [
         controls: [
             "Unknown",
         ],
+        devices: "Computer, Mobile",
         broken: true,
         note: "Game is blocked"
     },
@@ -1752,7 +1792,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Starve.io",
@@ -1778,7 +1819,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Subway Surfers",
@@ -1874,7 +1916,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Tetris",
@@ -1900,13 +1943,14 @@ const data = [
         publisher: "Unknown",
         controls: [
             "Unknown",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "There is no Game",
         id: "there_is_no_game",
         genre: "Adventure / Casual",
-        description: "This game is a comedy adventure that will take you on a journey you never asked to go on, through silly and unexpected video game universes. Will you be able to play along with the \"\"Game\"\" to find your way home? We sincerely think NOT.",
+        description: "This game is a comedy adventure that will take you on a journey you never asked to go on, through silly and unexpected video game universes. Will you be able to play along with the \"Game\" to find your way home? We sincerely think NOT.",
         link: "Game Files/There is no Game/index.html",
         img: `${cdnUrl}/High Compressed/highcompress_there_is_no_game.png`,
         file_based: true,
@@ -2080,7 +2124,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "None",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Wordle Unlimited",
@@ -2093,14 +2138,15 @@ const data = [
         publisher: "Unknown",
         controls: [
             "None",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     {
         name: "Worlds Hardest Game",
         id: "worlds_hardest_game",
         genre: "Puzzle",
         description: "This game is a very difficult game as it requires you to go through very difficult level that seem very unpossible.",
-        link: `${cdnUrl}/Game Files/Worlds Hardest Game/index.html`,
+        link: "Game Files/Worlds Hardest Game/index.html",
         img: `${cdnUrl}/High Compressed/highcompress_worlds_hardest_game.png`,
         file_based: true,
         publisher: "Unknown",
@@ -2119,7 +2165,8 @@ const data = [
         publisher: "Unknown",
         controls: [
             "",
-        ]
+        ],
+        devices: "Computer, Mobile"
     },
     // {
     //     name: "Zombs Royale",
@@ -2174,11 +2221,9 @@ function loadGames(){
         game_click.herf = game.id
 
         if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(game.id)){
-            if(localStorage.getItem("mode") !== "Dark") div.style.backgroundColor = localStorage.getItem("themeHex") || "#695CFE"
-            if(localStorage.getItem("mode") === "Dark") div.style.backgroundColor = "#3a3b3c"
+            div.style.backgroundColor = localStorage.getItem("themeHex") || "#695CFE"
             div.style.color = "#fff"
-            if(localStorage.getItem("mode") !== "Dark") div.style.boxShadow = `0 2px 10px ${localStorage.getItem("themeHex") || "#695CFE"}`
-            if(localStorage.getItem("mode") === "Dark") div.style.boxShadow = `0 5px 10px #3a3b3c`
+            div.style.boxShadow = `0 2px 10px ${localStorage.getItem("themeHex") || "#695CFE"}`
         }
 
         if(game.broken === true){
@@ -2416,6 +2461,7 @@ function unfavorite(id){
   }
 }
 
+var currentGame = null
 function viewGame(gameID){
     if(clickedStar === true) return clickedStar = false
     for(let i = 0; i < data.length; i++){
@@ -2428,6 +2474,7 @@ function viewGame(gameID){
             let desc = document.getElementById("gameViewDescription")
             let genre = document.getElementById("gameViewGenre")
             let publisher = document.getElementById("gameViewPublisher")
+            let devices = document.getElementById("gameViewDevices") || null
             let playBtn = document.getElementById("playButton")
 
             fullscreen.style.display = "block"
@@ -2438,6 +2485,8 @@ function viewGame(gameID){
             publisher.innerText = data[i].publisher
             playBtn.onclick = function(){ playGame(data[i].id) }
             document.body.style.overflow = "hidden"
+            if(data[i].devices){ devices.innerText = data[i].devices } else { devices.innerText = "Computer" };
+            currentGame = data[i].id
 
             if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(data[i].id)){
                 document.getElementById("favoriteOption2").onclick = function(){ unfavorite(data[i].id) }
@@ -2466,6 +2515,22 @@ document.addEventListener("click", () => {
             clickedView = false
         } else {
             if(clickcount === 0) return clickcount = 1
+            clickedView = false
+            clickcount = 0
+            document.getElementById("gameViewFullscreen").style.display = "none"
+            document.body.style.overflow = "visible"
+        }
+    }
+})
+
+document.addEventListener("keydown", (event) => {
+    if(document.getElementById("gameViewFullscreen").style.display === "block" && event.key === "Enter"){
+        playGame(currentGame);
+    }
+    if(document.getElementById("gameViewFullscreen").style.display === "block" && event.key === "Escape"){
+        if(clickedView === true){
+            clickedView = false
+        } else {
             clickedView = false
             clickcount = 0
             document.getElementById("gameViewFullscreen").style.display = "none"
@@ -2607,10 +2672,8 @@ function checkHash(){
     if(newHash === "#" || newHash === ""){
         gamepage();
     } else {
-        var realgame = false;
         data.forEach(game => { 
-            if(game.id === newHash.slice(1)) realgame = true
+            if(game.id === newHash.slice(1)) return playGame(newHash.slice(1));
         })
-        if(realgame === true) playGame(newHash.slice(1))
     }
 }

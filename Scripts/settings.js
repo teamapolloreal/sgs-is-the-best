@@ -1,3 +1,32 @@
+hotKeysSetting();
+
+function hotKeysSetting(changed){
+    if(changed === true){
+        if(localStorage.getItem("hotkeys") === null || localStorage.getItem("hotkeys") === "true"){
+            localStorage.setItem("hotkeys", "false")
+            document.getElementById("hotkeysSwitch").style.left = "15px";
+            document.getElementById("hotkeysSwitch").style.backgroundColor = "var(--body-color)"
+            document.getElementById("hotkeysBack").style.backgroundColor = "var(--toggle-color)";
+        } else {
+            document.getElementById("hotkeysSwitch").style.left = "30px";
+            document.getElementById("hotkeysSwitch").style.backgroundColor = "#fff"
+            document.getElementById("hotkeysBack").style.backgroundColor = "var(--primary-color)";
+            localStorage.setItem("hotkeys", "true")
+        }
+        createAlertBox({ color: "green", text: "Applied New Changes"})
+    } else
+    {
+        if(localStorage.getItem("hotkeys") === null || localStorage.getItem("hotkeys") === "true"){
+            if(document.getElementById("hotkeysSwitch") !== null){
+                document.getElementById("hotkeysSwitch").style.left = "30px";
+                document.getElementById("hotkeysSwitch").style.backgroundColor = "#fff"
+                document.getElementById("hotkeysBack").style.backgroundColor = "var(--primary-color)";
+            }
+        } else {
+        }
+    }
+}
+
 setNav()
 function setNav(){
     let nav = localStorage.getItem("nav")
@@ -229,8 +258,13 @@ function setMode(){
     let mode = localStorage.getItem("mode")
     if(!mode) mode = "Dark"
 
-    if(mode === "Dark" || mode === "Dark Themed"){
+    if(mode === "Dark" || mode === "Dark Themed" || mode === ""){
         localStorage.setItem("mode", "Dark");
+        if(body.classList[0] !== "dark") body.classList.toggle("dark");
+        loadTheme();
+    }
+    if(mode === "Darker Dark"){
+        localStorage.setItem("mode", "Darker Dark");
         if(body.classList[0] !== "dark") body.classList.toggle("dark");
         loadTheme();
     }
@@ -256,12 +290,40 @@ loadTheme();
 function loadTheme(){
     let theme = localStorage.getItem("themeHex")
     if(!theme) theme = "#695CFE"
+    if(theme === "Rainbow"){
+        theme = "#ff0000"
+
+        let hue = 0;
+        var rainbow = setInterval(() => {
+            hue = (hue + 1) % 360;
+            document.body.style.setProperty("--primary-color", `hsl(${hue}, 100%, 50%)`)
+        }, 25)
+    }
     if(localStorage.getItem("mode") === "Dark" || localStorage.getItem("mode") === "Dark Themed"){
         document.body.style.setProperty("--primary-color", theme)
         document.body.style.setProperty("--primary-text-color", "#fff")
+
+        document.body.style.setProperty("--text-color", "#cccccc")
+        document.body.style.setProperty("--body-color", "#18191a")
+        document.body.style.setProperty("--sidebar-color", "#242526")
+        document.body.style.setProperty("--primary-color-light", "#3a3b3c")
+    }
+    if(localStorage.getItem("mode") === "Darker Dark"){
+        document.body.style.setProperty("--primary-color", theme)
+        document.body.style.setProperty("--primary-text-color", "#fff")
+
+        document.body.style.setProperty("--text-color", "#cccccc")
+        document.body.style.setProperty("--body-color", "#000")
+        document.body.style.setProperty("--sidebar-color", "#101010")
+        document.body.style.setProperty("--primary-color-light", "#1e1e1e")
     }
     if(localStorage.getItem("mode") === "Light"){
         document.body.style.setProperty("--primary-color", theme)
+
+        document.body.style.setProperty("--text-color", "#707070")
+        document.body.style.setProperty("--body-color", "#e4e9f7")
+        document.body.style.setProperty("--sidebar-color", "#fff")
+        document.body.style.setProperty("--primary-color-light", "#f6f5ff")
     }
 }
 
@@ -294,6 +356,11 @@ function setTheme(){
     if(theme === "Custom"){
         localStorage.setItem("themeHex", document.getElementById("theme_color_picker").value)
         document.getElementById("theme_color_picker").style.display = "block"
+        loadTheme();
+    }
+
+    if(theme === "Rainbow"){
+        localStorage.setItem("themeHex", `Rainbow`)
         loadTheme();
     }
 }
