@@ -189,6 +189,11 @@ function loadProfile(){
     var achievementsCompleted = parseInt(localStorage.getItem("achievementCompletedCount")) || 0
     document.getElementById("achievements_completed_text").innerText = `${achievementsCompleted}/${achievement_data.length}`
     document.getElementById("achievements_completed").setAttribute("stroke-dasharray", Math.trunc(achievementsCompleted / achievement_data.length * 100) + ", 100")
+
+    var badgesEarned = localStorage.getItem("badges") || ""
+    document.getElementById("badges_earned_text").innerText = `${badgesEarned.split(" || ").length - 1}/5`
+    document.getElementById("badges_earned").setAttribute("stroke-dasharray", Math.trunc((badgesEarned.split(" || ").length - 1) / 5 * 100) + ", 100")
+    badges_earned_text
 }
 
 function editProfile(boolean){
