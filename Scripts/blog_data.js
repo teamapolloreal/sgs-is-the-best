@@ -27,6 +27,14 @@ let blog_data = [
 ]
 let log_data = [
     {
+        title: "Update Log of v6.3.1",
+        date: "February 6, 2023",
+        writtenBy: "Syce",
+        id: "v6-3-1",
+        description: "This update includes minor changes and bug fixes.",
+        text: "This update includes minor changes and bug fixes. Read below for more details:<br><br><h3>Changes</h3><ul><li>Searches are now fuzzy, meaning they correct for errors</li><li>Play button added for when you load the site onto a game via hash</li><li>SEO changes and performance improvements</li></ul><br><h3>Resolved Issues</h3><ul><li>The blogs would not re-show correctly after clearing the search</li><li>Clicking the links menu on the sidebar would reset the hash</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
+    {
         title: "Update Log of v6.3.0",
         date: "February 1, 2023",
         writtenBy: "Syce",
@@ -244,25 +252,36 @@ function blog(info){
 function searchBlog(){
     let input = document.getElementById("searchbarBlog").value
     input = input.toLowerCase()
-    let x = document.getElementsByClassName("blogBox")
+    let x = document.querySelectorAll("#blogBox")
+    var titles = document.getElementsByClassName("blogTitle")
+    var list = []
+
+    for(i = 0; i < titles.length; i++){
+        list.push(titles[i].textContent)
+    }
+
+    var options = {
+        includeScore: true,
+        threshold: 0.4,
+    }
+    var fuse = new Fuse(list, options)
+    var result = fuse.search(input)
+    var final = []
+    for(i = 0; i < result.length; i++){
+        final.push(result[i].item)
+    }
+
+    var xArray = Array.from(x)
+    var matching = xArray.filter(x => final.includes(x.getElementsByClassName("blogTitle")[0].textContent))
+    var not_matching = xArray.filter(x => !final.includes(x.getElementsByClassName("blogTitle")[0].textContent))
+    matching.forEach(item => { item.style.display = "inline-table" })
+    not_matching.forEach(item => { item.style.display = "none" })
 
     if(input === ""){
         document.getElementsByClassName("updateLogsBtn")[0].style.display = "block"
+        x.forEach(x => { x.style.display = "inline-table" })
     } else {
         document.getElementsByClassName("updateLogsBtn")[0].style.display = "none"
-    }
-
-    if(input <= 0 || input === ""){
-        for(o = 0; o < x.length; o++){ x[i].style.display = "inline-table" }
-        return;
-    }
-
-    for(i = 0; i < x.length; i++){
-        if(!blog_data[i].title.toLowerCase().includes(input)){
-            x[i].style.display = "none";
-        } else {
-            x[i].style.display = "inline-table"
-        }
     }
 }
 

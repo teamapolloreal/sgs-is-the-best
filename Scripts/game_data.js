@@ -1,4 +1,4 @@
-let lastUpdate = "2/1/2023 (v6.3.0)"
+let lastUpdate = "2/6/2023 (v6.3.1)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -2539,21 +2539,48 @@ document.addEventListener("keydown", (event) => {
     }
 })
 
+const options = {
+    shouldSort: true,
+    threshold: 0.6,
+    location: 0,
+    distance: 100,
+    maxPatternLength: 32,
+    minMatchCharLength: 1,
+    keys: [".textContent"]
+}
+
 function search(){
     let input = document.getElementById("searchbar").value
     input = input.toLowerCase()
-    var currentContainers = document.getElementsByClassName("container")
+    var gamesCon = document.querySelectorAll("#container")
+    var titles = document.getElementsByClassName("game_title")
+    var list = []
 
-    for(i = 0; i < currentContainers.length; i++){
-        if(!currentContainers[i].getElementsByClassName("game_title")[0].textContent.toLowerCase().includes(input)){
-            currentContainers[i].style.display = "none";
-        } else {
-            currentContainers[i].style.display = "inline-table"
-        }
+    for(i = 0; i < titles.length; i++){
+        list.push(titles[i].textContent)
     }
+
+    var options = {
+        includeScore: true,
+        threshold: 0.4,
+    }
+    var fuse = new Fuse(list, options)
+    var result = fuse.search(input)
+    var final = []
+    for(i = 0; i < result.length; i++){
+        final.push(result[i].item)
+    }
+
+    var conArray = Array.from(gamesCon)
+    var matching = conArray.filter(con => final.includes(con.getElementsByClassName("game_title")[0].textContent))
+    var not_matching = conArray.filter(con => !final.includes(con.getElementsByClassName("game_title")[0].textContent))
+    matching.forEach(item => { item.style.display = "inline-table" })
+    not_matching.forEach(item => { item.style.display = "none" })
+
+    if(input === "") gamesCon.forEach(con => { con.style.display = "inline-table" })
 }
 
-function playGame(gameID){
+function playGame(gameID, onload){
     for(let i = 0; i < data.length; i++){
         if(data[i].id === gameID){
             document.getElementById("gameViewFullscreen").style.display = "none"
@@ -2562,7 +2589,14 @@ function playGame(gameID){
             document.getElementById("mainpage").style.display = "none"
             document.getElementById("gamePageTitle").innerText = data[i].name
             document.getElementById("gamePageDesc").innerText = data[i].description
-            document.getElementById("gameIframe").src = data[i].link
+            if(onload === true){
+                document.getElementById("iframeFocus").style.display = "none"
+                document.getElementById("playbtnoverlay").style.display = "block"
+                document.getElementById("playbtnoverlay").onclick = function(){ playGame(data[i].id); document.getElementById("gameIframe").focus(); }
+            } else {
+                document.getElementById("gameIframe").src = data[i].link
+                document.getElementById("playbtnoverlay").style.display = "none"
+            }
             document.getElementById("controls").style.transform = `translateY(${-70 + (data[i].controls.length * -25)}px)`
             document.getElementById("controlsText").innerText = data[i].controls.join("\n")
             if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(data[i].id)){
@@ -2580,6 +2614,7 @@ function playGame(gameID){
             let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
             document.getElementById("gameIframe").style.height = newHeight
             document.getElementById("iframeFocus").style.height = newHeight
+            document.getElementById("playbtnoverlay").style.height = newHeight
 
             if(data[i].broken){
                 document.getElementById("importantMessage").style.display = "block"
@@ -2627,7 +2662,7 @@ function checkFocus(){
             document.getElementById("iframeFocus").style.display = "none"
         } else {
             // document.body.style.overflow = "visible"
-            document.getElementById("iframeFocus").style.display = "block"
+            if(document.getElementById("playbtnoverlay").style.display !== "block") document.getElementById("iframeFocus").style.display = "block"
         }
     }
 }
@@ -2667,13 +2702,16 @@ window.addEventListener("hashchange", function(){
     checkHash();
 })
 
-function checkHash(){
+function checkHash(onload){
     var newHash = window.location.hash
     if(newHash === "#" || newHash === ""){
         gamepage();
     } else {
         data.forEach(game => { 
+            if(game.id === newHash.slice(1) && onload === true) return playGame(newHash.slice(1), true);
             if(game.id === newHash.slice(1)) return playGame(newHash.slice(1));
         })
     }
 }
+
+// document.addEventListener("touchstart", function(event){event.preventDefault()}, true);

@@ -19,7 +19,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="description" content="One of the best unblocked game websites with over 140+ high quality games.">
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
@@ -172,7 +173,7 @@
                     </li>
 
                     <li class="nav-link" id="altLinks">
-                        <a href="#" onclick="optionsMenu('linkOptions')">
+                        <a onclick="optionsMenu('linkOptions')">
                             <i class='bx bx-link-alt icon' ></i>
                             <span class="text nav-text">Links</span>
                             <span class="hovertext">Links</span>
@@ -201,49 +202,50 @@
             </div>
 
             <div class="bottom-content" style="transform: translateY(-20%);">
-                <li class="nav-link">
-                    <a href="settings.html">
-                        <i class='bx bx-cog icon' ></i>
-                        <span class="text nav-text">Settings</span>
-                        <span class="hovertext">Settings</span>
-                    </a>
-                </li>
+                <ul>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
 
-                <!-- <li class="mode" id="notLoggedIn">
-                    <a href="#" onclick="toggleLoginPage()">
-                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
-                        <span class="text nav-text">Login or create</span>
-                        <span class="hovertext">Login or create an account</span>
-                    </a>
-                </li> -->
+                    <!-- <li class="mode" id="notLoggedIn">
+                        <a href="#" onclick="toggleLoginPage()">
+                            <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Login or create</span>
+                            <span class="hovertext">Login or create an account</span>
+                        </a>
+                    </li> -->
 
-                <li class="mode">
-                    <a href="profile.html">
-                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
-                        <span class="text nav-text">Profile</span>
-                        <span class="hovertext">View Profile</span>
-                    </a>
-                </li>
+                    <li class="mode">
+                        <a href="profile.html">
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
 
-                <!-- <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li> -->
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li> -->
 
-                <!-- <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
+                    <!-- <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
 
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li> -->
-
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li> -->
+                </ul>
             </div>
         </div>
 
@@ -256,7 +258,7 @@
         <br>
         <div class="search-box" style="width: 90%">
             <span class='bx bx-search icon'></span>
-            <input class="search-box-input" type="text" placeholder="Search..." id="searchbarBlog" onkeyup="searchBlog()">
+            <input class="search-box-input" type="text" placeholder="Search by blog title..." id="searchbarBlog" onkeyup="searchBlog()">
         </div>
         <br><br>
 
@@ -272,17 +274,17 @@
         <div class="pageHeading" id="blog_recent">Our Blog</div>
 
         <div style="text-align: left; width: 92.9%; margin: auto; transform: translateX(1.7%)">
-            <div class="blogBox">
+            <div class="blogBox" id="blogBox">
                 <div style=""><div class="blogTitle"></div><div class="blogDate"></div></div>
                 <div style="width: 1px; height: 15px; opacity: 0"></div><div class="blogDescription"></div>
                 <button class="blogReadBtn" onclick="">Continue Reading</button>
             </div>
-            <div class="blogBox">
+            <div class="blogBox" id="blogBox">
                 <div style=""><div class="blogTitle"></div><div class="blogDate"></div></div>
                 <div style="width: 1px; height: 15px; opacity: 0"></div><div class="blogDescription"></div>
                 <button class="blogReadBtn" onclick="">Continue Reading</button>
             </div>
-            <div class="blogBox">
+            <div class="blogBox" id="blogBox">
                 <div style=""><div class="blogTitle"></div><div class="blogDate"></div></div>
                 <div style="width: 1px; height: 15px; opacity: 0"></div><div class="blogDescription"></div>
                 <button class="blogReadBtn" onclick="">Continue Reading</button>
@@ -312,6 +314,11 @@
         <br>
 
         <div style="text-align: left; width: 92.9%; margin: auto; transform: translateX(1.7%)">
+            <div class="logBox">
+                <div style=""><div class="logTitle"></div><div class="logDate"></div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div><div class="logDescription"></div>
+                <button class="logReadBtn" onclick="">Continue Reading</button>
+            </div>
             <div class="logBox">
                 <div style=""><div class="logTitle"></div><div class="logDate"></div></div>
                 <div style="width: 1px; height: 15px; opacity: 0"></div><div class="logDescription"></div>
@@ -446,6 +453,7 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     <script src="./Scripts/blog_data.js"></script>
     <script src="./Scripts/settings.js"></script>
     <script src="./Scripts/profile.js"></script>

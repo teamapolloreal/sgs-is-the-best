@@ -19,7 +19,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="description" content="One of the best unblocked game websites with over 140+ high quality games.">
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
@@ -172,7 +173,7 @@
                     </li>
 
                     <li class="nav-link" id="altLinks">
-                        <a href="#" onclick="optionsMenu('linkOptions')">
+                        <a onclick="optionsMenu('linkOptions')">
                             <i class='bx bx-link-alt icon' ></i>
                             <span class="text nav-text">Links</span>
                             <span class="hovertext">Links</span>
@@ -201,49 +202,50 @@
             </div>
 
             <div class="bottom-content" style="transform: translateY(-20%);">
-                <li class="nav-link">
-                    <a href="settings.html">
-                        <i class='bx bx-cog icon' ></i>
-                        <span class="text nav-text">Settings</span>
-                        <span class="hovertext">Settings</span>
-                    </a>
-                </li>
+                <ul>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
 
-                <!-- <li class="mode" id="notLoggedIn">
-                    <a href="#" onclick="toggleLoginPage()">
-                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
-                        <span class="text nav-text">Login or create</span>
-                        <span class="hovertext">Login or create an account</span>
-                    </a>
-                </li> -->
+                    <!-- <li class="mode" id="notLoggedIn">
+                        <a href="#" onclick="toggleLoginPage()">
+                            <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Login or create</span>
+                            <span class="hovertext">Login or create an account</span>
+                        </a>
+                    </li> -->
 
-                <li class="mode">
-                    <a href="profile.html">
-                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
-                        <span class="text nav-text">Profile</span>
-                        <span class="hovertext">View Profile</span>
-                    </a>
-                </li>
+                    <li class="mode">
+                        <a href="profile.html">
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
 
-                <!-- <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li> -->
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li> -->
 
-                <!-- <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
+                    <!-- <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
 
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li> -->
-
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li> -->
+                </ul>
             </div>
         </div>
     </nav>
@@ -279,7 +281,7 @@
 
         <div class="search-box">
             <span class='bx bx-search icon'></span>
-            <input class="search-box-input" type="text" placeholder="Search..." id="searchbar" onkeyup="search()">
+            <input class="search-box-input" type="text" placeholder="Search by game title..." id="searchbar" onkeyup="search()">
         </div>
         <div class="filter">
             <span class='bx bx-filter icon'></span>
@@ -433,6 +435,9 @@
             <br>
             <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">You can't play the game if it's not focused, goofy. 💀</span>
         </div>
+        <div class="playgamebtnoverlay" id="playbtnoverlay">
+            <div class="clickToPlay">Play Game</div>
+        </div>
         <br>
         <div class="controlsBox" id="controls">
             <span class="controlsTitle">Controls</span>
@@ -486,6 +491,7 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     <script src="./Scripts/game_data.js"></script>
     <script src="./Scripts/settings.js"></script>
     <script src="./Scripts/profile.js"></script>

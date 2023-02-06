@@ -19,7 +19,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="description" content="One of the best unblocked game websites with over 140+ high quality games.">
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
@@ -201,49 +202,50 @@
             </div>
 
             <div class="bottom-content" style="transform: translateY(-20%);">
-                <li class="nav-link">
-                    <a href="settings.html">
-                        <i class='bx bx-cog icon' ></i>
-                        <span class="text nav-text">Settings</span>
-                        <span class="hovertext">Settings</span>
-                    </a>
-                </li>
+                <ul>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
 
-                <!-- <li class="mode" id="notLoggedIn">
-                    <a href="#" onclick="toggleLoginPage()">
-                        <i class='bx bx-exit icon' style="font-size: 22px;"></i>
-                        <span class="text nav-text">Login or create</span>
-                        <span class="hovertext">Login or create an account</span>
-                    </a>
-                </li> -->
+                    <!-- <li class="mode" id="notLoggedIn">
+                        <a href="#" onclick="toggleLoginPage()">
+                            <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Login or create</span>
+                            <span class="hovertext">Login or create an account</span>
+                        </a>
+                    </li> -->
 
-                <li class="mode">
-                    <a href="profile.html">
-                        <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
-                        <span class="text nav-text">Profile</span>
-                        <span class="hovertext">View Profile</span>
-                    </a>
-                </li>
+                    <li class="mode">
+                        <a href="profile.html">
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
 
-                <!-- <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li> -->
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li> -->
 
-                <!-- <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
+                    <!-- <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
 
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li> -->
-
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li> -->
+                </ul>
             </div>
         </div>
 
@@ -266,7 +268,7 @@
         <div style="height: 35px; width: 1px;"></div>
         <div class="search-box" style="width: 56.50%">
             <span class='bx bx-search icon'></span>
-            <input class="search-box-input" type="text" placeholder="Search..." id="searchbarSoundboard" onkeyup="searchSoundboard()">
+            <input class="search-box-input" type="text" placeholder="Search by sound name..." id="searchbarSoundboard" onkeyup="searchSoundboard()">
         </div>
         <div class="soundboard_button" id="play_all_btn" onclick="playAll()">
             <a class="soundboard_click" id="play_all_click">
@@ -327,6 +329,7 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     <script src="./Scripts/soundboard.js"></script>
     <script src="./Scripts/settings.js"></script>
     <script src="./Scripts/hotkeys.js"></script>

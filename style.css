@@ -370,7 +370,7 @@ body.dark #fav_icon {
 }
 
 .gameIframe{
-    background:url(sgs-loading.png) center center no-repeat;
+/*    background:url(sgs-loading.png) center center no-repeat;*/
     background-color: var(--sidebar-color);
     overflow: hidden;
     overflow: none;
@@ -396,11 +396,12 @@ body.dark #fav_icon {
     min-height: 100%;
     /* transform: translateX(); */
     z-index: 10000;
+    border: none;
 }
 
 .gameIframeFullscreen{
     background-color: var(--body-color);
-    /* overflow: hidden; */
+    overflow: hidden; 
     top: 0%;
     left: 0%;
     bottom: 0%;
@@ -429,6 +430,51 @@ body.dark #fav_icon {
     /* bottom: 50%; */
     color: var(--text-color);
     display: block;
+}
+
+.playgamebtnoverlay{
+    background-color: var(--sidebar-color);
+    overflow: none;
+    width: 80%;
+    height: 600px;
+    /* border-color: var(--text-color);
+    border-width: 3px; */
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 0;
+    opacity: 0.90;
+    z-index: 1;
+    position: absolute;
+    left: 9.8%;
+    transform: translateY(-101.25%);
+    /* bottom: 50%; */
+    color: var(--text-color);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 40%;
+    display: none;
+}
+
+.clickToPlay{
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 48%;
+    transform: translateX(-78px);
+    color: #fff;
+}
+
+.clickToPlay:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .FPSCount {

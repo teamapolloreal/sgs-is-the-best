@@ -1,4 +1,4 @@
-let lastUpdate = "2/1/2023 (v6.3.0)"
+let lastUpdate = "2/6/2023 (v6.3.1)"
 let sound_data = [
     {
         name: "9 + 10",
@@ -578,13 +578,40 @@ function stopAll(){
 function searchSoundboard(){
     let input = document.getElementById("searchbarSoundboard").value
     input = input.toLowerCase()
-    let x = document.getElementsByClassName("soundboard")
+    let x = document.querySelectorAll(".soundboard")
+    var titles = document.getElementsByClassName("soundboard_title")
+    var list = []
 
-    for(i = 0; i < x.length; i++){
-        if(!x[i].getElementsByClassName("soundboard_click")[0].getElementsByClassName("soundboard_title")[0].textContent.toLowerCase().includes(input)){
-            x[i].style.display = "none";
-        } else {
-            x[i].style.display = "inline-table"
-        }
+    for(i = 0; i < titles.length; i++){
+        list.push(titles[i].textContent)
     }
+
+    var options = {
+        includeScore: true,
+        threshold: 0.4,
+    }
+    var fuse = new Fuse(list, options)
+    var result = fuse.search(input)
+    var final = []
+    for(i = 0; i < result.length; i++){
+        final.push(result[i].item)
+    }
+
+    var xArray = Array.from(x)
+    var matching = xArray.filter(x => final.includes(x.getElementsByClassName("soundboard_title")[0].textContent))
+    var not_matching = xArray.filter(x => !final.includes(x.getElementsByClassName("soundboard_title")[0].textContent))
+    matching.forEach(item => { item.style.display = "inline-table" })
+    not_matching.forEach(item => { item.style.display = "none" })
+
+    if(input === ""){
+        x.forEach(x => { x.style.display = "inline-table" })
+    }
+
+    // for(i = 0; i < x.length; i++){
+    //     if(!x[i].getElementsByClassName("soundboard_click")[0].getElementsByClassName("soundboard_title")[0].textContent.toLowerCase().includes(input)){
+    //         x[i].style.display = "none";
+    //     } else {
+    //         x[i].style.display = "inline-table"
+    //     }
+    // }
 }

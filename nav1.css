@@ -29,6 +29,11 @@
     border-radius: 6px;
 }
 
+.sidebar header .image img{
+    width: auto;
+    height: auto;
+}
+
 .sidebar .icon{
     min-width: 60px;
     border-radius: 6px;
@@ -303,3 +308,7 @@ body.dark .switch::before{
     color: #fff;
     white-space: nowrap;
 } */
+
+.nav-link a:hover {
+    cursor: pointer;
+}

@@ -162,6 +162,7 @@ function resizeWidth(){
         let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
         document.getElementById("gameIframe").style.height = newHeight
         document.getElementById("iframeFocus").style.height = newHeight
+        document.getElementById("playbtnoverlay").style.height = newHeight
     }
     for(let i = 0; i < container.length; i++){
       var x = window.innerWidth * 90 / 100
@@ -205,7 +206,7 @@ window.onload = (event) => {
         if(document.getElementById("bannerMessage")) document.getElementById("bannerMessage").style.display = "block"
     }
 
-    if(window.location.pathname === "/games.html" || window.location.pathname === "/blog.html") checkHash();
+    if(window.location.pathname === "/games.html" || window.location.pathname === "/blog.html") checkHash(true);
 }
 
 // window.onbeforeunload = function() {
