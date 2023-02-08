@@ -13,6 +13,7 @@ function hotKeysSetting(changed){
             document.getElementById("hotkeysBack").style.backgroundColor = "var(--primary-color)";
             localStorage.setItem("hotkeys", "true")
         }
+        sendSiteData();
         createAlertBox({ color: "green", text: "Applied New Changes"})
     } else
     {
@@ -91,6 +92,7 @@ function instanlyLaunchGame(changed){
             document.getElementById("instantGameBack").style.backgroundColor = "var(--toggle-color)";
             localStorage.setItem("instantGame", false)
         }
+        sendSiteData();
         createAlertBox({ color: "green", text: "Applied New Changes"})
     } else {
         if(localStorage.getItem("instantGame") === "true"){
@@ -119,6 +121,7 @@ function gameIconSetting(changed){
             document.getElementById("gameIconBack").style.backgroundColor = "var(--primary-color)";
             localStorage.setItem("gameIcon", "true")
         }
+        sendSiteData();
         createAlertBox({ color: "green", text: "Applied New Changes"})
     } else
     {
@@ -149,6 +152,7 @@ function FPSSetting(changed){
             localStorage.setItem("FPSCount", "false")
             refreshLoop();
         }
+        sendSiteData();
         createAlertBox({ color: "green", text: "Applied New Changes"})
     } else {
         if(localStorage.getItem("FPSCount") === "true"){
@@ -177,6 +181,7 @@ function openSidebarSetting(changed){
             document.getElementById("openSidebarBack").style.backgroundColor = "var(--toggle-color)";
             localStorage.setItem("openSidebar", false)
         }
+        sendSiteData();
         createAlertBox({ color: "green", text: "Applied New Changes"})
     } else {
         if(localStorage.getItem("openSidebar") === "true"){
@@ -402,6 +407,7 @@ if(ddl !== null){
             }
             localStorage.setItem("tabCloak", event.target.value);
             setCloak();
+            sendSiteData();
             createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
@@ -415,6 +421,7 @@ if(ddl !== null){
             }
             localStorage.setItem("mode", event.target.value);
             setMode();
+            sendSiteData();
             createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
@@ -429,6 +436,7 @@ if(ddl !== null){
             localStorage.setItem("theme", event.target.value);
             document.getElementById("theme_color_picker").style.display = "none"
             setTheme();
+            sendSiteData();
             createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
@@ -442,6 +450,7 @@ if(ddl !== null){
             }
             localStorage.setItem("nav", event.target.value);
             setNav();
+            sendSiteData();
             createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })
@@ -454,6 +463,7 @@ if(ddl !== null){
                 localStorage.setItem("alerts", "Show All");
             }
             localStorage.setItem("alerts", event.target.value);
+            sendSiteData();
             createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();
         })

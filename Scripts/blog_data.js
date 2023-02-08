@@ -230,11 +230,13 @@ function viewBlog(blogID, log){
             if(!viewedBlogs){
                 viewedBlogs = `${data[i].id} || `
                 localStorage.setItem("viewedBlogs", viewedBlogs)
+                sendSiteData();
                 return;
             }
             if(!viewedBlogs.includes(`|| ${data[i].id}`) && !viewedBlogs.includes(`${data[i].id} ||`)){
                 viewedBlogs = viewedBlogs + `${data[i].id} || `
-                localStorage.setItem("viewedBlogs", viewedBlogs)
+                localStorage.setItem("viewedBlogs", viewedBlogs);
+                sendSiteData();
             }
             checkCompletion();
         }

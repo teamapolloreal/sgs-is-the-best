@@ -1,4 +1,4 @@
-let bannerMessageNum = "19"
+let bannerMessageNum = "20"
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -75,7 +75,6 @@ function gamepage(){
 
     if(localStorage.getItem("openSidebar") === "true" && body.querySelector('nav').classList.value === "sidebar close") body.querySelector('nav').classList.toggle("close")
 
-    // saveGameData();
     trackGameData(null, "stop")
     window.location.hash = `#`
 }

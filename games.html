@@ -253,9 +253,9 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">Blocked Links & Progress Loss (IMPORTANT!)</div>
-            <div class="messageBannerText">Links are dropping like flies! There is no current system to save progress between links which is why I'm working on one. There's nothing I can do about it right now and <b>I would recommend to not grind for achievements or games</b> until I get the system running. I am working my hardest to get this out as fast as possible.</div>
-            <div class="messageBannerDate">2/7/2023</div>
+            <div class="messageBannerTitle">Fixed Data Saving Between Links! (not recovered)</div>
+            <div class="messageBannerText">I finished the new automatic saving system, meaning your progress and achievements are visible on each link. Additionally, all game data is saved on each link so you won't lose your progress there. <b>However, I could not find any way to recover your old data if you lost it on the blocked links, I'm sorry.</b></div>
+            <div class="messageBannerDate">2/8/2023</div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
@@ -490,7 +490,10 @@
         </div>
     </section>
 
+    <iframe id="dataconnection" src="https://celebrated-stardust-91ad96.netlify.app/connection.html"></iframe>
+
     <script src="script.js"></script>
+    <script src="./Scripts/connection.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     <script src="./Scripts/game_data.js"></script>
     <script src="./Scripts/settings.js"></script>

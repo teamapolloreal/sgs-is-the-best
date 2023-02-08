@@ -221,6 +221,7 @@ function editProfile(boolean){
     if(boolean === false){
         document.getElementById("profileEdit").onclick = function(){ editProfile(true) }
         loadProfile();
+        sendSiteData();
     }
 }
 
@@ -252,11 +253,13 @@ function trackGameData(id, status){
         if(!playedGames){
             playedGames = `${id} || `
             localStorage.setItem("playedGames", playedGames)
+            sendSiteData();
             return;
         }
         if(!playedGames.includes(`|| ${id}`) && !playedGames.includes(`${id} ||`)){
             playedGames = playedGames + `${id} || `
             localStorage.setItem("playedGames", playedGames)
+            sendSiteData();
         }
         checkCompletion();
     }
@@ -337,6 +340,7 @@ setInterval(() => {
     } else {
         xpMinute = 2
     }
+    sendSiteData();
     checkCompletion();
 }, 60000)
 
@@ -426,7 +430,8 @@ function checkCompletion(){
                 loadProfile();
             }
         }
-    }
+    };
+    sendSiteData();
 }
 
 loadAchievements();
