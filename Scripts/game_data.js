@@ -606,7 +606,7 @@ const data = [
         id: "dragon_ball_z",
         genre: "Adventure",
         description: "The epic episodic adventure of Goku and the Z Warriors as they defend the Earth and the Universe from super-powered fighters and monsters.",
-        link: `${cdnUrl}GBA-Emulator/launcher.html#dbz_supersonic`,
+        link: `${cdnUrl}/GBA-Emulator/launcher.html#dbz_supersonic`,
         img: `${cdnUrl}/High Compressed/highcompress_dragon_ball_z.png`,
         file_based: true,
         publisher: "Nintendo",
