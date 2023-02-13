@@ -1,11 +1,11 @@
-let lastUpdate = "2/8/2023 (v6.3.1)"
+let lastUpdate = "2/12/2023 (v6.4.0)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
     {
         name: "1v1.lol",
         id: "1v1.lol",
-        genre: "Building Simulator",
+        genre: "Shooter / Battle Royale",
         description: "1v1.lol is an online building simulator & third person shooting game. Battle royale, build fight, zone wars and more game modes to enjoy!",
         link: "https://advanced-channeler.02.gz-associates.com/?t=tam-1v1-lol",
         img: `${cdnUrl}/High Compressed/highcompress_1v1-lol.png`,
@@ -20,7 +20,7 @@ const data = [
     {
         name: "2 Player Games",
         id: "2_player_games",
-        genre: "2 Player",
+        genre: "2 Player / Shooter",
         description: "2 Player Games is a 2 player shooter game that you and your friend can play. You earn coins from playing which can then be used to buy other charaters with different guns and rarities.",
         link: `${cdnUrl}/Game Files/2 Player Games/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_2_player_games.png`,
@@ -99,8 +99,7 @@ const data = [
         controls: [
             "idk the controls to this game",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Among Us",
@@ -134,7 +133,7 @@ const data = [
     {
         name: "Asteroids",
         id: "asteroids",
-        genre: "Arcade / Shooter",
+        genre: "Shooter / Arcade",
         description: "In this game you control a single spaceship in an asteroid field which is periodically traversed by flying saucers. The object of the game is to shoot and destroy the asteroids and saucers without getting hit by them.",
         link: `${cdnUrl}/Game Files/Asteroids/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_asteroids.png`,
@@ -159,8 +158,7 @@ const data = [
             "Left/Right Arrow Keys - Attack",
             "Hold Left/Right Arrow Key - Long Range Attack",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Ball Blast",
@@ -204,8 +202,7 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Binding of Isaac",
@@ -296,8 +293,7 @@ const data = [
             "U - Undo",
             "R - Restart",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "BreakLock",
@@ -325,8 +321,7 @@ const data = [
             "Hold Right Click - Aim & Power",
             "Release Right Click - Release"
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Cannon Basketball 4",
@@ -397,13 +392,11 @@ const data = [
             "Right Click - Place Piece in Row",
             "Right Click - Play Again"
         ],
-        broken: true,
-        note: "Game style broke (Blocked cross-origin response [link] with MIME type text/html."
     },
     {
         name: "Cookie Clicker",
         id: "cookie_clicker",
-        genre: "Incremental",
+        genre: "Incremental / Clicker",
         description: "Cookie Clicker is an incremental web-broswer game where the goal is to produce as many cookies as you can by clicking on the big cookie and buying items.",
         link: `${cdnUrl}/Game Files/Cookie Clicker/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_cookie_clicker.png`,
@@ -418,7 +411,7 @@ const data = [
     {
         name: "CraftMine",
         id: "craftmine",
-        genre: "Adventure / Survival",
+        genre: "Survival / Adventure",
         description: "CraftMine is a cool 2D Minecraft game, this game is all about surviving for as long as you can with surronding materials.",
         link: `${cdnUrl}/Game Files/CraftMine/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_craftmine.png`,
@@ -488,7 +481,7 @@ const data = [
     {
         name: "CTR Holiday",
         id: "ctr_holiday",
-        genre: "Arcade",
+        genre: "Puzzle",
         description: "In this game you must feed a creature named Om Nom with candy by cutting ropes in a certain manner, while using other tools such as bubbles and air cushions to avoid hazards and collect stars.",
         link: `${cdnUrl}/Game Files/CTR Holiday/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_ctr_holiday.png`,
@@ -503,7 +496,7 @@ const data = [
     {
         name: "CTR Time Travel",
         id: "ctr_time_travel",
-        genre: "Arcade",
+        genre: "Puzzle",
         description: "In this game you must feed a creature named Om Nom with candy by cutting ropes in a certain manner, while using other tools such as bubbles and air cushions to avoid hazards and collect stars.",
         link: `${cdnUrl}/Game Files/CTR Time Travel/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_ctr_time_travel.png`,
@@ -563,7 +556,7 @@ const data = [
     {
         name: "Defend the Tank",
         id: "defend_the_tank",
-        genre: "Arcade / Strategy",
+        genre: "Strategy / Arcade",
         description: "Drag and drop soldiers to place them at strategic positions on the tank. Keep the tank alive at all costs. Rotate your soldiers to inflict maximum damage on the enemy. Heal your tanks with mechanic soldiers. Collect coins to upgrade your tank after each battle.",
         link: `${cdnUrl}/Game Files/Defend the Tank/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_defend_the_tank.png`,
@@ -585,8 +578,7 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Doodle Jump",
@@ -617,7 +609,7 @@ const data = [
     {
         name: "Draw The Hill",
         id: "draw_the_hill",
-        genre: "Arcade / Endless",
+        genre: "Drawing / Arcade / Endless",
         description: "In this cool driving game, use your skills to draw a path for the car to drive through the level. Make sure you draw a steady path or else you'll end the level.",
         link: `${cdnUrl}/Game Files/Draw The Hill/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_draw_the_hill.png`,
@@ -693,8 +685,6 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true,
-        note: "Error while loading game (An error occurred running the Unity content on this page)"
     },
     {
         name: "Edge Not Found",
@@ -779,8 +769,7 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     // {
     //     name: "Fishington.io",
@@ -891,7 +880,7 @@ const data = [
     {
         name: "Gun Mayhem 2",
         id: "gun_mayhem_2",
-        genre: "Action / Shooter",
+        genre: "Shooter / Action",
         description: "The aim of each round is simple - you must knock your enemies off of the stage and prevent them from jumping back on. You can push your enemies by shooting them. You can avoid being thrown off the stage yourself by using a series of jumps and double jumps. The gameplay is fast-paced and fun and you must have quick reactions to win!",
         link: `${cdnUrl}/Game Files/Gun Mayhem 2/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_gun_mayhem_2.png`,
@@ -904,7 +893,7 @@ const data = [
     {
         name: "Gun Mayhem Redux",
         id: "gun_mayhem_redux",
-        genre: "Action / Shooter",
+        genre: "Shooter / Action",
         description: "Gun Mayhem Redux is a third-person shooter game. The goal of the game is either to capture a flag for a certain duration or kill your opponents. To play the game you move a character up and down, back and forth while shooting at the enemy. The game provides you with eight campaign levels and a tutorial.",
         link: `${cdnUrl}/Game Files/Gun Mayhem Redux/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_gun_mayhem_redux.png`,
@@ -967,22 +956,6 @@ const data = [
             "Unknown",
         ],
         devices: "Computer, Mobile"
-    },
-    {
-        name: "Incredibox",
-        id: "incredibox",
-        genre: "Rhythm",
-        description: "Incredibox is a music app that lets you create your own music with the help of a merry crew of beatboxers.Choose your musical style among 8 impressive atmospheres and start to lay down, record and share your mix.",
-        link: `${cdnUrl}/Game Files/Incredibox/index.html`,
-        img: `${cdnUrl}/High Compressed/highcompress_incredibox.png`,
-        file_based: false,
-        publisher: "incredibox.com",
-        controls: [
-            "Unknown",
-        ],
-        devices: "Computer, Mobile",
-        broken: true,
-        note: "Unable to load versions (Audio bug, cannot decode asset)"
     },
     {
         name: "Indestructo Tank",
@@ -1063,8 +1036,6 @@ const data = [
         controls: [
             "",
         ],
-        broken: true,
-        note: "Game takes forever to load"
     },
     {
         name: "Madalin Stunt Cars 3",
@@ -1109,7 +1080,7 @@ const data = [
     {
         name: "Mario Kart",
         id: "mario_kart",
-        genre: "Adventure / Driving",
+        genre: "Driving / Adventure",
         description: "Players compete in go-kart races while using various power up items.",
         link: `${cdnUrl}/GBA-Emulator/launcher.html#mariokart`,
         img: `${cdnUrl}/High Compressed/highcompress_mario_kart.png`,
@@ -1286,13 +1257,13 @@ const data = [
         controls: [
             "Unknown",
         ],
-        devices: "Computer, Mobile (Preferably Fast)",
+        devices: "Computer (Preferably Fast)",
         new: true
     },
     {
         name: "Pac-Man",
         id: "pac-man",
-        genre: "Action / Maze",
+        genre: "Maze / Action",
         description: "You must control Pac-Man through an enclosed maze. The objective of the game is to eat all of the dots placed in the maze while avoiding four colored ghosts.",
         link: `${cdnUrl}/Game Files/Pac-Man/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_pac-man.png`,
@@ -1477,7 +1448,7 @@ const data = [
     {
         name: "Portal Flash",
         id: "portal_flash",
-        genre: "Action / Puzzle",
+        genre: "Puzzle / Action",
         description: "The Flash Version includes over 40 challenging, portals thinking levels, which features almost every feature the real game does, in 2d - energy balls, cubes, turrets and even the famous crusher from the trailer.",
         link: `${cdnUrl}/Game Files/Portal Flash/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_portal_flash.png`,
@@ -1559,7 +1530,7 @@ const data = [
     {
         name: "Retro Bowl",
         id: "retro_bowl",
-        genre: "Sports",
+        genre: "Sports / Management",
         description: "Retro Bowl is the perfect game for the armchair quarterback to finally prove a point. Presented in a glorious retro style, the game has simple roster management, including press duties and the handling of fragile egos, while on the field you get to call the shots. Can you pass the grade and take your team all the way to the ultimate prize?",
         link: `${cdnUrl}/Game Files/Retro Bowl/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_retro_bowl.png`,
@@ -1626,7 +1597,7 @@ const data = [
     {
         name: "Scrap Metal 3",
         id: "scrap_metal_3",
-        genre: "Adventure / Driving",
+        genre: "Driving / Adventure",
         description: "This game is an amazing 3D car driving game in which you enjoy freedom to explore a huge map with many different terrains. This third Scrap Metal game brings you even more freedom, and 4 new cars. Explore the mountains, overcome different kinds of obstacles, and enjoy the high speeds!",
         link: `${cdnUrl}/Game Files/Scrap Metal 3/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_scrap_metal_3.png`,
@@ -1640,7 +1611,7 @@ const data = [
     {
         name: "Shell Shockers",
         id: "shell_shockers",
-        genre: "FPS / Shooter",
+        genre: "FPS",
         description: "Shell Shockers is an online, first-person shooter game where you control Eggs that move around one of nine Maps, with the objective being to go up the leaderboard killing each other.",
         link: "https://tam-shellshockers.arfotoarte.com/",
         img: `${cdnUrl}/High Compressed/highcompress_shell_shockers.png`,
@@ -1649,8 +1620,7 @@ const data = [
         controls: [
             "Unknown",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Slope 1",
@@ -1677,8 +1647,7 @@ const data = [
         controls: [
             "",
         ],
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Smash Karts",
@@ -1710,7 +1679,7 @@ const data = [
     {
         name: "Soldier Legend",
         id: "soldier_legend",
-        genre: "Action / Shooting",
+        genre: "Action / Shooter",
         description: "The legendary soldier is incredible. In the game, the city has been attacked by aliens. They are trying to destroy the city. Now, pick up weapon and fight against them! Grab coins after you eliminated an alien to buy advanced weapons, towers and power-ups. You might want to invest in robo-factories and mana that supports you.",
         link: `${cdnUrl}/Game Files/Soldier Legend/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_soldier_legend.png`,
@@ -1778,8 +1747,7 @@ const data = [
             "Unknown",
         ],
         devices: "Computer, Mobile",
-        broken: true,
-        note: "Game is blocked"
+        blocked: true,
     },
     {
         name: "Stack",
@@ -1825,7 +1793,7 @@ const data = [
     {
         name: "Subway Surfers",
         id: "subwaysurfers",
-        genre: "Endless / Runner",
+        genre: "Runner / Endless",
         description: "It's you're goal to run a away from a cop chasing you while you complete missions, etc. How far can you go before getting caught?",
         link: `${cdnUrl}/Game Files/Subway Surfers/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_subway_surfers.png`,
@@ -1852,7 +1820,7 @@ const data = [
     {
         name: "Super Mario Bros",
         id: "super_mario_bros",
-        genre: "Arcade / Platformer",
+        genre: "Platformer / Arcade",
         description: "Mario must race through the Mushroom Kingdom and save Princess Toadstool from Bowser. Mario jumps, runs, and walks across each level. The worlds are full of enemies and platforms, and open holes.",
         link: `${cdnUrl}/Game Files/Super Mario Bros/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_super_mario_bros.png`,
@@ -1865,7 +1833,7 @@ const data = [
     {
         name: "TankTrouble",
         id: "tank_trouble",
-        genre: "Maze / Shooter",
+        genre: "Shooter / Maze",
         description: "Drive through a maze to find your enemies, and shoot from a save point before they aim their cannon at you.",
         link: "https://bmarinacampground.net/uploads/5/5/6/7/5567194/custom_themes/851609344627074058/files/index.html",
         img: `${cdnUrl}/High Compressed/highcompress_tank_trouble.png`,
@@ -1908,7 +1876,7 @@ const data = [
     {
         name: "Temple Run 2",
         id: "temple_run_2",
-        genre: "Arcade",
+        genre: "Arcade / Runner",
         description: "Temple Run 2 is an endless running video game. The goal of the game is simple, run the longest you can dodging obstacles and jumping without messing up.",
         link: `${cdnUrl}/Game Files/Temple Run 2/index.html`,
         img: `${cdnUrl}/High Compressed/highcompress_temple_run_2.png`,
@@ -2226,12 +2194,13 @@ function loadGames(){
             div.style.boxShadow = `0 2px 10px ${localStorage.getItem("themeHex") || "#695CFE"}`
         }
 
-        if(game.broken === true){
-          var broken_icon = document.createElement("i")
-          broken_icon.className = "bx bx-error icon"
-          broken_icon.id = "broken_icon"
-          if(localStorage.getItem("gameIcon") === "false") broken_icon.id = "broken_icon1"
-          game_click.appendChild(broken_icon)
+        if(game.broken === true || game.blocked == true){
+            var broken_icon = document.createElement("i")
+            broken_icon.className = "bx bx-error icon"
+            broken_icon.id = "broken_icon"
+            if(localStorage.getItem("gameIcon") === "false") broken_icon.id = "broken_icon1"
+            if(game.blocked === true) broken_icon.style.color = "#febb01"
+            game_click.appendChild(broken_icon)
         } else {
           var fav_icon = document.createElement("i")
           fav_icon.className = "bx bx-star icon"
@@ -2277,7 +2246,7 @@ function loadGames(){
         var game_genre = document.createElement("div")
         game_genre.className = "game_genre"
         game_genre.id = "genre"
-        game_genre.innerText = game.genre
+        game_genre.innerText = "#" + game.genre.split(" / ")[0]
         if(localStorage.getItem("mode") === "Light" && localStorage.getItem("gameIcon") !== "false"){
             game_genre.style.color = "#ccc"
             document.getElementById("rgs_genre").style.color = "#ccc"
@@ -2379,8 +2348,6 @@ select.onchange = async (event) => {
     var currentContainers = document.getElementsByClassName("container")
     var inputText = event.target.value;
 
-    console.log(currentContainers)
-
     if(inputText === "Filter - None"){
         for(let i = 0; i < currentContainers.length; i++){ currentContainers[i].style.display = "inline-table"}
         return;
@@ -2388,18 +2355,15 @@ select.onchange = async (event) => {
 
     for(let i = 0; i < currentContainers.length; i++){ currentContainers[i].style.display = "none"}
 
-    for(let i = 0; i < selectOptionsList.length; i++){
-        if(inputText === selectOptionsList[i]){
-            for(let o = 0; o < currentContainers.length; o++){
-                if(data[o].genre.includes(" / ")){
-                    for(let u = 0; u < currentContainers[o].getElementsByClassName("game_genre")[0].textContent.split(" / ").length; u++){
-                        if(currentContainers[o].getElementsByClassName("game_genre")[0].textContent.split(" / ")[u] === inputText) currentContainers[o].style.display = "inline-table"
-                    }
-                } else {
-                    if(currentContainers[o].getElementsByClassName("game_genre")[0].textContent === inputText) currentContainers[o].style.display = "inline-table"
-                }
+    var filter = []
+    for(let i = 0; i < data.length; i++){
+        for(let o = 0; o < currentContainers.length; o++){
+            if(data[i].genre.includes(inputText) && currentContainers[o].getElementsByClassName("game_title")[0].textContent === data[i].name) filter.push(currentContainers[o])
+            if(i === data.length - 1 && o === currentContainers.length - 1){
+                filter.forEach(con => {
+                    con.style.display = "inline-table"
+                })
             }
-            break;
         }
     }
 }
@@ -2423,6 +2387,9 @@ function favorite(id){
             document.getElementById("favoriteOption2").onclick = function(){ unfavorite(data[i].id) }
             document.getElementById("favStarOption2").className = "bx bxs-star icon"
             document.getElementById("favoriteTextOption2").innerText = "Unfavorite"
+
+            document.getElementById("cbfavorite").onclick = function(){ unfavorite(data[i].id) }
+            document.getElementById("cbfavoriteicon").className = "bx bxs-star cbicon"
 
             removeGames();
             loadGames();
@@ -2453,6 +2420,9 @@ function unfavorite(id){
           document.getElementById("favStarOption2").className = "bx bx-star icon"
           document.getElementById("favoriteTextOption2").innerText = "Favorite"
 
+          document.getElementById("cbfavorite").onclick = function(){ favorite(data[i].id) }
+          document.getElementById("cbfavoriteicon").className = "bx bx-star cbicon"
+
           removeGames();
           loadGames();
           createAlertBox({ color: "red", text: "Unfavorited Game"})
@@ -2481,7 +2451,7 @@ function viewGame(gameID){
             title.innerText = data[i].name
             img.src = data[i].img
             desc.innerText = data[i].description
-            genre.innerText = data[i].genre
+            genre.innerText = data[i].genre.replaceAll(" / ", ", ")
             publisher.innerText = data[i].publisher
             playBtn.onclick = function(){ playGame(data[i].id) }
             document.body.style.overflow = "hidden"
@@ -2489,7 +2459,7 @@ function viewGame(gameID){
             currentGame = data[i].id
 
             if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(data[i].id)){
-                document.getElementById("favoriteOption2").onclick = function(){ unfavorite(data[i].id) }
+                document.getElemeFntById("favoriteOption2").onclick = function(){ unfavorite(data[i].id) }
                 document.getElementById("favStarOption2").className = "bx bxs-star icon"
                 document.getElementById("favoriteTextOption2").innerText = "Unfavorite"
             } else {
@@ -2590,10 +2560,11 @@ function playGame(gameID, onload){
             document.getElementById("gamePageTitle").innerText = data[i].name
             document.getElementById("gamePageDesc").innerText = data[i].description
             if(onload === true){
-                document.getElementById("iframeFocus").style.display = "none"
+                document.getElementById("fullscreenGame").style.opacity = 1
                 document.getElementById("playbtnoverlay").style.display = "block"
                 document.getElementById("playbtnoverlay").onclick = function(){ playGame(data[i].id); document.getElementById("gameIframe").focus(); }
             } else {
+                document.getElementById("fullscreenGame").style.opacity = 0.7
                 document.getElementById("gameIframe").src = data[i].link
                 document.getElementById("playbtnoverlay").style.display = "none"
             }
@@ -2603,22 +2574,34 @@ function playGame(gameID, onload){
                 document.getElementById("favoriteOption").onclick = function(){ unfavorite(data[i].id) }
                 document.getElementById("favStarOption").className = "bx bxs-star icon"
                 document.getElementById("favoriteTextOption").innerText = "Unfavorite"
+
+                document.getElementById("cbfavorite").onclick = function(){ unfavorite(data[i].id) }
+                document.getElementById("cbfavoriteicon").className = "bx bxs-star cbicon"
             } else {
                 document.getElementById("favoriteOption").onclick = function(){ favorite(data[i].id) }
                 document.getElementById("favStarOption").className = "bx bx-star icon"
                 document.getElementById("favoriteTextOption").innerText = "Favorite"
+
+                document.getElementById("cbfavorite").onclick = function(){ favorite(data[i].id) }
+                document.getElementById("cbfavoriteicon").className = "bx bx-star cbicon"
             }
 
             if(document.getElementById("gameOptions").style.display = "block") document.getElementById("gameOptions").style.display = "none"
 
-            let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
-            document.getElementById("gameIframe").style.height = newHeight
-            document.getElementById("iframeFocus").style.height = newHeight
-            document.getElementById("playbtnoverlay").style.height = newHeight
+            resizeWidth();
 
             if(data[i].broken){
                 document.getElementById("importantMessage").style.display = "block"
+                document.getElementById("importantMessage").style.backgroundColor = "red"
+                document.getElementById("mbttitle").innerHTML = `This game may be experiencing issues.`
                 document.getElementById("messageBannerText").innerHTML = `This game may not be working as expected. <a class="errormessage">Error: ${data[i].note}</a>`
+            }
+
+            if(data[i].blocked){
+                document.getElementById("importantMessage").style.display = "block"
+                document.getElementById("importantMessage").style.backgroundColor = "#febb01"
+                document.getElementById("mbttitle").innerHTML = `This game is blocked.`
+                document.getElementById("messageBannerText").innerHTML = `This may not affect you depending on where you are and on what device.`
             }
 
             if(localStorage.getItem("nav") === "Sidebar" && body.querySelector('nav').classList.value === "sidebar") body.querySelector('nav').classList.toggle("close")
@@ -2659,10 +2642,10 @@ function checkFocus(){
     if(document.getElementById("gamepage").style.display === "block"){
         if(document.activeElement === document.getElementById("gameIframe")){
             // document.body.style.overflow = "hidden"
-            document.getElementById("iframeFocus").style.display = "none"
+            document.getElementById("fullscreenGame").style.opacity = 1
         } else {
             // document.body.style.overflow = "visible"
-            if(document.getElementById("playbtnoverlay").style.display !== "block") document.getElementById("iframeFocus").style.display = "block"
+            if(document.getElementById("playbtnoverlay").style.display !== "block") document.getElementById("fullscreenGame").style.opacity = 0.7
         }
     }
 }
@@ -2675,7 +2658,7 @@ function focusGame(){
 document.body.onclick = function(){ checkFocus() }
 const listener = window.addEventListener("blur", () => {
     if(document.activeElement === document.querySelector("iframe")){
-        console.log("clicked iframe")
+        // console.log("clicked iframe")
         checkFocus()
     }
     window.removeEventListener("blur", listener)
@@ -2715,3 +2698,47 @@ function checkHash(onload){
 }
 
 // document.addEventListener("touchstart", function(event){event.preventDefault()}, true);
+
+function hideBar(){
+    document.getElementById("controlbar").style.display = "none"
+
+    var stylesheet = document.styleSheets[0]
+    let elementRules;
+    let elementRules2;
+
+    for(let i = 0; i < stylesheet.cssRules.length; i++){
+        if(stylesheet.cssRules[i].selectorText === ".gameIframeFullscreen"){
+            elementRules = stylesheet.cssRules[i]
+        }
+
+        if(stylesheet.cssRules[i].selectorText === ".gameIframeFull"){
+            elementRules2 = stylesheet.cssRules[i]
+        }
+    }
+
+    if(inWindowedFullscreen === true) document.getElementById("exitBtn").style.display = "block"
+    elementRules.style.setProperty("height", "100%")
+    elementRules2.style.setProperty("height", "100%")
+}
+
+function showBar(){
+    document.getElementById("controlbar").style.display = "block"
+
+    var stylesheet = document.styleSheets[0]
+    let elementRules;
+    let elementRules2;
+
+    for(let i = 0; i < stylesheet.cssRules.length; i++){
+        if(stylesheet.cssRules[i].selectorText === ".gameIframeFullscreen"){
+            elementRules = stylesheet.cssRules[i]
+        }
+
+        if(stylesheet.cssRules[i].selectorText === ".gameIframeFull"){
+            elementRules2 = stylesheet.cssRules[i]
+        }
+    }
+
+    document.getElementById("exitBtn").style.display = "none"
+    elementRules.style.setProperty("height", "calc(100% - 60px)")
+    elementRules2.style.setProperty("height", "calc(100% - 60px)")
+}

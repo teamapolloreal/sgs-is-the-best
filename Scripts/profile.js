@@ -109,7 +109,7 @@ const achievement_data = [
         id: "play_every_game",
         reward: "1250xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/1.png' class='img-emoji2'> Badge!",
         progress: null,
-        progress_info: { a: "play_games", b: 148, xp: 1250, b_id: "1" }
+        progress_info: { a: "play_games", b: 147, xp: 1250, b_id: "1" }
     },
     {
         name: "Read 2 Blogs or Logs",
@@ -125,6 +125,10 @@ const achievement_data = [
         progress: null,
         progress_info: { a: "read_blogs", b: 10, xp: 250, b_id: "5" }
     },
+]
+
+const removed_games = [
+    "incredibox"
 ]
 
 loadProfile();
@@ -175,16 +179,18 @@ function loadProfile(){
 
     var games_played = localStorage.getItem("playedGames") || null
     if(!games_played){
-        document.getElementById("games_played_text").innerText = `0/148`
+        document.getElementById("games_played_text").innerText = `0/147`
         document.getElementById("games_played").setAttribute("stroke-dasharray", "0, 100")
     } else {
-        document.getElementById("games_played_text").innerText = `${games_played.split("||").length - 1}/148`
-        document.getElementById("games_played").setAttribute("stroke-dasharray", Math.trunc((games_played.split("||").length - 1) / 148 * 100) + ", 100")
+        document.getElementById("games_played_text").innerText = `${games_played.split("||").length - 1}/147`
+        document.getElementById("games_played").setAttribute("stroke-dasharray", Math.trunc((games_played.split("||").length - 1) / 147 * 100) + ", 100")
     }
 
     var minutes_played = parseInt(localStorage.getItem("minutes_played")) || 0
-    if(minutes_played >= 60 && minutes_played < 66){ s = "" } else { s = "s" }
-    document.getElementById("minutes_played_text").innerText = `Minutes Played: ${minutes_played} (${Math.trunc(minutes_played / 60 * 10) / 10} hr${s})`
+    var hours = Math.trunc(minutes_played / 60)
+    var mins = minutes_played - hours * 60
+    if(hours === 1){ s = "" } else { s = "s" }
+    document.getElementById("minutes_played_text").innerText = `Time Played: ${hours} hr${s}, ${mins} min`
 
     var achievementsCompleted = parseInt(localStorage.getItem("achievementCompletedCount")) || 0
     document.getElementById("achievements_completed_text").innerText = `${achievementsCompleted}/${achievement_data.length}`
@@ -244,6 +250,10 @@ function inputUsername(){
 
 var playing = false;
 function trackGameData(id, status){
+    removed_games.forEach(game => {
+        var playedGames = localStorage.getItem("playedGames") || null
+        if(playedGames.includes(game)) localStorage.setItem("playedGames", playedGames.replace(`${game} || `, ""))
+    })
     if(status === "stop"){
         playing = false
     } else {

@@ -24,6 +24,7 @@ var siteSaves = [
 	"tabCloak",
 	"theme",
 	"bannerMessageNum",
+	"alwaysOnTop",
 
 	"play_10_minutes",
 	"play_20_minutes",

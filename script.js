@@ -1,4 +1,4 @@
-let bannerMessageNum = "21"
+let bannerMessageNum = "22"
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -77,8 +77,11 @@ function gamepage(){
 
     trackGameData(null, "stop")
     window.location.hash = `#`
+    exitFullscreen();
+    exitWindowed();
 }
 
+var inFullscreen = false
 function fullscreen(){
     document.getElementById("gameIframe").focus();
     if(window.location == window.parent.location){
@@ -93,7 +96,7 @@ function fullscreen(){
 
         var iframe = document.getElementById("gameIframe")
         var fpscount = document.getElementById("FPSCount")
-
+        var controlbar = document.getElementById("controlbar")
 
         elem.addEventListener("fullscreenchange", exitHandler, false)
         elem.addEventListener("mozfullscreenchange", exitHandler, false)
@@ -103,10 +106,27 @@ function fullscreen(){
             if(!document.webkitIsFullScreen && !document.MozFullScreen && !document.msFullscreenElement){
                 iframe.classList = "gameIframe"
                 fpscount.classList = "FPSCount"
+                controlbar.classList = "controlBar"
+                inFullscreen = false
+                document.getElementById("cbfullscreen").onclick = function(){ fullscreen() }
+                document.getElementById("cbfullscreenicon").classList = "bx bx-fullscreen cbicon"
+                document.body.style.overflow = "visible"                
+                document.getElementById("cbOptionsMenu").style.transform = "translate(75px, -190px)"
+                document.getElementById("hidebaroption").style.display = "none"
+                showBar();
                 resizeWidth();
+                if(inWindowedFullscreen === true) windowedfullscreen()
+                focusGame();
             } else {
                 iframe.classList = "gameIframeFullscreen"
                 fpscount.classList = "FPSCount FPSCountFullscreen"
+                controlbar.classList = "controlBarFullscreen"
+                inFullscreen = true
+                document.getElementById("cbfullscreen").onclick = function(){ exitFullscreen() }
+                document.getElementById("cbfullscreenicon").classList = "bx bx-exit-fullscreen cbicon"
+                document.getElementById("cbOptionsMenu").style.transform = "translate(75px, -245px)"
+                document.getElementById("hidebaroption").style.display = "block";
+                focusGame();
             }
         }
     } else {
@@ -115,6 +135,7 @@ function fullscreen(){
 }
 
 function exitFullscreen(){
+    if(inFullscreen === false) return;
     if(document.exitFullscreen){
         document.exitFullscreen();
     } else if(document.webkitExitFullscreen){
@@ -124,7 +145,9 @@ function exitFullscreen(){
     }
 }
 
+var inWindowedFullscreen = false
 function windowedfullscreen (){
+    exitFullscreen();
     var iframe = document.getElementById("gameIframe")
     iframe.classList = "gameIframeFull"
     document.body.style.overflow = "hidden"
@@ -132,7 +155,16 @@ function windowedfullscreen (){
     iframe.focus()
     var fpscount = document.getElementById("FPSCount")
     fpscount.classList = "FPSCount FPSCountFull"
-    document.getElementById("exitBtn").style.display = "block"
+    var controlbar = document.getElementById("controlbar")
+    controlbar.classList = "controlBarFull"
+    inWindowedFullscreen = true
+    document.getElementById("cbfullscreen").onclick = function(){ exitWindowed() }
+    document.getElementById("cbfullscreenicon").classList = "bx bx-exit-fullscreen cbicon"
+    document.getElementById("cbwindowed").onclick = function(){ exitWindowed() }
+    document.getElementById("cbwindowedtext").innerText = "Exit Windowed"
+    document.getElementById("cbOptionsMenu").style.transform = "translate(75px, -245px)"
+    document.getElementById("hidebaroption").style.display = "block";
+    focusGame();
 }
 
 function exitWindowed(){
@@ -140,9 +172,20 @@ function exitWindowed(){
     var fpscount = document.getElementById("FPSCount")
     iframe.classList = "gameIframe"
     fpscount.classList = "FPSCount"
+    var controlbar = document.getElementById("controlbar")
+    controlbar.classList = "controlBar"
     document.body.style.overflow = "visible"
     document.getElementById("exitBtn").style.display = "none"
+    inWindowedFullscreen = false
+    document.getElementById("cbfullscreen").onclick = function(){ fullscreen() }
+    document.getElementById("cbfullscreenicon").classList = "bx bx-fullscreen cbicon"
+    document.getElementById("cbwindowed").onclick = function(){ windowedfullscreen() }
+    document.getElementById("cbwindowedtext").innerText = "Windowed"
+    document.getElementById("cbOptionsMenu").style.transform = "translate(75px, -190px)"
+    document.getElementById("hidebaroption").style.display = "none"
+    showBar();
     resizeWidth();
+    focusGame();
 }
 
 setTimeout(() => {
@@ -159,8 +202,21 @@ function resizeWidth(){
     var gamebar = document.getElementById("gamebar")
     if(document.getElementById("gameIframe") !== null){
         let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
-        document.getElementById("gameIframe").style.height = newHeight
-        document.getElementById("iframeFocus").style.height = newHeight
+        if(inFullscreen !== true && inWindowedFullscreen !== true){
+            var stylesheet = document.styleSheets[0]
+            let elementRules;
+
+            for(let i = 0; i < stylesheet.cssRules.length; i++){
+                if(stylesheet.cssRules[i].selectorText === ".gameIframe"){
+                    elementRules = stylesheet.cssRules[i]
+                }
+            }
+
+            var newnewHeight = document.querySelector("iframe").getBoundingClientRect().width / 1.778 - 60
+            if(document.getElementById("navbar1").classList.value === "sidebar") newnewHeight = (document.querySelector("iframe").getBoundingClientRect().width + 162) / 1.778 - 60
+            elementRules.style.setProperty("height", `${newnewHeight}px`)
+        }
+        // document.getElementById("iframeFocus").style.height = newHeight
         document.getElementById("playbtnoverlay").style.height = newHeight
     }
     for(let i = 0; i < container.length; i++){
@@ -312,10 +368,12 @@ function toggleFPS(){
         document.getElementById("FPSCount").style.display = "block"
         refreshLoop();
         createAlertBox({ color: "green", text: "FPS Count Enabled" })
+        document.getElementById("cbfpstoggleicon").classList = "bx bx-toggle-right icon"
     } else {
         localStorage.setItem("FPSCount", "false")
         document.getElementById("FPSCount").style.display = "none"
         createAlertBox({ color: "red", text: "FPS Count Disabled" })
+        document.getElementById("cbfpstoggleicon").classList = "bx bx-toggle-left icon"
     }
 }
 

@@ -376,9 +376,8 @@ body.dark #fav_icon {
     overflow: none;
     width: 80%;
     /* height: 600px; */
-    border-color: var(--text-color);
-    border-width: 3px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 5px 5px 0 0;
     margin-bottom: 0;
     opacity: 1;
 }
@@ -392,8 +391,8 @@ body.dark #fav_icon {
     bottom: 0%;
     right: 0%;
     width: 100%;
-    height: 100%;
-    min-height: 100%;
+    height: calc(100% - 60px);
+    min-height: calc(100% - 60px);
     /* transform: translateX(); */
     z-index: 10000;
     border: none;
@@ -407,8 +406,8 @@ body.dark #fav_icon {
     bottom: 0%;
     right: 0%;
     width: 100%;
-    height: 100%;
-    min-height: 100%;
+    height: calc(100% - 60px);
+    min-height: calc(100% - 60px);
     border: none;
 }
 
@@ -497,8 +496,9 @@ body.dark #fav_icon {
 .FPSCountFull {
     right: 2%;
     z-index: 10001;
-    /* transform: translateY(-510%); */
+/*    transform: translateY(-130%); */
     top: -0.5%;
+    position: fixed;
 }
 
 .FPSCountFullscreen {
@@ -514,16 +514,16 @@ body.dark #fav_icon {
 .exitBtn {
     width: 40px;
     height: 40px;
-    left: -55px;
-    top: -0.5%;
+    left: 2%;
+    top: 16px;
     z-index: 10001;
-    position: absolute;
+    position: fixed;
     background-color: var(--sidebar-color);
     padding: 7px;
     border-radius: 15px;
     color: #fff;
     font-style: 12px;
-    transform: translateY(50%);
+/*    transform: translateY(50%);*/
     opacity: 0.8;
     overflow: hidden;
     display: none
@@ -531,6 +531,95 @@ body.dark #fav_icon {
 
 .exitBtn:hover {
     opacity: 0.5
+}
+
+.controlBar {
+    width: 80%;
+    height: 60px;
+    background-color: var(--primary-color);
+    margin: auto;
+    transform: translateY(-9px);
+    border: none;
+    border-radius: 0 0 5px 5px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.controlBarFull {
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-color);
+    margin: auto;
+    transform: translateY(-9px);
+    border: none;
+    border-radius: 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translateY(0px);
+    z-index: 10001;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.controlBarFullscreen {
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-color);
+    margin: auto;
+    transform: translateY(-9px);
+    border: none;
+    border-radius: 0px;
+    bottom: 0;
+    transform: translateY(-7px);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cbLogo {
+    height: 35px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cbLogoText {
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 1;
+    color: #fff;
+    position: absolute;
+}
+
+.controlOption{
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    position: relative;
+    display: inline-table;
+    margin-left: 15px;
+    border-radius: 10px;
+    transform: translateY(2px);
+    transition: var(--tran-03);
+}
+
+.controlOption:hover {
+    cursor: pointer;
+    background-color: var(--sidebar-color);
+}
+
+.cbicon{
+    font-size: 22px;
+    transform: translateY(5px);
+    color: #fff;
 }
 
 .gameOptions {
@@ -854,12 +943,11 @@ body.dark .dropdown-content button {
     /* height: 50px; */
     height: auto;
     border-radius: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--sidebar-color);
     display: none;
     position: absolute;
     margin-left: 35%;
     z-index: 10000;
-    /* transform: translateY(-70px); */
     padding: 10px;
     text-align: left;
     transition: var(--tran-05);

@@ -31,7 +31,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Syce's Game Shack</title>
-    <link rel="icon" herf="sgs-logo.png" type="image/png">
+    <link rel="icon" herf="sgs-logo.png" type="image/png" id="site-icon">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -75,7 +75,7 @@
                     <span class="horText">Links</span>
 
                     <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
-                        <button onclick="window.open('https://bit.ly/sgs-links', '_blank')" class="dropbtn" id="altLinks">
+                        <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
                             <span class='bx bx-link-external icon' style="transform: translateY(3px); font-size: 20px;"></span>
                             <span style="padding: 5px">Alt Links</span>
                         </button>
@@ -179,7 +179,7 @@
                             <span class="hovertext">Links</span>
 
                             <div id="linkOptions" class="dropdown-content" style="transform: translate(75px, 0px)">
-                                <button onclick="window.open('https://bit.ly/sgs-links', '_blank')" class="dropbtn" id="altLinks">
+                                <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
                                     <span class='bx bx-link-external' style="transform: translateY(3px); font-size: 20px;"></span>
                                     <span style="padding: 5px">Alt Links</span>
                                 </button>
@@ -199,6 +199,7 @@
                         </a>
                     </li>
                 </ul>
+                <br>
             </div>
 
             <div class="bottom-content" style="transform: translateY(-20%);">
@@ -349,6 +350,13 @@
                 <span class="switchDot" id="openSidebarSwitch"></span>
             </div>
             <br>
+            <div class="settingsTitle">Always on Top Navbar</div>
+            <div class="pageDescription">For the horizontal navbar, this will keep it at the top of the screen even when scrolling.</div>
+            <div class="settingsSwitch" onclick="alwaysOnTop(true)">
+                <span class="switchBack" id="alwaysOnTopBack"></span>
+                <span class="switchDot" id="alwaysOnTopSwitch"></span>
+            </div>
+            <br>
         </div>
         <br>
         <footer class="footer" id="footer">
@@ -374,15 +382,12 @@
         </div>
     </section>
 
-    <!-- <iframe id="testdata" src="https://celebrated-stardust-91ad96.netlify.app/connection.html"></iframe> -->
-
     <iframe style="display: none" id="dataconnection" src="https://celebrated-stardust-91ad96.netlify.app/connection.html"></iframe>
 
     <script src="script.js"></script>
     <script src="./Scripts/connection.js"></script>
     <script src="./Scripts/settings.js"></script>
     <script src="./Scripts/hotkeys.js"></script>
-    <!-- <script src="./Scripts/connection.js"></script> -->
 
 </body>
 </html>

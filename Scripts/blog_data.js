@@ -27,6 +27,14 @@ let blog_data = [
 ]
 let log_data = [
     {
+        title: "Update Log of v6.4.0",
+        date: "February 12, 2023",
+        writtenBy: "Syce",
+        id: "v6-4-0",
+        description: "This update includes a new game control bar with loads of bug fixes and other changes.",
+        text: "This update includes a new game control bar with loads of bug fixes and other changes. Read below for more details:<br><br><h3>Changes</h3><ul><li>New control bar while playing games</li><li class='whitecircle' type='circle'>Always with the game, meaning it stays in fullscreen mode</li><li class='whitecircle' type='circle'>Option to hide it in the menu, only for windowed fullscreen and normal fullscreen</li><li>Broken status icons are now two colors: yellow and red</li><li class='whitecircle' type='circle'>Yellow means blocked</li><li class='whitecircle' type='circle'>Red means broken or not working as expected</li></ul><br><h3>Other</h3><ul><li>Tags are shown a bit differently, only the first one is shown on the thumbnail</li><li>Removed game not focused overlay</li><li>Improved the speed of the filter by genre</li><li>Total time spent playing games is now in hours and minutes on the profile</li><li>Horizontal navbar automatically stays on top, can be disabled in settings</li><li>Removed Incredibox due to copyright infringement</li></ul><br><h3>Resolved Issues</h3><ul><li>Loading the site into the update logs section via hash would display the main section underneath</li><li>Windowed fullscreen would remain when going back with the arrow in chrome and clicking a new game</li><li>Most noticeable on mobile, you can scroll the sidebar horizontally and completely hide it</li><li>The top part of the sidebar would collide and go underneath the bottom part without any space on some devices</li><li>Opening up the sidebar and changing the scale would incorrectly set the iframe’s height upon closing the sidebar</li><li>Connect 4 style being messed up, replaced with a new one</li><li>Duck Life 4 not loading, you will still get the error</li><li>Madalin Stunt Cars 2 & 3 not loading</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
+    {
         title: "Update Log of v6.3.1",
         date: "February 6, 2023",
         writtenBy: "Syce",
@@ -296,6 +304,7 @@ function checkHash(){
     var newHash = window.location.hash
     if(newHash === "#updatelogs"){
         document.getElementById('blogPage').style.display = 'none'; 
+        document.getElementById('blog').style.display = 'none'; 
         document.getElementById('updateLogs').style.display = 'block';
     }
     if(newHash === "#" || newHash === ""){

@@ -1,3 +1,42 @@
+alwaysOnTop();
+
+function alwaysOnTop(changed){
+    if(changed === true){
+        if(localStorage.getItem("alwaysOnTop") === null || localStorage.getItem("alwaysOnTop") === "true"){
+            localStorage.setItem("alwaysOnTop", "false")
+            document.getElementById("alwaysOnTopSwitch").style.left = "15px";
+            document.getElementById("alwaysOnTopSwitch").style.backgroundColor = "var(--body-color)"
+            document.getElementById("alwaysOnTopBack").style.backgroundColor = "var(--toggle-color)";
+
+            document.getElementById("navbar2").style.position = "relative"
+            document.getElementById("navbar2").style.zIndex = 1000
+        } else {
+            document.getElementById("alwaysOnTopSwitch").style.left = "30px";
+            document.getElementById("alwaysOnTopSwitch").style.backgroundColor = "#fff"
+            document.getElementById("alwaysOnTopBack").style.backgroundColor = "var(--primary-color)";
+            localStorage.setItem("alwaysOnTop", "true")
+
+            document.getElementById("navbar2").style.position = "fixed"
+            document.getElementById("navbar2").style.zIndex = 1000
+        }
+        sendSiteData();
+        createAlertBox({ color: "green", text: "Applied New Changes"})
+    } else
+    {
+        if(localStorage.getItem("alwaysOnTop") !== "false"){
+            if(document.getElementById("alwaysOnTopSwitch") !== null){
+                document.getElementById("alwaysOnTopSwitch").style.left = "30px";
+                document.getElementById("alwaysOnTopSwitch").style.backgroundColor = "#fff"
+                document.getElementById("alwaysOnTopBack").style.backgroundColor = "var(--primary-color)";
+            }
+
+            document.getElementById("navbar2").style.position = "fixed"
+            document.getElementById("navbar2").style.zIndex = 1000
+        } else {
+        }
+    }
+}
+
 hotKeysSetting();
 
 function hotKeysSetting(changed){
@@ -204,7 +243,7 @@ function setCloak() {
     if(!link){
         link = window.document.createElement("link");
         link.rel = "icon"
-        link.herf = "test"
+        link.herf = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"
         link.type = "image/x-icon"
         window.document.getElementsByTagName("head")[0].appendChild(link);
     }

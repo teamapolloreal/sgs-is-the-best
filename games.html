@@ -75,7 +75,7 @@
                     <span class="horText">Links</span>
 
                     <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
-                        <button onclick="window.open('https://bit.ly/sgs-links', '_blank')" class="dropbtn" id="altLinks">
+                        <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
                             <span class='bx bx-link-external icon' style="transform: translateY(3px); font-size: 20px;"></span>
                             <span style="padding: 5px">Alt Links</span>
                         </button>
@@ -179,7 +179,7 @@
                             <span class="hovertext">Links</span>
 
                             <div id="linkOptions" class="dropdown-content" style="transform: translate(75px, 0px)">
-                                <button onclick="window.open('https://bit.ly/sgs-links', '_blank')" class="dropbtn" id="altLinks">
+                                <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
                                     <span class='bx bx-link-external' style="transform: translateY(3px); font-size: 20px;"></span>
                                     <span style="padding: 5px">Alt Links</span>
                                 </button>
@@ -253,9 +253,9 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">Alt Links Backup</div>
-            <div class="messageBannerText">I just created a backup for the link hub just in case they end up blocking the main one. Make sure to save them both, because at this point they're just blocking a new link everyday so idk. <a class="underline_text" onclick="window.open('https://bit.ly/sgs-links', '_blank')">bit.ly/sgs-links</a>, <a class="underline_text" onclick="window.open('https://bit.ly/sgs-alt-links', '_blank')">bit.ly/sgs-alt-links</a>.</div>
-            <div class="messageBannerDate">2/10/2023</div>
+            <div class="messageBannerTitle">New Update! (v6.4.0)</div>
+            <div class="messageBannerText">All new game control bar, with loads of game and bug fixes including Connect 4, Duck Life 4, Madalin Stunt Cars 2 & 3, plus more! Additionally, there is a new link hub with all new links: <a class="underline_text" onclick="window.open('https://bit.ly/sgs-v6', '_blank')">bit.ly/sgs-v6</a>. You can read the full update log <a class="underline_text" onclick="location.replace('blog.html#v6-4-0')">here.</a></div>
+            <div class="messageBannerDate">2/12/2023</div>
             <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
@@ -305,7 +305,8 @@
                     <div class="gameViewSubTitle">Description</div>
                     <div class="gameViewText" id="gameViewDescription"></div>
                     <br>
-                    <div style="display: inline-table; width: 50%; float: left;">
+                    <div style="display: inline-table; width: 50%; float: left; overflow: none;
+                    max-height: 23px;">
                         <div class="gameViewSubTitle">Genre</div>
                         <div class="gameViewText" id="gameViewGenre"></div>
                     </div>
@@ -387,7 +388,7 @@
         <div class="messageBanner broken_banner" style="display: none; background-color: red;" id="importantMessage">
             <div class="messageBannerTitle">
                 <span class='bx bx-error icon' style="transform: translateY(2px)"></span>
-                <span>This game may be experiencing issues.<span>
+                <span id="mbttitle">This game may be experiencing issues.<span>
             </div>
             <div class="messageBannerText" style="width: 100%; overflow: none;" id="messageBannerText">This game may not be working as expected. Error: </div>
         </div>
@@ -424,46 +425,49 @@
             <div style="min-width: 100vw; min-height: 100vh; position: fixed; background-color: transparent; top: 0;
             z-index: 100000" id="afkdetector"></div>
             <iframe class="gameIframe" src="" id="gameIframe"></iframe>
-        </div>
-        <div class="iframeFocus" onclick="focusGame()" id="iframeFocus">
-            <br><br>
-            <span style="font-size: 2.25vw; line-height: 150%; font-weight: 600;">Game not focused</span>
-            <br>
-            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">Click to re-focus.</span>
-            <div style="height: 25vw; width: 1px; opacity: 0;"></div>
-            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 600;">Huh?</span>
-            <br>
-            <span style="font-size: 1.2vw; line-height: 150%; font-weight: 500;">You can't play the game if it's not focused, goofy. 💀</span>
-        </div>
-        <div class="playgamebtnoverlay" id="playbtnoverlay">
-            <div class="clickToPlay">Play Game</div>
-        </div>
-        <br>
-        <div class="controlsBox" id="controls">
+            <div class="controlBar" id="controlbar" onclick="focusGame()">
+                <div style="float: left">
+                    <img class="cbLogo" src="sgs-logo.png" alt="">
+                    <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                        <span class="cbLogoText" id="horLogoText">Syce's Game Shack</span>
+                    </div>
+                </div>
+                <div style="float: right">
+                    <div class="controlOption" onclick="optionsMenu('cbOptionsMenu')">
+                        <span class='bx bx-dots-vertical-rounded cbicon'></span>
+                        <div id="cbOptionsMenu" class="dropdown-content" style="transform: translate(75px, -190px); right: 0px;">
+                            <button onclick="hideBar()" class="dropbtn splashOp" style="display: none" id="hidebaroption">
+                                <span class='bx bx-hide icon' style="transform: translateY(3px); font-size: 20px"></span>
+                                <span style="padding: 5px">Hide This Bar</span>
+                            </button>
+                            <button onclick="windowedfullscreen()" class="dropbtn splashOp" id="cbwindowed">
+                                <span class='bx bx-window-alt icon' style="transform: translateY(3px); font-size: 20px"></span>
+                                <span style="padding: 5px" id="cbwindowedtext">Windowed</span>
+                            </button>
+                            <button onclick="toggleFPS()" class="dropbtn splashOp">
+                                <span class='bx bx-toggle-right icon' style="transform: translateY(3px); font-size: 20px" id="cbfpstoggleicon"></span>
+                                <span style="padding: 5px;">Toggle FPS</span>
+                            </button>
+                            <button onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')" class="dropbtn splashOp">
+                                <span class='bx bx-error-circle icon' style="transform: translateY(3px); font-size: 20px"></span>
+                                <span style="padding: 5px">Report</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="controlOption" onclick="favorite()" id="cbfavorite"><span class='bx bx-star cbicon' id="cbfavoriteicon"></span></div>
+                    <div class="controlOption" onclick="controls()"><span class='bx bx-joystick-button cbicon'></span></div>
+                    <div class="controlOption" onclick="gamepage()"><span class='bx bx-joystick cbicon'></span></div>
+                    <div class="controlOption" onclick="fullscreen()" id="cbfullscreen"><span class='bx bx-fullscreen cbicon' id="cbfullscreenicon"></span></div>
+                </div>
+            </div>
+            <div class="controlsBox" id="controls">
             <span class="controlsTitle">Controls</span>
             <br>
             <span class="controlsText" id="controlsText"></span>
         </div>
-        <div class="gamePageBtnBackground">
-            <div class="gamePageBtn" onclick="fullscreen()">
-                <span class='bx bx-fullscreen icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
-                <span style="padding: 5px; font-size: 1.2vw">Fullscreen</span>
-            </div>
-            <div style="width: 5%; height: 1px; display: inline-table;"></div>
-            <div class="gamePageBtn" onclick="controls()">
-                <span class='bx bxs-joystick-button icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
-                <span style="padding: 5px; font-size: 1.2vw">Controls</span>
-            </div>
-            <div style="width: 5%; height: 1px; display: inline-table;"></div>
-            <div class="gamePageBtn" onclick="window.open('https://forms.gle/nw1mY6aqgSHdbm5E7', '_blank')">
-                <span class='bx bxs-error-circle icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
-                <span style="padding: 5px; font-size: 1.2vw">Report</span>
-            </div>
-            <div style="width: 5%; height: 1px; display: inline-table;"></div>
-            <div class="gamePageBtn" onclick="gamepage()">
-                <span class='bx bxs-joystick icon' style="transform: translateY(3px); font-size: 1.6vw"></span>
-                <span style="padding: 5px; font-size: 1.2vw">Gamepage</span>
-            </div>
+        </div>
+        <div class="playgamebtnoverlay" id="playbtnoverlay">
+            <div class="clickToPlay">Play Game</div>
         </div>
         <br>
         <br>
