@@ -1,4 +1,4 @@
-let bannerMessageNum = "22"
+let bannerMessageNum = "23"
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -203,18 +203,9 @@ function resizeWidth(){
     if(document.getElementById("gameIframe") !== null){
         let newHeight = `${document.querySelector("iframe").getBoundingClientRect().width / 1.778}px`
         if(inFullscreen !== true && inWindowedFullscreen !== true){
-            var stylesheet = document.styleSheets[0]
-            let elementRules;
-
-            for(let i = 0; i < stylesheet.cssRules.length; i++){
-                if(stylesheet.cssRules[i].selectorText === ".gameIframe"){
-                    elementRules = stylesheet.cssRules[i]
-                }
-            }
-
             var newnewHeight = document.querySelector("iframe").getBoundingClientRect().width / 1.778 - 60
             if(document.getElementById("navbar1").classList.value === "sidebar") newnewHeight = (document.querySelector("iframe").getBoundingClientRect().width + 162) / 1.778 - 60
-            elementRules.style.setProperty("height", `${newnewHeight}px`)
+            document.getElementById("gameIframe").style.height = newnewHeight + "px"
         }
         // document.getElementById("iframeFocus").style.height = newHeight
         document.getElementById("playbtnoverlay").style.height = newHeight

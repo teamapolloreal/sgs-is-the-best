@@ -2724,21 +2724,21 @@ function hideBar(){
 function showBar(){
     document.getElementById("controlbar").style.display = "block"
 
-    var stylesheet = document.styleSheets[0]
-    let elementRules;
-    let elementRules2;
+    // var stylesheet = document.styleSheets[0]
+    // let elementRules;
+    // let elementRules2;
 
-    for(let i = 0; i < stylesheet.cssRules.length; i++){
-        if(stylesheet.cssRules[i].selectorText === ".gameIframeFullscreen"){
-            elementRules = stylesheet.cssRules[i]
-        }
+    // for(let i = 0; i < stylesheet.cssRules.length; i++){
+    //     if(stylesheet.cssRules[i].selectorText === ".gameIframeFullscreen"){
+    //         elementRules = stylesheet.cssRules[i]
+    //     }
 
-        if(stylesheet.cssRules[i].selectorText === ".gameIframeFull"){
-            elementRules2 = stylesheet.cssRules[i]
-        }
-    }
+    //     if(stylesheet.cssRules[i].selectorText === ".gameIframeFull"){
+    //         elementRules2 = stylesheet.cssRules[i]
+    //     }
+    // }
 
-    document.getElementById("exitBtn").style.display = "none"
-    elementRules.style.setProperty("height", "calc(100% - 60px)")
-    elementRules2.style.setProperty("height", "calc(100% - 60px)")
+    // document.getElementById("exitBtn").style.display = "none"
+    // elementRules.style.setProperty("height", "calc(100% - 60px)")
+    // elementRules2.style.setProperty("height", "calc(100% - 60px)")
 }
