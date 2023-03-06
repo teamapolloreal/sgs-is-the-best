@@ -418,7 +418,7 @@ function submitform(e){
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        if(data.success === "true"){
+        if(data.success === "true" || data.message.startsWith("This form needs Activation.")){
             reportform();
             createAlertBox({ color: "green", text: "Successfully Submitted", time: 5000 })
             document.getElementById("brform").style.opacity = 1
