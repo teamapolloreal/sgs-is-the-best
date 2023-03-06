@@ -1,4 +1,4 @@
-let lastUpdate = "2/12/2023 (v6.4.0)"
+let lastUpdate = "3/6/2023 (v6.4.1)"
 let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -7,15 +7,15 @@ const data = [
         id: "1v1.lol",
         genre: "Shooter / Battle Royale",
         description: "1v1.lol is an online building simulator & third person shooting game. Battle royale, build fight, zone wars and more game modes to enjoy!",
-        link: "https://advanced-channeler.02.gz-associates.com/?t=tam-1v1-lol",
+        link: "https://r.codewars.cf/d918eeaba2584f1eb0e57c88f5312813/_rhsuABgp://Klj.q5a/",
         img: `${cdnUrl}/High Compressed/highcompress_1v1-lol.png`,
         file_based: false,
         publisher: "JustPlay.LOL",
         controls: [
             "Slide Left Click - Aim",
         ],
-        broken: true,
-        note: "Game won't load (WebSocket connection to wss failed)"
+        // broken: true,
+        // note: "Game won't load (WebSocket connection to wss failed)"
     },
     {
         name: "2 Player Games",
@@ -2172,7 +2172,7 @@ document.getElementById("gamecount").innerText = `Game count: ${data.length}\nUp
 // var genre = document.getElementsByClassName(`game_genre`)
 // var click = document.getElementsByClassName(`game_click`)
 loadGames()
-function loadGames(){
+function loadGames(text){
     var count = 0
     var containers = []
     var favorities = []
@@ -2255,6 +2255,13 @@ function loadGames(){
 
         div.appendChild(game_click)
 
+        if(text === true || localStorage.getItem("thumbnailtext") === "true"){
+            game_title.style.display = "block"
+            game_genre.style.display = "block"
+            shadow.style.display = "block"
+            if(fav_icon){ fav_icon.style.display = "block" } else { broken_icon.style.display = "block" }
+        }
+
         if(localStorage.getItem("gameIcon") === "false"){
             div.style.padding = "8px";
             div.style.height = "55px";
@@ -2265,6 +2272,9 @@ function loadGames(){
             game_title.style.transform = "translate(0, -2px)"
             game_genre.style.transform = "translate(0, 25px)"
             game_genre.style.opacity = 1
+            game_title.style.display = "block"
+            game_genre.style.display = "block"
+            if(fav_icon){ fav_icon.style.display = "block" } else { broken_icon.style.display = "block" }
 
             var randomGameSelector = document.getElementById("randomSelector")
             randomGameSelector.style.padding = "8px";
@@ -2457,6 +2467,7 @@ function viewGame(gameID){
             document.body.style.overflow = "hidden"
             if(data[i].devices){ devices.innerText = data[i].devices } else { devices.innerText = "Computer" };
             currentGame = data[i].id
+            document.getElementById("gameviewrb").onclick = function(){ reportform(data[i].name) }
 
             if(localStorage.getItem("favorites") && localStorage.getItem("favorites").includes(data[i].id)){
                 document.getElemeFntById("favoriteOption2").onclick = function(){ unfavorite(data[i].id) }
@@ -2481,6 +2492,7 @@ function clicked(){
 
 document.addEventListener("click", () => {
     if(document.getElementById("gameViewFullscreen").style.display === "block"){
+        if(document.getElementById("reportform").style.display === "block") return;
         if(clickedView === true){
             clickedView = false
         } else {
@@ -2494,6 +2506,7 @@ document.addEventListener("click", () => {
 })
 
 document.addEventListener("keydown", (event) => {
+    if(document.getElementById("reportform").style.display === "block") return;
     if(document.getElementById("gameViewFullscreen").style.display === "block" && event.key === "Enter"){
         playGame(currentGame);
     }
@@ -2604,6 +2617,8 @@ function playGame(gameID, onload){
                 document.getElementById("messageBannerText").innerHTML = `This may not affect you depending on where you are and on what device.`
             }
 
+            document.getElementById("cbbrform").onclick = function(){ reportform(data[i].name) }
+
             if(localStorage.getItem("nav") === "Sidebar" && body.querySelector('nav').classList.value === "sidebar") body.querySelector('nav').classList.toggle("close")
             // document.getElementById("gameIframe").focus();
             window.scrollTo(0, 0)
@@ -2701,24 +2716,25 @@ function checkHash(onload){
 
 function hideBar(){
     document.getElementById("controlbar").style.display = "none"
+    document.getElementById("gameIframe").style.height = "100%"
 
-    var stylesheet = document.styleSheets[0]
-    let elementRules;
-    let elementRules2;
+    // var stylesheet = document.styleSheets[0]
+    // let elementRules;
+    // let elementRules2;
 
-    for(let i = 0; i < stylesheet.cssRules.length; i++){
-        if(stylesheet.cssRules[i].selectorText === ".gameIframeFullscreen"){
-            elementRules = stylesheet.cssRules[i]
-        }
+    // for(let i = 0; i < stylesheet.cssRules.length; i++){
+    //     if(stylesheet.cssRules[i].selectorText === ".gameIframeFullscreen"){
+    //         elementRules = stylesheet.cssRules[i]
+    //     }
 
-        if(stylesheet.cssRules[i].selectorText === ".gameIframeFull"){
-            elementRules2 = stylesheet.cssRules[i]
-        }
-    }
+    //     if(stylesheet.cssRules[i].selectorText === ".gameIframeFull"){
+    //         elementRules2 = stylesheet.cssRules[i]
+    //     }
+    // }
 
     if(inWindowedFullscreen === true) document.getElementById("exitBtn").style.display = "block"
-    elementRules.style.setProperty("height", "100%")
-    elementRules2.style.setProperty("height", "100%")
+    // elementRules.style.setProperty("height", "100%")
+    // elementRules2.style.setProperty("height", "100%")
 }
 
 function showBar(){

@@ -314,7 +314,7 @@
                 <option class="settingsSelectOption">Green</option>
                 <option class="settingsSelectOption">Light Blue</option>
                 <option class="settingsSelectOption">Red</option>
-                <!-- <option class="settingsSelectOption">Rainbow</option> -->
+                <option class="settingsSelectOption">Rainbow</option>
             </select>
             <input name="Color Picker" type="color" class="color_picker" id="theme_color_picker" oninput="setTheme()">
             <br>
@@ -328,6 +328,13 @@
                 <option class="settingsSelectOption">Schoology</option>
                 <option class="settingsSelectOption">Desmos</option>
             </select>
+            <br>
+            <div class="settingsTitle">Show Game Thumbnail Text</div>
+            <div class="pageDescription">Toggle whether to show the text on game thumbnails. When this setting is off it only appears on hover.</div>
+            <div class="settingsSwitch" onclick="ThumbnailText(true)">
+                <span class="switchBack" id="TTBack"></span>
+                <span class="switchDot" id="TTSwitch"></span>
+            </div>
             <br>
         </div>
         <div class="pageLine"></div>

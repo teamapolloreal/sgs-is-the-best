@@ -1,4 +1,4 @@
-let lastUpdate = "2/12/2023 (v6.4.0)"
+let lastUpdate = "3/6/2023 (v6.4.1)"
 let sound_data = [
     {
         name: "9 + 10",
@@ -571,7 +571,7 @@ function stopAll(){
         document.getElementById(sound_data[i].id + "_circle").style.display = "none"
         document.getElementById(sound_data[i].id + "_click").getElementsByClassName("icon")[0].classList = "bx bx-play icon"
         document.getElementById(sound_data[i].id).style.boxShadow = "none"
-        document.getElementById(sound_data[i].id).onclick = function(){ playSound(id) }
+        document.getElementById(sound_data[i].id).onclick = function(){ playSound(sound_data[i].id) }
     }
 }
 

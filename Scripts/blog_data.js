@@ -24,8 +24,27 @@ let blog_data = [
         description: "Yeah, it's that time again. Read this to find out what I have planed for version 6. 👀",
         text: "So I basically got bored and started thinking of what to do next. Honestly, just thinking about adding games and some new features makes me not want to work on the site for some reason, and I get pulled into thinking about how I could improve the site even better. This led me to think about version 6, the next big update to Syce’s Game Shack!<br><br>And yes I know there haven’t been any updates recently and that’s because of school and stuff. You can read more about why and stuff in my forms: https://sgs.peerboard.com/post/1933814057. Yes, this will continue to be the same until the update most likely, so don’t get your hopes up for an update before version 6.<br><br><h3>What To Expect</h3>I wouldn’t expect too much from any major site update. As mentioned before, updates are usually just features and stuff, and not anything different. So why not refresh the site a little bit every once in a while to make it seem new?<br><br>In this update, I plan on redesigning some major components of the site including the overhaul of some pages to give them a new fresh look. Almost think about it as version 4 (which was a massive rewrite) except not as insane and more modern. Of course, I still plan on adding features and some games to go along with this but I’m more so focusing on the design.<br><br><h3>What for Now?</h3>For now, you can just wait and continue playing as always. I wouldn’t say this would take that long, maybe a few weeks at most, sometime in December. I’m totally open to suggestions, you can suggest through the game suggestion link (which will change to accept features) or my peerboard: https://sgs.peerboard.com. Anyways, I hope you’ll like the refresh and I’ll continue to do this every once in a while.",
     },
+
+    //hidden
+    {
+        title: "Bug Report Data Privacy",
+        date: "March 4, 2023",
+        writtenBy: "Syce",
+        id: "bug-report-data-privacy",
+        hidden: true,
+        description: "",
+        text: "I respect all user data & privacy which is why I choose to not send any personal or sensitive information. That being said, additional data is sent over along with the report to better help investigate and get a better understanding of the issue. This includes, but is not limited to:<br><ul><li>Analytical Data</li><li>Device and Broswer Data</li></ul><br>If you feel this violates your privacy in any way you are welcome to report bugs through this <a class='underline_text colored' onclick='window.open(`https://forms.gle/nw1mY6aqgSHdbm5E7`, `_blank`)'>Google Form</a> as no additional or personal data is send through."
+    },
 ]
 let log_data = [
+    {
+        title: "Update Log of v6.4.1",
+        date: "March 6, 2023",
+        writtenBy: "Syce",
+        id: "v6-4-1",
+        description: "This update includes some small changes and bug fixes.",
+        text: "This update includes some small changes and bug fixes. Read below for more details:<br><br><h3>Changes</h3><ul><li>Slight design change for the game thumbnails, text only appears on hover</li><li class='whitecircle' type='circle'>Can be toggled back on in settings</li><li>Rainbow theme color, uses threading to optimize performance</li><li>New bug report form, built into the site (may need additional work)</li></ul><br><h3>Resolved Issues</h3><ul><li>Bootstrap alert box positioning wrong with the horizontal navbar being always on top</li><li>Sounds unplayable after clicking stop all while all were playing</li><li>The hide bar button not working properly</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
     {
         title: "Update Log of v6.4.0",
         date: "February 12, 2023",
@@ -189,6 +208,7 @@ let log_data = [
 
 let count = 0
 blog_data.forEach(blog => {
+    if(blog.hidden === true) return;
     let btn = document.getElementsByClassName(`blogReadBtn`)
     let title = document.getElementsByClassName(`blogTitle`)
     let date = document.getElementsByClassName(`blogDate`)
@@ -204,6 +224,7 @@ blog_data.forEach(blog => {
 
 let count2 = 0
 log_data.forEach(blog => {
+    if(blog.hidden === true) return;
     let btn = document.getElementsByClassName(`logReadBtn`)
     let title = document.getElementsByClassName(`logTitle`)
     let date = document.getElementsByClassName(`logDate`)

@@ -25,6 +25,7 @@ var siteSaves = [
 	"theme",
 	"bannerMessageNum",
 	"alwaysOnTop",
+	"thumbnailtext",
 
 	"play_10_minutes",
 	"play_20_minutes",

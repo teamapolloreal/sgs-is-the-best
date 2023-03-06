@@ -1,4 +1,4 @@
-let bannerMessageNum = "23"
+let bannerMessageNum = "23" //6.4.1
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -253,6 +253,7 @@ window.onload = (event) => {
     }
 
     if(window.location.pathname === "/games.html" || window.location.pathname === "/blog.html") checkHash(true);
+    if(localStorage.getItem("nav") === "Horizontal Bar" && localStorage.getItem("alwaysOnTop") !== "false") document.getElementById("alerts").style.bottom = "5%"
 }
 
 // window.onbeforeunload = function() {
@@ -372,4 +373,151 @@ function random_game(){
     if(!window.location.pathname === "/games.html") return; 
     clickcount = 1
     if(document.getElementById("gamepage").style.display === "none") viewGame(data[Math.floor(Math.random() * data.length)].id);
+}
+
+function reportform(name){
+    var form = document.getElementById("reportform")
+    if(form.style.display === "block"){
+        form.style.display = "none"
+        if(document.getElementById("gameViewFullscreen").style.display !== "block") document.body.style.overflow = "visible"
+    } else {
+        form.style.display = "block"
+        if(name) document.getElementById("issue").value = name;
+        exitFullscreen();
+        exitWindowed();
+        document.body.style.overflow = "hidden"
+    }
+}
+
+var sending = false //small backup just in case
+function submitform(e){
+    e.preventDefault();
+    if(sending === true) return;
+    sending = true
+    createAlertBox({ text: "Please wait...", time: "never", id:"submitting" })
+    document.getElementById("brform").style.opacity = 0.7
+    document.getElementById("brform").style.pointerEvents = "none"
+    var form = document.getElementById("brform");
+    var formData = {};
+    for (const field of form.elements) {
+        if (field.name) {
+          formData[field.name] = field.value;
+        }
+    }
+    formData.device = OSDetails()
+    formData.browser = browserDetails()
+    //56ade426936ca24343ca1bd09d53f608
+    fetch('https://formsubmit.co/ajax/sycegameshack@gmail.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        if(data.success === "true"){
+            reportform();
+            createAlertBox({ color: "green", text: "Successfully Submitted", time: 5000 })
+            document.getElementById("brform").style.opacity = 1
+            document.getElementById("brform").style.pointerEvents = "auto"
+            document.getElementById("submitting").remove()
+            sending = false
+        } else {
+            if(data.success === "false"){
+                createAlertBox({ color: "red", text: "Unable to Submit", time: 5000 })
+                document.getElementById("brform").style.opacity = 1
+                document.getElementById("brform").style.pointerEvents = "auto"
+                document.getElementById("submitting").remove()
+                sending = false
+            }
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        createAlertBox({ color: "red", text: "Unable to Submit", time: 5000 })
+        document.getElementById("brform").style.opacity = 1
+        document.getElementById("brform").style.pointerEvents = "auto"
+        document.getElementById("submitting").remove()
+        sending = false
+      });
+}
+
+function browserDetails(){
+    var nVer = navigator.appVersion;
+    var nAgt = navigator.userAgent;
+    var browserName  = navigator.appName;
+    var fullVersion  = ''+parseFloat(navigator.appVersion); 
+    var majorVersion = parseInt(navigator.appVersion,10);
+    var nameOffset,verOffset,ix;
+
+    // In Opera, the true version is after "OPR" or after "Version"
+    if ((verOffset=nAgt.indexOf("OPR"))!=-1) {
+     browserName = "Opera";
+     fullVersion = nAgt.substring(verOffset+4);
+     if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+       fullVersion = nAgt.substring(verOffset+8);
+    }
+    // In MS Edge, the true version is after "Edg" in userAgent
+    else if ((verOffset=nAgt.indexOf("Edg"))!=-1) {
+     browserName = "Microsoft Edge";
+     fullVersion = nAgt.substring(verOffset+4);
+    }
+    // In MSIE, the true version is after "MSIE" in userAgent
+    else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+     browserName = "Microsoft Internet Explorer";
+     fullVersion = nAgt.substring(verOffset+5);
+    }
+    // In Chrome, the true version is after "Chrome" 
+    else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+     browserName = "Chrome";
+     fullVersion = nAgt.substring(verOffset+7);
+    }
+    // In Safari, the true version is after "Safari" or after "Version" 
+    else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+     browserName = "Safari";
+     fullVersion = nAgt.substring(verOffset+7);
+     if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+       fullVersion = nAgt.substring(verOffset+8);
+    }
+    // In Firefox, the true version is after "Firefox" 
+    else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+     browserName = "Firefox";
+     fullVersion = nAgt.substring(verOffset+8);
+    }
+    // In most other browsers, "name/version" is at the end of userAgent 
+    else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+              (verOffset=nAgt.lastIndexOf('/')) ) 
+    {
+     browserName = nAgt.substring(nameOffset,verOffset);
+     fullVersion = nAgt.substring(verOffset+1);
+     if (browserName.toLowerCase()==browserName.toUpperCase()) {
+      browserName = navigator.appName;
+     }
+    }
+    // trim the fullVersion string at semicolon/space if present
+    if ((ix=fullVersion.indexOf(";"))!=-1)
+       fullVersion=fullVersion.substring(0,ix);
+    if ((ix=fullVersion.indexOf(" "))!=-1)
+       fullVersion=fullVersion.substring(0,ix);
+
+    majorVersion = parseInt(''+fullVersion,10);
+    if (isNaN(majorVersion)) {
+     fullVersion  = ''+parseFloat(navigator.appVersion); 
+     majorVersion = parseInt(navigator.appVersion,10);
+    }
+
+    return `${browserName}, ${fullVersion}, ${majorVersion}, ${navigator.appName}, ${navigator.userAgent}`;
+}
+
+function OSDetails(){
+    var OSName="Unknown OS";
+    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+    return OSName
 }

@@ -1,3 +1,37 @@
+ThumbnailText();
+
+function ThumbnailText(changed){
+    if(changed === true){
+        if(localStorage.getItem("thumbnailtext") === "true"){
+            localStorage.setItem("thumbnailtext", "false")
+            document.getElementById("TTSwitch").style.left = "15px";
+            document.getElementById("TTSwitch").style.backgroundColor = "var(--body-color)"
+            document.getElementById("TTBack").style.backgroundColor = "var(--toggle-color)";
+            removeGames();
+            loadGames();
+        } else {
+            document.getElementById("TTSwitch").style.left = "30px";
+            document.getElementById("TTSwitch").style.backgroundColor = "#fff"
+            document.getElementById("TTBack").style.backgroundColor = "var(--primary-color)";
+            localStorage.setItem("thumbnailtext", "true")
+            removeGames();
+            loadGames(true);
+        }
+        sendSiteData();
+        createAlertBox({ color: "green", text: "Applied New Changes"})
+    } else
+    {
+        if(localStorage.getItem("thumbnailtext") === "true"){
+            if(document.getElementById("TTSwitch") !== null){
+                document.getElementById("TTSwitch").style.left = "30px";
+                document.getElementById("TTSwitch").style.backgroundColor = "#fff"
+                document.getElementById("TTBack").style.backgroundColor = "var(--primary-color)";
+            }
+        } else {
+        }
+    }
+}
+
 alwaysOnTop();
 
 function alwaysOnTop(changed){
@@ -10,6 +44,7 @@ function alwaysOnTop(changed){
 
             document.getElementById("navbar2").style.position = "relative"
             document.getElementById("navbar2").style.zIndex = 1000
+            if(localStorage.getItem("nav") === "Horizontal Bar") document.getElementById("alerts").style.bottom = "17%"
         } else {
             document.getElementById("alwaysOnTopSwitch").style.left = "30px";
             document.getElementById("alwaysOnTopSwitch").style.backgroundColor = "#fff"
@@ -18,6 +53,7 @@ function alwaysOnTop(changed){
 
             document.getElementById("navbar2").style.position = "fixed"
             document.getElementById("navbar2").style.zIndex = 1000
+            if(localStorage.getItem("nav") === "Horizontal Bar") document.getElementById("alerts").style.bottom = "5%"
         }
         sendSiteData();
         createAlertBox({ color: "green", text: "Applied New Changes"})
@@ -97,6 +133,7 @@ function setNav(){
         document.getElementById("navbar2").style.display = "block"
         sidebar.classList = "sidebar"
         document.getElementById("alerts").style.bottom = "17%"
+        if(localStorage.getItem("alwaysOnTop") !== null) document.getElementById("alerts").style.bottom = "5%"
 
         var sections = document.getElementsByClassName("section")
         for(let i = 0; i < sections.length; i++){
@@ -330,18 +367,21 @@ if(ddl !== null){
     }
 }
 
+const rainbow = new Worker('Scripts/Threading/rainbow.js');
+rainbow.onmessage = function(e) {
+    if(e.data.type === "sending") document.body.style.setProperty("--primary-color", e.data.data)
+}
+
 loadTheme();
 function loadTheme(){
     let theme = localStorage.getItem("themeHex")
     if(!theme) theme = "#695CFE"
+    rainbow.postMessage('Stop Interval');
     if(theme === "Rainbow"){
         theme = "#ff0000"
-
-        let hue = 0;
-        var rainbow = setInterval(() => {
-            hue = (hue + 1) % 360;
-            document.body.style.setProperty("--primary-color", `hsl(${hue}, 100%, 50%)`)
-        }, 25)
+        
+        rainbow.postMessage('Start Interval');
+        
     }
     if(localStorage.getItem("mode") === "Dark" || localStorage.getItem("mode") === "Dark Themed"){
         document.body.style.setProperty("--primary-color", theme)
