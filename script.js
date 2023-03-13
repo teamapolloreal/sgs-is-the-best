@@ -1,4 +1,4 @@
-let bannerMessageNum = "23" //6.4.1
+let bannerMessageNum = "24" //6.5.0
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -110,7 +110,7 @@ function fullscreen(){
                 inFullscreen = false
                 document.getElementById("cbfullscreen").onclick = function(){ fullscreen() }
                 document.getElementById("cbfullscreenicon").classList = "bx bx-fullscreen cbicon"
-                document.body.style.overflow = "visible"                
+                if(inRForm === false) document.body.style.overflow = "visible"                
                 document.getElementById("cbOptionsMenu").style.transform = "translate(75px, -190px)"
                 document.getElementById("hidebaroption").style.display = "none"
                 showBar();
@@ -216,9 +216,11 @@ function resizeWidth(){
       var z = x / y - 26
 
         container[i].style.width = `${z}px`
+        if(localStorage.getItem("gameIcon") !== "false") container[i].getElementsByClassName("game_img")[0].style.height = `${z * 0.5249}px`
         // container[i].style.marginLeft = `${z}px`
         gamebar.style.width = `calc(90% + ${7 * y})`
         document.getElementById("randomSelector").style.width = `${z}px`
+        if(localStorage.getItem("gameIcon") !== "false") document.getElementById("randomSelector").getElementsByClassName("game_img")[0].style.height = `${z * 0.5249}px`
     }
     for(let i = 0; i < soundboard.length; i++){
         var x = window.innerWidth * 90 / 100
@@ -252,7 +254,7 @@ window.onload = (event) => {
         if(document.getElementById("bannerMessage")) document.getElementById("bannerMessage").style.display = "block"
     }
 
-    if(window.location.pathname === "/games.html" || window.location.pathname === "/blog.html") checkHash(true);
+    if(window.location.pathname.endsWith("games.html") || window.location.pathname.endsWith("blog.html")) checkHash(true);
     if(localStorage.getItem("nav") === "Horizontal Bar" && localStorage.getItem("alwaysOnTop") !== "false") document.getElementById("alerts").style.bottom = "5%"
 }
 
@@ -267,13 +269,29 @@ function hideBanner(){
 }
 
 function optionsMenu(dropdown) {
-		e = document.getElementById(dropdown)
-		if(e.style.display === "none" || (e.style.display !== "none" && e.style.display !== "block")){
-			e.style.display = "block"
-		} else {
-			e.style.display = "none"
-		}
+	e = document.getElementById(dropdown)
+	if(e.style.display === "none" || (e.style.display !== "none" && e.style.display !== "block")){
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
 	}
+}
+
+window.addEventListener("message", testLoop, false);
+
+var lastFPSUpdate = null
+function testLoop(event){
+    if(localStorage.getItem("FPSCount") !== "true") return;
+    if(!document.getElementById("FPSCount")) return;
+    document.getElementById("FPSCount").style.display = "block"
+    if(event.data.id === "sendFPSData") document.getElementById("FPSCount").innerText = event.data.count;
+    lastFPSUpdate = Date.now()
+}
+
+var fps2 = null
+setInterval(() => {
+    if(lastFPSUpdate + 5000 < Date.now()){ fps2 = true } else { fps2 = false };
+}, 2000)
 
   const times = [];
   var updateTime = null
@@ -294,13 +312,13 @@ function optionsMenu(dropdown) {
           fps = times.length
           minimum.push(fps)
           if(updateTime === null || updateTime < Date.now()){
-              if(lastMin.num === 4){
+              if(lastMin.num === 2){
                   lastMin.last = minimum.sort((a, b) => a - b)[0]
                   lastMin.num = 0
                   minimum = []
               }
-              document.getElementById("FPSCount").innerText = `${fps - 1}/${lastMin.last - 1} FPS`
-              updateTime = Date.now() + 250
+              if(fps2 === true) document.getElementById("FPSCount").innerText = `${fps - 1}/${lastMin.last - 1} FPS`
+              updateTime = Date.now() + 500
               lastMin.num++
           }
           refreshLoop()
@@ -346,7 +364,7 @@ function optionsMenu(dropdown) {
   }
 
 function instantLaunch(event){
-    if(!window.location.pathname === "/games.html") return;
+    if(!window.location.pathname.endsWith("games.html")) return;
     console.log(event)
     if(event.target.id === "container") playGame(event.target.firstChild.id);
     if(event.target.id === "title" || event.target.id === "genre") playGame(event.target.parentElement.id);
@@ -354,7 +372,7 @@ function instantLaunch(event){
 }
 
 function toggleFPS(){
-    if(window.location.pathname !== "/games.html") return;
+    if(!window.location.pathname.endsWith("games.html")) return;
     if(localStorage.getItem("FPSCount") !== "true"){
         localStorage.setItem("FPSCount", "true")
         document.getElementById("FPSCount").style.display = "block"
@@ -375,37 +393,106 @@ function random_game(){
     if(document.getElementById("gamepage").style.display === "none") viewGame(data[Math.floor(Math.random() * data.length)].id);
 }
 
+var inRForm = false
 function reportform(name){
     var form = document.getElementById("reportform")
     if(form.style.display === "block"){
         form.style.display = "none"
-        if(document.getElementById("gameViewFullscreen").style.display !== "block") document.body.style.overflow = "visible"
+        if(document.getElementById("gameViewFullscreen").style.display !== "block") document.body.style.overflow = "visible";
+        clearForm();
+        inRForm = false
     } else {
         form.style.display = "block"
         if(name) document.getElementById("issue").value = name;
         exitFullscreen();
         exitWindowed();
-        document.body.style.overflow = "hidden"
+        document.body.style.overflow = "hidden";
+        document.getElementById("sform").style.display = "none"
+        document.getElementById("brform").style.display = "block"
+        document.getElementById("fform").style.display = "none"
+        document.getElementById("form_title").innerText = "Bug Report"
+        inRForm = true
     }
 }
 
+function suggestform(){
+    var form = document.getElementById("reportform")
+    if(form.style.display === "block"){
+        form.style.display = "none"
+        if(document.getElementById("gameViewFullscreen").style.display !== "block") document.body.style.overflow = "visible";
+        clearForm();
+        inRForm = false
+    } else {
+        form.style.display = "block"
+        if(name) document.getElementById("issue").value = name;
+        exitFullscreen();
+        exitWindowed();
+        document.body.style.overflow = "hidden";
+        document.getElementById("sform").style.display = "block"
+        document.getElementById("brform").style.display = "none"
+        document.getElementById("fform").style.display = "none"
+        document.getElementById("form_title").innerText = "Suggestion"
+        inRForm = true
+    }
+}
+
+function feedbackform(){
+    var form = document.getElementById("reportform")
+    if(form.style.display === "block"){
+        form.style.display = "none"
+        if(document.getElementById("gameViewFullscreen").style.display !== "block") document.body.style.overflow = "visible";
+        clearForm();
+        inRForm = false
+    } else {
+        form.style.display = "block"
+        if(name) document.getElementById("issue").value = name;
+        exitFullscreen();
+        exitWindowed();
+        document.body.style.overflow = "hidden";
+        document.getElementById("fform").style.display = "block"
+        document.getElementById("sform").style.display = "none"
+        document.getElementById("brform").style.display = "none"
+        document.getElementById("form_title").innerText = "Feedback"
+        inRForm = true
+    }
+}
+
+function clearForm(){
+    document.getElementById("issue").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("reproduce").value = "";
+
+    document.getElementById("suggestion").value = "";
+    document.getElementById("information").value = "";
+
+    document.getElementById("feedback").value = "";
+    document.getElementById("improvement").value = "";
+    document.getElementById("rating").value = "";
+}
+
 var sending = false //small backup just in case
-function submitform(e){
+function submitform(e, type){
     e.preventDefault();
     if(sending === true) return;
     sending = true
     createAlertBox({ text: "Please wait...", time: "never", id:"submitting" })
     document.getElementById("brform").style.opacity = 0.7
     document.getElementById("brform").style.pointerEvents = "none"
-    var form = document.getElementById("brform");
+    document.getElementById("sform").style.opacity = 0.7
+    document.getElementById("sform").style.pointerEvents = "none"
+    document.getElementById("fform").style.opacity = 0.7
+    document.getElementById("fform").style.pointerEvents = "none"
+    var form = document.getElementById(type);
     var formData = {};
     for (const field of form.elements) {
         if (field.name) {
           formData[field.name] = field.value;
         }
     }
-    formData.device = OSDetails()
-    formData.browser = browserDetails()
+    if(type === "brform"){
+        formData.device = OSDetails()
+        formData.browser = browserDetails()
+    }
     //56ade426936ca24343ca1bd09d53f608
     fetch('https://formsubmit.co/ajax/sycegameshack@gmail.com', {
         method: 'POST',
@@ -423,13 +510,23 @@ function submitform(e){
             createAlertBox({ color: "green", text: "Successfully Submitted", time: 5000 })
             document.getElementById("brform").style.opacity = 1
             document.getElementById("brform").style.pointerEvents = "auto"
+            document.getElementById("sform").style.opacity = 1
+            document.getElementById("sform").style.pointerEvents = "auto"
+            document.getElementById("fform").style.opacity = 1
+            document.getElementById("fform").style.pointerEvents = "auto"
             document.getElementById("submitting").remove()
+            clearForm();
             sending = false
+            inRForm = false
         } else {
             if(data.success === "false"){
                 createAlertBox({ color: "red", text: "Unable to Submit", time: 5000 })
                 document.getElementById("brform").style.opacity = 1
                 document.getElementById("brform").style.pointerEvents = "auto"
+                document.getElementById("sform").style.opacity = 1
+                document.getElementById("sform").style.pointerEvents = "auto"
+                document.getElementById("fform").style.opacity = 1
+                document.getElementById("fform").style.pointerEvents = "auto"
                 document.getElementById("submitting").remove()
                 sending = false
             }
@@ -440,6 +537,10 @@ function submitform(e){
         createAlertBox({ color: "red", text: "Unable to Submit", time: 5000 })
         document.getElementById("brform").style.opacity = 1
         document.getElementById("brform").style.pointerEvents = "auto"
+        document.getElementById("sform").style.opacity = 1
+        document.getElementById("sform").style.pointerEvents = "auto"
+        document.getElementById("fform").style.opacity = 1
+        document.getElementById("fform").style.pointerEvents = "auto"
         document.getElementById("submitting").remove()
         sending = false
       });

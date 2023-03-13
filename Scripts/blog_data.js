@@ -28,15 +28,23 @@ let blog_data = [
     //hidden
     {
         title: "Bug Report Data Privacy",
-        date: "March 4, 2023",
+        date: "March 10, 2023",
         writtenBy: "Syce",
         id: "bug-report-data-privacy",
         hidden: true,
         description: "",
-        text: "I respect all user data & privacy which is why I choose to not send any personal or sensitive information. That being said, additional data is sent over along with the report to better help investigate and get a better understanding of the issue. This includes, but is not limited to:<br><ul><li>Analytical Data</li><li>Device and Broswer Data</li></ul><br>If you feel this violates your privacy in any way you are welcome to report bugs through this <a class='underline_text colored' onclick='window.open(`https://forms.gle/nw1mY6aqgSHdbm5E7`, `_blank`)'>Google Form</a> as no additional or personal data is send through."
+        text: "I respect all user data & privacy which is why I choose to not send any personal or sensitive information. That being said, additional data is sent over along with the report to better help investigate and get a better understanding of the issue. This includes, but is not limited to:<br><ul><li>Analytical Data</li><li>Device and Broswer Data</li></ul><br>If you feel this violates your privacy in any way you are welcome to report bugs through this <a class='underline_text colored' onclick='window.open(`https://forms.gle/nw1mY6aqgSHdbm5E7`, `_blank`)'>Google Form</a> as no additional or personal data is sent through."
     },
 ]
 let log_data = [
+    {
+        title: "Update Log of v6.5.0",
+        date: "March 13, 2023",
+        writtenBy: "Syce",
+        id: "v6-5-0",
+        description: "This update includes new games, sounds, with other changes and bug fixes.",
+        text: "This update includes new games, sounds, with other changes and bug fixes. Read below for more details:<br><br><h3>Changes</h3><ul><li>34 new sounds + new games (listed below)</li><li>New banners for new or updated games and sounds</li><li>New section on your profile to view games you’ve played and ones you’ve haven’t yet</li><li>Experimental games have been added, these games may need testing and might not work</li></ul><br><h3>New Games</h3><ul><li>Bloons TD 4</li><li>CSGOClicker</li><li>Duck Life 1</li><li>FNAF 1-4</li><li>JustFall.LOL</li><li>Stack Ball</li><li>Talking Tom Gold Run (experimental)</li><li>Vex 7 (experimental)</li><li>World’s Hardest Game 2</li><li>Zombs Royale (experimental)</li></ul><br><h3>Other</h3><ul><li>Downloaded versions notify you when a new update is available, with download link</li><li>Two new built-in forms: suggestion and feedback</li><li>Extended the afk timeout</li></ul><br><h3>Resolved Issues</h3><ul><li>Games don’t show with the thumbnail text and hide thumbnail image enabled (<a class='underline_text' onclick='window.open(`https://trello.com/c/xrvgPPQg/83-hidden-games`, `_blank`)'>xrvgPPQg</a>)</li><li>FPS count inaccurate for some games, will still be for some (<a class='underline_text' onclick='window.open(`https://trello.com/c/i6ss1uYt/74-fps-count-inaccurate`, `_blank`)'>i6ss1uYt</a>)</li><li>Text remains in report form after submitting or closing the overlay (<a class='underline_text' onclick='window.open(`https://trello.com/c/VeTz9JH2/80-text-remains-in-report-form`, `_blank`)'>VeTz9JH2</a>)</li><li>Double scrollbar appears in report form after clicking on report while in fullscreen (<a class='underline_text' onclick='window.open(`https://trello.com/c/4KZx7iCw/81-double-scrollbar-report-form`, `_blank`)'>4KZx7iCw</a>)</li><li>Game thumbnails and the game view squished when images can’t load (<a class='underline_text' onclick='window.open(`https://trello.com/c/EdBq7qGj/88-thumbnail-and-game-view-squished`, `_blank`)'>EdBq7qGj</a>)</li><li>Game still plays after crash (<a class='underline_text' onclick='window.open(`https://trello.com/c/TO6Tu8kV/89-game-still-plays-after-crash`, `_blank`)'>TO6Tu8kV</a>)</li><li>Several other small fixes for downloaded versions</li></ul><br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
     {
         title: "Update Log of v6.4.1",
         date: "March 6, 2023",

@@ -254,10 +254,10 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle">Slight New Look! (v6.4.1)</div>
-            <div class="messageBannerText">Game thumbnail text is hidden by default and shows over hover. This should make it easier to find games and if you don't like it you can turn in back on in the personalization settings. You can read the full update log <a class="underline_text" onclick="location.replace('blog.html#v6-4-1')">here.</a></div>
-            <div class="messageBannerDate">3/6/2023</div>
-            <button class="messageBannerButton" onclick="hideBanner()">Never show this message again</button>
+            <div class="messageBannerTitle" id="mbtitle">New Update! (v6.5.0)</div>
+            <div class="messageBannerText" id="mbtext">13 new games and 34 new sounds! New section on the profile to view what games you haven't played and the ones you have. Experimental games have been added, these games may need testing and might not work. You can read the full update log <a class="underline_text" onclick="location.replace('blog.html#v6-5-0')">here.</a></div>
+            <div class="messageBannerDate" id="mbdate">3/13/2023</div>
+            <button class="messageBannerButton" id="mbbtn" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
         <div class="text">Remember to only play games during free time or when you have permission to do so. I am not responsible for any trouble this might cause.</div>
@@ -267,7 +267,11 @@
             <i class='bx bx-dots-horizontal-rounded icon' ></i>
             <span class="hovertext7">Options</span>
             <div id="gamepageOptions" class="dropdown-content" style="transform: translateX(-155px)">
-                <button class="dropbtn" onclick="window.open('https://forms.gle/gs3eyQ4rwb8tucxo8', '_blank')">
+                <button class="dropbtn" onclick="feedbackform()">
+                    <span class='bx bx-detail icon' style="transform: translateY(3px); font-size: 20px"></span>
+                    <span style="padding: 5px">Feedback</span>
+                </button>
+                <button class="dropbtn" onclick="suggestform()">
                     <span class='bx bx-plus-circle icon' style="transform: translateY(3px); font-size: 20px"></span>
                     <span style="padding: 5px">Suggestion</span>
                 </button>
@@ -301,7 +305,7 @@
                 <button class="gameViewBack" onclick="document.getElementById('gameViewFullscreen').style.display = 'none', document.body.style.overflow = 'visible'">
                     <i class='bx bx-x icon' style="transform: translateY(-5px)"></i>
                 </button>
-                <img class="gameViewImg" id="gameViewImg">
+                <img class="gameViewImg" id="gameViewImg" alt="">
                 <div style="position: absolute; right: 35px; top: 60px; width: 33%; height: 24.5vw; overflow-y: auto;">
                     <div class="gameViewSubTitle">Description</div>
                     <div class="gameViewText" id="gameViewDescription"></div>
@@ -346,7 +350,7 @@
         <div style="text-align: center; width: calc(90% + 35px); margin: auto; transform: translateX(0);" id="gamebar">
             <div class="randomGameSelector" id="randomSelector">
                 <a herf=" " class="game_click" onclick="viewGame(data[Math.floor(Math.random() * data.length)].id)" id="click">
-                    <img class="game_img" id="rgs_img" src="https://celebrated-stardust-91ad96.netlify.app/Images/random_game.png">
+                    <img class="game_img" id="rgs_img" src="https://celebrated-stardust-91ad96.netlify.app/Images/random_game.png" style="background-color: var(--primary-color);">
                     <div class="shadow" id="rgs_shadow" style="display: block"></div>
                     <div class="game_title" id="rgs_title" style="display: block">Random Game</div>
                     <div class="game_genre" id="rgs_genre" style="display: block">Pick a random game.</div>
@@ -480,24 +484,51 @@
     <section class="reportform" id="reportform">
         <div style="width: 40em; max-height: 100%; margin: auto; text-align: left; padding: 10px;">
             <br><br>
-            <span class="form_title">Bug Report</span>
+            <span class="form_title" id="form_title">Bug Report</span>
             <div class="blogBack brexitBtn" onclick="reportform()">
                 <i class='bx bx-x icon' style="transform: translateX(5px);"></i>
             </div>
             <br><br>
-            <form onsubmit="submitform(event)" id="brform">
+            <form onsubmit="submitform(event, 'brform')" id="brform">
                 <span class="form_text">What are you reporting?</span>
                 <input name="issue" id="issue" placeholder="Ex: 2048, site theme, etc" required>
                 <br><br>
                 <span class="form_text">Describe your issue.</span>
-                <input name="description" placeholder="Ex: Game is blocked, it displays the wrong color, etc" required>
+                <input name="description" id="description" placeholder="Ex: Game is blocked, it displays the wrong color, etc" required>
                 <br><br>
                 <span class="form_text">If possible, how to reproduce? Explain how you got the bug.</span>
-                <input name="reproduce" placeholder="Ex: I changed the theme setting and it displayed the wrong color">
+                <input name="reproduce" id="reproduce" placeholder="Ex: I changed the theme setting and it displayed the wrong color">
                 <br><br><br><br>
                 <button type="submit">Submit</button>
                 <br><br>
                 <span class="form_text" style="font-weight: 400; font-size: 12px">Unable to submit? Try again, otherwise use this <a class='underline_text colored' onclick='window.open(`https://forms.gle/nw1mY6aqgSHdbm5E7`, `_blank`)'>Google Form.</a><br>Will not work using a downloaded version. - Read about data privacy <a class='underline_text colored' onclick='location.replace(`blog.html#bug-report-data-privacy`)'>here.</a></span>
+                <br><br>
+            </form>
+            <form onsubmit="submitform(event, 'sform')" id="sform">
+                <span class="form_text">What would you like to suggest?</span>
+                <input name="suggestion" id="suggestion" placeholder="Ex: Stickman hook, custom themes, etc" required>
+                <br><br>
+                <span class="form_text">Additional info?</span>
+                <input name="information" id="information" placeholder="Ex: Here's a link to it, it would make the site look cool, etc" >
+                <br><br><br><br>
+                <button type="submit">Submit</button>
+                <br><br>
+                <span class="form_text" style="font-weight: 400; font-size: 12px">Unable to submit? Try again, otherwise use this <a class='underline_text colored' onclick='window.open(`https://forms.gle/gs3eyQ4rwb8tucxo8`, `_blank`)'>Google Form.</a><br>Will not work using a downloaded version. - Additional data is not sent with this report</a></span>
+                <br><br>
+            </form>
+            <form onsubmit="submitform(event, 'fform')" id="fform">
+                <span class="form_text">Put your feedback here.</span>
+                <input name="feedback" id="feedback" placeholder="Ex: Great site, needs more games, etc" required>
+                <br><br>
+                <span class="form_text">What could be improved?</span>
+                <input name="improvement" id="improvement" placeholder="Ex: Loading times, mobile experience, etc" >
+                <br><br>
+                <span class="form_text">Overall, what would you rate the site? (1-10)</span>
+                <input name="rating" id="rating">
+                <br><br><br><br>
+                <button type="submit">Submit</button>
+                <br><br>
+                <span class="form_text" style="font-weight: 400; font-size: 12px">Unable to submit? Try again, otherwise use this <a class='underline_text colored' onclick='window.open(`https://forms.gle/Rnw5WE86HrA98RKE8`, `_blank`)'>Google Form.</a><br>Will not work using a downloaded version. - Additional data is not sent with this report</a></span>
                 <br><br>
             </form>
         </div>

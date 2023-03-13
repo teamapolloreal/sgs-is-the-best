@@ -109,7 +109,7 @@ const achievement_data = [
         id: "play_every_game",
         reward: "1250xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/1.png' class='img-emoji2'> Badge!",
         progress: null,
-        progress_info: { a: "play_games", b: 147, xp: 1250, b_id: "1" }
+        progress_info: { a: "play_games", b: 160, xp: 1250, b_id: "1" }
     },
     {
         name: "Read 2 Blogs or Logs",
@@ -179,11 +179,11 @@ function loadProfile(){
 
     var games_played = localStorage.getItem("playedGames") || null
     if(!games_played){
-        document.getElementById("games_played_text").innerText = `0/147`
+        document.getElementById("games_played_text").innerText = `0/160`
         document.getElementById("games_played").setAttribute("stroke-dasharray", "0, 100")
     } else {
-        document.getElementById("games_played_text").innerText = `${games_played.split("||").length - 1}/147`
-        document.getElementById("games_played").setAttribute("stroke-dasharray", Math.trunc((games_played.split("||").length - 1) / 147 * 100) + ", 100")
+        document.getElementById("games_played_text").innerText = `${games_played.split("||").length - 1}/160`
+        document.getElementById("games_played").setAttribute("stroke-dasharray", Math.trunc((games_played.split("||").length - 1) / 160 * 100) + ", 100")
     }
 
     var minutes_played = parseInt(localStorage.getItem("minutes_played")) || 0
@@ -284,7 +284,7 @@ function notafklol(){
         document.getElementById("afk_message1").remove();
     }
     if(document.getElementById("afk_message2")){
-        document.getElementById("afk_message2").remove();
+        document.getElementById("afk_message1").remove();
         document.getElementById("afk_message2").remove();
     }
     if(document.getElementById("afkdetector").style.display === "block") focusGame();
@@ -301,7 +301,7 @@ if(window.location.pathname.includes("games.html")){
 var xpMinute = 1
 setInterval(() => {
     if(playing === false) return checkCompletion();
-    if(lastInput + 1020000 < Date.now() || !document.getElementById("afkdetector") && window.location.pathname.includes("games.html")){
+    if(lastInput + 1620000 < Date.now() || !document.getElementById("afkdetector") && window.location.pathname.includes("games.html")){
         exitWindowed();
         exitFullscreen();
         setTimeout(() => {
@@ -313,7 +313,7 @@ setInterval(() => {
             document.activeElement.blur()
         }, 3000)
     }
-    if(lastInput + 1200000 < Date.now() || !document.getElementById("afkdetector") && window.location.pathname.includes("games.html")){
+    if(lastInput + 1800000 < Date.now() || !document.getElementById("afkdetector") && window.location.pathname.includes("games.html")){
         exitWindowed();
         exitFullscreen();
         setTimeout(() => {
@@ -562,4 +562,32 @@ function loadAchievements(){
     var achievementsCompleted = parseInt(localStorage.getItem("achievementCompletedCount")) || 0
     if(window.location.pathname.includes("profile.html")) document.getElementById("achievements_completed_text").innerText = `${achievementsCompleted}/${achievement_data.length}`
     if(window.location.pathname.includes("profile.html")) document.getElementById("achievements_completed").setAttribute("stroke-dasharray", Math.trunc(achievementsCompleted / achievement_data.length * 100) + ", 100")
+}
+
+
+loadPlayedGames();
+function loadPlayedGames(){
+    if(!window.location.pathname.endsWith("profile.html")) return;
+    var games_played = localStorage.getItem("playedGames").split(" || ") || null
+
+    var matching = data.filter(game => games_played.includes(game.id))
+    var not_matching = data.filter(game => !games_played.includes(game.id))
+
+    matching.forEach(game => {
+        var div = document.createElement("div");
+        div.className = "gameBox"
+        div.innerText = game.name
+        div.style.opacity = 0.7
+        div.onclick = function(){ location.replace(`games.html#${game.id}`)}
+        document.getElementById("playedContainer").appendChild(div)
+    })
+
+    not_matching.forEach(game => {
+        var div = document.createElement("div");
+        div.className = "gameBox"
+        div.innerText = game.name
+        div.onclick = function(){ location.replace(`games.html#${game.id}`)}
+        document.getElementById("notplayedContainer").appendChild(div)
+    })
+    console.log(matching)
 }

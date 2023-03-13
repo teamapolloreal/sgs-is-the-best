@@ -282,7 +282,7 @@
                 <i class='bx bx-edit-alt icon' style="font-size: 25px;"></i>
             </div>
             <br><br>
-            <div class="profileStatsBox" style="float: left;">
+            <div class="profileStatsBox clickablestat" style="float: left;" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('playedgames').style.display = 'block'">
                 <span class="profileStatsTitle">Games Played</span>
                 <br>
                 <span class="profileStatsText" id="games_played_text"><b>90/111</b></span>
@@ -293,7 +293,7 @@
                    <path class="percent" id="games_played" stroke-dasharray="81, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
                 </svg>
             </div>
-            <div class="profileStatsBox" style="margin: auto">
+            <div class="profileStatsBox clickablestat" style="margin: auto" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('achievements').style.display = 'block'">
                 <span class="profileStatsTitle">Achievements</span>
                 <br>
                 <span class="profileStatsText" id="achievements_completed_text"><b>0/12</b></span>
@@ -321,6 +321,12 @@
             <span class="profileUsername">Achievements</span>
             <br>
             <span class="profileText">Click to view your progress towards achievements.</span>
+            <i class='bx bx-chevron-right achieveIcon'></i>
+        </div>
+        <br><div class="profileBox achieveBtn" onclick="document.getElementById('mainProfile').style.display = 'none', document.getElementById('playedgames').style.display = 'block'">
+            <span class="profileUsername">Games Played</span>
+            <br>
+            <span class="profileText">Click to view the games you've played and haven't yet.</span>
             <i class='bx bx-chevron-right achieveIcon'></i>
         </div>
         <br>
@@ -391,6 +397,38 @@
         </footer>
     </section>
 
+    <section class="section" id="playedgames" style="display: none">
+        <br>
+        <div class="title">Haven't Played Games</div>
+        <div class="text">You haven't played these games yet! Maybe you should ツ <b>Scroll to the bottom to view played ones.</b></div>
+        <div class="blogBack" onclick="loadProfile(), document.getElementById('mainProfile').style.display = 'block', document.getElementById('playedgames').style.display = 'none'">
+            <i class='bx bx-chevron-left icon' ></i>
+            <span class="hovertext7">Back</span>
+        </div>
+        <br>
+        <div style="width: 90%; margin: auto; position: relative; text-align: left" id="notplayedContainer">
+        </div>
+        <br><br>
+
+        <div class="pageLine"></div>
+        <br>
+        <div class="pageHeading">Played Games</div>
+        <div class="pageDescription" style="width: 100%; padding: 0px 5%; transform: translateY(-10px)">So far you've played these games. Nice!</div>
+        <div style="width: 90%; margin: auto; position: relative; text-align: left" id="playedContainer">
+        </div>
+
+        <br><br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright Syce's Game Shack 2023© - Contact: sycegameshack@gmail.com</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
     <section class="alertSection">
         <div class="hotkeysoverlay" id="hotkeysoverlay">
             <span class="hotkeysoverlaytt">Hot Keys</span>
@@ -407,8 +445,8 @@
 
     <script src="script.js"></script>
     <script src="./Scripts/connection.js"></script>
-    <script src="./Scripts/connection.js"></script>
     <script src="./Scripts/settings.js"></script>
+    <script src="./Scripts/game_data.js"></script>
     <script src="./Scripts/profile.js"></script>
     <script src="./Scripts/hotkeys.js"></script>
 

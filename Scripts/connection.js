@@ -1,4 +1,5 @@
 var iframe = document.getElementById("dataconnection");
+var currentVersion = "v6.5.0"
 var siteSaves = [
 	"viewedBlogs",
 	"favorites",
@@ -72,11 +73,26 @@ iframe.onload = function(){
 	if(localStorage.getItem("lsgdtes") === null){
 		sendGameData();
 	}
+
+	iframe.contentWindow.postMessage({ id: "checkVersion", version: currentVersion }, "*")
 }
 
 function receiveMessage(event){
 	if(event.origin !== "https://celebrated-stardust-91ad96.netlify.app") return;
 	// console.log(event.data)
+
+	if(event.data.id === "updatedVersion"){
+		createAlertBox({ color: "red", text: `${event.data.version} is avaiable!`, time: 3000 })
+		if(!window.location.pathname.endsWith("games.html")) createAlertBox({ color: "red", text: `Download on games page`, time: 3000 })
+
+		if(window.location.pathname.endsWith("games.html")){
+			document.getElementById("mbtitle").innerText = `${event.data.version} is out! (Download)`
+			document.getElementById("mbtext").innerHTML = `Unless you don't want the newest features and games, you can download the new update <a class="underline_text" onclick="window.open(${event.data.download}, '_blank')">here.</a>`
+			document.getElementById("mbtext").style.width = "100%";
+			document.getElementById("mbdate").innerText = `Recommended - Includes stability and fixes`
+			document.getElementById("mbbtn").style.display = "none"
+		}
+	}
 
 	if(event.data.id === "sendSiteData"){
 		if(event.data.data === "never_saved_before"){

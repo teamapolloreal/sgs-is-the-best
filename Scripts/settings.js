@@ -367,21 +367,42 @@ if(ddl !== null){
     }
 }
 
-const rainbow = new Worker('Scripts/Threading/rainbow.js');
-rainbow.onmessage = function(e) {
-    if(e.data.type === "sending") document.body.style.setProperty("--primary-color", e.data.data)
+var rainbow = null
+try {
+    rainbow = new Worker('Scripts/Threading/rainbow.js');
+} catch(err) {
+    console.log("Unable to start worker")
+}
+if(rainbow){
+    rainbow.onmessage = function(e) {
+        if(e.data.type === "sending") document.body.style.setProperty("--primary-color", e.data.data)
+    }
 }
 
+let rainbowInterval;
 loadTheme();
 function loadTheme(){
     let theme = localStorage.getItem("themeHex")
     if(!theme) theme = "#695CFE"
-    rainbow.postMessage('Stop Interval');
-    if(theme === "Rainbow"){
-        theme = "#ff0000"
-        
-        rainbow.postMessage('Start Interval');
-        
+    if(rainbow){
+        rainbow.postMessage('Stop Interval');
+        if(theme === "Rainbow"){
+            theme = "#ff0000"
+            
+            rainbow.postMessage('Start Interval');
+        }
+    } else {
+        clearInterval(rainbowInterval)
+        if(theme === "Rainbow"){
+            let hue = 0;
+            rainbowInterval = setInterval(() => {
+                document.body.style.setProperty("--primary-color", `hsl(${hue}, 100%, 50%)`)
+                hue = hue + 2;
+                if (hue >= 360) {
+                    hue = 0;
+                }
+            }, 100);
+        }
     }
     if(localStorage.getItem("mode") === "Dark" || localStorage.getItem("mode") === "Dark Themed"){
         document.body.style.setProperty("--primary-color", theme)

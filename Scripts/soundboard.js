@@ -1,5 +1,209 @@
-let lastUpdate = "3/6/2023 (v6.4.1)"
+let lastUpdate = "3/13/2023 (v6.5.0)"
 let sound_data = [
+    {
+        name: "-999 Social Credit",
+        id: "999-social-credit-siren",
+        path: "Soundboard/999-social-credit-siren.mp3",
+        new: true
+    },
+    {
+        name: "Aw Hell Nah Man",
+        id: "aw-hell-nah-man",
+        path: "Soundboard/aw-hell-nah-man.mp3",
+        new: true
+    },
+    {
+        name: "Aw Sh*t! Here we go again",
+        id: "gta-here-we-go-again",
+        path: "Soundboard/gta-here-we-go-again.mp3",
+        new: true
+    },
+    {
+        name: "Bing Chilling 🥶",
+        id: "bing-chilling",
+        path: "Soundboard/bing-chilling_fcdGgUc.mp3",
+        new: true
+    },
+    {
+        name: "Dedotaded Wam",
+        id: "dedotaded_wam",
+        path: "Soundboard/DEDOTADED WAM.mp3",
+        new: true
+    },
+    {
+        name: "Directed by Robert B",
+        id: "directed-by-robert-b",
+        path: "Soundboard/directed-by-robert-b.mp3",
+        new: true
+    },
+    {
+        name: "Deja Vu",
+        id: "deja-vu",
+        path: "Soundboard/deja-vu.mp3",
+        new: true
+    },
+    {
+        name: "EE Sports",
+        id: "ea-sports-meme",
+        path: "Soundboard/ea-sports-meme.mp3",
+        new: true
+    },
+        {
+        name: "Gangsters Paradise",
+        id: "gangsters_paradise",
+        path: "Soundboard/gangsters_paradise.mp3",
+        new: true
+    },
+    {
+        name: "GG's Bro",
+        id: "ggs-bro",
+        path: "Soundboard/ggs-bro.mp3",
+        new: true
+    },
+    {
+        name: "God Damn",
+        id: "god-damn",
+        path: "Soundboard/god-damn-1.mp3",
+        new: true
+    },
+    {
+        name: "Helicopter Helicopter",
+        id: "helicopter-meme",
+        path: "Soundboard/helicopter-meme.mp3",
+        new: true
+    },
+    {
+        name: "Illuminati 🛆",
+        id: "illuminati",
+        path: "Soundboard/ILLUMINATI.mp3",
+        new: true
+    },
+    {
+        name: "Ladies and Gentlemen, We Got 'Em",
+        id: "ladies-and-gentlement-we-got-em",
+        path: "Soundboard/ladies-and-gentlement-we-got-em.mp3",
+        new: true
+    },
+    {
+        name: "LETS GO",
+        id: "lets-go-meme",
+        path: "Soundboard/lets-go-meme.mp3",
+        new: true
+    },
+    {
+        name: "Minecraft Potion Drinking",
+        id: "minecraft-potion-drinking-sound-effect",
+        path: "Soundboard/minecraft-potion-drinking-sound-effect-1.mp3",
+        new: true
+    },
+    {
+        name: "MrBeast Phonk",
+        id: "mr-beast-phonk-meme",
+        path: "Soundboard/mr-beast-phonk-meme.mp3",
+        new: true
+    },
+    {
+        name: "MrBeast Rap Battle",
+        id: "mrbeast_rap_battle",
+        path: "Soundboard/mrbeast rap battle.mp3",
+        new: true
+    },
+    {
+        name: "Nani",
+        id: "nani-meme-sound-effect",
+        path: "Soundboard/nani-meme-sound-effect.mp3",
+        new: true
+    },
+    {
+        name: "Never Done That",
+        id: "never_done_that",
+        path: "Soundboard/NEVER DONE THAT.mp3",
+        new: true
+    },
+    {
+        name: "Ninja Stream Sniping",
+        id: "ninja-stream-sniping",
+        path: "Soundboard/ninja-stream-sniping.mp3",
+        new: true
+    },
+    {
+        name: "Oh no no no Tik Tok",
+        id: "oh-no-no-no-tik-tok-song-sound-effect",
+        path: "Soundboard/oh-no-no-no-tik-tok-song-sound-effect.mp3",
+        new: true
+    },
+    {
+        name: "Outro",
+        id: "outro-song",
+        path: "Soundboard/outro-song_oqu8zAg.mp3",
+        new: true
+    },
+    {
+        name: "Sanic",
+        id: "sanic",
+        path: "Soundboard/SANIC.mp3",
+        new: true
+    },
+    {
+        name: "Shooting Stars",
+        id: "shooting-stars",
+        path: "Soundboard/shooting-stars.mp3",
+        new: true
+    },
+        {
+        name: "Snopp Dogg",
+        id: "snopp_dogg",
+        path: "Soundboard/snopp_dogg.mp3",
+        new: true
+    },
+    {
+        name: "Shots Fired",
+        id: "shots_fired",
+        path: "Soundboard/SHOTS FIRED.mp3",
+        new: true
+    },
+    {
+        name: "Tactical Nuke",
+        id: "tactical_nule",
+        path: "Soundboard/tactical nuke.mp3",
+        new: true
+    },
+        {
+        name: "That's Class",
+        id: "thats-class",
+        path: "Soundboard/thats-class.mp3",
+        new: true
+    },
+    {
+        name: "This is a certified hood classic",
+        id: "this-a-certified-hood-classic",
+        path: "Soundboard/this-is-a-certified-hood-classic.mp3",
+        new: true
+    },
+    {
+        name: "Whatcha Say",
+        id: "whatcha_say",
+        path: "Soundboard/Whatcha Say.mp3",
+        new: true
+    },
+    {
+        name: "Wombo Combo",
+        id: "wombo_combo",
+        path: "Soundboard/WOMBO COMBO.mp3",
+        new: true
+    },
+        {
+        name: "Wide Putin",
+        id: "wide-putin",
+        path: "Soundboard/wide-putin.mp3",
+        new: true
+    },
+    {
+        name: "Why do I hear boss music?",
+        id: "why-do-i-hear-boss-music",
+        path: "Soundboard/why-do-i-hear-boss-music.mp3",
+        new: true
+    },
     {
         name: "9 + 10",
         id: "9+10=21",
@@ -471,6 +675,13 @@ function loadSounds(){
         var soundboard_click = document.createElement("a")
         soundboard_click.className = "soundboard_click"
         soundboard_click.id = sound.id + "_click"
+
+        if(sound.new === true){
+            var newbanner = document.createElement("div")
+            newbanner.id = "newsoundbanner"
+            newbanner.innerHTML = "<span style='transform: translate(-4px, -4px); position: absolute; left: 16px'>New!</span>"
+            soundboard_click.appendChild(newbanner)
+        }
 
         var soundboard_title = document.createElement("div")
         soundboard_title.className = "soundboard_title"
