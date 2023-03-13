@@ -252,7 +252,7 @@ var playing = false;
 function trackGameData(id, status){
     removed_games.forEach(game => {
         var playedGames = localStorage.getItem("playedGames") || null
-        if(playedGames.includes(game)) localStorage.setItem("playedGames", playedGames.replace(`${game} || `, ""))
+        if(playedGames && playedGames.includes(game)) localStorage.setItem("playedGames", playedGames.replace(`${game} || `, ""))
     })
     if(status === "stop"){
         playing = false
@@ -568,6 +568,16 @@ function loadAchievements(){
 loadPlayedGames();
 function loadPlayedGames(){
     if(!window.location.pathname.endsWith("profile.html")) return;
+    if(!localStorage.getItem("playedGames")){
+        data.forEach(game => {
+            var div = document.createElement("div");
+            div.className = "gameBox"
+            div.innerText = game.name
+            div.onclick = function(){ location.replace(`games.html#${game.id}`)}
+            document.getElementById("notplayedContainer").appendChild(div)
+        })
+        return;
+    }
     var games_played = localStorage.getItem("playedGames").split(" || ") || null
 
     var matching = data.filter(game => games_played.includes(game.id))
