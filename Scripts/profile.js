@@ -266,7 +266,7 @@ function trackGameData(id, status){
             sendSiteData();
             return;
         }
-        if(!playedGames.includes(`|| ${id}`) && !playedGames.includes(`${id} ||`)){
+        if(!playedGames.includes(`${id} ||`)){
             playedGames = playedGames + `${id} || `
             localStorage.setItem("playedGames", playedGames)
             sendSiteData();
