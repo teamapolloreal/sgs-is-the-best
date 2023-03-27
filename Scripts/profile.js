@@ -44,7 +44,7 @@ const achievement_data = [
     {
         name: "Play Games for 24 Hours",
         id: "play_24_hours",
-        reward: "20000xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/3.png' class='img-emoji2'> Badge",
+        reward: "20000xp + <img src='https://soft-palmier-05ed85.netlify.app/Images/3.png' class='img-emoji2'> Badge",
         progress: null,
         progress_info: { a: "minutes_played", b: 1440, xp: 20000, b_id: "3" }
     },
@@ -72,14 +72,14 @@ const achievement_data = [
     {
         name: "Reach Level 69",
         id: "reach_level_69",
-        reward: "6969xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/4.png' class='img-emoji2'> Badge!",
+        reward: "6969xp + <img src='https://soft-palmier-05ed85.netlify.app/Images/4.png' class='img-emoji2'> Badge!",
         progress: null,
         progress_info: { a: "reach_level", b: 69, xp: 6969, b_id: "4" }
     },
     {
         name: "Reach Level 100",
         id: "reach_level_100",
-        reward: "10000xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/2.png' class='img-emoji2'> Badge!",
+        reward: "10000xp + <img src='https://soft-palmier-05ed85.netlify.app/Images/2.png' class='img-emoji2'> Badge!",
         progress: null,
         progress_info: { a: "reach_level", b: 100, xp: 10000, b_id: "2" }
     },
@@ -107,7 +107,7 @@ const achievement_data = [
     {
         name: "Play Every Single Game",
         id: "play_every_game",
-        reward: "1250xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/1.png' class='img-emoji2'> Badge!",
+        reward: "1250xp + <img src='https://soft-palmier-05ed85.netlify.app/Images/1.png' class='img-emoji2'> Badge!",
         progress: null,
         progress_info: { a: "play_games", b: 160, xp: 1250, b_id: "1" }
     },
@@ -121,7 +121,7 @@ const achievement_data = [
     {
         name: "Read 10 Blogs or Logs",
         id: "read_10_blogs",
-        reward: "250xp + <img src='https://celebrated-stardust-91ad96.netlify.app/Images/5.png' class='img-emoji2'> Badge!",
+        reward: "250xp + <img src='https://soft-palmier-05ed85.netlify.app/Images/5.png' class='img-emoji2'> Badge!",
         progress: null,
         progress_info: { a: "read_blogs", b: 10, xp: 250, b_id: "5" }
     },
@@ -142,11 +142,11 @@ function loadProfile(){
 
     var badges = localStorage.getItem("badges") || null
     var badgesInclude = ""
-    if(badges && badges.includes("2")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/2.png' class='img-emoji'>";
-    if(badges && badges.includes("3")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/3.png' class='img-emoji'>";
-    if(badges && badges.includes("4")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/4.png' class='img-emoji'>";
-    if(badges && badges.includes("1")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/1.png' class='img-emoji'>";
-    if(badges && badges.includes("5")) badgesInclude = badgesInclude + "<img src='https://celebrated-stardust-91ad96.netlify.app/Images/5.png' class='img-emoji'>";
+    if(badges && badges.includes("2")) badgesInclude = badgesInclude + "<img src='https://soft-palmier-05ed85.netlify.app/Images/2.png' class='img-emoji'>";
+    if(badges && badges.includes("3")) badgesInclude = badgesInclude + "<img src='https://soft-palmier-05ed85.netlify.app/Images/3.png' class='img-emoji'>";
+    if(badges && badges.includes("4")) badgesInclude = badgesInclude + "<img src='https://soft-palmier-05ed85.netlify.app/Images/4.png' class='img-emoji'>";
+    if(badges && badges.includes("1")) badgesInclude = badgesInclude + "<img src='https://soft-palmier-05ed85.netlify.app/Images/1.png' class='img-emoji'>";
+    if(badges && badges.includes("5")) badgesInclude = badgesInclude + "<img src='https://soft-palmier-05ed85.netlify.app/Images/5.png' class='img-emoji'>";
     if(username) document.getElementById("profileUsername").innerHTML = `${username} ${badgesInclude}`;
     if(!username) document.getElementById("profileUsername").innerHTML = `No Username Set ${badgesInclude}`;
 

@@ -78,7 +78,7 @@ iframe.onload = function(){
 }
 
 function receiveMessage(event){
-	if(event.origin !== "https://celebrated-stardust-91ad96.netlify.app") return;
+	if(event.origin !== "https://soft-palmier-05ed85.netlify.app") return;
 	// console.log(event.data)
 
 	if(event.data.id === "updatedVersion"){

@@ -1,5 +1,5 @@
 let lastUpdate = "3/13/2023 (v6.5.0)"
-let cdnUrl = "https://celebrated-stardust-91ad96.netlify.app"
+let cdnUrl = "https://soft-palmier-05ed85.netlify.app"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
     // {
