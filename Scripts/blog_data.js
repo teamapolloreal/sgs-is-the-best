@@ -5,7 +5,7 @@ let blog_data = [
         date: "March 28, 2022",
         writtenBy: "Syce",
         id: "1-million-views",
-        description: "March 24, 2023, the day Syce's Game Shack hit 1 million views. Inccredible milestone for the site.",
+        description: "March 24, 2023, the day Syce's Game Shack hit 1 million views. What an incredible milestone for the site.",
         text: "Wow, I can’t believe this! The site crossed over the 1,000,000 view mark on Friday March 24, 2023. This was roughly around the same time last year when the site was created, even though no data was tracked for last school year. The site got a staggering 28,000+ views just on Friday alone, making it the highest view day ever and pushing the count into the 7 digits. I can’t thank you enough with all the support I’ve received, its been a tough year trying to keep up with everything going on and pushing updates to the site but I’m excited to move forward continuing to create more for the site. I have one last announcement…<br><br>Version 7 coming mid to late April, expect leaks and updates soon."
     },
     {
