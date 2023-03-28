@@ -78,7 +78,7 @@ iframe.onload = function(){
 }
 
 function receiveMessage(event){
-	if(event.origin !== "https://soft-palmier-05ed85.netlify.app") return;
+	if(event.origin !== "https://coruscating-shortbread-45f18a.netlify.app") return;
 	// console.log(event.data)
 
 	if(event.data.id === "updatedVersion"){

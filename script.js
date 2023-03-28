@@ -1,4 +1,4 @@
-let bannerMessageNum = "25" //Fix
+let bannerMessageNum = "26" //1 Mill
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
