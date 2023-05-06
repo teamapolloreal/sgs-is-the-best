@@ -1,6 +1,6 @@
 let lastUpdate = "3/28/2023 (v6.5.0.d)"
 let cdnUrl = "https://coruscating-shortbread-45f18a.netlify.app"
-let gitcdnUrl = "https://raw.githubusercontent.com/SyceGaming/sgs-gitcdn/main"
+let gitcdnUrl = "https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
     // {
