@@ -1,4 +1,4 @@
-let bannerMessageNum = "27" //404 Errors
+let bannerMessageNum = "28" //Fixed 404 Errors
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),

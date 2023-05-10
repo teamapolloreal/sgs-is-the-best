@@ -1,5 +1,5 @@
-let lastUpdate = "3/28/2023 (v6.5.0.d)"
-let cdnUrl = "https://coruscating-shortbread-45f18a.netlify.app"
+let lastUpdate = "5/9/2023 (v6.5.0.e)"
+let cdnUrl = "https://exquisite-muffin-3bccf5.netlify.app"
 let gitcdnUrl = "https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main"
 //CHANGE IMAGES ON HOME PAGE TOO
 const data = [
@@ -29,8 +29,7 @@ const data = [
         controls: [
             "",
         ],
-        devices: "Computer, Mobile",
-        new: true    
+        devices: "Computer, Mobile", 
     },
     {
         name: "CSGOClicker",
@@ -44,8 +43,7 @@ const data = [
         controls: [
             "",
         ],
-        devices: "Computer, Mobile",
-        new: true    
+        devices: "Computer, Mobile",  
     },
     {
         name: "Duck Life 1",
@@ -58,8 +56,7 @@ const data = [
         publisher: "",
         controls: [
             "",
-        ],
-        new: true    
+        ],  
     },
     {
         name: "FNAF",
@@ -73,7 +70,6 @@ const data = [
         controls: [
             "",
         ],
-        new: true    
     },
     {
         name: "FNAF 2",
@@ -87,7 +83,6 @@ const data = [
         controls: [
             "",
         ],
-        new: true    
     },
     {
         name: "FNAF 3",
@@ -101,7 +96,6 @@ const data = [
         controls: [
             "",
         ],
-        new: true    
     },
     {
         name: "FNAF 4",
@@ -115,7 +109,6 @@ const data = [
         controls: [
             "",
         ],
-        new: true    
     },
     {
         name: "JustFall.LOL",
@@ -129,7 +122,6 @@ const data = [
         controls: [
             "",
         ],
-        new: true    
     },
     {
         name: "Stack Ball",
@@ -144,7 +136,6 @@ const data = [
             "",
         ],
         devices: "Computer, Mobile",
-        new: true    
     },
     {
         name: "Talking Tom Gold Run",
@@ -186,7 +177,6 @@ const data = [
         controls: [
             "",
         ],
-        new: true    
     },
     {
         name: "Zombs Royale",
