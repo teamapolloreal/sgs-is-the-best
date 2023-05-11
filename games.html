@@ -17,6 +17,7 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TB243QR');</script>
     <!-- End Google Tag Manager -->
+    <div class="bodyOverlay"></div>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
@@ -28,7 +29,7 @@
     <link rel="stylesheet" href="nav2.css">
 
     <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Syce's Game Shack</title>
     <link rel="icon" herf="sgs-logo.png" type=image/png>
@@ -55,23 +56,32 @@
 
             <div style="float: right; text-align: center; transform: translate(0px, -34px)">
                 <div class="horPage" onclick="location.replace('./index.html')">
-                    <i class='bx bx-home-alt pageIcon' ></i>
+                    <!-- <i class='bx bx-home-alt pageIcon' ></i> -->
                     <span class="horText">Home</span>
                 </div>
                 <div class="horPage horSelected" onclick="gamepage()">
-                    <i class='bx bx-joystick pageIcon' ></i>
+                    <!-- <i class='bx bx-joystick pageIcon' ></i> -->
                     <span class="horText">Games</span>
+                    <div class="horSelectedBar"></div>
                 </div>
                 <div class="horPage" onclick="location.replace('./soundboard.html')">
-                    <i class='bx bx-volume-full pageIcon' ></i>
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
                     <span class="horText">Soundboard</span>
                 </div>
+                <div class="horPage" onclick="location.replace('./tools.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Tools</span>
+                </div>
+                <div class="horPage" onclick="location.replace('./chat.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Chat</span>
+                </div>
                 <div class="horPage" onclick="location.replace('blog.html')">
-                    <i class='bx bx-book-alt pageIcon' ></i>
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
                     <span class="horText">Blogs</span>
                 </div>
                 <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
-                    <i class='bx bx-link-alt pageIcon' ></i>
+                    <!-- <i class='bx bx-link-alt pageIcon' ></i> -->
                     <span class="horText">Links</span>
 
                     <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
@@ -94,10 +104,10 @@
                     </div>
                 </div>
                 <div class="horPage" onclick="location.replace('./settings.html')">
-                    <i class='bx bx-cog pageIcon' ></i>
+                    <!-- <i class='bx bx-cog pageIcon' ></i> -->
                     <span class="horText">Settings</span>
                 </div>
-                <div class="horPage" onclick="location.replace('./profile.html')" style="background-color: var(--primary-color-light)">
+                <div class="horPage" onclick="location.replace('./profile.html')">
                     <i class='bx bx-user-circle pageIcon profileIcon' ></i>
                 </div>
             </div>
@@ -106,7 +116,10 @@
 
     <nav class="sidebar close" id="navbar1">
         <header>
-            <br>
+            <!-- <br>
+            <div class="toggle-background">
+                <i class='bx bx-horizontal-right toggle' ></i>
+            </div> -->
             <div class="image-text">
                 <span class="image">
                     <img src="sgs-logo.png" alt="">
@@ -118,7 +131,7 @@
                 </div>
             </div>
 
-            <i class='bx bx-chevron-right toggle'></i>
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
         </header>
 
         <div class="menu-bar">
@@ -141,6 +154,7 @@
 
                     <li class="nav-link">
                         <a href="#" class="selected" onclick="gamepage()">
+                            <div class="selected-bar"></div>
                             <i class='bx bx-joystick icon' ></i>
                             <span class="text nav-text">Games</span>
 
@@ -165,6 +179,22 @@
                     </li>
 
                     <li class="nav-link">
+                        <a href="tools.html">
+                            <i class='bx bx-wrench icon' ></i>
+                            <span class="text nav-text">Tools</span>
+                            <span class="hovertext">Tools</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="chat.html">
+                            <i class='bx bx-conversation icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                            <span class="hovertext">Chat</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
                         <a href="blog.html">
                             <i class='bx bx-book-alt icon' ></i>
                             <span class="text nav-text">Blog</span>
@@ -178,7 +208,7 @@
                             <span class="text nav-text">Links</span>
                             <span class="hovertext">Links</span>
 
-                            <div id="linkOptions" class="dropdown-content" style="transform: translate(75px, 0px)">
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
                                 <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
                                     <span class='bx bx-link-external' style="transform: translateY(3px); font-size: 20px;"></span>
                                     <span style="padding: 5px">Alt Links</span>
@@ -199,10 +229,9 @@
                         </a>
                     </li>
                 </ul>
-                <br>
             </div>
 
-            <div class="bottom-content" style="transform: translateY(-20%);">
+            <div class="bottom-content">
                 <ul>
                     <li class="nav-link">
                         <a href="settings.html">
@@ -254,13 +283,13 @@
     <section class="section" id="mainpage">
         <br>
         <div class="messageBanner" id="bannerMessage">
-            <div class="messageBannerTitle" id="mbtitle">Fixed the games!</div>
-            <div class="messageBannerText" id="mbtext">Sorry for taking so long to fix this, I've been caught up on version 7, which btw should be coming out tomorrow if everything goes to plan. Hopefully an incident like this should never happen again as I will be making changes to some game files and other components to prevent this. Which also means if you notice anything broken or weird on a game that you've played before please report it to me so I can fix it. Thanks, sorry if you lost your patience.</div>
-            <div class="messageBannerDate" id="mbdate">5/9/2023</div>
+            <div class="messageBannerTitle" id="mbtitle">Version 7!</div>
+            <div class="messageBannerText" id="mbtext">All new accent colors in the settings, Syce's Tools, new sidebar and horizontal navbar, plus more! Sort of small but some pretty cool changes in my opinion, with more to come later! You can read the full update log <a class="underline_text" onclick="location.replace('blog.html#v7-0-0')">here.</a></div>
+            <div class="messageBannerDate" id="mbdate">5/11/2023</div>
             <button class="messageBannerButton" id="mbbtn" onclick="hideBanner()">Never show this message again</button>
         </div>
         <div class="title">Games</div>
-        <div class="text">Remember to only play games during free time or when you have permission to do so. I am not responsible for any trouble this might cause.</div>
+        <!-- <div class="text">Remember to only play games during free time or when you have permission to do so. I am not responsible for any trouble this might cause.</div> -->
         <br>
         <div class="text" id="gamecount" style="display: inline-table; float: left;"></div>
         <div id="" class="gameOptions" onclick="optionsMenu('gamepageOptions')" style="transform: translateY(-0.75px); background-color: var(--primary-color-light)">
@@ -356,7 +385,44 @@
                     <div class="game_genre" id="rgs_genre" style="display: block">Pick a random game.</div>
                 </a>
             </div>
+            <div class="randomGameSelector rec_container" id="recommendation_1">
+                <a herf=" " class="game_click" id="click">
+                    <img class="game_img" id="rec1_img" src="">
+                    <div class="#newgamebanner" id="newgamebanner" style="width: 140px; background-color: #0ed929">Recommendation</div>
+                    <div class="shadow" id="rec1_shadow"></div>
+                    <div class="game_title" id="rec1_title">Generating...</div>
+                    <div class="game_genre" id="rec1_genre">AI Powered</div>
+                </a>
+            </div>
+            <div class="randomGameSelector rec_container" id="recommendation_2">
+                <a herf=" " class="game_click" id="click">
+                    <img class="game_img" id="rec2_img" src="">
+                    <div class="#newgamebanner" id="newgamebanner" style="width: 140px; background-color: #0ed929">Recommendation</div>
+                    <div class="shadow" id="rec2_shadow"></div>
+                    <div class="game_title" id="rec2_title">Generating...</div>
+                    <div class="game_genre" id="rec2_genre">AI Powered</div>
+                </a>
+            </div>
+            <div class="randomGameSelector rec_container" id="recommendation_3">
+                <a herf=" " class="game_click" id="click">
+                    <img class="game_img" id="rec3_img" src="">
+                    <div class="#newgamebanner" id="newgamebanner" style="width: 140px; background-color: #0ed929">Recommendation</div>
+                    <div class="shadow" id="rec3_shadow"></div>
+                    <div class="game_title" id="rec3_title">Generating...</div>
+                    <div class="game_genre" id="rec3_genre">AI Powered</div>
+                </a>
+            </div>
+            <div class="randomGameSelector rec_container" id="recommendation_4">
+                <a herf=" " class="game_click" id="click">
+                    <img class="game_img" id="rec4_img" src="">
+                    <div class="#newgamebanner" id="newgamebanner" style="width: 140px; background-color: #0ed929">Recommendation</div>
+                    <div class="shadow" id="rec4_shadow"></div>
+                    <div class="game_title" id="rec4_title">Generating...</div>
+                    <div class="game_genre" id="rec4_genre">AI Powered</div>
+                </a>
+            </div>
         </div>
+        <div style="opacity: 0; display: inline-table; width: 10px; height: 1px;"></div>
 
         <br><br>
         <footer class="footer" id="footer">
@@ -534,11 +600,13 @@
         </div>
     </section>
 
-    <!-- <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe> -->
+    <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe>
 
     <script src="script.js"></script>
-    <!-- <script src="./Scripts/connection.js"></script> -->
+    <script src="./Scripts/connection.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ml5@latest"></script>
+    <script src="./Scripts/machine-learning.js"></script>
     <script src="./Scripts/game_data.js"></script>
     <script src="./Scripts/settings.js"></script>
     <script src="./Scripts/profile.js"></script>

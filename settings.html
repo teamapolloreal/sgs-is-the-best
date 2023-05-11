@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="nav2.css">
 
     <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Syce's Game Shack</title>
     <link rel="icon" herf="sgs-logo.png" type="image/png" id="site-icon">
@@ -38,6 +38,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB243QR"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+    <div class="bodyOverlay"></div>
     <div class="loader-wrapper" id="loader-wrapper">
         <span class="loader">
             <span class="loader-inner">
@@ -55,23 +56,31 @@
 
             <div style="float: right; text-align: center; transform: translate(0px, -34px)">
                 <div class="horPage" onclick="location.replace('./index.html')">
-                    <i class='bx bx-home-alt pageIcon' ></i>
+                    <!-- <i class='bx bx-home-alt pageIcon' ></i> -->
                     <span class="horText">Home</span>
                 </div>
                 <div class="horPage" onclick="location.replace('./games.html')">
-                    <i class='bx bx-joystick pageIcon' ></i>
+                    <!-- <i class='bx bx-joystick pageIcon' ></i> -->
                     <span class="horText">Games</span>
                 </div>
                 <div class="horPage" onclick="location.replace('./soundboard.html')">
-                    <i class='bx bx-volume-full pageIcon' ></i>
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
                     <span class="horText">Soundboard</span>
                 </div>
+                <div class="horPage" onclick="location.replace('./tools.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Tools</span>
+                </div>
+                <div class="horPage" onclick="location.replace('./chat.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Chat</span>
+                </div>
                 <div class="horPage" onclick="location.replace('blog.html')">
-                    <i class='bx bx-book-alt pageIcon' ></i>
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
                     <span class="horText">Blogs</span>
                 </div>
                 <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
-                    <i class='bx bx-link-alt pageIcon' ></i>
+                    <!-- <i class='bx bx-link-alt pageIcon' ></i> -->
                     <span class="horText">Links</span>
 
                     <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
@@ -94,10 +103,11 @@
                     </div>
                 </div>
                 <div class="horPage horSelected">
-                    <i class='bx bx-cog pageIcon' ></i>
+                    <!-- <i class='bx bx-cog pageIcon' ></i> -->
                     <span class="horText">Settings</span>
+                    <div class="horSelectedBar"></div>
                 </div>
-                <div class="horPage" onclick="location.replace('./profile.html')" style="background-color: var(--primary-color-light)">
+                <div class="horPage" onclick="location.replace('./profile.html')">
                     <i class='bx bx-user-circle pageIcon profileIcon' ></i>
                 </div>
             </div>
@@ -106,7 +116,10 @@
 
     <nav class="sidebar close" id="navbar1">
         <header>
-            <br>
+            <!-- <br>
+            <div class="toggle-background">
+                <i class='bx bx-horizontal-right toggle' ></i>
+            </div> -->
             <div class="image-text">
                 <span class="image">
                     <img src="sgs-logo.png" alt="">
@@ -118,7 +131,7 @@
                 </div>
             </div>
 
-            <i class='bx bx-chevron-right toggle'></i>
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
         </header>
 
         <div class="menu-bar">
@@ -165,6 +178,22 @@
                     </li>
 
                     <li class="nav-link">
+                        <a href="tools.html">
+                            <i class='bx bx-wrench icon' ></i>
+                            <span class="text nav-text">Tools</span>
+                            <span class="hovertext">Tools</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="chat.html">
+                            <i class='bx bx-conversation icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                            <span class="hovertext">Chat</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
                         <a href="blog.html">
                             <i class='bx bx-book-alt icon' ></i>
                             <span class="text nav-text">Blog</span>
@@ -178,7 +207,7 @@
                             <span class="text nav-text">Links</span>
                             <span class="hovertext">Links</span>
 
-                            <div id="linkOptions" class="dropdown-content" style="transform: translate(75px, 0px)">
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
                                 <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
                                     <span class='bx bx-link-external' style="transform: translateY(3px); font-size: 20px;"></span>
                                     <span style="padding: 5px">Alt Links</span>
@@ -199,13 +228,13 @@
                         </a>
                     </li>
                 </ul>
-                <br>
             </div>
 
-            <div class="bottom-content" style="transform: translateY(-20%);">
+            <div class="bottom-content">
                 <ul>
                     <li class="nav-link">
                         <a href="#" class="selected">
+                            <div class="selected-bar"></div>
                             <i class='bx bx-cog icon' ></i>
                             <span class="text nav-text">Settings</span>
                             <span class="hovertext">Settings</span>
@@ -222,7 +251,7 @@
 
                     <li class="mode">
                         <a href="profile.html">
-                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <i class='bx bx-user-circle icon' style="font-size: 22px;"></i>
                             <span class="text nav-text">Profile</span>
                             <span class="hovertext">View Profile</span>
                         </a>
@@ -318,6 +347,29 @@
             </select>
             <input name="Color Picker" type="color" class="color_picker" id="theme_color_picker" oninput="setTheme()">
             <br>
+            <div class="settingsTitle">Accent Color</div>
+            <div class="pageDescription">This applies a nice slight color change to the background and on some elements to give the site a colorful look.</div>
+            <select class="settingsSelect" id="accentSelect">
+                <option class="settingsSelectOption">None (Default)</option>
+                <option class="settingsSelectOption">Custom</option>
+                <option class="settingsSelectOption">Red</option>
+                <option class="settingsSelectOption">Orange</option>
+                <option class="settingsSelectOption">Light Blue</option>
+                <option class="settingsSelectOption">Yellow</option>
+                <option class="settingsSelectOption">Green</option>
+                <option class="settingsSelectOption">Purple</option>
+            </select>
+            <input name="Color Picker" type="color" class="color_picker" id="accent_color_picker" oninput="setAccent()">
+            <br>
+            <div class="settingsTitle">Accent Color Strength</div>
+            <div class="pageDescription">This changes how strong the opacity of the accent color is.</b></div>
+            <select class="settingsSelect" id="accentStrengthSelect">
+                <option class="settingsSelectOption">Very Weak</option>
+                <option class="settingsSelectOption">Weak</option>
+                <option class="settingsSelectOption">Good</option>
+                <option class="settingsSelectOption">Strong 💪</option>
+            </select>
+            <br>
             <div class="settingsTitle">Tab Cloak</div>
             <div class="pageDescription">This changes the website icon and title to help hide this among your tabs. <b>Note: This may not be working correctly.</b></div>
             <select class="settingsSelect" id="cloakSelect">
@@ -389,10 +441,10 @@
         </div>
     </section>
 
-    <!-- <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe> -->
+    <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe>
 
     <script src="script.js"></script>
-    <!-- <script src="./Scripts/connection.js"></script> -->
+    <script src="./Scripts/connection.js"></script>
     <script src="./Scripts/settings.js"></script>
     <script src="./Scripts/hotkeys.js"></script>
 

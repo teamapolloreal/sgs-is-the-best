@@ -1,209 +1,175 @@
 let lastUpdate = "3/13/2023 (v6.5.0)"
-let gitcdnUrl = "https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main"
+let gitcdnUrl = "https://raw.githubusercontent.com/SyceGaming/sgs-gitcdn/main"
 let sound_data = [
     {
         name: "-999 Social Credit",
         id: "999-social-credit-siren",
         path: `${gitcdnUrl}/Soundboard/999-social-credit-siren.mp3`,
-        new: true
     },
     {
         name: "Aw Hell Nah Man",
         id: "aw-hell-nah-man",
         path: `${gitcdnUrl}/Soundboard/aw-hell-nah-man.mp3`,
-        new: true
     },
     {
         name: "Aw Sh*t! Here we go again",
         id: "gta-here-we-go-again",
         path: `${gitcdnUrl}/Soundboard/gta-here-we-go-again.mp3`,
-        new: true
     },
     {
         name: "Bing Chilling 🥶",
         id: "bing-chilling",
         path: `${gitcdnUrl}/Soundboard/bing-chilling_fcdGgUc.mp3`,
-        new: true
     },
     {
         name: "Dedotaded Wam",
         id: "dedotaded_wam",
         path: `${gitcdnUrl}/Soundboard/DEDOTADED WAM.mp3`,
-        new: true
     },
     {
         name: "Directed by Robert B",
         id: "directed-by-robert-b",
         path: `${gitcdnUrl}/Soundboard/directed-by-robert-b.mp3`,
-        new: true
     },
     {
         name: "Deja Vu",
         id: "deja-vu",
         path: `${gitcdnUrl}/Soundboard/deja-vu.mp3`,
-        new: true
     },
     {
         name: "EE Sports",
         id: "ea-sports-meme",
         path: `${gitcdnUrl}/Soundboard/ea-sports-meme.mp3`,
-        new: true
     },
         {
         name: "Gangsters Paradise",
         id: "gangsters_paradise",
         path: `${gitcdnUrl}/Soundboard/gangsters_paradise.mp3`,
-        new: true
     },
     {
         name: "GG's Bro",
         id: "ggs-bro",
         path: `${gitcdnUrl}/Soundboard/ggs-bro.mp3`,
-        new: true
     },
     {
         name: "God Damn",
         id: "god-damn",
         path: `${gitcdnUrl}/Soundboard/god-damn-1.mp3`,
-        new: true
     },
     {
         name: "Helicopter Helicopter",
         id: "helicopter-meme",
         path: `${gitcdnUrl}/Soundboard/helicopter-meme.mp3`,
-        new: true
     },
     {
         name: "Illuminati 🛆",
         id: "illuminati",
         path: `${gitcdnUrl}/Soundboard/ILLUMINATI.mp3`,
-        new: true
     },
     {
         name: "Ladies and Gentlemen, We Got 'Em",
         id: "ladies-and-gentlement-we-got-em",
         path: `${gitcdnUrl}/Soundboard/ladies-and-gentlement-we-got-em.mp3`,
-        new: true
     },
     {
         name: "LETS GO",
         id: "lets-go-meme",
         path: `${gitcdnUrl}/Soundboard/lets-go-meme.mp3`,
-        new: true
     },
     {
         name: "Minecraft Potion Drinking",
         id: "minecraft-potion-drinking-sound-effect",
         path: `${gitcdnUrl}/Soundboard/minecraft-potion-drinking-sound-effect-1.mp3`,
-        new: true
     },
     {
         name: "MrBeast Phonk",
         id: "mr-beast-phonk-meme",
         path: `${gitcdnUrl}/Soundboard/mr-beast-phonk-meme.mp3`,
-        new: true
     },
     {
         name: "MrBeast Rap Battle",
         id: "mrbeast_rap_battle",
         path: `${gitcdnUrl}/Soundboard/mrbeast rap battle.mp3`,
-        new: true
     },
     {
         name: "Nani",
         id: "nani-meme-sound-effect",
         path: `${gitcdnUrl}/Soundboard/nani-meme-sound-effect.mp3`,
-        new: true
     },
     {
         name: "Never Done That",
         id: "never_done_that",
         path: `${gitcdnUrl}/Soundboard/NEVER DONE THAT.mp3`,
-        new: true
     },
     {
         name: "Ninja Stream Sniping",
         id: "ninja-stream-sniping",
         path: `${gitcdnUrl}/Soundboard/ninja-stream-sniping.mp3`,
-        new: true
     },
     {
         name: "Oh no no no Tik Tok",
         id: "oh-no-no-no-tik-tok-song-sound-effect",
         path: `${gitcdnUrl}/Soundboard/oh-no-no-no-tik-tok-song-sound-effect.mp3`,
-        new: true
     },
     {
         name: "Outro",
         id: "outro-song",
         path: `${gitcdnUrl}/Soundboard/outro-song_oqu8zAg.mp3`,
-        new: true
     },
     {
         name: "Sanic",
         id: "sanic",
         path: `${gitcdnUrl}/Soundboard/SANIC.mp3`,
-        new: true
     },
     {
         name: "Shooting Stars",
         id: "shooting-stars",
         path: `${gitcdnUrl}/Soundboard/shooting-stars.mp3`,
-        new: true
     },
         {
         name: "Snopp Dogg",
         id: "snopp_dogg",
         path: `${gitcdnUrl}/Soundboard/snopp_dogg.mp3`,
-        new: true
     },
     {
         name: "Shots Fired",
         id: "shots_fired",
         path: `${gitcdnUrl}/Soundboard/SHOTS FIRED.mp3`,
-        new: true
     },
     {
         name: "Tactical Nuke",
         id: "tactical_nule",
         path: `${gitcdnUrl}/Soundboard/tactical nuke.mp3`,
-        new: true
     },
         {
         name: "That's Class",
         id: "thats-class",
         path: `${gitcdnUrl}/Soundboard/thats-class.mp3`,
-        new: true
     },
     {
         name: "This is a certified hood classic",
         id: "this-a-certified-hood-classic",
         path: `${gitcdnUrl}/Soundboard/this-is-a-certified-hood-classic.mp3`,
-        new: true
     },
     {
         name: "Whatcha Say",
         id: "whatcha_say",
         path: `${gitcdnUrl}/Soundboard/Whatcha Say.mp3`,
-        new: true
     },
     {
         name: "Wombo Combo",
         id: "wombo_combo",
         path: `${gitcdnUrl}/Soundboard/WOMBO COMBO.mp3`,
-        new: true
     },
         {
         name: "Wide Putin",
         id: "wide-putin",
         path: `${gitcdnUrl}/Soundboard/wide-putin.mp3`,
-        new: true
     },
     {
         name: "Why do I hear boss music?",
         id: "why-do-i-hear-boss-music",
         path: `${gitcdnUrl}/Soundboard/why-do-i-hear-boss-music.mp3`,
-        new: true
     },
     {
         name: "9 + 10",

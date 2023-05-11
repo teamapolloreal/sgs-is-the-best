@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZF5EEF09R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RZF5EEF09R');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TB243QR');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="description" content="One of the best unblocked game websites with over 140+ high quality games.">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="nav2.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Syce's Game Shack</title>
+    <link rel="icon" herf="sgs-logo.png" type=image/png>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB243QR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="bodyOverlay"></div>
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner">
+            </span>
+        </span>
+        <span class="loadingMessage" id="loadingMessage"></span>
+    </div>
+
+    <div class="horNavbar" id="navbar2">
+        <div class="horBar">
+            <img class="horLogo" src="sgs-logo.png" alt="">
+            <div style="float: left; text-align: left; transform: translate(55px, -32px)">
+                <span class="horLogoText" id="horLogoText">Syce's Game Shack</span>
+            </div>
+
+            <div style="float: right; text-align: center; transform: translate(0px, -34px)">
+                <div class="horPage" onclick="location.replace('./index.html')">
+                    <!-- <i class='bx bx-home-alt pageIcon' ></i> -->
+                    <span class="horText">Home</span>
+                </div>
+                <div class="horPage" onclick="location.replace('./games.html')">
+                    <!-- <i class='bx bx-joystick pageIcon' ></i> -->
+                    <span class="horText">Games</span>
+                </div>
+                <div class="horPage" onclick="location.replace('./soundboard.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Soundboard</span>
+                </div>
+                <div class="horPage horSelected" onclick="location.replace('./tools.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Tools</span>
+                    <div class="horSelectedBar"></div>
+                </div>
+                <div class="horPage" onclick="location.replace('./chat.html')">
+                    <!-- <i class='bx bx-volume-full pageIcon' ></i> -->
+                    <span class="horText">Chat</span>
+                </div>
+                <div class="horPage" onclick="location.replace('./blog.html')">
+                    <!-- <i class='bx bx-book-alt pageIcon' ></i> -->
+                    <span class="horText">Blogs</span>
+                </div>
+                <div class="horPage" onclick="optionsMenu('linkOptionsNav2')">
+                    <!-- <i class='bx bx-link-alt pageIcon' ></i> -->
+                    <span class="horText">Links</span>
+
+                    <div id="linkOptionsNav2" class="dropdown-content" style="transform: translate(-65px, 10px)">
+                        <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
+                            <span class='bx bx-link-external icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Alt Links</span>
+                        </button>
+                        <button onclick="window.open('https://sgs.peerboard.com', '_blank')" class="dropbtn" id="peerboard">
+                            <span class='bx bx-chat icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Forums</span>
+                        </button>
+                        <button onclick="window.open('https://discord.gg/rTYbmvZC7X', '_blank')" class="dropbtn" id="discord">
+                            <span class='bx bxl-discord-alt icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Discord</span>
+                        </button>
+                        <button onclick="window.open('https://trello.com/b/PUXmNYGm/syces-game-shack', '_blank')" class="dropbtn" id="trello">
+                            <span class='bx bxl-trello icon' style="transform: translateY(3px); font-size: 20px;"></span>
+                            <span style="padding: 5px">Trello Board</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="horPage" onclick="location.replace('./settings.html')">
+                    <!-- <i class='bx bx-cog pageIcon' ></i> -->
+                    <span class="horText">Settings</span>
+                </div>
+                <div class="horPage" onclick="location.replace('./profile.html')">
+                    <i class='bx bx-user-circle pageIcon profileIcon' ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar close" id="navbar1">
+        <header>
+            <!-- <br>
+            <div class="toggle-background">
+                <i class='bx bx-horizontal-right toggle' ></i>
+            </div> -->
+            <div class="image-text">
+                <span class="image">
+                    <img src="sgs-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Syce's</span>
+                    <span class="profession">Game Shack</span>
+                </div>
+            </div>
+
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+
+                            <span class="hovertext">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="games.html">
+                            <i class='bx bx-joystick icon' ></i>
+                            <span class="text nav-text">Games</span>
+
+                            <span class="hovertext">Games</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                            <span class="hovertext">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href="soundboard.html">
+                            <i class='bx bx-volume-full icon' ></i>
+                            <span class="text nav-text">Soundboard</span>
+                            <span class="hovertext">Soundboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" class="selected">
+                            <div class="selected-bar"></div>
+                            <i class='bx bx-wrench icon' ></i>
+                            <span class="text nav-text">Tools</span>
+                            <span class="hovertext">Tools</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="chat.html">
+                            <i class='bx bx-conversation icon' ></i>
+                            <span class="text nav-text">Chat</span>
+                            <span class="hovertext">Chat</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="blog.html">
+                            <i class='bx bx-book-alt icon'></i>
+                            <span class="text nav-text">Blog</span>
+                            <span class="hovertext">Blog</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" id="altLinks">
+                        <a onclick="optionsMenu('linkOptions')">
+                            <i class='bx bx-link-alt icon' ></i>
+                            <span class="text nav-text">Links</span>
+                            <span class="hovertext">Links</span>
+
+                            <div id="linkOptions" class="dropdown-content" style="transform: translate(70px, 0px)">
+                                <button onclick="window.open('https://bit.ly/sgs-v6', '_blank')" class="dropbtn" id="altLinks">
+                                    <span class='bx bx-link-external' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Alt Links</span>
+                                </button>
+                                <button onclick="window.open('https://sgs.peerboard.com', '_blank')" class="dropbtn" id="peerboard">
+                                    <span class='bx bx-chat' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Forums</span>
+                                </button>
+                                <button onclick="window.open('https://discord.gg/rTYbmvZC7X', '_blank')" class="dropbtn" id="discord">
+                                    <span class='bx bxl-discord-alt' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Discord</span>
+                                </button>
+                                <button onclick="window.open('https://trello.com/b/PUXmNYGm/syces-game-shack', '_blank')" class="dropbtn" id="trello">
+                                    <span class='bx bxl-trello' style="transform: translateY(3px); font-size: 20px;"></span>
+                                    <span style="padding: 5px">Trello Board</span>
+                                </button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul>
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                            <span class="hovertext">Settings</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="mode" id="notLoggedIn">
+                        <a href="#" onclick="toggleLoginPage()">
+                            <i class='bx bx-exit icon' style="font-size: 22px;"></i>
+                            <span class="text nav-text">Login or create</span>
+                            <span class="hovertext">Login or create an account</span>
+                        </a>
+                    </li> -->
+
+                    <li class="mode">
+                        <a href="profile.html">
+                            <i class='bx bx-user-circle icon' style="font-size: 25px;"></i>
+                            <span class="text nav-text">Profile</span>
+                            <span class="hovertext">View Profile</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li> -->
+
+                    <!-- <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="section" id="blog">
+        <br>
+        <div class="title">Syce's Tools</div>
+        <div class="text">This page has useful tools that you may find cool or interesting. If you have any tools you would like to see on here then your welcome to submit one.</div>
+        <br>
+        <!-- <div class="search-box" style="width: 90%">
+            <span class='bx bx-search icon'></span>
+            <input class="search-box-input" type="text" placeholder="Search by blog title..." id="searchbarBlog" onkeyup="searchBlog()">
+        </div>
+        <br><br> -->
+
+        <div style="text-align: left; width: 92.9%; margin: auto; transform: translateX(1.7%)">
+            <div class="blogBox" id="blogBox">
+                <div style=""><div class="blogTitle">GBA-Emulator</div>
+                <div class="blogDate">Added 5/11/2023</div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div>
+                <div class="blogDescription">Known as Gameboy Advance Emulator, allows you to experience old games that were included on the Gameboy right in your browser.</div>
+                <button class="blogReadBtn" onclick="window.open(`./Tools/GBA-Emulator/index.html`, `_blank`)">Continue in New Tab <i class='bx bx-link-external' style="transform: translateY(2px); font-size: 17px;"></i></button>
+            </div>
+            <div class="blogBox" id="blogBox">
+                <div style=""><div class="blogTitle">About:Blank</div>
+                <div class="blogDate">Added 5/11/2023</div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div>
+                <div class="blogDescription">Open this website into an about:blank window that hides the url.</div>
+                <button class="blogReadBtn" onclick="about_blank()">Continue in New Tab <i class='bx bx-link-external' style="transform: translateY(2px); font-size: 17px;"></i></button>
+            </div>
+            <!-- <div class="blogBox" id="blogBox">
+                <div style=""><div class="blogTitle">Download SGS</div>
+                <div class="blogDate">Added 5/11/2023</div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div>
+                <div class="blogDescription">Would like to own a copy of this website? Click the button to download the files in a zip, right-click and press "extract all," and there you go.</div>
+                <button class="blogReadBtn" onclick="">Download in New Tab <i class='bx bx-link-external' style="transform: translateY(2px); font-size: 17px;"></i></button>
+            </div> -->
+        </div>
+
+        <div class="pageHeading" id="blog_recent">Other</div>
+
+        <div style="text-align: left; width: 92.9%; margin: auto; transform: translateX(1.7%)">
+            <div class="blogBox" id="blogBox">
+                <div style=""><div class="blogTitle">Sin.bat</div>
+                <div class="blogDate">Added 5/11/2023</div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div>
+                <div class="blogDescription">If your school district uses Lightspeed Systems to restrict stuff then running this script will bypass that making your laptop unrestricted.</div>
+                <button class="blogReadBtn" onclick="downloadFile('./Tools/sin.bat', 'sin.bat')">Download File <i class='bx bx-file-blank' style="transform: translateY(2px); font-size: 17px;"></i></button>
+            </div>
+            <div class="blogBox" id="blogBox">
+                <div style=""><div class="blogTitle">Jamal's Proxy Hub</div>
+                <div class="blogDate">Added 5/11/2023</div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div>
+                <div class="blogDescription">Jamal’s Proxy Hub is a place where anyone can use available proxies, play games, and much more as you dive in deeper!</div>
+                <button class="blogReadBtn" onclick="window.open('https://docs.google.com/presentation/d/1g9wfSLIRPMxCPccnUTVysCHieHJ-yfXcP-MYGDZPnfY/mobilepresent?slide=id.p', '_blank')">Continue in New Tab <i class='bx bx-link-external' style="transform: translateY(2px); font-size: 17px;"></i></button>
+            </div>
+            <div class="blogBox" id="blogBox">
+                <div style=""><div class="blogTitle">Your Tool Could be Here!</div>
+                <div class="blogDate">Added 5/11/2023</div></div>
+                <div style="width: 1px; height: 15px; opacity: 0"></div>
+                <div class="blogDescription">Have a useful tool you would like to share? Click the button below to request your tool to me.</div>
+                <button class="blogReadBtn" onclick="location.replace('blog.html#how-to-submit-tool')">How to Request <i class='bx bx-detail' style="transform: translateY(2px); font-size: 17px;"></i></button>
+            </div>
+        </div>
+
+        <br><br>
+        <footer class="footer" id="footer">
+            <br>
+            <span class="text">Copyright Syce's Game Shack 2023© - Contact: sycegameshack@gmail.com</span>
+            <br>
+            <!-- <span class="text">Terms of Service - Privacy Policy - Blog</span>
+            <br> -->
+            <span class="text">All games on this site are owned to their respective owners.</span>
+            <!-- <span class="text">All games on this site are owned to their respective owners. Read more in the Terms of Service.</span> -->
+        </footer>
+    </section>
+
+    <section class="alertSection">
+        <div class="hotkeysoverlay" id="hotkeysoverlay">
+            <span class="hotkeysoverlaytt">Hot Keys</span>
+            <br><span class="hotkeysoverlaytext">Shift + F - Toggle FPS Count</span>
+            <br><span class="hotkeysoverlaytext">Shift + R - Choose Random Game</span>
+            <br><span class="hotkeysoverlaytext">Control + Left Mouse Click - Instantly Load Game</span>
+            <br><br><br><br><span class="hotkeysoverlaytext">Press Escape to exit this menu.</span>
+        </div>
+        <div class="alerts" id="alerts">
+        </div>
+    </section>
+
+    <iframe style="display: none" id="dataconnection" src="https://coruscating-shortbread-45f18a.netlify.app/connection.html"></iframe>
+
+    <script src="script.js"></script>
+    <script src="./Scripts/connection.js"></script>
+    <script src="./Scripts/settings.js"></script>
+    <script src="./Scripts/profile.js"></script>
+    <script src="./Scripts/hotkeys.js"></script>
+
+</body>
+</html>

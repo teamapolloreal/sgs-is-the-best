@@ -1,11 +1,19 @@
 let lastUpdate = "1/18/2023 (v6.2.1)"
 let blog_data = [
     {
+        title: "How to Submit a Tool",
+        date: "May 1, 2023",
+        writtenBy: "Syce",
+        id: "how-to-submit-tool",
+        description: "Would like to include a useful tool on Syce's Tools? Learn how to submit one here.",
+        text: "Hello! This blog will go into detail on how you could submit your own tool to be added on Syce's Tools.<br><br>Syce's Tools is a great way for users to enhance their gaming experience by people like you who may want to attribute to it. This will expose your tool to our large user base and receive feedback and ratings from our users.<br><br><h3>What can I submit?</h3>Great question! Anything from something you created like a proxy or some link hub to something else like a file your found can be submitted. No malware, no fishing sites, nothing that can do harm, etc. Basically whatever seems useful to an unblocked gaming community.<br><br><h3>Where do I get started?</h3>The process of submitting a tool has multiple steps:<br><br><ul><li>The first step involves filling out this form: <a class='underline_text' onclick='window.open(`https://forms.gle/yRXiGQbZNNDh4L1MA`, `_blank`)'>click to visit the form.</a></li></ul>This form will propose your tool to me and start the review process. The review process is fairly simple, just making sure it's safe, suitable for the site, and can actually be functional on the site.<br><br><ul><li>Once the review process is done you will be contacted via the email provided in the form. The email will include if your tool has been approved or declined.</li></ul>School emails will not work so make sure you have provided a personal email.<br><br><ul><li>If approved, you will be asked in the same email about how your tool should appear on the site.</li></ul>Ex: <i>What would you like the title to be? What would you like the description to be?</i><br><br>And that's basically it! I may ask for additional information or for any questions I may have, but otherwise its a pretty simple process. Of course, feel free to ask me any additional questions in the process or for any concerns you may have. I hope this blog has explained this well, otherwise, ask me about questions you may have."
+    },
+    {
         title: "1,000,000 Views!",
         date: "March 28, 2022",
         writtenBy: "Syce",
         id: "1-million-views",
-        description: "March 24, 2023, the day Syce's Game Shack hit 1 million views. What an incredible milestone for the site.",
+        description: "March 24, 2023, the day Syce's Game Shack hit 1 million views. Inccredible milestone for the site.",
         text: "Wow, I can’t believe this! The site crossed over the 1,000,000 view mark on Friday March 24, 2023. This was roughly around the same time last year when the site was created, even though no data was tracked for last school year. The site got a staggering 28,000+ views just on Friday alone, making it the highest view day ever and pushing the count into the 7 digits. I can’t thank you enough with all the support I’ve received, its been a tough year trying to keep up with everything going on and pushing updates to the site but I’m excited to move forward continuing to create more for the site. I have one last announcement…<br><br>Version 7 coming mid to late April, expect leaks and updates soon."
     },
     {
@@ -45,6 +53,14 @@ let blog_data = [
     },
 ]
 let log_data = [
+    {
+        title: "Update Log of Version 7!",
+        date: "May 11, 2023",
+        writtenBy: "Syce",
+        id: "v7-0-0",
+        description: "This update includes the all new accent colors and Syce’s Tools with many other changes and details.",
+        text: "<img class='blogImg' src='https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Images/Blogs/v7-0-0.PNG'><br><br>This update includes the all new accent colors and Syce’s Tools with many other changes and details. Read below for more details:<br><br><h3>Changes</h3><ul><li>Accent colors have been added and can be applied in the personalization settings</li><li class='whitecircle' type='circle'>Nice slight color change to the background and some objects, which it’s strength can also be adjusted</li><li>New slim sidebar and a redesigned horizontal navbar</li><li>Added chat tab, wasn’t quite ready so it’s not added yet</li></ul><br><h3>Syce’s Tools</h3><ul><li>Allows you to use useful tools to spice up your gaming experience</li><li>This could be anything from emulators, to proxies, etc</li><li>Submit your own tool to be included on this website</li></ul><br><h3>Recommendations</h3><ul><li>Uses artificial intelligence to suggest games you play on a regular basis</li><li>Recommendations will get better over time and may be random at certain times</li><li>Still experimenting with this a little bit, expect some more changes to this eventually</li></ul><br><h3>Other</h3><ul><li>New game banners are now only set to the purple theme color</li><li>Blogs can now have images</li></ul><br><h3>Resolved Issues</h3><ul><li>PlayGame function running multiple times (<a class='underline_text' onclick='window.open(`https://trello.com/c/ERBPOrIS/101-playgame-running-multiple-times`, `_blank`)'>ERBPOrIS</a>)</li><li>Badges not loading on the profile</li></ul> <br><br>Check out my <a class='underline_text colored' onclick='window.open(`https://trello.com/b/PUXmNYGm/syces-game-shack`, `_blank`)'><b>Trello Board</b></a> with a list of bugs and planned upcoming features."
+    },
     {
         title: "Update Log of v6.5.0",
         date: "March 13, 2023",

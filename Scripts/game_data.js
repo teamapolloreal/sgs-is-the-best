@@ -1,4 +1,4 @@
-let lastUpdate = "5/9/2023 (v6.5.0.e)"
+let lastUpdate = "5/11/2023 (v7.0.0)"
 let cdnUrl = "https://exquisite-muffin-3bccf5.netlify.app"
 let gitcdnUrl = "https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main"
 //CHANGE IMAGES ON HOME PAGE TOO
@@ -29,7 +29,7 @@ const data = [
         controls: [
             "",
         ],
-        devices: "Computer, Mobile", 
+        devices: "Computer, Mobile",   
     },
     {
         name: "CSGOClicker",
@@ -56,7 +56,7 @@ const data = [
         publisher: "",
         controls: [
             "",
-        ],  
+        ], 
     },
     {
         name: "FNAF",
@@ -2348,6 +2348,75 @@ if(window.location.pathname.endsWith("games.html")){
     // var title = document.getElementsByClassName(`game_title`)
     // var genre = document.getElementsByClassName(`game_genre`)
     // var click = document.getElementsByClassName(`game_click`)
+    
+    if(localStorage.getItem("gameIcon") === "false"){
+        let rec_containers = document.getElementsByClassName("rec_container")
+        for(let j = 0; j < rec_containers.length; j++){
+            rec_containers[j].getElementsByClassName("game_img")[0].style.display = "none"
+            rec_containers[j].style.padding = "8px";
+            rec_containers[j].style.height = "55px";
+            rec_containers[j].style.shadowBox = "none";
+            // div.style.marginTop = "7px";
+            rec_containers[j].classList.add("container2");
+            rec_containers[j].style.backgroundColor = "var(--sidebar-color)";
+            rec_containers[j].getElementsByClassName("game_title")[0].style.transform = "translate(0, -2px)"
+            rec_containers[j].getElementsByClassName("game_genre")[0].style.transform = "translate(0, 25px)"
+            rec_containers[j].getElementsByClassName("game_genre")[0].style.opacity = 1
+            rec_containers[j].getElementsByClassName("game_title")[0].style.display = "block"
+            rec_containers[j].getElementsByClassName("game_genre")[0].style.display = "block"
+
+            rec_containers[j].getElementsByClassName("#newgamebanner")[0].id = "newgamebanner1"
+            rec_containers[j].getElementsByClassName("#newgamebanner")[0].innerHTML = "<span style='transform: translate(0px, -4px); position: absolute; left: 16px'>Recommendation</span>"
+        }
+    }
+    //Generate Recommendations
+    function randomGames(){
+        let randomGames = [];
+
+        for (let i = 0; i < 4; i++) {
+          const randomIndex = Math.floor(Math.random() * data.length);
+          randomGames.push(data[randomIndex])
+        }
+
+        let rec_containers = document.getElementsByClassName("rec_container")
+        for(let j = 0; j < rec_containers.length; j++){
+            rec_containers[j].getElementsByClassName("game_click")[0].onclick = function(){ viewGame(randomGames[j].id) }
+            if(localStorage.getItem("gameIcon") !== "false"){
+                rec_containers[j].getElementsByClassName("game_img")[0].src = randomGames[j].img
+                rec_containers[j].getElementsByClassName("game_img")[0].style.opacity = 1
+            }
+            rec_containers[j].getElementsByClassName("shadow")[0].style.opacity = 1
+            rec_containers[j].getElementsByClassName("game_title")[0].innerText = randomGames[j].name
+            rec_containers[j].getElementsByClassName("game_genre")[0].innerText = randomGames[j].genre
+            if(localStorage.getItem("thumbnailtext") === "true"){
+                rec_containers[j].getElementsByClassName("shadow")[0].style.display = "block"
+                rec_containers[j].getElementsByClassName("game_title")[0].style.display = "block"
+                rec_containers[j].getElementsByClassName("game_genre")[0].style.display = "block"
+            }
+
+            rec_containers[j].style.animation = "none";
+            rec_containers[j].style.opacity = 1;
+        }
+    }
+    
+    var rec_data = JSON.parse(localStorage.getItem("recommendations"))
+    let recommendations = null
+    if(rec_data && rec_data.length > 1){
+        var genres = rec_data.map(function(element) {
+          return element.output.genre;
+        });
+        rec_data.forEach(function(element) {
+          delete element.date;
+        });
+        var day = new Date().getDay() + 1;
+        var hours = new Date().getHours();
+        var minutes = new Date().getMinutes();
+        var time = (hours < 10 ? '0' + hours : hours) + '' + (minutes < 10 ? '0' + minutes : minutes);
+        if(new Set(genres).size !== 1){ 
+            neural_network(rec_data, {day:day,time:parseInt(time)}, "recommendations"); 
+        } else { randomGames() }
+    } else { randomGames() }
+
     loadGames()
     function loadGames(text){
         var count = 0
@@ -2611,6 +2680,7 @@ if(window.location.pathname.endsWith("games.html")){
 
                 removeGames();
                 loadGames();
+                sendSiteData();
                 createAlertBox({ color: "green", text: "Favorited Game"})
                 return;
             }
@@ -2643,6 +2713,7 @@ if(window.location.pathname.endsWith("games.html")){
 
               removeGames();
               loadGames();
+              sendSiteData();
               createAlertBox({ color: "red", text: "Unfavorited Game"})
               return;
           }
@@ -2771,9 +2842,12 @@ if(window.location.pathname.endsWith("games.html")){
         if(input === "") gamesCon.forEach(con => { con.style.display = "inline-table" })
     }
 
+    window.currentPlay = null
     function playGame(gameID, onload){
         for(let i = 0; i < data.length; i++){
             if(data[i].id === gameID){
+                console.log("e r")
+                window.currentPlay = gameID
                 document.getElementById("gameViewFullscreen").style.display = "none"
 
                 document.getElementById("gamepage").style.display = "block"
@@ -2841,6 +2915,25 @@ if(window.location.pathname.endsWith("games.html")){
                 document.body.style.overflow = "visible"
                 trackGameData(data[i].id, null)
                 window.location.hash = `#${data[i].id}`
+
+                if(localStorage.getItem("cookie_preferences") !== "Only_Necessary"){
+                    var rec_data = JSON.parse(localStorage.getItem("recommendations"))
+                    var day = new Date().getDay() + 1;
+                    var hours = new Date().getHours();
+                    var minutes = new Date().getMinutes();
+                    var time = (hours < 10 ? '0' + hours : hours) + '' + (minutes < 10 ? '0' + minutes : minutes);
+                    console.log(data[i].genre.split(" / "))
+                    if(!rec_data){
+                        for(let j = 0; j < data[i].genre.split(" / ").length; j++){
+                            localStorage.setItem("recommendations", JSON.stringify([{input: {day: day, time: parseInt(time)}, output: {genre: data[i].genre.split(" / ")[j]}, date: Date.now()}]))
+                        }
+                    } else {
+                        for(let j = 0; j < data[i].genre.split(" / ").length; j++){
+                            rec_data.push({input: {day: day, time: parseInt(time)}, output: {genre: data[i].genre.split(" / ")[j]}, date: Date.now()})
+                            localStorage.setItem("recommendations", JSON.stringify(rec_data))
+                        }
+                    }
+                }
             }
         }
     }
@@ -2923,7 +3016,7 @@ if(window.location.pathname.endsWith("games.html")){
         } else {
             data.forEach(game => { 
                 if(game.id === newHash.slice(1) && onload === true) return playGame(newHash.slice(1), true);
-                if(game.id === newHash.slice(1)) return playGame(newHash.slice(1));
+                if(game.id === newHash.slice(1) && window.currentPlay !== game.id) return playGame(newHash.slice(1));
             })
         }
     }

@@ -1,3 +1,93 @@
+setAccentStrength()
+
+function setAccentStrength(){
+    let accent = localStorage.getItem("accentColor");
+    if(!accent) accent = "None (Default)";
+    let strength = localStorage.getItem("accentStrength");
+    if(!strength) localStorage.setItem("accentStrength", "Good");
+
+    if(accent === "None (Default)"){
+        return document.body.style.setProperty("--accent-opacity", 0);
+    }
+    if(strength === "Very Weak") document.body.style.setProperty("--accent-opacity", 0.1);
+    if(strength === "Weak") document.body.style.setProperty("--accent-opacity", 0.2);
+    if(strength === "Good" || !strength) document.body.style.setProperty("--accent-opacity", 0.3);
+    if(strength === "Strong 💪") document.body.style.setProperty("--accent-opacity", 0.4);
+}
+
+var ddl = document.getElementById("accentStrengthSelect");
+if(ddl !== null){
+    var opts = ddl.options.length
+    for(var i = 0; i < opts; i++){
+        if(ddl.options[i].value == localStorage.getItem("accentStrength")){
+            ddl.options[i].selected = true;
+            break;
+        }
+    }
+}
+
+function setAccent(){
+    let accent = localStorage.getItem("accentColor");
+    if(!accent) accent = "None (Default)";
+    let strength = localStorage.getItem("accentStrength");
+    if(strength === "Very Weak") strength = 0.1;
+    if(strength === "Weak") strength = 0.2;
+    if(strength === "Good" || !strength) strength = 0.3;
+    if(strength === "Strong 💪") strength = 0.4;
+
+    if(accent === "None (Default)"){
+        document.body.style.setProperty("--accent-opacity", 0)
+    }
+    if(accent === "Purple"){
+        document.body.style.setProperty("--accent-color", "#695CFE")
+        document.body.style.setProperty("--accent-opacity", strength)
+    }
+    if(accent === "Green"){
+        document.body.style.setProperty("--accent-color", "#0ed929")
+        document.body.style.setProperty("--accent-opacity", strength)
+    }if(accent === "Light Blue"){
+        document.body.style.setProperty("--accent-color", "#16aee6")
+        document.body.style.setProperty("--accent-opacity", strength)
+    }
+    if(accent === "Orange"){
+        document.body.style.setProperty("--accent-color", "#f6920e")
+        document.body.style.setProperty("--accent-opacity", strength)
+    }
+    if(accent === "Red"){
+        document.body.style.setProperty("--accent-color", "#f6290e")
+        document.body.style.setProperty("--accent-opacity", strength)
+    }
+    if(accent === "Yellow"){
+        document.body.style.setProperty("--accent-color", "#febb01")
+        document.body.style.setProperty("--accent-opacity", strength)
+    }
+    if(accent === "Custom"){
+        if(document.getElementById("accent_color_picker")){
+            localStorage.setItem("accentCustom", document.getElementById("accent_color_picker").value)
+            document.getElementById("accent_color_picker").style.display = "block"
+        }
+        document.body.style.setProperty("--accent-color", localStorage.getItem("accentCustom"))
+        document.body.style.setProperty("--accent-opacity", strength)
+        
+    } else { if(document.getElementById("accent_color_picker")) document.getElementById("accent_color_picker").style.display = "none" }
+}
+
+var ddl = document.getElementById("accentSelect");
+var accentColorPicker = document.getElementById("accent_color_picker")
+if(ddl !== null){
+    var opts = ddl.options.length
+    for(var i = 0; i < opts; i++){
+        if(ddl.options[i].value == localStorage.getItem("accentColor")){
+            ddl.options[i].selected = true;
+            if(localStorage.getItem("accentColor") === "Custom"){
+                accentColorPicker.value = localStorage.getItem("accentCustom")
+            }
+            break;
+        }
+    }
+}
+setAccent();
+
 ThumbnailText();
 
 function ThumbnailText(changed){
@@ -462,7 +552,7 @@ function setTheme(){
         localStorage.setItem("themeHex", document.getElementById("theme_color_picker").value)
         document.getElementById("theme_color_picker").style.display = "block"
         loadTheme();
-    }
+    } else { document.getElementById("theme_color_picker").style.display = "none" }
 
     if(theme === "Rainbow"){
         localStorage.setItem("themeHex", `Rainbow`)
@@ -471,15 +561,15 @@ function setTheme(){
 }
 
 var ddl = document.getElementById("themeSelect");
-var colorPicker = document.getElementById("theme_color_picker")
+var themeColorPicker = document.getElementById("theme_color_picker")
 if(ddl !== null){
     var opts = ddl.options.length
     for(var i = 0; i < opts; i++){
         if(ddl.options[i].value == localStorage.getItem("theme")){
             ddl.options[i].selected = true;
             if(localStorage.getItem("theme") === "Custom"){
-                colorPicker.style.display = "block"
-                colorPicker.value = localStorage.getItem("themeHex")
+                themeColorPicker.style.display = "block"
+                themeColorPicker.value = localStorage.getItem("themeHex")
             }
             break;
         }
@@ -534,7 +624,6 @@ if(ddl !== null){
                 localStorage.setItem("theme", "Purple (Default)");
             }
             localStorage.setItem("theme", event.target.value);
-            document.getElementById("theme_color_picker").style.display = "none"
             setTheme();
             sendSiteData();
             createAlertBox({ color: "green", text: "Applied New Changes"})
@@ -563,6 +652,34 @@ if(ddl !== null){
                 localStorage.setItem("alerts", "Show All");
             }
             localStorage.setItem("alerts", event.target.value);
+            sendSiteData();
+            createAlertBox({ color: "green", text: "Applied New Changes"})
+            // saveSiteData();
+        })
+    }
+
+    var accentSelect = document.getElementById("accentSelect")
+    if(accentSelect){
+        accentSelect.addEventListener("change", function(event){
+            if(localStorage.getItem("accentColor") === null){
+                localStorage.setItem("accentColor", "None (Default)");
+            }
+            localStorage.setItem("accentColor", event.target.value);
+            setAccent();
+            sendSiteData();
+            createAlertBox({ color: "green", text: "Applied New Changes"})
+            // saveSiteData();
+        })
+    }
+
+    var accentStrengthSelect = document.getElementById("accentStrengthSelect")
+    if(accentStrengthSelect){
+        accentStrengthSelect.addEventListener("change", function(event){
+            if(localStorage.getItem("accentStrength") === null){
+                localStorage.setItem("accentStrength", "Good");
+            }
+            localStorage.setItem("accentStrength", event.target.value);
+            setAccentStrength();
             sendSiteData();
             createAlertBox({ color: "green", text: "Applied New Changes"})
             // saveSiteData();

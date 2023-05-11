@@ -1,4 +1,4 @@
-let bannerMessageNum = "28" //Fixed 404 Errors
+let bannerMessageNum = "29" //7.0.0
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -33,15 +33,15 @@ if(mode === null){
     }
 }
 
-toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
+// toggle.addEventListener("click" , () =>{
+//     sidebar.classList.toggle("close");
 
-    if(sidebar.classList.value !== "sidebar close"){
-        document.getElementById("linkOptions").style.transform = "translate(240px, 0px)"
-    } else {
-        document.getElementById("linkOptions").style.transform = "translate(75px, 0px)"
-    }
-})
+//     if(sidebar.classList.value !== "sidebar close"){
+//         document.getElementById("linkOptions").style.transform = "translate(240px, 0px)"
+//     } else {
+//         document.getElementById("linkOptions").style.transform = "translate(75px, 0px)"
+//     }
+// })
 
 if(localStorage.getItem("openSidebar") === "true"){
     sidebar.classList.toggle("close")
@@ -79,6 +79,7 @@ function gamepage(){
     window.location.hash = `#`
     exitFullscreen();
     exitWindowed();
+    window.currentPlay = null;
 }
 
 var inFullscreen = false
@@ -221,6 +222,11 @@ function resizeWidth(){
         gamebar.style.width = `calc(90% + ${7 * y})`
         document.getElementById("randomSelector").style.width = `${z}px`
         if(localStorage.getItem("gameIcon") !== "false") document.getElementById("randomSelector").getElementsByClassName("game_img")[0].style.height = `${z * 0.5249}px`
+        let rec_containers = document.getElementsByClassName("rec_container")
+        for(let j = 0; j < rec_containers.length; j++){
+            rec_containers[j].style.width = `${z}px`
+            if(localStorage.getItem("gameIcon") !== "false") rec_containers[j].getElementsByClassName("game_img")[0].style.height = `${z * 0.5249}px`
+        }
     }
     for(let i = 0; i < soundboard.length; i++){
         var x = window.innerWidth * 90 / 100
@@ -621,4 +627,46 @@ function OSDetails(){
     if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
     return OSName
+}
+
+function generate(count) {
+    var _sym = 'abcdefghijklmnopqrstuvwxyz1234567890';
+    var str = '';
+
+    for(var i = 0; i < count; i++) {
+        str += _sym[parseInt(Math.random() * (_sym.length))];
+    }
+    return str;
+}
+
+{
+    let chat_id = localStorage.getItem("sgs_chat_id")
+    if(!chat_id){
+        localStorage.setItem("sgs_chat_id", generate(12))
+    }
+}
+
+function about_blank(){
+    var newWindow = window.open('about:blank', '_blank');
+    newWindow.document.body.style.margin = '0';
+    newWindow.document.body.style.height = '100vh';
+    newWindow.document.body.style.minHeight = '100vh';
+    var iframe = newWindow.document.createElement('iframe');
+    iframe.style.border = 'none';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.minWidth = '100%';
+    iframe.style.minHeight = '100%';
+    iframe.style.margin = '0';
+    iframe.src = `${window.location.origin}`;
+    newWindow.document.body.appendChild(iframe);
+}
+
+function downloadFile(url, filename) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
