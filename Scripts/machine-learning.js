@@ -43,7 +43,9 @@ function neural_network(jsondata, predictData, type){
 	    day: predictData.day,
 	    time: predictData.time
 	  };
-	  nn.classify(input, gotResults);
+	  nn.classify(input, gotResults).catch((err) => {
+	  	return console.log(err)
+	  })
 	}
 
 	function gotResults(error, results) {
@@ -61,8 +63,17 @@ function neural_network(jsondata, predictData, type){
 		  		if(data[i].genre === results[1].label) games.push(data[i])
 		  	}
 	  	}
+	  	if(games.length < 4){
+	  		for(let i = 0; i < data.length; i++){
+		  		if(data[i].genre === results[2].label) games.push(data[i])
+		  	}
+	  	}
+	  	if(games.length < 4){
+	  		for(let i = 0; i < data.length; i++){
+		  		if(data[i].genre === results[3].label) games.push(data[i])
+		  	}
+	  	}
 	  	let final_games = randomly_choose(games, 4)
-	  	console.log(final_games)
 
 	  	let rec_containers = document.getElementsByClassName("rec_container")
         for(let j = 0; j < rec_containers.length; j++){
@@ -73,7 +84,7 @@ function neural_network(jsondata, predictData, type){
             }
             rec_containers[j].getElementsByClassName("shadow")[0].style.opacity = 1
             rec_containers[j].getElementsByClassName("game_title")[0].innerText = final_games[j].name
-            rec_containers[j].getElementsByClassName("game_genre")[0].innerText = final_games[j].genre
+            rec_containers[j].getElementsByClassName("game_genre")[0].innerText = "#" + final_games[j].genre.split(" / ")[0]
             if(localStorage.getItem("thumbnailtext") === "true"){
             	rec_containers[j].getElementsByClassName("shadow")[0].style.display = "block"
             	rec_containers[j].getElementsByClassName("game_title")[0].style.display = "block"
@@ -83,10 +94,7 @@ function neural_network(jsondata, predictData, type){
             rec_containers[j].style.animation = "none";
             rec_containers[j].style.opacity = 1;
         }
-
-	  	console.log(`${results[0].label}\n${results[1].label}\n${results[2].label}\n${results[3].label}\n${results[4].label}`)
 	  }
-	  console.log(results);
 	  return results;
 	}
 }

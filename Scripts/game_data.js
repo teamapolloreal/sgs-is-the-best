@@ -1,4 +1,4 @@
-let lastUpdate = "5/11/2023 (v7.0.0)"
+let lastUpdate = "6/12/2023 (v7.0.1)"
 let cdnUrl = "https://exquisite-muffin-3bccf5.netlify.app"
 let gitcdnUrl = "https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main"
 //CHANGE IMAGES ON HOME PAGE TOO
@@ -2361,9 +2361,9 @@ if(window.location.pathname.endsWith("games.html")){
             rec_containers[j].style.backgroundColor = "var(--sidebar-color)";
             rec_containers[j].getElementsByClassName("game_title")[0].style.transform = "translate(0, -2px)"
             rec_containers[j].getElementsByClassName("game_genre")[0].style.transform = "translate(0, 25px)"
-            rec_containers[j].getElementsByClassName("game_genre")[0].style.opacity = 1
             rec_containers[j].getElementsByClassName("game_title")[0].style.display = "block"
             rec_containers[j].getElementsByClassName("game_genre")[0].style.display = "block"
+            rec_containers[j].getElementsByClassName("shadow")[0].style.display = "none"
 
             rec_containers[j].getElementsByClassName("#newgamebanner")[0].id = "newgamebanner1"
             rec_containers[j].getElementsByClassName("#newgamebanner")[0].innerHTML = "<span style='transform: translate(0px, -4px); position: absolute; left: 16px'>Recommendation</span>"
@@ -2387,7 +2387,7 @@ if(window.location.pathname.endsWith("games.html")){
             }
             rec_containers[j].getElementsByClassName("shadow")[0].style.opacity = 1
             rec_containers[j].getElementsByClassName("game_title")[0].innerText = randomGames[j].name
-            rec_containers[j].getElementsByClassName("game_genre")[0].innerText = randomGames[j].genre
+            rec_containers[j].getElementsByClassName("game_genre")[0].innerText = "#" + randomGames[j].genre.split(" / ")[0]
             if(localStorage.getItem("thumbnailtext") === "true"){
                 rec_containers[j].getElementsByClassName("shadow")[0].style.display = "block"
                 rec_containers[j].getElementsByClassName("game_title")[0].style.display = "block"
@@ -2635,6 +2635,11 @@ if(window.location.pathname.endsWith("games.html")){
         var currentContainers = document.getElementsByClassName("container")
         var inputText = event.target.value;
 
+        let rec_containers = document.getElementsByClassName("rec_container")
+        for(let j = 0; j < rec_containers.length; j++){
+            if(inputText === "Filter - None"){ rec_containers[j].style.display = "inline-table" } else { rec_containers[j].style.display = "none" }
+        }
+
         if(inputText === "Filter - None"){
             for(let i = 0; i < currentContainers.length; i++){ currentContainers[i].style.display = "inline-table"}
             return;
@@ -2786,8 +2791,8 @@ if(window.location.pathname.endsWith("games.html")){
 
     document.addEventListener("keydown", (event) => {
         if(document.getElementById("reportform").style.display === "block") return;
-        if(document.getElementById("gameViewFullscreen").style.display === "block" && event.key === "Enter"){
-            playGame(currentGame);
+        if(document.getElementById("gameViewFullscreen").style.display === "block"){
+            if(event.key === "Enter" || event.code === "Space") playGame(currentGame);
         }
         if(document.getElementById("gameViewFullscreen").style.display === "block" && event.key === "Escape"){
             if(clickedView === true){
@@ -2814,6 +2819,12 @@ if(window.location.pathname.endsWith("games.html")){
     function search(){
         let input = document.getElementById("searchbar").value
         input = input.toLowerCase()
+
+        let rec_containers = document.getElementsByClassName("rec_container")
+        for(let j = 0; j < rec_containers.length; j++){
+            if(input === ""){ rec_containers[j].style.display = "inline-table" } else { rec_containers[j].style.display = "none" }
+        }
+        
         var gamesCon = document.querySelectorAll("#container")
         var titles = document.getElementsByClassName("game_title")
         var list = []
@@ -2840,6 +2851,7 @@ if(window.location.pathname.endsWith("games.html")){
         not_matching.forEach(item => { item.style.display = "none" })
 
         if(input === "") gamesCon.forEach(con => { con.style.display = "inline-table" })
+        
     }
 
     window.currentPlay = null
@@ -2861,7 +2873,50 @@ if(window.location.pathname.endsWith("games.html")){
                     document.getElementById("playbtnoverlay").onclick = function(){ playGame(data[i].id); document.getElementById("gameIframe").focus(); }
                 } else {
                     document.getElementById("fullscreenGame").style.opacity = 0.7
-                    document.getElementById("gameIframe").src = data[i].link
+                    // document.getElementById("gameIframe").src = data[i].link
+
+                    const url = 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/index.html'
+                    fetch(url)
+                        .then(response => response.text())
+                        .then(data => {
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(data, "text/html");
+                            const scripts = doc.getElementsByTagName("script");
+                            for(let i = 0; i < scripts.length; i++){
+                                let src = scripts[i].getAttribute("src");
+                                if(src){
+                                    src = src.replace(/^\.\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+                                    src = src.replace(/^\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+
+                                    if(!src.startsWith("http")){
+                                        src = `https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/${src}`
+                                    }
+                                    scripts[i].setAttribute("src", src);
+                                }
+                            }
+
+                            const links = doc.getElementsByTagName("link");
+
+                            for(let i = 0; i < links.length; i++){
+                                let herf = links[i].getAttribute("herf");
+
+                                if(herf){
+                                    herf = herf.replace(/^\.\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+                                    herf = herf.replace(/^\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+
+                                    if(!herf.startsWith("http")){
+                                        herf = `https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/${herf}`
+                                    }
+
+                                    links[i].setAttribute("herf", herf)
+                                }
+                            }
+
+                            const html = new XMLSerializer().serializeToString(doc)
+                            document.getElementById("gameIframe").srcdoc = html
+
+
+                        })
                     document.getElementById("playbtnoverlay").style.display = "none"
                 }
                 document.getElementById("controls").style.transform = `translateY(${-70 + (data[i].controls.length * -25)}px)`

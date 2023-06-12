@@ -1,5 +1,5 @@
-let lastUpdate = "3/13/2023 (v6.5.0)"
-let gitcdnUrl = "https://raw.githubusercontent.com/SyceGaming/sgs-gitcdn/main"
+let lastUpdate = "6/12/2023 (v7.0.1)"
+let gitcdnUrl = "https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main"
 let sound_data = [
     {
         name: "-999 Social Credit",

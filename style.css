@@ -309,6 +309,14 @@ body.dark .section .text{
     display: block;
 }
 
+.container2:hover .game_click .game_title,
+.container2:hover .game_click .game_genre,
+.container2:hover .game_click .shadow,
+.container2:hover .game_click #fav_icon,
+.container2:hover .game_click #broken_icon {
+    opacity: 0.5;
+}
+
 .game_img{
     border-radius: 10px;
     display: block;
