@@ -2873,50 +2873,50 @@ if(window.location.pathname.endsWith("games.html")){
                     document.getElementById("playbtnoverlay").onclick = function(){ playGame(data[i].id); document.getElementById("gameIframe").focus(); }
                 } else {
                     document.getElementById("fullscreenGame").style.opacity = 0.7
-                    // document.getElementById("gameIframe").src = data[i].link
+                    document.getElementById("gameIframe").src = data[i].link
 
-                    const url = 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/index.html'
-                    fetch(url)
-                        .then(response => response.text())
-                        .then(data => {
-                            const parser = new DOMParser();
-                            const doc = parser.parseFromString(data, "text/html");
-                            const scripts = doc.getElementsByTagName("script");
-                            for(let i = 0; i < scripts.length; i++){
-                                let src = scripts[i].getAttribute("src");
-                                if(src){
-                                    src = src.replace(/^\.\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
-                                    src = src.replace(/^\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+                    // const url = 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/index.html'
+                    // fetch(url)
+                    //     .then(response => response.text())
+                    //     .then(data => {
+                    //         const parser = new DOMParser();
+                    //         const doc = parser.parseFromString(data, "text/html");
+                    //         const scripts = doc.getElementsByTagName("script");
+                    //         for(let i = 0; i < scripts.length; i++){
+                    //             let src = scripts[i].getAttribute("src");
+                    //             if(src){
+                    //                 src = src.replace(/^\.\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+                    //                 src = src.replace(/^\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
 
-                                    if(!src.startsWith("http")){
-                                        src = `https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/${src}`
-                                    }
-                                    scripts[i].setAttribute("src", src);
-                                }
-                            }
+                    //                 if(!src.startsWith("http")){
+                    //                     src = `https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/${src}`
+                    //                 }
+                    //                 scripts[i].setAttribute("src", src);
+                    //             }
+                    //         }
 
-                            const links = doc.getElementsByTagName("link");
+                    //         const links = doc.getElementsByTagName("link");
 
-                            for(let i = 0; i < links.length; i++){
-                                let herf = links[i].getAttribute("herf");
+                    //         for(let i = 0; i < links.length; i++){
+                    //             let herf = links[i].getAttribute("herf");
 
-                                if(herf){
-                                    herf = herf.replace(/^\.\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
-                                    herf = herf.replace(/^\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+                    //             if(herf){
+                    //                 herf = herf.replace(/^\.\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
+                    //                 herf = herf.replace(/^\//, 'https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/');
 
-                                    if(!herf.startsWith("http")){
-                                        herf = `https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/${herf}`
-                                    }
+                    //                 if(!herf.startsWith("http")){
+                    //                     herf = `https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main/Projects/2048/${herf}`
+                    //                 }
 
-                                    links[i].setAttribute("herf", herf)
-                                }
-                            }
+                    //                 links[i].setAttribute("herf", herf)
+                    //             }
+                    //         }
 
-                            const html = new XMLSerializer().serializeToString(doc)
-                            document.getElementById("gameIframe").srcdoc = html
+                    //         const html = new XMLSerializer().serializeToString(doc)
+                    //         document.getElementById("gameIframe").srcdoc = html
 
 
-                        })
+                    //     })
                     document.getElementById("playbtnoverlay").style.display = "none"
                 }
                 document.getElementById("controls").style.transform = `translateY(${-70 + (data[i].controls.length * -25)}px)`
