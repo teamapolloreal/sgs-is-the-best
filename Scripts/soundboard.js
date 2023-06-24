@@ -1,4 +1,4 @@
-let lastUpdate = "6/12/2023 (v7.0.1)"
+let lastUpdate = "6/23/2023 (v7.0.2)"
 let gitcdnUrl = "https://raw.githubusercontent.com/SyceProjects/sgs-gitcdn/main"
 let sound_data = [
     {

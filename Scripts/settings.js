@@ -370,7 +370,7 @@ function setCloak() {
     if(!link){
         link = window.document.createElement("link");
         link.rel = "icon"
-        link.herf = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"
+        link.href = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"
         link.type = "image/x-icon"
         window.document.getElementsByTagName("head")[0].appendChild(link);
     }
@@ -378,37 +378,37 @@ function setCloak() {
     // var link = document.querySelector("link[rel*='icon']") || document.createElement("link");
     // link.type = "image/x-icon";
     // link.rel = "shortcut icon";
-    // link.herf = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
+    // link.href = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
     // document.getElementsByTagName('head')[0].appendChild(link);
     // return;
 
     if(icon === "Default"){
-        link.herf = "sgs-logo.png";
+        link.href = "sgs-logo.png";
         document.title = "Syce's Game Shack"
     }
 
     if(icon === "Google Slides"){
-        link.herf = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
+        link.href = "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
         document.title = "Google Slides"
     }
 
     if(icon === "Google Docs"){
-        link.herf = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
+        link.href = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
         document.title = "Google Docs"
     }
 
     if(icon === "Google Drive"){
-        link.setAttribute("herf", "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png")
+        link.setAttribute("href", "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png")
         document.title = "Google Drive"
     }
 
     if(icon === "Schoology"){
-        link.herf = "https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico";
+        link.href = "https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico";
         document.title = "Home | Schoology"
     }
 
     if(icon === "Desmos"){
-        link.herf = "https://www.desmos.com/assets/img/touch-icon-192x192.png";
+        link.href = "data:image/jpeg;base64,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";
         document.title = "Desmos | Scientific Calculator"
     }
 }
